@@ -52,7 +52,16 @@ Ergebnis: **keine kritischen Befunde.** Hinweise für einen öffentlichen Server
    Tatoeba-Satz). Beispielsätze der allerersten Wörter enthalten teils noch unbekannte Wörter (z. B. „Es cosa de gusto.“ für „de“).
 2. Chinesisch: Bei 5 Lektionen fehlt je ein Satz (Fehlbestand 5) – die Übungen nehmen dann Sätze der Einheit doppelt.
 3. Inhalte sind nicht muttersprachlich geprüft.
-4. GitHub: Repository „wortweg“ veröffentlichen – erst nach ausdrücklicher Bestätigung.
+4. Weitere Veröffentlichungen (Releases über Versions-Tags) nur nach ausdrücklicher Bestätigung.
+
+### 0.5 Veröffentlichung 21.10.2026
+
+- Repository: <https://github.com/aprael/wortweg> (öffentlich), Branch `main`, ein Commit für Stand 0.4.0.
+- App-Version über GitHub Pages (Quelle „GitHub Actions“, Workflow `pages.yml`): <https://aprael.github.io/wortweg/>.
+- Erste Läufe grün: CI (Check, E2E, App-Build) und Pages-Deploy. Live-Seite in Headless-Brave 375 × 812 geprüft: Startseite lädt,
+  keine Konsolenfehler, kein horizontales Scrollen.
+- Hinweis der Läufe: `actions/checkout@v4`, `setup-node@v4` und `upload-artifact@v4` laufen noch auf Node 20 (wird von GitHub
+  auf Node 24 gezwungen) – bei Gelegenheit auf neuere Hauptversionen anheben.
 
 ## 1. Ausgangslage (vorher)
 
