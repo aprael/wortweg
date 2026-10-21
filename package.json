@@ -1,0 +1,27 @@
+{
+  "name": "wortweg",
+  "version": "0.4.0",
+  "description": "Wortweg – freie Sprachlern-App: Server mit Konten und Kurs-Editor oder offline als App (PWA), Lernpfad, Wiederholung, offene Kurse",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "start": "node server/main.mjs",
+    "db:setup": "node scripts/db-setup.mjs",
+    "db:reset": "node scripts/db-setup.mjs --reset",
+    "admin": "node scripts/create-admin.mjs",
+    "test": "node --test \"tests/*.test.mjs\"",
+    "lint": "node scripts/lint.mjs",
+    "validate": "node scripts/validate-content.mjs",
+    "check": "npm run lint && npm run validate && npm test",
+    "e2e": "node scripts/e2e.mjs",
+    "build:app": "node scripts/build-app.mjs",
+    "preview:app": "node scripts/serve-dist.mjs",
+    "icons": "node scripts/make-icons.mjs",
+    "sources": "node scripts/fetch-sources.mjs",
+    "build:courses": "node scripts/build-course-zh.mjs && node scripts/build-course-es.mjs"
+  }
+}

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56 56" width="56" height="56">
+  <!-- Symbol „Wegmarke mit Fahne“ für Checkpoints und Erfolge. Eigenes Werk, selbst gezeichnet für Wortweg (2026), Lizenz CC0 1.0. -->
+  <ellipse cx="28" cy="48" rx="20" ry="5" fill="#bcd2ff"/>
+  <path d="M18 48 L22 22 H34 L38 48 Z" fill="#2459dc"/>
+  <rect x="20.5" y="30" width="15" height="4" rx="2" fill="#ffc32b"/>
+  <line x1="28" y1="22" x2="28" y2="4" stroke="#0d1b46" stroke-width="3" stroke-linecap="round"/>
+  <path d="M29.5 5 H47 L42 10.5 L47 16 H29.5 Z" fill="#ffc32b"/>
+</svg>

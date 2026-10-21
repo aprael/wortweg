@@ -1,0 +1,390 @@
+{
+  "id": "de-en",
+  "title": "Englisch",
+  "subtitle": "Englisch lernen von Deutsch aus",
+  "nativeLang": "de",
+  "targetLang": "en",
+  "ttsLang": "en-GB",
+  "demo": true,
+  "license": "Eigene Demo-Inhalte (Wortweg-Projekt), CC0 1.0",
+  "levels": [
+    {
+      "id": "a1",
+      "title": "A1 · Einstieg",
+      "units": [
+        {
+          "id": "a1-greetings",
+          "title": "Begrüßung",
+          "description": "Hallo sagen, sich vorstellen, höflich sein",
+          "words": [
+            { "native": ["Hallo"], "target": ["hello", "hi"] },
+            { "native": ["Tschüss"], "target": ["bye", "goodbye"] },
+            { "native": ["danke"], "target": ["thank you", "thanks"] },
+            { "native": ["bitte"], "target": ["please"], "note": "„please“ benutzt man beim Bitten. Als Antwort auf „thank you“ sagt man „you're welcome“." },
+            { "native": ["ja"], "target": ["yes"] },
+            { "native": ["nein"], "target": ["no"] },
+            { "native": ["Name"], "target": ["name"] },
+            { "native": ["Freund"], "target": ["friend"] },
+            { "native": ["gut"], "target": ["good", "well"], "note": "„good“ ist ein Adjektiv, „well“ beschreibt oft, wie es jemandem geht: „I'm well“." },
+            { "native": ["Morgen"], "target": ["morning"], "note": "„Morgen“ als Tageszeit ist „morning“, „morgen“ (der nächste Tag) ist „tomorrow“." },
+            { "native": ["Entschuldigung"], "target": ["sorry", "excuse me"], "note": "„excuse me“ vor einer Bitte, „sorry“ nach einem Fehler." },
+            { "native": ["Abend"], "target": ["evening"] }
+          ],
+          "sentences": [
+            { "native": ["Hallo, ich bin Anna."], "target": ["Hello, I am Anna.", "Hi, I am Anna."], "note": "„ich bin“ = „I am“. „I“ wird im Englischen immer großgeschrieben." },
+            { "native": ["Wie heißt du?"], "target": ["What is your name?", "What's your name?"], "note": "Wörtlich: „Was ist dein Name?“ – im Englischen fragt man nach dem Namen mit „what“." },
+            { "native": ["Mein Name ist Tom."], "target": ["My name is Tom."], "note": "„mein“ = „my“, „ist“ = „is“." },
+            { "native": ["Guten Morgen!"], "target": ["Good morning!"], "note": "Feste Grußformel: „good“ + Tageszeit." },
+            { "native": ["Danke, gut."], "target": ["Thank you, good.", "Thanks, good.", "Thank you, well.", "Thanks, well."], "note": "Kurze Antwort auf „How are you?“. Natürlicher: „Fine, thanks.“" },
+            { "native": ["Wie geht es dir?"], "target": ["How are you?"], "note": "Feste Wendung: wörtlich „Wie bist du?“" },
+            { "native": ["Das ist mein Freund."], "target": ["This is my friend.", "That is my friend."], "note": "Beim Vorstellen von Personen sagt man „this is …“." },
+            { "native": ["Guten Abend, Herr Smith."], "target": ["Good evening, Mr Smith.", "Good evening, Mr. Smith."], "note": "„Herr“ = „Mr“ (britisch ohne Punkt, amerikanisch „Mr.“)." },
+            { "native": ["Ja, bitte."], "target": ["Yes, please."], "note": "Höfliche Zustimmung zu einem Angebot." }
+          ]
+        },
+        {
+          "id": "a1-people",
+          "title": "Menschen & Familie",
+          "description": "Familie, Personen und „sein“",
+          "words": [
+            { "native": ["Mutter"], "target": ["mother", "mum", "mom"] },
+            { "native": ["Vater"], "target": ["father", "dad"] },
+            { "native": ["Bruder"], "target": ["brother"] },
+            { "native": ["Schwester"], "target": ["sister"] },
+            { "native": ["Kind"], "target": ["child", "kid"], "note": "Mehrzahl unregelmäßig: „children“." },
+            { "native": ["Frau"], "target": ["woman", "wife"], "note": "„woman“ = Frau allgemein, „wife“ = Ehefrau." },
+            { "native": ["Mann"], "target": ["man", "husband"], "note": "„man“ = Mann allgemein, „husband“ = Ehemann." },
+            { "native": ["Familie"], "target": ["family"] },
+            { "native": ["groß"], "target": ["tall", "big"], "note": "Bei Menschen: „tall“, bei Dingen: „big“." },
+            { "native": ["jung"], "target": ["young"] },
+            { "native": ["alt"], "target": ["old"] },
+            { "native": ["nett"], "target": ["nice", "kind"] }
+          ],
+          "sentences": [
+            { "native": ["Meine Mutter ist nett."], "target": ["My mother is nice.", "My mum is nice.", "My mom is nice.", "My mother is kind."], "note": "„my“ ist für alle Geschlechter gleich: kein „meine/mein“-Unterschied." },
+            { "native": ["Er ist mein Bruder."], "target": ["He is my brother."], "note": "„er“ = „he“, „sie“ (Einzahl) = „she“." },
+            { "native": ["Wir sind eine Familie."], "target": ["We are a family."], "note": "„wir sind“ = „we are“." },
+            { "native": ["Sie ist jung."], "target": ["She is young."], "note": "„she is“ – bei Einzahl „sie“." },
+            { "native": ["Mein Vater ist groß."], "target": ["My father is tall.", "My dad is tall."], "note": "Körpergröße von Menschen: „tall“." },
+            { "native": ["Das Kind ist drei."], "target": ["The child is three.", "The kid is three."], "note": "Beim Alter reicht die Zahl: „She is ten.“ – ohne „years“." },
+            { "native": ["Hast du eine Schwester?"], "target": ["Do you have a sister?", "Have you got a sister?"], "note": "Fragen mit „have“ bildet man mit „do“: „Do you have …?“" },
+            { "native": ["Der Mann ist alt."], "target": ["The man is old."], "note": "„der/die/das“ = immer „the“." },
+            { "native": ["Sie sind Kinder."], "target": ["They are children.", "They are kids."], "note": "„sie“ (Mehrzahl) = „they“; „child“ → „children“." }
+          ]
+        },
+        {
+          "id": "a1-food",
+          "title": "Essen & Trinken",
+          "description": "Bestellen, mögen, Hunger haben",
+          "words": [
+            { "native": ["Wasser"], "target": ["water"] },
+            { "native": ["Brot"], "target": ["bread"] },
+            { "native": ["Apfel"], "target": ["apple"], "note": "Vor Vokal-Laut: „an apple“ statt „a apple“." },
+            { "native": ["Kaffee"], "target": ["coffee"] },
+            { "native": ["Tee"], "target": ["tea"] },
+            { "native": ["Milch"], "target": ["milk"] },
+            { "native": ["Käse"], "target": ["cheese"] },
+            { "native": ["Ei"], "target": ["egg"] },
+            { "native": ["essen"], "target": ["eat"] },
+            { "native": ["trinken"], "target": ["drink"] },
+            { "native": ["mögen"], "target": ["like"] },
+            { "native": ["Hunger"], "target": ["hunger"], "note": "„Ich habe Hunger“ sagt man mit Adjektiv: „I am hungry“." }
+          ],
+          "sentences": [
+            { "native": ["Ich trinke Wasser."], "target": ["I drink water.", "I am drinking water."], "note": "Gewohnheit: einfache Gegenwart „I drink“. Gerade jetzt: „I am drinking“." },
+            { "native": ["Sie isst einen Apfel."], "target": ["She eats an apple.", "She is eating an apple."], "note": "Bei „he/she/it“ bekommt das Verb ein -s: „she eats“." },
+            { "native": ["Ich mag Kaffee."], "target": ["I like coffee."], "note": "„mögen“ = „like“." },
+            { "native": ["Ich habe Hunger."], "target": ["I am hungry.", "I'm hungry."], "note": "Englisch nutzt „sein + Adjektiv“: „I am hungry“, nicht „I have hunger“." },
+            { "native": ["Wir essen Brot und Käse."], "target": ["We eat bread and cheese.", "We are eating bread and cheese."], "note": "„und“ = „and“." },
+            { "native": ["Magst du Tee?"], "target": ["Do you like tea?"], "note": "Fragen in der Gegenwart: „Do you …?“" },
+            { "native": ["Ein Kaffee mit Milch, bitte."], "target": ["A coffee with milk, please.", "One coffee with milk, please."], "note": "„please“ steht beim Bestellen oft am Satzende." },
+            { "native": ["Er trinkt keinen Tee."], "target": ["He does not drink tea.", "He doesn't drink tea."], "note": "Verneinung: „does not“ + Grundform, ohne -s." },
+            { "native": ["Das Ei ist gut."], "target": ["The egg is good."], "note": "„gut“ als Eigenschaft eines Dings: „good“." }
+          ]
+        },
+        {
+          "id": "a1-time",
+          "title": "Zahlen & Zeit",
+          "description": "Zahlen, Uhrzeit und Wochentage",
+          "words": [
+            { "native": ["eins"], "target": ["one"] },
+            { "native": ["zwei"], "target": ["two"] },
+            { "native": ["drei"], "target": ["three"] },
+            { "native": ["zehn"], "target": ["ten"] },
+            { "native": ["Tag"], "target": ["day"] },
+            { "native": ["Woche"], "target": ["week"] },
+            { "native": ["heute"], "target": ["today"] },
+            { "native": ["morgen"], "target": ["tomorrow"] },
+            { "native": ["Uhr"], "target": ["clock", "watch", "o'clock"], "note": "Uhrzeit: „five o'clock“. Gegenstand: „clock“ (Wand) oder „watch“ (Armband)." },
+            { "native": ["Montag"], "target": ["Monday"], "note": "Wochentage werden im Englischen großgeschrieben." },
+            { "native": ["Stunde"], "target": ["hour"], "note": "Das „h“ ist stumm: „an hour“." },
+            { "native": ["spät"], "target": ["late"] }
+          ],
+          "sentences": [
+            { "native": ["Es ist drei Uhr."], "target": ["It is three o'clock.", "It's three o'clock.", "It is three."], "note": "Volle Stunden: Zahl + „o'clock“." },
+            { "native": ["Heute ist Montag."], "target": ["Today is Monday.", "It is Monday today."], "note": "Wochentage immer großschreiben: „Monday“." },
+            { "native": ["Ich habe zwei Brüder."], "target": ["I have two brothers.", "I have got two brothers.", "I've got two brothers."], "note": "Regelmäßige Mehrzahl mit -s: „brother“ → „brothers“." },
+            { "native": ["Bis morgen!"], "target": ["See you tomorrow!", "Until tomorrow!"], "note": "Natürliche Verabschiedung: „See you tomorrow!“" },
+            { "native": ["Eine Woche hat sieben Tage."], "target": ["A week has seven days."], "note": "„hat“ bei „he/she/it“ = „has“." },
+            { "native": ["Es ist spät."], "target": ["It is late.", "It's late."], "note": "Bei Zeit und Wetter steht „it“ als Subjekt." },
+            { "native": ["Wie spät ist es?"], "target": ["What time is it?"], "note": "Feste Frage nach der Uhrzeit: „What time is it?“" },
+            { "native": ["Ich arbeite zehn Stunden."], "target": ["I work ten hours.", "I work for ten hours."], "note": "„hour“ → „hours“, das „h“ bleibt stumm." },
+            { "native": ["Der Tag ist lang."], "target": ["The day is long."], "note": "„lang“ = „long“." }
+          ]
+        },
+        {
+          "id": "a1-home",
+          "title": "Zuhause & Alltag",
+          "description": "Wohnung, Gegenstände, „es gibt“",
+          "words": [
+            { "native": ["Haus"], "target": ["house", "home"], "note": "„house“ = Gebäude, „home“ = Zuhause." },
+            { "native": ["Zimmer"], "target": ["room"] },
+            { "native": ["Küche"], "target": ["kitchen"] },
+            { "native": ["Tisch"], "target": ["table"] },
+            { "native": ["Stuhl"], "target": ["chair"] },
+            { "native": ["Bett"], "target": ["bed"] },
+            { "native": ["Tür"], "target": ["door"] },
+            { "native": ["Fenster"], "target": ["window"] },
+            { "native": ["schlafen"], "target": ["sleep"] },
+            { "native": ["wohnen"], "target": ["live"] },
+            { "native": ["klein"], "target": ["small", "little"] },
+            { "native": ["neu"], "target": ["new"] }
+          ],
+          "sentences": [
+            { "native": ["Ich wohne in Berlin."], "target": ["I live in Berlin."], "note": "„wohnen“ = „live“." },
+            { "native": ["Das Haus ist klein."], "target": ["The house is small.", "The house is little."], "note": "„small“ ist neutral, „little“ klingt oft gefühlvoll." },
+            { "native": ["Es gibt einen Tisch in der Küche."], "target": ["There is a table in the kitchen.", "There's a table in the kitchen."], "note": "„es gibt“ = „there is“ (Einzahl) bzw. „there are“ (Mehrzahl)." },
+            { "native": ["Die Tür ist neu."], "target": ["The door is new."], "note": "Adjektive ändern sich im Englischen nicht." },
+            { "native": ["Er schläft im Bett."], "target": ["He sleeps in bed.", "He is sleeping in bed.", "He sleeps in the bed.", "He is sleeping in the bed."], "note": "„in bed“ ohne Artikel bedeutet „im Bett (zum Schlafen)“." },
+            { "native": ["Mein Zimmer hat zwei Fenster."], "target": ["My room has two windows."], "note": "„my room has“ – dritte Person Einzahl → „has“." },
+            { "native": ["Wo ist der Stuhl?"], "target": ["Where is the chair?", "Where's the chair?"], "note": "„wo“ = „where“, nicht „who“ (= wer)." },
+            { "native": ["Wir sind zu Hause."], "target": ["We are at home.", "We are home."], "note": "„zu Hause“ = „at home“." },
+            { "native": ["Es gibt drei Zimmer."], "target": ["There are three rooms."], "note": "Mehrzahl: „there are“." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a2",
+      "title": "A2 · Aufbau",
+      "units": [
+        {
+          "id": "a2-travel",
+          "title": "Reisen",
+          "description": "Unterwegs sein, nach dem Weg fragen",
+          "words": [
+            { "native": ["Zug"], "target": ["train"] },
+            { "native": ["Bahnhof"], "target": ["station", "train station"] },
+            { "native": ["Fahrkarte"], "target": ["ticket"] },
+            { "native": ["Flughafen"], "target": ["airport"] },
+            { "native": ["Straße"], "target": ["street", "road"] },
+            { "native": ["links"], "target": ["left"] },
+            { "native": ["rechts"], "target": ["right"] },
+            { "native": ["Hotel"], "target": ["hotel"] },
+            { "native": ["Koffer"], "target": ["suitcase"] },
+            { "native": ["Karte"], "target": ["map", "card", "ticket"], "note": "Landkarte = „map“, Spielkarte/Bankkarte = „card“." },
+            { "native": ["reisen"], "target": ["travel"] },
+            { "native": ["weit"], "target": ["far"] }
+          ],
+          "sentences": [
+            { "native": ["Wo ist der Bahnhof?"], "target": ["Where is the station?", "Where is the train station?", "Where's the station?"], "note": "Nach dem Weg fragen: „Where is …?“" },
+            { "native": ["Eine Fahrkarte nach London, bitte."], "target": ["A ticket to London, please.", "One ticket to London, please."], "note": "Richtung mit „to“: „a ticket to London“." },
+            { "native": ["Gehen Sie nach links."], "target": ["Go left.", "Turn left."], "note": "Aufforderungen: Grundform des Verbs ohne Subjekt." },
+            { "native": ["Der Zug ist spät."], "target": ["The train is late."], "note": "„Verspätung haben“ = „to be late“." },
+            { "native": ["Ist es weit?"], "target": ["Is it far?"], "note": "Fragen mit „be“: Verb nach vorn – „Is it …?“" },
+            { "native": ["Ich reise gern."], "target": ["I like travelling.", "I like traveling.", "I like to travel."], "note": "„gern tun“ = „like + -ing“ oder „like to …“." },
+            { "native": ["Mein Koffer ist im Hotel."], "target": ["My suitcase is in the hotel.", "My suitcase is at the hotel."], "note": "„im“ = „in the“." },
+            { "native": ["Das Hotel ist rechts."], "target": ["The hotel is on the right.", "The hotel is to the right."], "note": "Position: „on the right / on the left“." },
+            { "native": ["Wir fahren zum Flughafen."], "target": ["We are going to the airport.", "We go to the airport.", "We are driving to the airport."], "note": "„fahren“ ist oft einfach „go“; „drive“ nur, wenn man selbst fährt." }
+          ]
+        },
+        {
+          "id": "a2-shopping",
+          "title": "Einkaufen",
+          "description": "Preise, Größen, bezahlen",
+          "words": [
+            { "native": ["Geschäft"], "target": ["shop", "store"] },
+            { "native": ["Preis"], "target": ["price"] },
+            { "native": ["teuer"], "target": ["expensive"] },
+            { "native": ["billig"], "target": ["cheap"] },
+            { "native": ["kaufen"], "target": ["buy"] },
+            { "native": ["bezahlen"], "target": ["pay"] },
+            { "native": ["Geld"], "target": ["money"], "note": "„money“ ist nicht zählbar: kein „moneys“." },
+            { "native": ["Hemd"], "target": ["shirt"] },
+            { "native": ["Schuhe"], "target": ["shoes"] },
+            { "native": ["Größe"], "target": ["size"] },
+            { "native": ["offen"], "target": ["open"] },
+            { "native": ["geschlossen"], "target": ["closed"] }
+          ],
+          "sentences": [
+            { "native": ["Wie viel kostet das?"], "target": ["How much is this?", "How much does this cost?", "How much is that?", "How much does that cost?"], "note": "Preisfrage: „How much …?“" },
+            { "native": ["Das ist zu teuer."], "target": ["That is too expensive.", "This is too expensive.", "That's too expensive."], "note": "„zu“ vor einem Adjektiv = „too“." },
+            { "native": ["Ich möchte dieses Hemd kaufen."], "target": ["I would like to buy this shirt.", "I'd like to buy this shirt.", "I want to buy this shirt."], "note": "Höflich: „I would like to …“" },
+            { "native": ["Kann ich mit Karte bezahlen?"], "target": ["Can I pay by card?", "Can I pay with card?", "Can I pay with a card?"], "note": "„mit Karte“ = „by card“." },
+            { "native": ["Das Geschäft ist geschlossen."], "target": ["The shop is closed.", "The store is closed."], "note": "„shop“ (britisch), „store“ (amerikanisch)." },
+            { "native": ["Haben Sie das in Größe 40?"], "target": ["Do you have this in size 40?", "Do you have that in size 40?", "Have you got this in size 40?"], "note": "„in size …“ – ohne Artikel." },
+            { "native": ["Die Schuhe sind billig."], "target": ["The shoes are cheap."], "note": "Mehrzahl → „are“." },
+            { "native": ["Ich habe kein Geld."], "target": ["I have no money.", "I do not have any money.", "I don't have any money."], "note": "„kein“ = „no“ oder „not … any“." },
+            { "native": ["Ist der Laden heute offen?"], "target": ["Is the shop open today?", "Is the store open today?"], "note": "„open“ ist hier ein Adjektiv: „is open“." }
+          ]
+        },
+        {
+          "id": "a2-work",
+          "title": "Arbeit & Lernen",
+          "description": "Beruf, Büro, Schule",
+          "words": [
+            { "native": ["Arbeit"], "target": ["work", "job"], "note": "„work“ = Tätigkeit (unzählbar), „job“ = Stelle." },
+            { "native": ["Büro"], "target": ["office"] },
+            { "native": ["Lehrer"], "target": ["teacher"] },
+            { "native": ["Schule"], "target": ["school"] },
+            { "native": ["lernen"], "target": ["learn", "study"] },
+            { "native": ["schreiben"], "target": ["write"] },
+            { "native": ["lesen"], "target": ["read"] },
+            { "native": ["Kollege"], "target": ["colleague"] },
+            { "native": ["Treffen"], "target": ["meeting"] },
+            { "native": ["beschäftigt"], "target": ["busy"] },
+            { "native": ["einfach"], "target": ["easy", "simple"] },
+            { "native": ["schwierig"], "target": ["difficult", "hard"] }
+          ],
+          "sentences": [
+            { "native": ["Ich arbeite in einem Büro."], "target": ["I work in an office."], "note": "„office“ beginnt mit Vokal-Laut → „an office“." },
+            { "native": ["Sie ist Lehrerin."], "target": ["She is a teacher."], "note": "Bei Berufen steht im Englischen „a/an“: „She is a teacher.“" },
+            { "native": ["Ich lerne Englisch."], "target": ["I learn English.", "I am learning English.", "I study English.", "I'm learning English."], "note": "Sprachen schreibt man groß: „English“." },
+            { "native": ["Das Treffen ist um zehn."], "target": ["The meeting is at ten.", "The meeting is at ten o'clock."], "note": "Uhrzeit mit „at“: „at ten“." },
+            { "native": ["Ich bin heute beschäftigt."], "target": ["I am busy today.", "I'm busy today."], "note": "„beschäftigt“ = „busy“." },
+            { "native": ["Er liest ein Buch."], "target": ["He reads a book.", "He is reading a book."], "note": "Gerade jetzt: „is reading“ (Verlaufsform)." },
+            { "native": ["Die Aufgabe ist schwierig."], "target": ["The task is difficult.", "The task is hard.", "The exercise is difficult."], "note": "„difficult“ und „hard“ sind hier beide richtig." },
+            { "native": ["Mein Kollege schreibt eine E-Mail."], "target": ["My colleague writes an email.", "My colleague is writing an email.", "My colleague is writing an e-mail."], "note": "„email“ beginnt mit Vokal-Laut → „an email“." },
+            { "native": ["Englisch ist einfach."], "target": ["English is easy."], "note": "„easy“ = leicht zu tun, „simple“ = schlicht." }
+          ]
+        },
+        {
+          "id": "a2-past",
+          "title": "Vergangenheit",
+          "description": "Was gestern war: Simple Past",
+          "words": [
+            { "native": ["gestern"], "target": ["yesterday"] },
+            { "native": ["letzte"], "target": ["last"], "note": "„letzte Woche“ = „last week“ – ohne „the“." },
+            { "native": ["war"], "target": ["was"], "note": "„I/he/she/it was“, aber „you/we/they were“." },
+            { "native": ["waren"], "target": ["were"] },
+            { "native": ["ging"], "target": ["went"], "note": "Unregelmäßig: go → went." },
+            { "native": ["sah"], "target": ["saw"], "note": "Unregelmäßig: see → saw." },
+            { "native": ["machte"], "target": ["made", "did"], "note": "„make“ → „made“ (herstellen), „do“ → „did“ (tun)." },
+            { "native": ["vor"], "target": ["ago", "before"], "note": "„vor zwei Tagen“ = „two days ago“ – „ago“ steht hinten." },
+            { "native": ["Urlaub"], "target": ["holiday", "vacation"] },
+            { "native": ["Film"], "target": ["film", "movie"] },
+            { "native": ["spielte"], "target": ["played"], "note": "Regelmäßig: Verb + -ed." },
+            { "native": ["kaufte"], "target": ["bought"], "note": "Unregelmäßig: buy → bought." }
+          ],
+          "sentences": [
+            { "native": ["Gestern war ich müde."], "target": ["Yesterday I was tired.", "I was tired yesterday."], "note": "„ich war“ = „I was“. Zeitangaben stehen oft am Satzende." },
+            { "native": ["Wir gingen ins Kino."], "target": ["We went to the cinema.", "We went to the movies."], "note": "go → went (unregelmäßig)." },
+            { "native": ["Ich sah einen Film."], "target": ["I saw a film.", "I saw a movie.", "I watched a film.", "I watched a movie."], "note": "„see“ → „saw“; für Filme auch „watch“ → „watched“." },
+            { "native": ["Sie kaufte Brot."], "target": ["She bought bread.", "She bought some bread."], "note": "buy → bought (unregelmäßig)." },
+            { "native": ["Letzte Woche war ich im Urlaub."], "target": ["Last week I was on holiday.", "I was on holiday last week.", "Last week I was on vacation.", "I was on vacation last week."], "note": "„im Urlaub sein“ = „to be on holiday“." },
+            { "native": ["Er spielte Fußball."], "target": ["He played football.", "He played soccer."], "note": "Regelmäßige Verben: + -ed." },
+            { "native": ["Wo warst du?"], "target": ["Where were you?"], "note": "Bei „you“ immer „were“." },
+            { "native": ["Das war vor zwei Tagen."], "target": ["That was two days ago.", "It was two days ago."], "note": "„ago“ steht nach der Zeitangabe." },
+            { "native": ["Ich habe das nicht gemacht."], "target": ["I did not do that.", "I didn't do that.", "I did not do it.", "I didn't do it."], "note": "Verneinung im Simple Past: „did not“ + Grundform." }
+          ]
+        },
+        {
+          "id": "a2-health",
+          "title": "Gesundheit",
+          "description": "Körper, Beschwerden, Arztbesuch",
+          "words": [
+            { "native": ["Kopf"], "target": ["head"] },
+            { "native": ["Hand"], "target": ["hand"] },
+            { "native": ["Arzt"], "target": ["doctor"] },
+            { "native": ["krank"], "target": ["ill", "sick"] },
+            { "native": ["gesund"], "target": ["healthy"] },
+            { "native": ["müde"], "target": ["tired"] },
+            { "native": ["Schmerzen"], "target": ["pain"] },
+            { "native": ["Tablette"], "target": ["pill", "tablet"] },
+            { "native": ["Bauch"], "target": ["stomach", "belly"] },
+            { "native": ["helfen"], "target": ["help"] },
+            { "native": ["Termin"], "target": ["appointment"] },
+            { "native": ["Fieber"], "target": ["fever", "temperature"] }
+          ],
+          "sentences": [
+            { "native": ["Ich bin krank."], "target": ["I am ill.", "I am sick.", "I'm ill.", "I'm sick."], "note": "„ill“ (eher britisch) und „sick“ (eher amerikanisch)." },
+            { "native": ["Ich habe Kopfschmerzen."], "target": ["I have a headache.", "I've got a headache.", "I have got a headache."], "note": "Kopf + Schmerz = „headache“, mit „a“." },
+            { "native": ["Ich brauche einen Arzt."], "target": ["I need a doctor."], "note": "„brauchen“ = „need“." },
+            { "native": ["Können Sie mir helfen?"], "target": ["Can you help me?", "Could you help me?"], "note": "„Could you …?“ ist besonders höflich." },
+            { "native": ["Er hat Fieber."], "target": ["He has a fever.", "He has a temperature.", "He's got a fever.", "He has got a fever."], "note": "Britisch oft: „to have a temperature“." },
+            { "native": ["Mein Bauch tut weh."], "target": ["My stomach hurts.", "My belly hurts."], "note": "„weh tun“ = „hurt“; bei „it“ mit -s: „hurts“." },
+            { "native": ["Ich habe einen Termin."], "target": ["I have an appointment.", "I've got an appointment."], "note": "Termin beim Arzt = „appointment“ (Vokal → „an“)." },
+            { "native": ["Nimm eine Tablette."], "target": ["Take a pill.", "Take a tablet."], "note": "Medikamente „nehmen“ = „take“." },
+            { "native": ["Sie ist wieder gesund."], "target": ["She is healthy again.", "She is well again.", "She's well again."], "note": "„wieder gesund“ wird oft „well again“ ausgedrückt." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "b1",
+      "title": "B1 · Selbstständig",
+      "units": [
+        {
+          "id": "b1-opinions",
+          "title": "Meinungen",
+          "description": "Zustimmen, widersprechen, begründen",
+          "words": [
+            { "native": ["denken"], "target": ["think"] },
+            { "native": ["glauben"], "target": ["believe"] },
+            { "native": ["Meinung"], "target": ["opinion"] },
+            { "native": ["zustimmen"], "target": ["agree"] },
+            { "native": ["weil"], "target": ["because"] },
+            { "native": ["aber"], "target": ["but"] },
+            { "native": ["vielleicht"], "target": ["maybe", "perhaps"] },
+            { "native": ["wichtig"], "target": ["important"] },
+            { "native": ["wahr"], "target": ["true"] },
+            { "native": ["falsch"], "target": ["wrong", "false"] },
+            { "native": ["besser"], "target": ["better"], "note": "Unregelmäßige Steigerung: good → better → best." },
+            { "native": ["sicher"], "target": ["sure", "safe"], "note": "„sure“ = überzeugt, „safe“ = ungefährlich." }
+          ],
+          "sentences": [
+            { "native": ["Ich denke, das ist wahr."], "target": ["I think that is true.", "I think it is true.", "I think that's true.", "I think it's true.", "I think this is true."], "note": "„I think“ + Satz – „that“ ist optional." },
+            { "native": ["Ich stimme dir zu."], "target": ["I agree with you.", "I agree."], "note": "„agree with someone“ – kein „am“: nicht „I am agree“." },
+            { "native": ["Meiner Meinung nach ist das falsch."], "target": ["In my opinion that is wrong.", "In my opinion, that is wrong.", "In my opinion, it is wrong.", "In my opinion that's wrong."], "note": "„meiner Meinung nach“ = „in my opinion“." },
+            { "native": ["Vielleicht hast du recht."], "target": ["Maybe you are right.", "Perhaps you are right.", "Maybe you're right.", "Perhaps you're right."], "note": "„recht haben“ = „to be right“." },
+            { "native": ["Das ist wichtig, weil es hilft."], "target": ["That is important because it helps.", "This is important because it helps.", "It is important because it helps."], "note": "Nach „because“ bleibt die normale Wortstellung." },
+            { "native": ["Ich bin nicht sicher."], "target": ["I am not sure.", "I'm not sure."], "note": "Unsicherheit: „not sure“." },
+            { "native": ["Das ist eine bessere Idee."], "target": ["That is a better idea.", "That's a better idea.", "This is a better idea."], "note": "good → better (Komparativ)." },
+            { "native": ["Ich glaube dir."], "target": ["I believe you."], "note": "„believe someone“ – ohne Präposition." },
+            { "native": ["Es ist gut, aber teuer."], "target": ["It is good but expensive.", "It is good, but expensive.", "It's good but expensive.", "It's good, but expensive."], "note": "„aber“ = „but“." }
+          ]
+        },
+        {
+          "id": "b1-future",
+          "title": "Pläne & Zukunft",
+          "description": "will, going to, Pläne machen",
+          "words": [
+            { "native": ["Plan"], "target": ["plan"] },
+            { "native": ["Zukunft"], "target": ["future"] },
+            { "native": ["bald"], "target": ["soon"] },
+            { "native": ["nächste"], "target": ["next"] },
+            { "native": ["hoffen"], "target": ["hope"] },
+            { "native": ["vergessen"], "target": ["forget"] },
+            { "native": ["anrufen"], "target": ["call", "phone"] },
+            { "native": ["später"], "target": ["later"] },
+            { "native": ["Wochenende"], "target": ["weekend"] },
+            { "native": ["umziehen"], "target": ["move"] },
+            { "native": ["vielleicht nicht"], "target": ["maybe not", "perhaps not"] },
+            { "native": ["Jahr"], "target": ["year"] }
+          ],
+          "sentences": [
+            { "native": ["Ich rufe dich später an."], "target": ["I will call you later.", "I'll call you later.", "I will phone you later."], "note": "Spontane Zusage: „will“ + Grundform." },
+            { "native": ["Wir ziehen nächstes Jahr um."], "target": ["We are moving next year.", "We are going to move next year.", "We will move next year."], "note": "Feste Pläne: „be going to“ oder Verlaufsform." },
+            { "native": ["Was machst du am Wochenende?"], "target": ["What are you doing at the weekend?", "What are you doing on the weekend?", "What are you doing this weekend?"], "note": "Pläne erfragen mit Verlaufsform: „What are you doing …?“" },
+            { "native": ["Ich hoffe, es regnet nicht."], "target": ["I hope it does not rain.", "I hope it doesn't rain.", "I hope it will not rain.", "I hope it won't rain."], "note": "Nach „hope“ oft Gegenwart mit Zukunftsbedeutung." },
+            { "native": ["Vergiss es nicht!"], "target": ["Do not forget it!", "Don't forget it!", "Don't forget!"], "note": "Verneinte Aufforderung: „Don't …!“" },
+            { "native": ["Ich werde bald Englisch sprechen."], "target": ["I will speak English soon.", "I will soon speak English.", "I'll speak English soon."], "note": "Zukunft mit „will“: will + Grundform." },
+            { "native": ["Hast du einen Plan?"], "target": ["Do you have a plan?", "Have you got a plan?"], "note": "„Do you have …?“ ist überall üblich." },
+            { "native": ["Die Zukunft ist offen."], "target": ["The future is open."], "note": "„future“ mit „the“, wenn allgemein gemeint." },
+            { "native": ["Nächste Woche fliege ich nach Rom."], "target": ["Next week I am flying to Rome.", "I am flying to Rome next week.", "Next week I will fly to Rome.", "I'm flying to Rome next week."], "note": "„nächste Woche“ = „next week“, ohne „the“." }
+          ]
+        }
+      ]
+    }
+  ]
+}

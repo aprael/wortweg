@@ -1,0 +1,170 @@
+{
+  "id": "de-es",
+  "title": "Spanisch",
+  "subtitle": "Spanisch lernen von Deutsch aus (Demo)",
+  "nativeLang": "de",
+  "targetLang": "es",
+  "ttsLang": "es-ES",
+  "demo": true,
+  "license": "Eigene Demo-Inhalte (Wortweg-Projekt), CC0 1.0",
+  "levels": [
+    {
+      "id": "a1",
+      "title": "A1 · Einstieg",
+      "units": [
+        {
+          "id": "es-a1-greetings",
+          "title": "Begrüßung",
+          "description": "Hallo sagen und sich vorstellen",
+          "words": [
+            { "native": ["Hallo"], "target": ["hola"] },
+            { "native": ["danke"], "target": ["gracias"] },
+            { "native": ["bitte"], "target": ["por favor"] },
+            { "native": ["ja"], "target": ["sí"], "note": "Mit Akzent „sí“ = ja, ohne Akzent „si“ = wenn." },
+            { "native": ["nein"], "target": ["no"] },
+            { "native": ["Freund"], "target": ["amigo"], "note": "Freundin = „amiga“." },
+            { "native": ["gut"], "target": ["bien", "bueno"], "note": "„bien“ ist ein Adverb (Me va bien), „bueno“ ein Adjektiv." },
+            { "native": ["Name"], "target": ["nombre"] }
+          ],
+          "sentences": [
+            { "native": ["Hallo, ich bin Anna."], "target": ["Hola, soy Anna.", "Hola, yo soy Anna."], "note": "„soy“ = ich bin; das „yo“ (ich) lässt man meist weg." },
+            { "native": ["Wie heißt du?"], "target": ["¿Cómo te llamas?", "Cómo te llamas?", "Como te llamas?"], "note": "Fragen beginnen im Spanischen mit „¿“." },
+            { "native": ["Mein Name ist Tom."], "target": ["Mi nombre es Tom.", "Me llamo Tom."], "note": "„Me llamo …“ ist die übliche Vorstellung." },
+            { "native": ["Danke, gut."], "target": ["Gracias, bien.", "Bien, gracias."], "note": "Kurze Antwort auf „¿Qué tal?“" },
+            { "native": ["Er ist mein Freund."], "target": ["Él es mi amigo.", "El es mi amigo.", "Es mi amigo."], "note": "„él“ (mit Akzent) = er; „el“ = der." },
+            { "native": ["Ja, bitte."], "target": ["Sí, por favor.", "Si, por favor."], "note": "„por favor“ = bitte (beim Bitten)." },
+            { "native": ["Guten Morgen!"], "target": ["¡Buenos días!"], "note": "Wörtlich „Gute Tage“ – der Gruß steht im Plural. „¡“ eröffnet einen Ausruf, so wie „¿“ eine Frage." }
+          ]
+        },
+        {
+          "id": "es-a1-food",
+          "title": "Essen & Trinken",
+          "description": "Bestellen und mögen",
+          "words": [
+            { "native": ["Wasser"], "target": ["agua"] },
+            { "native": ["Brot"], "target": ["pan"] },
+            { "native": ["Kaffee"], "target": ["café", "cafe"] },
+            { "native": ["Milch"], "target": ["leche"] },
+            { "native": ["Apfel"], "target": ["manzana"] },
+            { "native": ["essen"], "target": ["comer"] },
+            { "native": ["trinken"], "target": ["beber", "tomar"] },
+            { "native": ["Käse"], "target": ["queso"] }
+          ],
+          "sentences": [
+            { "native": ["Ich trinke Wasser."], "target": ["Bebo agua.", "Yo bebo agua.", "Tomo agua."], "note": "Die Verbendung -o zeigt „ich“: „bebo“." },
+            { "native": ["Ich mag Kaffee."], "target": ["Me gusta el café.", "Me gusta el cafe."], "note": "Wörtlich: „Mir gefällt der Kaffee“ – mit Artikel." },
+            { "native": ["Ein Kaffee mit Milch, bitte."], "target": ["Un café con leche, por favor.", "Un cafe con leche, por favor."], "note": "„mit“ = „con“." },
+            { "native": ["Wir essen Brot und Käse."], "target": ["Comemos pan y queso.", "Nosotros comemos pan y queso."], "note": "Endung -emos = „wir“." },
+            { "native": ["Sie isst einen Apfel."], "target": ["Ella come una manzana.", "Come una manzana."], "note": "„manzana“ ist weiblich → „una“." },
+            { "native": ["Das Brot ist gut."], "target": ["El pan es bueno.", "El pan está bueno."], "note": "„está bueno“ = schmeckt gut (Zustand)." },
+            { "native": ["Ich esse keinen Käse."], "target": ["No como queso.", "Yo no como queso."], "note": "Verneinung: „no“ steht direkt vor dem Verb. Für „kein“ braucht man kein eigenes Wort." }
+          ]
+        },
+        {
+          "id": "es-a1-me",
+          "title": "Ich & du",
+          "description": "Herkunft, Wohnort, Sprachen und Alter",
+          "words": [
+            { "native": ["ich"], "target": ["yo"], "note": "Meist weggelassen, weil die Verbendung die Person schon zeigt." },
+            { "native": ["du"], "target": ["tú"], "note": "Mit Akzent „tú“ = du; ohne Akzent „tu“ = dein." },
+            { "native": ["wohnen"], "target": ["vivir"], "note": "Bedeutet auch „leben“." },
+            { "native": ["sprechen"], "target": ["hablar"], "note": "Das „h“ ist im Spanischen immer stumm." },
+            { "native": ["Deutschland"], "target": ["Alemania"] },
+            { "native": ["Spanisch"], "target": ["español"], "note": "Sprachen schreibt man im Spanischen klein. Das „ñ“ klingt wie „nj“." },
+            { "native": ["Jahr"], "target": ["año"], "note": "Auf das „ñ“ achten: „año“ = Jahr." },
+            { "native": ["Student"], "target": ["estudiante"], "note": "Gleiche Form für Student und Studentin: „el/la estudiante“." }
+          ],
+          "sentences": [
+            { "native": ["Ich wohne in Berlin."], "target": ["Vivo en Berlín.", "Yo vivo en Berlín."], "note": "„vivo“ = ich wohne. Auf Spanisch schreibt man „Berlín“ mit Akzent." },
+            { "native": ["Woher kommst du?"], "target": ["¿De dónde eres?", "¿De dónde eres tú?", "¿De dónde vienes?", "¿De dónde vienes tú?"], "note": "Wörtlich „Von wo bist du?“. Fragewörter wie „dónde“ tragen immer einen Akzent." },
+            { "native": ["Ich bin aus Deutschland."], "target": ["Soy de Alemania.", "Yo soy de Alemania.", "Vengo de Alemania."], "note": "Herkunft drückt man mit „ser de“ aus: „soy de …“ = ich bin aus …" },
+            { "native": ["Sprichst du Spanisch?"], "target": ["¿Hablas español?", "¿Tú hablas español?", "¿Hablas tú español?"], "note": "Die Endung -as zeigt „du“: hablar → hablas." },
+            { "native": ["Ja, ich spreche ein bisschen Spanisch."], "target": ["Sí, hablo un poco de español.", "Sí, yo hablo un poco de español."], "note": "„un poco de …“ = ein bisschen … Die Endung -o zeigt „ich“: „hablo“." },
+            { "native": ["Ich bin zwanzig Jahre alt."], "target": ["Tengo veinte años.", "Yo tengo veinte años."], "note": "Das Alter gibt man mit „tener“ (haben) an: wörtlich „Ich habe zwanzig Jahre“." },
+            { "native": ["Bist du Student?"], "target": ["¿Eres estudiante?", "¿Tú eres estudiante?", "¿Eres tú estudiante?"], "note": "„eres“ = du bist (von „ser“). Bei Berufen steht kein Artikel." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a1-alltag",
+      "title": "A1 · Alltag",
+      "units": [
+        {
+          "id": "es-a1-time",
+          "title": "Zahlen & Zeit",
+          "description": "Uhrzeit, Preise und Tage",
+          "words": [
+            { "native": ["eins"], "target": ["uno"], "note": "Vor männlichen Nomen wird „uno“ zu „un“: „un café“." },
+            { "native": ["zwei"], "target": ["dos"] },
+            { "native": ["drei"], "target": ["tres"] },
+            { "native": ["zehn"], "target": ["diez"], "note": "Das „z“ spricht man in Spanien wie das englische „th“." },
+            { "native": ["heute"], "target": ["hoy"] },
+            { "native": ["morgen"], "target": ["mañana"], "note": "„la mañana“ (mit Artikel) heißt „der Morgen/Vormittag“." },
+            { "native": ["Stunde"], "target": ["hora"], "note": "Auch für die Uhrzeit: „¿Qué hora es?“" },
+            { "native": ["Tag"], "target": ["día"], "note": "Endet auf -a, ist aber männlich: „el día“." }
+          ],
+          "sentences": [
+            { "native": ["Wie spät ist es?"], "target": ["¿Qué hora es?"], "note": "Wörtlich „Welche Stunde ist es?“. Das Fragewort „qué“ trägt einen Akzent." },
+            { "native": ["Es ist ein Uhr."], "target": ["Es la una."], "note": "Bei ein Uhr steht der Singular „es la una“; „una“ ist weiblich wie „la hora“." },
+            { "native": ["Es ist drei Uhr."], "target": ["Son las tres."], "note": "Ab zwei Uhr steht der Plural: „son las …“." },
+            { "native": ["Heute habe ich Zeit."], "target": ["Hoy tengo tiempo.", "Tengo tiempo hoy."], "note": "„tiempo“ = Zeit (auch: Wetter). Die Uhrzeit dagegen ist „la hora“." },
+            { "native": ["Bis morgen!"], "target": ["¡Hasta mañana!"], "note": "„hasta“ = bis. Das „h“ ist stumm." },
+            { "native": ["Ein Kaffee kostet zwei Euro."], "target": ["Un café cuesta dos euros."], "note": "„cuesta“ kommt von „costar“ (kosten). „euro“ bekommt im Plural ein -s." },
+            { "native": ["Ich lerne jeden Tag."], "target": ["Aprendo todos los días.", "Yo aprendo todos los días.", "Estudio todos los días."], "note": "„jeden Tag“ heißt wörtlich „alle die Tage“: „todos los días“." },
+            { "native": ["Der Zug kommt in zehn Minuten."], "target": ["El tren llega en diez minutos.", "El tren viene en diez minutos."], "note": "„llega“ kommt von „llegar“ (ankommen). „en“ + Zeitangabe = in." }
+          ]
+        },
+        {
+          "id": "es-a1-family",
+          "title": "Familie",
+          "description": "Familienmitglieder vorstellen",
+          "words": [
+            { "native": ["Mutter"], "target": ["madre"], "note": "Umgangssprachlich: „mamá“." },
+            { "native": ["Vater"], "target": ["padre"], "note": "Umgangssprachlich: „papá“." },
+            { "native": ["Bruder"], "target": ["hermano"], "note": "Das „h“ ist stumm." },
+            { "native": ["Schwester"], "target": ["hermana"] },
+            { "native": ["Sohn"], "target": ["hijo"], "note": "Tochter = „hija“. Das „j“ klingt wie ein kräftiges deutsches „ch“." },
+            { "native": ["Großmutter", "Oma"], "target": ["abuela"], "note": "Großvater = „abuelo“." },
+            { "native": ["Familie"], "target": ["familia"] },
+            { "native": ["klein"], "target": ["pequeño"], "note": "Weiblich: „pequeña“." }
+          ],
+          "sentences": [
+            { "native": ["Das ist meine Mutter."], "target": ["Esta es mi madre."], "note": "„esta“ = diese, weiblich wie „madre“. „mi“ = mein/meine." },
+            { "native": ["Mein Vater heißt Juan."], "target": ["Mi padre se llama Juan."], "note": "„se llama“ = er heißt (wörtlich: er nennt sich)." },
+            { "native": ["Ich habe einen Bruder und eine Schwester."], "target": ["Tengo un hermano y una hermana.", "Yo tengo un hermano y una hermana."], "note": "„un“ steht vor männlichen, „una“ vor weiblichen Nomen." },
+            { "native": ["Meine Großmutter wohnt in Madrid.", "Meine Oma wohnt in Madrid."], "target": ["Mi abuela vive en Madrid."], "note": "„vive“ = sie wohnt. Die Endung -e zeigt „er/sie“ bei Verben auf -ir." },
+            { "native": ["Wir sind eine große Familie."], "target": ["Somos una familia grande.", "Somos una gran familia.", "Nosotros somos una familia grande."], "note": "Adjektive stehen meist nach dem Nomen. Davor wird „grande“ zu „gran“." },
+            { "native": ["Unser Sohn ist klein."], "target": ["Nuestro hijo es pequeño."], "note": "„nuestro“ = unser; vor weiblichen Nomen „nuestra“." },
+            { "native": ["Hast du Geschwister?"], "target": ["¿Tienes hermanos?", "¿Tú tienes hermanos?"], "note": "„hermanos“ (Plural) heißt Brüder oder allgemein Geschwister." }
+          ]
+        },
+        {
+          "id": "es-a1-city",
+          "title": "Stadt & Wege",
+          "description": "Nach dem Weg fragen und Wege beschreiben",
+          "words": [
+            { "native": ["Stadt"], "target": ["ciudad"] },
+            { "native": ["Straße"], "target": ["calle"], "note": "Das „ll“ spricht man meist wie ein deutsches „j“." },
+            { "native": ["Bahnhof"], "target": ["estación"] },
+            { "native": ["links"], "target": ["izquierda"], "note": "„a la izquierda“ = nach links." },
+            { "native": ["rechts"], "target": ["derecha"], "note": "„a la derecha“ = nach rechts." },
+            { "native": ["geradeaus"], "target": ["todo recto", "recto"] },
+            { "native": ["nah", "in der Nähe"], "target": ["cerca"], "note": "Gegenteil: „lejos“ (weit weg)." },
+            { "native": ["wo"], "target": ["dónde"], "note": "Als Fragewort immer mit Akzent." }
+          ],
+          "sentences": [
+            { "native": ["Wo ist der Bahnhof?"], "target": ["¿Dónde está la estación?"], "note": "Für den Ort benutzt man „estar“: „está“ = ist (befindet sich)." },
+            { "native": ["Der Bahnhof ist in der Nähe.", "Der Bahnhof ist nah."], "target": ["La estación está cerca."], "note": "„cerca“ = nah. „estación“ ist weiblich: „la estación“." },
+            { "native": ["Bieg links ab."], "target": ["Gira a la izquierda.", "Dobla a la izquierda."], "note": "„gira“ ist die Befehlsform von „girar“ (abbiegen) für „du“." },
+            { "native": ["Geh geradeaus."], "target": ["Sigue todo recto.", "Sigue recto.", "Ve todo recto."], "note": "„sigue“ = geh weiter (von „seguir“). „todo recto“ = immer geradeaus." },
+            { "native": ["Das Hotel ist rechts."], "target": ["El hotel está a la derecha."], "note": "„a la derecha“ = rechts, auf der rechten Seite. Das „h“ in „hotel“ ist stumm." },
+            { "native": ["Ich suche eine Apotheke."], "target": ["Busco una farmacia.", "Yo busco una farmacia.", "Estoy buscando una farmacia."], "note": "„buscar“ = suchen – ohne Präposition danach." },
+            { "native": ["Die Stadt ist sehr schön."], "target": ["La ciudad es muy bonita.", "La ciudad es muy bella.", "La ciudad es muy linda."], "note": "„ciudad“ ist weiblich, deshalb „bonita“. „muy“ = sehr." },
+            { "native": ["Ich wohne in dieser Straße."], "target": ["Vivo en esta calle.", "Yo vivo en esta calle."], "note": "„calle“ ist weiblich, deshalb „esta calle“." }
+          ]
+        }
+      ]
+    }
+  ]
+}

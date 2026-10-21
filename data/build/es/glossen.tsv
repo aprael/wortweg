@@ -1,0 +1,1036 @@
+# Von Hand geprüfte deutsche Bedeutungen der häufigsten spanischen Lemmata (Rang 1 bis etwa 1.000), Stand 21.10.2026.
+# Spalten (Tab): Lemma · Bedeutungen (" | ", erste = Hauptbedeutung; Nomen mit und ohne Artikel; "-" = Lemma nicht aufnehmen)
+#   · Zielformen (optional, " | "; sonst automatisch, Nomen mit Artikel) · Hinweis (optional, erscheint beim Wort).
+# Lemmata ohne Eintrag bekommen ihre Bedeutung automatisch aus WikDict/Wiktionary (siehe scripts/build-course-es.mjs).
+el	der/die/das (Artikel)	el	Formen: la (weiblich), los, las (Plural).
+de	von | aus
+que	dass | als (Vergleich)
+no	nicht | nein
+ser	sein (dauerhaft)		ser: Wesen, Herkunft, Beruf, Uhrzeit; estar: Zustand und Ort.
+a	nach, zu (Richtung)
+lo	ihn, es (Akkusativ)
+un	ein, eine	un | una
+estar	sein (Zustand, Ort) | sich befinden		estar: Zustand und Ort; ser: Wesen und Eigenschaften.
+y	und
+en	in | auf
+ir	gehen | fahren
+tener	haben | besitzen		tener que + Infinitiv = müssen.
+por	durch, wegen | pro
+qué	was (Frage) | welcher
+haber	haben (Hilfsverb) | es gibt (hay)
+me	mich, mir
+hacer	machen | tun
+poder	können | dürfen
+se	sich
+te	dich, dir
+con	mit
+decir	sagen
+para	für | um zu
+mi	mein, meine
+saber	wissen
+su	sein, ihr (Possessiv)
+querer	wollen | lieben, mögen
+este	dieser, diese
+todo	alles, alle | ganz
+pero	aber
+sí	ja
+si	wenn, falls | ob
+bien	gut (Adverb) | wohl
+eso	das (da)
+ver	sehen
+yo	ich
+tu	dein, deine
+bueno	gut
+le	ihm, ihr (Dativ)
+como	wie | als
+aquí	hier
+ese	dieser (da), jener
+más	mehr
+solo	nur | allein
+ahí	da
+uno	eins, einer | man
+esto	das (hier) | dies
+creer	glauben
+e	und (vor i-/hi-)
+deber	müssen, sollen | schulden
+ya	schon | bereits
+dar	geben
+ahora	jetzt | nun
+muy	sehr
+así	so | auf diese Weise
+algo	etwas
+pasar	passieren | verbringen
+dejar	lassen | zurücklassen
+vez	das Mal | Mal	la vez | vez
+hablar	sprechen | reden
+él	er
+cuando	wenn, als (zeitlich)
+tú	du
+nada	nichts
+nos	uns
+cómo	wie (Frage)
+o	oder
+venir	kommen
+otro	anderer, andere | noch ein
+mucho	viel
+ella	sie (Singular)
+pensar	denken | nachdenken
+gracias	danke
+esperar	warten | hoffen | erwarten
+cosa	die Sache | Sache | das Ding
+señor	der Herr | Herr
+porque	weil
+necesitar	brauchen
+nuestro	unser, unsere
+mirar	anschauen | schauen
+día	der Tag | Tag
+usted	Sie (Höflichkeitsform)
+llamar	rufen, anrufen | heißen (llamarse)
+hombre	der Mann | Mann | der Mensch
+entonces	dann | also
+hola	hallo
+casa	das Haus | Haus | das Zuhause
+verdad	die Wahrheit | Wahrheit
+quién	wer (Frage)
+alguno	irgendein | einige
+tiempo	die Zeit | Zeit | das Wetter
+chico	der Junge | Junge	el chico | chico
+sentir	fühlen | bedauern (lo siento)
+volver	zurückkommen | zurückkehren
+tan	so (sehr)
+encontrar	finden | treffen
+llevar	tragen | mitnehmen
+dos	zwei
+nunca	nie | niemals
+mejor	besser
+dónde	wo (Frage)
+parecer	scheinen | aussehen
+año	das Jahr | Jahr
+gustar	gefallen | mögen (me gusta)		me gusta = mir gefällt, ich mag.
+oh	-
+favor	der Gefallen | Gefallen		por favor = bitte.
+mí	mich, mir (nach Präposition)
+poner	stellen, legen | setzen
+tomar	nehmen | trinken
+noche	die Nacht | Nacht | der Abend
+grande	groß
+mismo	derselbe, gleich | selbst
+oír	hören
+dios	der Gott | Gott
+vida	das Leben | Leben
+también	auch
+quedar	bleiben
+sobre	über | auf
+amigo	der Freund | Freund
+sin	ohne
+salir	hinausgehen | ausgehen
+ti	dich, dir (nach Präposition)
+poco	wenig | ein bisschen (un poco)
+nuevo	neu
+llegar	ankommen | erreichen
+alguien	jemand
+conocer	kennen | kennenlernen
+seguir	folgen | weitermachen
+padre	der Vater | Vater
+siempre	immer
+hasta	bis | sogar
+primero	erster, erste | zuerst
+antes	vorher | früher
+ni	weder … noch | nicht einmal
+ayudar	helfen
+escuchar	zuhören | anhören
+sentar	setzen | sich setzen (sentarse)
+nosotros	wir
+seguro	sicher
+morir	sterben
+entender	verstehen
+ellos	sie (Plural)
+trabajo	die Arbeit | Arbeit | der Job
+gente	die Leute | Leute
+hijo	der Sohn | Sohn
+mujer	die Frau | Frau
+nadie	niemand
+buscar	suchen | abholen
+tal	solch, so ein		¿Qué tal? = Wie geht's?
+vivir	leben | wohnen
+claro	klar | natürlich
+momento	der Moment | Moment | der Augenblick
+fuera	draußen | außerhalb
+después	danach | später
+acabar	aufhören, zu Ende gehen | gerade (acabar de)		acabar de + Infinitiv = gerade etwas getan haben.
+problema	das Problem | Problem		Männlich trotz -a: el problema.
+hora	die Stunde | Stunde | die Uhrzeit
+perder	verlieren | verpassen
+trabajar	arbeiten
+desde	seit | von … aus
+mundo	die Welt | Welt
+lugar	der Ort | Ort | der Platz
+dinero	das Geld | Geld
+tipo	der Typ | Typ | die Art	el tipo | tipo
+mío	meiner, meins
+mal	schlecht (Adverb) | schlimm
+madre	die Mutter | Mutter
+mañana	morgen | der Morgen	mañana | la mañana
+tratar	behandeln | versuchen (tratar de)
+acordar	sich erinnern (acordarse) | vereinbaren
+persona	die Person | Person
+donde	wo (Relativ)
+suponer	annehmen | vermuten
+quizá	vielleicht
+allí	dort
+menos	weniger | minus
+importar	wichtig sein | ausmachen		no me importa = das ist mir egal.
+recordar	sich erinnern an | erinnern
+ninguno	kein, keiner
+tanto	so viel
+intentar	versuchen
+traer	bringen | mitbringen
+pedir	bitten um | bestellen
+nombre	der Name | Name
+luego	dann | nachher		hasta luego = bis später.
+empezar	anfangen | beginnen
+entrar	hereinkommen | eintreten
+niño	das Kind | Kind
+mamá	die Mama | Mama
+parte	der Teil | Teil
+hoy	heute
+tres	drei
+conseguir	bekommen | erreichen, schaffen
+papá	der Papa | Papa
+valer	wert sein | kosten		vale = okay, einverstanden (Spanien).
+preguntar	fragen
+pequeño	klein
+mano	die Hand | Hand		Weiblich trotz -o: la mano.
+usar	benutzen | verwenden
+conmigo	mit mir
+último	letzter, letzte
+terminar	beenden | fertig werden
+listo	fertig, bereit | klug		estar listo = fertig sein; ser listo = klug sein.
+realmente	wirklich
+cierto	wahr | gewiss
+razón	der Grund | Grund | die Vernunft		tener razón = recht haben.
+aún	noch | immer noch
+comer	essen
+idea	die Idee | Idee
+contar	erzählen | zählen
+cada	jeder, jede
+tarde	spät | der Nachmittag	tarde | la tarde
+quien	wer (Relativ)
+cambiar	ändern | wechseln
+serio	ernst
+demasiado	zu (viel)
+contigo	mit dir
+único	einzig
+viejo	alt
+olvidar	vergessen
+policía	die Polizei | Polizei
+semana	die Woche | Woche
+cualquiera	jeder beliebige | irgendein
+eh	-
+minuto	die Minute | Minute
+hermano	der Bruder | Bruder
+malo	schlecht | böse
+preocupar	beunruhigen | sich Sorgen machen (preocuparse)
+familia	die Familie | Familie
+sacar	herausnehmen | herausholen
+cuánto	wie viel (Frage)
+amor	die Liebe | Liebe
+junto	zusammen
+entre	zwischen | unter
+ganar	gewinnen | verdienen
+tío	der Onkel | Onkel | der Typ
+loco	verrückt
+ustedes	ihr, Sie (Plural)
+forma	die Form | Form
+pagar	bezahlen | zahlen
+cabeza	der Kopf | Kopf
+todavía	noch | immer noch
+lado	die Seite | Seite
+dormir	schlafen
+mantener	aufrechterhalten | behalten
+amar	lieben
+caso	der Fall | Fall
+crear	erschaffen | erstellen
+segundo	zweiter, zweite
+jugar	spielen
+maldito	-
+historia	die Geschichte | Geschichte
+ah	-
+leer	lesen
+puerta	die Tür | Tür
+rápido	schnell	rápido | rápida
+cariño	der Schatz (Kosewort) | die Zuneigung	el cariño | cariño
+bajo	niedrig | unter	bajo | baja
+abrir	öffnen | aufmachen
+significar	bedeuten
+genial	toll | genial
+manera	die Art und Weise | Art und Weise	la manera | manera
+mientras	während (+ Satz) | solange
+cuál	welcher (Frage)
+comprar	kaufen
+cuenta	die Rechnung | Rechnung | das Konto		darse cuenta = merken.
+feliz	glücklich
+muerto	tot
+suceder	geschehen
+camino	der Weg | Weg
+adiós	tschüss | auf Wiedersehen
+tocar	berühren | spielen (Instrument)
+pues	denn | nun ja
+ojo	das Auge | Auge
+contra	gegen
+regresar	zurückkehren
+durante	während (+ Nomen)
+ocurrir	vorkommen | einfallen (se me ocurre)
+mover	bewegen
+palabra	das Wort | Wort
+importante	wichtig
+caro	teuer
+jefe	der Chef | Chef
+hija	die Tochter | Tochter
+pregunta	die Frage | Frage
+mes	der Monat | Monat
+ciudad	die Stadt | Stadt
+dentro	drinnen | innerhalb
+casi	fast | beinahe
+arma	die Waffe | Waffe		Weiblich, aber im Singular „el arma“ (betontes a-).
+acuerdo	die Vereinbarung | Vereinbarung	el acuerdo | acuerdo	de acuerdo = einverstanden.
+enviar	schicken | senden
+hacia	in Richtung | gegen (zeitlich)
+propio	eigen
+hecho	die Tatsache | Tatsache	el hecho | hecho
+corazón	das Herz | Herz
+meter	hineinstecken | hineintun
+pronto	bald | früh
+muerte	der Tod | Tod
+suerte	das Glück | Glück		¡Suerte! = Viel Glück!
+escribir	schreiben
+caer	fallen
+funcionar	funktionieren
+doctor	der Doktor | Doktor
+siquiera	wenigstens		ni siquiera = nicht einmal.
+punto	der Punkt | Punkt
+echar	werfen | hinauswerfen
+disculpar	entschuldigen
+casar	heiraten (casarse) | verheiraten
+justo	gerecht | genau
+clase	die Klasse | Klasse | der Unterricht	la clase | clase
+hace	vor (zeitlich)	hace	hace dos años = vor zwei Jahren.
+os	euch
+hey	-
+perro	der Hund | Hund
+realidad	die Wirklichkeit | Wirklichkeit | die Realität
+miedo	die Angst | Angst		tener miedo = Angst haben.
+alto	hoch | groß (Person)	alto | alta
+son	-
+agua	das Wasser | Wasser	el agua | agua	Weiblich, aber im Singular „el agua“ (betontes a-).
+esposa	die Ehefrau | Ehefrau
+joven	jung
+equipo	die Mannschaft | Mannschaft | das Team
+detener	festnehmen | aufhalten
+suficiente	genug | ausreichend
+correr	rennen | laufen
+difícil	schwierig | schwer
+recibir	bekommen, erhalten | empfangen
+fin	das Ende | Ende | der Zweck		por fin = endlich.
+cuerpo	der Körper | Körper
+encantar	begeistern | sehr gefallen		me encanta = ich liebe es, es gefällt mir sehr.
+derecho	das Recht | Recht	el derecho | derecho	a la derecha = rechts.
+bastante	ziemlich
+adelante	vorwärts | herein!
+disparar	-
+igual	gleich | egal (me da igual)
+cinco	fünf
+tierra	die Erde | Erde | das Land
+ayuda	die Hilfe | Hilfe
+puto	-
+cerca	in der Nähe | nah
+salvar	retten
+juego	das Spiel | Spiel
+mostrar	zeigen
+número	die Nummer | Nummer | die Zahl
+coger	greifen, nehmen | fangen		In Lateinamerika vulgär; dort sagt man „tomar“ oder „agarrar“.
+coche	das Auto | Auto | der Wagen
+cuidado	die Vorsicht | Vorsicht | die Sorgfalt	el cuidado | cuidado	¡Cuidado! = Vorsicht!; tener cuidado = aufpassen.
+medio	halb | mittlerer	medio | media
+hermana	die Schwester | Schwester
+fiesta	die Party | Party | das Fest
+beber	trinken
+cuándo	wann (Frage)
+auto	das Auto | Auto
+guerra	der Krieg | Krieg
+comenzar	beginnen | anfangen
+perdonar	verzeihen | vergeben
+fuerte	stark | laut
+incluso	sogar
+permitir	erlauben
+vuelta	die Rückkehr | Rückkehr | die Runde	la vuelta | vuelta	dar una vuelta = eine Runde drehen.
+aunque	obwohl | auch wenn
+cuatro	vier
+subir	hinaufgehen, steigen | einsteigen
+allá	dort drüben
+oportunidad	die Gelegenheit | Gelegenheit | die Chance
+teléfono	das Telefon | Telefon
+arriba	oben | nach oben
+convertir	verwandeln | werden (convertirse en)
+novio	der feste Freund | fester Freund | der Bräutigam
+final	der Schluss | Schluss | das Finale	el final | final	al final = am Ende.
+bebé	das Baby | Baby
+tuyo	deiner, deins
+robar	stehlen | rauben
+desear	wünschen
+muchacho	der junge Mann | junger Mann | der Junge
+decidir	entscheiden | beschließen
+luz	das Licht | Licht
+quitar	wegnehmen | ausziehen (quitarse)
+llamado	-
+posible	möglich
+cuanto	so viel wie | sobald (en cuanto)
+plan	der Plan | Plan
+diablo	der Teufel | Teufel
+prometer	versprechen
+escuela	die Schule | Schule
+sonar	klingen | klingeln
+supuesto	angeblich | natürlich (por supuesto)	supuesto | supuesta
+sangre	das Blut | Blut
+cuidar	pflegen | sich kümmern um
+habitación	das Zimmer | Zimmer
+callar	schweigen | still sein (callarse)
+orden	der Befehl | Befehl | die Ordnung	la orden | orden	el orden = die Ordnung, la orden = der Befehl.
+prueba	der Beweis | Beweis | der Test
+vender	verkaufen
+romper	brechen | kaputtmachen
+libro	das Buch | Buch
+levantar	heben | aufstehen (levantarse)
+preparar	vorbereiten | zubereiten
+capitán	der Kapitän | Kapitän
+demonio	der Dämon | Dämon
+comido	-
+fácil	leicht, einfach
+santo	heilig
+enseñar	lehren, beibringen | zeigen
+exactamente	genau
+cielo	der Himmel | Himmel
+correcto	richtig | korrekt
+abajo	unten | nach unten
+bonito	hübsch | schön
+modo	die Art | Art	el modo | modo	de todos modos = jedenfalls.
+probar	probieren | beweisen
+foto	das Foto | Foto		Weiblich trotz -o: la foto (von la fotografía).
+confiar	vertrauen
+mentir	lügen
+aceptar	akzeptieren | annehmen
+ello	es, das (neutral)
+cerrar	schließen | zumachen
+culpa	die Schuld | Schuld
+negro	schwarz	negro | negra
+negocio	das Geschäft | Geschäft
+atrás	hinten | zurück
+próximo	nächster, nächste
+hermoso	schön
+pie	der Fuß | Fuß
+idiota	-
+molestar	stören | belästigen
+parar	stoppen, anhalten | aufhören
+niña	das Mädchen | Mädchen
+película	der Film | Film
+blanco	weiß
+duro	hart
+raro	seltsam | selten
+aprender	lernen
+imaginar	sich vorstellen
+estado	der Zustand | Zustand | der Staat
+perfecto	perfekt
+querido	lieb, geliebt	querido | querida
+probablemente	wahrscheinlich
+diferente	verschieden | anders
+pasado	vergangen | letzter (el año pasado)	pasado | pasada
+servir	dienen | servieren
+bajar	hinuntergehen | aussteigen
+millón	die Million | Million
+dólar	der Dollar | Dollar
+par	das Paar | Paar	el par | par	un par de = ein paar.
+tampoco	auch nicht
+mil	tausend
+andar	laufen, zu Fuß gehen
+tirar	wegwerfen | ziehen
+extraño	merkwürdig | fremd
+presentar	vorstellen | präsentieren
+noticia	die Nachricht | Nachricht
+sueño	der Traum | Traum | der Schlaf		tener sueño = müde sein.
+sitio	die Stelle | Stelle | der Platz	el sitio | sitio
+secreto	das Geheimnis | Geheimnis	el secreto | secreto
+médico	der Arzt | Arzt	el médico | médico
+calle	die Straße | Straße
+arreglar	reparieren | in Ordnung bringen
+asegurar	versichern | sichern
+simplemente	einfach (nur)
+asunto	die Angelegenheit | Angelegenheit
+oficina	das Büro | Büro
+cama	das Bett | Bett
+lejos	weit weg | fern
+estúpido	-
+seis	sechs
+agente	der Agent | Agent	el agente | agente
+seguridad	die Sicherheit | Sicherheit
+despertar	wecken | aufwachen (despertarse)
+alegrar	freuen | sich freuen (alegrarse)
+tranquilo	ruhig | still
+músico	der Musiker | Musiker	el músico | músico
+real	echt, wirklich | königlich
+país	das Land | Land
+especial	besonders | speziell
+aquel	jener, jene
+bastar	genügen | reichen
+asesino	-
+largo	lang
+además	außerdem | zudem
+pueblo	das Dorf | Dorf | das Volk
+rey	der König | König
+paso	der Schritt | Schritt
+humano	menschlich
+marido	der Ehemann | Ehemann | der Mann
+paz	der Frieden | Frieden
+odiar	hassen
+señorita	das Fräulein | Fräulein
+explicar	erklären
+escapar	entkommen | fliehen
+acerca	über (acerca de)		Nur in „acerca de“ = über, bezüglich.
+descubrir	entdecken | herausfinden
+cuarto	vierter, vierte		el cuarto = das Zimmer, das Viertel.
+carta	der Brief | Brief | die Karte
+bienvenido	willkommen
+referir	sich beziehen (referirse a) | verweisen
+desaparecer	verschwinden
+fuerza	die Kraft | Kraft | die Stärke
+cual	welcher, welche (Relativ)		„el cual“ = der/die/das (Relativpronomen); mit Akzent fragt „cuál“: welcher?
+temer	fürchten | befürchten
+mensaje	die Nachricht | Nachricht | die Botschaft
+hospital	das Krankenhaus | Krankenhaus
+viaje	die Reise | Reise
+increíble	unglaublich
+fuego	das Feuer | Feuer
+lindo	hübsch | schön | niedlich
+anoche	gestern Abend | letzte Nacht
+error	der Fehler | Fehler | der Irrtum
+vuestro	euer, eure
+caballero	der Herr | Herr | der Ritter
+cortar	schneiden | abschneiden
+perdón	Entschuldigung | Verzeihung
+presidente	der Präsident | Präsident
+mandar	schicken | befehlen
+libre	frei
+vale	okay | in Ordnung		In Spanien sehr häufig: ¡Vale! = Okay! (Form von valer = gelten, kosten).
+divertido	lustig | unterhaltsam
+abogado	der Anwalt | Anwalt | der Rechtsanwalt
+llorar	weinen
+lograr	schaffen | erreichen
+diez	zehn
+ambos	beide
+pobre	arm
+faltar	fehlen
+resto	der Rest | Rest
+ropa	die Kleidung | Kleidung | die Wäsche
+verdadero	wahr | echt
+café	der Kaffee | Kaffee | das Café	el café | café
+cargo	das Amt | Amt | die Verantwortung	el cargo | cargo	a cargo de = zuständig für.
+enterar	erfahren (enterarse) | mitbekommen
+relación	die Beziehung | Beziehung | der Zusammenhang
+cambio	die Veränderung | Veränderung | das Wechselgeld	el cambio | cambio	en cambio = dagegen, hingegen.
+proteger	schützen | beschützen
+grupo	die Gruppe | Gruppe
+existir	existieren | bestehen
+aparecer	erscheinen | auftauchen
+sentido	der Sinn | Sinn | die Richtung	el sentido | sentido	tener sentido = Sinn ergeben.
+afuera	draußen | hinaus
+elegir	wählen | aussuchen
+golpear	klopfen | schlagen
+cantar	singen
+detrás	hinten | dahinter		detrás de = hinter.
+caminar	zu Fuß gehen | laufen
+asesinato	-
+compañero	der Kamerad | Kamerad | der Kollege		compañero de clase = Mitschüler, compañero de piso = Mitbewohner.
+suyo	seiner, ihrer		Auch „Ihrer“ (höflich, usted).
+general	allgemein | generell		en general = im Allgemeinen.
+bailar	tanzen
+voz	die Stimme | Stimme
+información	die Information | Information | die Auskunft
+daño	der Schaden | Schaden
+oficial	offiziell | amtlich
+responder	antworten | beantworten
+siguiente	folgend | nächster
+futuro	zukünftig | künftig		el futuro = die Zukunft.
+soler	gewöhnlich tun | pflegen		suelo + Infinitiv = ich tue gewöhnlich …
+control	die Kontrolle | Kontrolle
+lleno	voll
+lamentar	bedauern | beklagen
+maravilloso	wunderbar | wundervoll
+respuesta	die Antwort | Antwort
+ayer	gestern
+demás	übrige | andere		los demás = die anderen; lo demás = der Rest.
+continuar	fortsetzen | weitermachen
+preferir	bevorzugen | lieber mögen
+sistema	das System | System
+luchar	kämpfen
+frente	die Stirn | Stirn | die Vorderseite		frente a = gegenüber; el frente = die Front.
+cliente	der Kunde | Kunde
+campo	das Feld | Feld | das Land
+cita	der Termin | Termin | die Verabredung
+conducir	Auto fahren | lenken
+personal	persönlich
+vivo	lebendig | am Leben
+caja	die Kiste | Kiste | die Schachtel
+línea	die Linie | Linie
+boca	der Mund | Mund
+dolor	der Schmerz | Schmerz
+atención	die Aufmerksamkeit | Aufmerksamkeit
+sexo	-
+pena	die Strafe | Strafe | das Mitleid		¡Qué pena! = Wie schade! · vale la pena = es lohnt sich.
+profesor	der Lehrer | Lehrer | der Professor
+marchar	weggehen (marcharse) | marschieren
+caballo	das Pferd | Pferd
+canción	das Lied | Lied
+encima	oben | darauf		encima de = auf, über.
+uh	-
+llave	der Schlüssel | Schlüssel
+servicio	der Dienst | Dienst | die Bedienung	el servicio | servicio
+papel	das Papier | Papier | die Rolle
+ofrecer	anbieten | bieten
+ley	das Gesetz | Gesetz
+mente	der Geist | Geist | der Verstand
+acercar	näherbringen | sich nähern (acercarse)
+cámara	die Kamera | Kamera
+baño	das Badezimmer | Badezimmer | die Toilette
+sino	sondern
+aire	die Luft | Luft		al aire libre = im Freien.
+decisión	die Entscheidung | Entscheidung
+vosotros	ihr		In Lateinamerika sagt man stattdessen „ustedes“.
+soltar	loslassen | freilassen
+vamos	los geht's | lass uns gehen	vamos	Form von ir: ¡Vamos! = Los! / Gehen wir!
+rojo	rot
+esconder	verstecken | verbergen
+visto	gesehen | offensichtlich		por lo visto = anscheinend.
+jamás	nie | niemals
+pelear	sich streiten | kämpfen
+víctima	das Opfer | Opfer
+situación	die Situation | Situation | die Lage
+era	-
+herido	verletzt
+actuar	handeln | schauspielern
+atrapar	fangen | erwischen
+enfermo	krank
+volar	fliegen
+obtener	erhalten | bekommen
+jurar	schwören
+reír	lachen
+averiguar	herausfinden | ermitteln
+frío	kalt		hace frío = es ist kalt; el frío = die Kälte.
+hotel	das Hotel | Hotel
+tienda	der Laden | Laden | das Geschäft		Auch: das Zelt.
+estrella	der Stern | Stern
+guardar	aufbewahren | behalten | speichern
+compañía	die Gesellschaft | Gesellschaft | die Firma
+edad	das Alter | Alter
+merecer	verdienen
+maestro	der Lehrer | Lehrer | der Meister	el maestro | maestro
+ay	au | ach	ay
+recoger	abholen | aufheben | sammeln
+pelo	das Haar | Haar | die Haare
+devolver	zurückgeben
+barco	das Schiff | Schiff | das Boot
+alrededor	herum | ringsherum		alrededor de = um … herum; ungefähr.
+gritar	schreien
+invitar	einladen
+regalo	das Geschenk | Geschenk
+montón	der Haufen | Haufen		un montón de = eine Menge.
+encargar	beauftragen | bestellen		encargarse de = sich kümmern um.
+dulce	süß
+comprender	verstehen | begreifen
+dicho	-
+accidente	der Unfall | Unfall
+capaz	fähig | vielleicht		ser capaz de = fähig sein zu; in Lateinamerika auch „vielleicht“.
+carrera	das Rennen | Rennen | das Studium		Auch: die Laufbahn.
+adónde	wohin
+normal	normal
+crecer	wachsen | aufwachsen
+reunión	das Treffen | Treffen | die Besprechung
+evitar	vermeiden | verhindern
+ocupado	beschäftigt | besetzt
+boda	die Hochzeit | Hochzeit
+atacar	angreifen
+necesario	notwendig | nötig
+mesa	der Tisch | Tisch
+destruir	zerstören
+tras	nach | hinter
+placer	das Vergnügen | Vergnügen | die Freude		Es un placer = Sehr erfreut.
+brazo	der Arm | Arm
+recuperar	zurückbekommen | sich erholen (recuperarse)
+público	öffentlich		el público = das Publikum.
+rico	reich | lecker
+mitad	die Hälfte | Hälfte
+abandonar	verlassen | aufgeben
+calmar	beruhigen		¡Cálmate! = Beruhige dich!
+avión	das Flugzeug | Flugzeug
+trato	der Umgang | Umgang | die Abmachung		¡Trato hecho! = Abgemacht!
+dirección	die Adresse | Adresse | die Richtung
+asustar	erschrecken | Angst machen
+nacer	geboren werden
+broma	der Scherz | Scherz | der Witz
+detective	der Detektiv | Detektiv	el detective | detective
+centro	das Zentrum | Zentrum | die Mitte
+droga	-
+salvo	außer | ausgenommen		a salvo = in Sicherheit.
+vestido	das Kleid | Kleid	el vestido | vestido	Auch Partizip von vestir: angezogen.
+horrible	grauenhaft | furchtbar
+cena	das Abendessen | Abendessen
+gracioso	witzig | komisch
+peligroso	gefährlich
+soldado	der Soldat | Soldat	el soldado | soldado
+programa	das Programm | Programm | die Sendung
+agradecer	danken | dankbar sein
+través	durch (a través de)	través	a través de = durch, mittels.
+señal	das Zeichen | Zeichen | das Signal	la señal | señal
+principio	der Anfang | Anfang | das Prinzip		al principio = am Anfang.
+disfrutar	genießen
+dirigir	leiten | lenken | richten
+bromear	scherzen | Witze machen
+animal	das Tier | Tier	el animal | animal
+espera	-
+dama	die Dame | Dame
+alejar	entfernen | sich entfernen (alejarse)
+interesante	interessant
+imposible	unmöglich
+ocupar	besetzen | einnehmen		ocuparse de = sich kümmern um.
+entregar	übergeben | abgeben | liefern
+sol	die Sonne | Sonne
+resultar	sich herausstellen | ergeben
+nave	das Raumschiff | Raumschiff | das Schiff
+terrible	schrecklich | furchtbar
+crimen	-
+director	der Direktor | Direktor | der Regisseur
+divertir	unterhalten | sich amüsieren (divertirse)
+sufrir	leiden | erleiden
+limpiar	putzen | reinigen
+pierna	das Bein | Bein
+hambre	der Hunger | Hunger		tener hambre = Hunger haben; „el hambre“ ist trotzdem weiblich.
+equivocar	sich irren (equivocarse) | verwechseln
+paciente	geduldig		el/la paciente = der Patient, die Patientin.
+completamente	völlig | vollständig
+partido	das Spiel | Spiel | die Partie	el partido | partido
+enemigo	der Feind | Feind | feindlich	el enemigo | enemigo
+universidad	die Universität | Universität
+totalmente	total | ganz
+amable	nett | freundlich
+carajo	-
+revisar	überprüfen | durchsehen
+abuela	die Großmutter | Großmutter | die Oma
+costar	kosten | schwerfallen
+siete	sieben
+puesto	die Stelle | Stelle | der Posten	el puesto | puesto	Auch Partizip von poner: gestellt, gelegt.
+sala	der Saal | Saal | das Zimmer		sala de estar = Wohnzimmer.
+investigación	die Untersuchung | Untersuchung | die Forschung
+club	der Klub | Klub | der Verein
+considerar	betrachten | in Betracht ziehen
+unir	vereinen | verbinden
+trasero	-
+completo	vollständig | komplett
+cenar	zu Abend essen
+izquierdo	linker, linke | links		a la izquierda = links.
+pegar	kleben | ankleben
+largar	-
+preocupado	besorgt
+visitar	besuchen | besichtigen
+cumpleaños	der Geburtstag | Geburtstag		¡Feliz cumpleaños! = Alles Gute zum Geburtstag!
+ataque	der Angriff | Angriff | der Anfall
+reunir	versammeln | sammeln		reunirse = sich treffen.
+partir	aufbrechen | teilen		a partir de = ab (zeitlich).
+equivocado	falsch | im Irrtum		estar equivocado = sich irren.
+reconocer	erkennen | wiedererkennen | zugeben
+sal	das Salz | Salz
+consejo	der Rat | Rat | der Ratschlag
+engañar	täuschen | betrügen
+acción	die Handlung | Handlung | die Tat
+don	Herr (Anrede vor Vornamen) | die Gabe	don	„don“ + Vorname ist eine respektvolle Anrede für Männer.
+prisa	die Eile | Eile		tener prisa = es eilig haben; ¡Date prisa! = Beeil dich!
+manejar	handhaben | umgehen mit | Auto fahren		In Lateinamerika: manejar = Auto fahren.
+cansado	müde
+contacto	der Kontakt | Kontakt
+tren	der Zug | Zug
+ventana	das Fenster | Fenster
+oler	riechen
+cárcel	das Gefängnis | Gefängnis
+gobierno	die Regierung | Regierung
+navidad	Weihnachten	Navidad | navidad	¡Feliz Navidad! = Frohe Weihnachten!
+controlar	kontrollieren | steuern
+huir	fliehen | flüchten
+escena	die Szene | Szene
+sorpresa	die Überraschung | Überraschung
+traje	der Anzug | Anzug		Auch Form von traer: traje = ich brachte.
+estudiar	studieren | lernen
+ejército	die Armee | Armee
+maldición	-
+cumplir	erfüllen | einhalten		cumplir años = Geburtstag haben.
+casado	verheiratet
+mentira	die Lüge | Lüge
+besar	küssen
+acá	hierher | hier
+abuelo	der Großvater | Großvater | der Opa
+inteligente	intelligent | klug
+triste	traurig
+edificio	das Gebäude | Gebäude
+regla	die Regel | Regel | das Lineal
+notar	bemerken | merken
+vino	der Wein | Wein		Auch Form von venir: vino = er/sie kam.
+interesar	interessieren
+saltar	springen
+fondo	der Hintergrund | Hintergrund | der Grund		en el fondo = im Grunde; al fondo = hinten.
+disculpa	die Entschuldigung | Entschuldigung
+piso	die Wohnung | Wohnung | der Stock		el piso = auch der Fußboden.
+testigo	der Zeuge | Zeuge | die Zeugin
+cometer	begehen (Fehler, Tat)
+abierto	offen | geöffnet
+guardia	die Wache | Wache | der Wächter
+espalda	der Rücken | Rücken
+agarrar	packen | greifen
+utilizar	benutzen | verwenden
+silencio	die Stille | Stille | das Schweigen
+ocho	acht
+locura	der Wahnsinn | Wahnsinn
+esposo	der Ehemann | Ehemann | der Gatte
+cerveza	das Bier | Bier
+antiguo	alt | ehemalig | antik
+matrimonio	die Ehe | Ehe | das Ehepaar
+peligro	die Gefahr | Gefahr
+unido	vereint | verbunden		Estados Unidos = die Vereinigten Staaten.
+político	-
+resolver	lösen
+rato	die Weile | Weile | der Moment		un rato = eine Weile.
+compartir	teilen
+cerebro	das Gehirn | Gehirn
+precioso	wunderschön | kostbar
+construir	bauen
+teniente	der Leutnant | Leutnant	el teniente | teniente
+descansar	sich ausruhen | ruhen
+banco	die Bank | Bank
+delante	vorne | davor		delante de = vor.
+simple	einfach | schlicht
+basura	der Müll | Müll
+bar	die Bar | Bar | die Kneipe
+acostar	ins Bett bringen | sich hinlegen (acostarse)
+color	die Farbe | Farbe
+permiso	die Erlaubnis | Erlaubnis		Con permiso = Entschuldigung, darf ich (vorbei)?
+tercero	dritter, dritte
+espacio	der Raum | Raum | der Weltraum
+arruinar	ruinieren
+iglesia	die Kirche | Kirche
+libertad	die Freiheit | Freiheit
+pista	die Spur | Spur | der Hinweis	la pista | pista
+firmar	unterschreiben
+guapo	gutaussehend | hübsch
+sobrevivir	überleben
+nervioso	nervös
+discutir	diskutieren | streiten
+agradable	angenehm
+opción	die Option | Option | die Möglichkeit
+honor	die Ehre | Ehre
+suelo	der Boden | Boden | der Fußboden		Auch Form von soler: suelo = ich pflege (zu tun).
+golpe	der Schlag | Schlag	el golpe | golpe	de golpe = plötzlich.
+bombo	-
+opinión	die Meinung | Meinung
+dedo	der Finger | Finger
+tema	das Thema | Thema
+ángel	der Engel | Engel	el ángel | ángel
+mar	das Meer | Meer
+dudar	zweifeln | bezweifeln
+infierno	-
+acompañar	begleiten
+departamento	die Abteilung | Abteilung | die Wohnung		In Lateinamerika: el departamento = die Wohnung.
+despedir	sich verabschieden (despedirse) | entlassen
+apostar	wetten
+contestar	antworten | beantworten
+salud	die Gesundheit | Gesundheit		¡Salud! = Prost! / Gesundheit!
+oro	das Gold | Gold	el oro | oro
+aun	sogar | selbst		aun = sogar; aún (mit Akzent) = noch.
+según	laut | gemäß
+demostrar	beweisen | zeigen
+orgulloso	stolz
+misión	die Mission | Mission | der Auftrag
+americano	amerikanisch
+bolsa	die Tasche | Tasche | die Tüte
+gato	die Katze | Katze | der Kater
+zona	das Gebiet | Gebiet | die Zone
+avisar	Bescheid sagen | warnen
+ante	vor | angesichts
+luna	der Mond | Mond
+árbol	der Baum | Baum
+respirar	atmen
+pelea	der Streit | Streit | der Kampf
+mayoría	die Mehrheit | Mehrheit
+energía	die Energie | Energie
+duda	der Zweifel | Zweifel		sin duda = ohne Zweifel.
+carne	das Fleisch | Fleisch
+pesar	trotz (a pesar de)	pesar	a pesar de = trotz; pesar = wiegen.
+corte	der Schnitt | Schnitt | der Hof		el corte = der Schnitt; la corte = der Hof, das Gericht.
+informe	der Bericht | Bericht
+quemar	verbrennen | brennen
+retirar	zurückziehen | entfernen
+juez	der Richter | Richter
+mencionar	erwähnen
+causar	verursachen
+posición	die Position | Position | die Stellung	la posición | posición
+viajar	reisen
+nivel	das Niveau | Niveau | die Ebene	el nivel | nivel
+parir	-
+flor	die Blume | Blume | die Blüte
+zapato	der Schuh | Schuh
+extrañar	vermissen | sich wundern (extrañarse)		Te extraño = Ich vermisse dich.
+adentro	drinnen | hinein
+enseguida	sofort | gleich
+planeta	der Planet | Planet	el planeta | planeta
+azul	blau
+tarjeta	die Karte | Karte		tarjeta de crédito = Kreditkarte.
+caliente	heiß | warm
+cruzar	überqueren | kreuzen
+obra	das Werk | Werk | die Baustelle
+chino	chinesisch | das Chinesisch	chino
+máquina	die Maschine | Maschine
+preparado	bereit | vorbereitet
+especie	die Art | Art | die Spezies
+base	die Basis | Basis | die Grundlage
+sentado	sitzend		estar sentado = sitzen.
+temprano	früh
+prisión	das Gefängnis | Gefängnis
+planear	planen
+embargo	jedoch (sin embargo)	embargo	sin embargo = jedoch, trotzdem.
+negar	leugnen | verneinen | verweigern
+excelente	ausgezeichnet | hervorragend
+finalmente	schließlich | endlich
+inglés	englisch		el inglés = Englisch (Sprache).
+fantástico	fantastisch
+imagen	das Bild | Bild
+sorprender	überraschen
+hogar	das Zuhause | Zuhause | der Haushalt	el hogar | hogar
+soportar	ertragen | aushalten
+posibilidad	die Möglichkeit | Möglichkeit
+banda	die Band | Band | die Bande	la banda | banda
+esperanza	die Hoffnung | Hoffnung
+cocina	die Küche | Küche
+resultado	das Ergebnis | Ergebnis | das Resultat
+baile	der Tanz | Tanz | der Ball	el baile | baile
+sentimiento	das Gefühl | Gefühl
+falso	falsch | unecht
+arte	die Kunst | Kunst
+pertenecer	gehören | angehören
+doler	wehtun | schmerzen		Me duele la cabeza = Mir tut der Kopf weh.
+apenas	kaum
+contento	zufrieden | froh
+estación	der Bahnhof | Bahnhof | die Jahreszeit
+operación	die Operation | Operation
+juicio	das Urteil | Urteil | der Verstand	el juicio | juicio
+oscuro	dunkel
+miembro	das Mitglied | Mitglied	el miembro | miembro
+destino	das Schicksal | Schicksal | das Ziel
+metro	der Meter | Meter | die U-Bahn
+sargento	der Feldwebel | Feldwebel	el sargento | sargento
+motivo	der Grund | Grund | das Motiv	el motivo | motivo
+reina	die Königin | Königin
+apagar	ausschalten | löschen
+porqué	das Warum | Warum	el porqué | porqué	porque = weil; ¿por qué? = warum?
+mudar	umziehen (mudarse) | wechseln
+movimiento	die Bewegung | Bewegung
+éxito	der Erfolg | Erfolg
+enfrentar	sich stellen | konfrontieren
+cubrir	bedecken | abdecken
+salido	-
+ordenar	aufräumen | ordnen | befehlen
+felicidad	das Glück | Glück		¡Felicidades! = Herzlichen Glückwunsch!
+admitir	zugeben | zulassen
+investigar	untersuchen | ermitteln
+limpio	sauber
+diferencia	der Unterschied | Unterschied
+favorito	Lieblings- | bevorzugt	favorito
+exacto	genau | exakt		¡Exacto! = Genau!
+inocente	unschuldig
+precio	der Preis | Preis
+experiencia	die Erfahrung | Erfahrung
+sospechoso	verdächtig
+principal	hauptsächlich | Haupt-
+odio	der Hass | Hass
+prestar	leihen		prestar atención = aufpassen.
+ejemplo	das Beispiel | Beispiel	el ejemplo | ejemplo	por ejemplo = zum Beispiel.
+radio	das Radio | Radio
+apuesto	-
+culpable	schuldig
+depender	abhängen		Depende = Es kommt darauf an.
+lanzar	werfen | starten
+té	der Tee | Tee
+norte	der Norden | Norden | nördlich	el norte | norte
+objetivo	das Ziel | Ziel | objektiv	el objetivo | objetivo
+coronel	der Oberst | Oberst	el coronel | coronel
+estupendo	toll | großartig
+valor	der Wert | Wert | der Mut
+indio	-
+vigilar	überwachen | aufpassen auf
+elección	die Wahl | Wahl
+excepto	außer
+pared	die Wand | Wand
+aguantar	aushalten | ertragen
+deseo	der Wunsch | Wunsch
+tontería	die Dummheit | Dummheit | der Unsinn
+causa	die Ursache | Ursache | der Grund		a causa de = wegen.
+relajar	entspannen		¡Relájate! = Entspann dich!
+bala	-
+cerrado	geschlossen | zu
+pistola	-
+nene	das Baby | Baby | der Kleine	el nene | nene
+haz	-
+asesinado	-
+francés	französisch		el francés = Französisch (Sprache).
+común	gemeinsam | gewöhnlich
+fumar	rauchen
+mira	-
+cuestión	die Frage | Frage | die Angelegenheit
+video	das Video | Video	el video | video | el vídeo | vídeo
+gusto	der Geschmack | Geschmack		Mucho gusto = Sehr erfreut.
+formar	bilden | formen
+conocido	bekannt
+isla	die Insel | Insel
+sucio	schmutzig | dreckig
+ocultar	verbergen | verstecken
+intento	der Versuch | Versuch	el intento | intento
+sugerir	vorschlagen
+alcanzar	erreichen | reichen
+estudio	das Studium | Studium | das Studio
+tardar	dauern | lange brauchen
+convencer	überzeugen
+héroe	der Held | Held	el héroe | héroe
+alemán	deutsch		el alemán = Deutsch (Sprache).
+apartamento	das Apartment | Apartment | die Wohnung
+respecto	bezüglich (respecto a)	respecto	con respecto a = in Bezug auf.
+debajo	unten | darunter		debajo de = unter.
+soñar	träumen
+hallar	auffinden | finden
+borracho	betrunken
+colega	der Kollege | Kollege | der Kumpel	el colega | colega
+huevo	das Ei | Ei	el huevo | huevo
+familiar	familiär | vertraut		el familiar = der Verwandte.
+gordo	dick
+río	der Fluss | Fluss
+brillante	glänzend | brillant
+tony	-
+ridículo	lächerlich
+beso	der Kuss | Kuss
+gay	-
+privado	privat
+# Monate: auf Spanisch ohne Artikel („en julio“, „el 3 de julio“).
+enero	der Januar | Januar	enero
+febrero	der Februar | Februar	febrero
+marzo	der März | März	marzo
+abril	der April | April	abril
+mayo	der Mai | Mai	mayo
+junio	der Juni | Juni	junio
+julio	der Juli | Juli	julio
+agosto	der August | August	agosto
+septiembre	der September | September	septiembre | setiembre
+octubre	der Oktober | Oktober	octubre
+noviembre	der November | November	noviembre
+diciembre	der Dezember | Dezember	diciembre

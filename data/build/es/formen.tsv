@@ -1,0 +1,140 @@
+# Formen → Lemma, wo die Verweise aus Wiktionary fürs Lernen ungeeignet sind (Pronomen, Artikel, Begleiter).
+# Spalten (Tab): Form, Lesarten getrennt durch " | ". Lesart = Lemma[+Lemma…]/Wortart[:Gewicht].
+# "+" = Zusammenziehung (alle Lemmata müssen bekannt sein). Gewicht = Anteil an der Häufigkeit (Standard 1).
+# Bei mehreren Lesarten entscheidet im Satz der Kontext (z. B. „la“ vor Verb = Pronomen).
+el	el/article
+la	el/article:3 | lo/pron:1
+las	el/article:3 | lo/pron:1
+los	el/article:3 | lo/pron:1
+lo	lo/pron
+del	de+el/prep
+al	a+el/prep
+un	un/article
+unos	un/article
+unas	un/article
+una	un/article:3 | uno/pron:1
+uno	uno/pron
+yo	yo/pron
+tú	tú/pron
+él	él/pron
+ella	ella/pron
+usted	usted/pron
+ustedes	ustedes/pron
+nosotros	nosotros/pron
+nosotras	nosotros/pron
+vosotros	vosotros/pron
+vosotras	vosotros/pron
+ellos	ellos/pron
+ellas	ellos/pron
+me	me/pron
+te	te/pron
+se	se/pron
+nos	nos/pron
+os	os/pron
+le	le/pron
+les	le/pron
+mí	mí/pron
+ti	ti/pron
+sí	sí/adv
+conmigo	conmigo/pron
+contigo	contigo/pron
+mi	mi/det
+mis	mi/det
+tu	tu/det
+tus	tu/det
+su	su/det
+sus	su/det
+nuestro	nuestro/det
+nuestra	nuestro/det
+nuestros	nuestro/det
+nuestras	nuestro/det
+vuestro	vuestro/det
+vuestra	vuestro/det
+vuestros	vuestro/det
+vuestras	vuestro/det
+mío	mío/pron
+mía	mío/pron
+míos	mío/pron
+mías	mío/pron
+tuyo	tuyo/pron
+tuya	tuyo/pron
+tuyos	tuyo/pron
+tuyas	tuyo/pron
+suyo	suyo/pron
+suya	suyo/pron
+suyos	suyo/pron
+suyas	suyo/pron
+este	este/det
+esta	este/det
+estos	este/det
+estas	este/det
+éste	este/det
+ésta	este/det
+éstos	este/det
+éstas	este/det
+esto	esto/pron
+ese	ese/det
+esa	ese/det
+esos	ese/det
+esas	ese/det
+ése	ese/det
+ésa	ese/det
+ésos	ese/det
+ésas	ese/det
+eso	eso/pron
+aquel	aquel/det
+aquella	aquel/det
+aquellos	aquel/det
+aquellas	aquel/det
+aquél	aquel/det
+aquélla	aquel/det
+aquello	aquello/pron
+sólo	solo/adv
+# Formen, bei denen eine seltene Funktionswort-Lesart sonst die Häufigkeit eines Verbs/Nomens „stiehlt“.
+he	haber/verb
+hace	hacer/verb:3 | hace/prep:1
+veces	vez/noun
+noche	noche/noun
+dicho	decir/verb:3 | dicho/noun:1
+di	decir/verb:2 | dar/verb:1
+dado	dar/verb
+basta	bastar/verb
+demonios	demonio/noun
+diablos	diablo/noun
+quedo	quedar/verb
+consigo	conseguir/verb:3 | consigo/pron:1
+seguido	seguir/verb
+des	dar/verb
+cheque	cheque/noun
+cantidad	cantidad/noun
+cantidades	cantidad/noun
+escapado	escapar/verb
+queriendo	querer/verb
+montones	montón/noun
+narices	nariz/noun
+cuernos	cuerno/noun
+vientos	viento/noun
+tela	tela/noun
+pipa	pipa/noun
+tope	tope/noun
+cabe	caber/verb
+ud	usted/pron
+tipo	tipo/noun
+gracias	gracias/intj
+sé	saber/verb
+muy	muy/adv
+# Formen, die sonst einem fürs Lernen ungeeigneten oder seltenen Lemma zugeschlagen würden (Handprüfung 21.10.2026).
+apuesto	apostar/verb
+haz	hacer/verb
+mira	mirar/verb
+era	ser/verb
+eras	ser/verb
+éramos	ser/verb
+eran	ser/verb
+espera	esperar/verb:3 | espera/noun:1
+vino	venir/verb:1 | vino/noun:1
+traje	traer/verb:1 | traje/noun:1
+puesto	poner/verb:1 | puesto/noun:1
+para	para/prep
+abogado	abogado/noun
+abogados	abogado/noun

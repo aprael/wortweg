@@ -1,0 +1,9 @@
+# Lemmata, die nicht in den Kurs kommen (Grund als Kommentar).
+mas	# meist Tippfehler für „más“; „mas“ (= aber) ist veraltet
+do	# Musiknote / veraltet
+re	# Musiknote / umgangssprachlich
+so	# veraltet bzw. Ausruf
+dese	# Zusammenziehung „de ese“, veraltet
+he	# nur „he aquí“; sonst Form von haber
+anal	# anstößig
+mariquita	# auch abwertend gebraucht

@@ -1,0 +1,22 @@
+# Release bei einem Versions-Tag (z. B. v0.3.0): prüfen, App bauen, ZIP der App-Version anhängen.
+name: Release
+on:
+  push:
+    tags: ['v*']
+permissions:
+  contents: write
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - run: npm run check
+      - run: npm run e2e
+      - run: npm run build:app
+      - run: cd dist && zip -qr "../wortweg-app-${GITHUB_REF_NAME}.zip" .
+      - env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh release create "$GITHUB_REF_NAME" "wortweg-app-${GITHUB_REF_NAME}.zip" --title "Wortweg ${GITHUB_REF_NAME}" --notes-file docs/RELEASE.md

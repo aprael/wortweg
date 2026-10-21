@@ -1,0 +1,2247 @@
+# Themen der chinesischen Wörter (Handzuordnung 21.10.2026, aus automatischer Vorsortierung korrigiert).
+# Spalten: Hanzi · Pinyin · Thema · erste Bedeutung (unterscheidet gleiche Schreibung und Lesung) · Kommentar (HSK-Stufe).
+# Themen-Codes und Lehrplan: data/build/zh/lehrplan.json. Regel-Codes: zw (Zählwörter), frage, modal, part (Satzpartikeln),
+# vgl (Vergleiche), komp (得/地/极了), aspekt (了/着/过/正在), satz (把/被/让/叫), konj (Bindewörter), praep, ort (Orte/Richtungen).
+是	shì	grund	sein	# HSK 1
+我	wǒ	grund	ich	# HSK 1
+在	zài	grund	in	# HSK 1
+的	de	grund	Besitzpartikel	# HSK 1
+不	bù	grund	nicht	# HSK 1
+他	tā	grund	er	# HSK 1
+这	zhè	grund	dies	# HSK 1
+人	rén	person	Mensch	# HSK 1
+也	yě	grund	auch	# HSK 1
+你	nǐ	grund	du	# HSK 1
+了	le	aspekt	Partikel für Abgeschlossenes	# HSK 1
+好	hǎo	grund	gut	# HSK 1
+来	lái	grund	kommen	# HSK 1
+有	yǒu	grund	haben	# HSK 1
+说	shuō	kommu	sprechen	# HSK 1
+会	huì	modal	können (gelernt)	# HSK 1
+很	hěn	grund	sehr	# HSK 1
+个	gè	grund	allgemeines Zählwort	# HSK 1
+我们	wǒmen	grund	wir	# HSK 1
+要	yào	grund	wollen	# HSK 1
+她	tā	grund	sie (eine Frau)	# HSK 1
+想	xiǎng	grund	möchten	# HSK 1
+去	qù	grund	gehen	# HSK 1
+对	duì	grund	richtig	# HSK 1
+看	kàn	grund	anschauen	# HSK 1
+一	yī	zahl	eins	# HSK 1
+就	jiù	grund	dann	# HSK 1
+和	hé	grund	und	# HSK 1
+什么	shénme	frage	was	# HSK 1
+都	dōu	grund	alle	# HSK 1
+到	dào	grund	ankommen	# HSK 1
+做	zuò	grund	machen	# HSK 1
+能	néng	modal	können (möglich)	# HSK 1
+那	nà	grund	jenes	# HSK 1
+吧	ba	part	Partikel für Vorschläge	# HSK 1
+还	hái	grund	noch	# HSK 1
+点	diǎn	zeit	Uhr (Uhrzeit)	# HSK 1
+着	zhe	aspekt	Partikel für Andauern	# HSK 1
+没有	méiyǒu	grund	nicht haben	# HSK 1
+他们	tāmen	grund	sie (Mehrzahl)	# HSK 1
+从	cóng	grund	von	# HSK 1
+给	gěi	grund	geben	# HSK 1
+等	děng	allg	warten	# HSK 1
+吗	ma	grund	Fragepartikel	# HSK 1
+现在	xiànzài	zeit	jetzt	# HSK 1
+下	xià	ort	unten	# HSK 1
+多	duō	grund	viel	# HSK 1
+真	zhēn	grund	wirklich	# HSK 1
+没	méi	grund	nicht (Vergangenheit)	# HSK 1
+呢	ne	part	Partikel für Rückfragen	# HSK 1
+上	shàng	ort	oben	# HSK 1
+太	tài	grund	zu (sehr)	# HSK 1
+知道	zhīdào	grund	wissen	# HSK 1
+大	dà	grund	groß	# HSK 1
+用	yòng	allg	benutzen	# HSK 1
+走	zǒu	allg	gehen	# HSK 1
+时候	shíhou	zeit	Zeit	# HSK 1
+工作	gōngzuò	arbeit	Arbeit	# HSK 1
+事	shì	grund	Sache	# HSK 1
+再	zài	grund	noch einmal	# HSK 1
+家	jiā	familie	Familie	# HSK 1
+你们	nǐmen	grund	ihr	# HSK 1
+怎么	zěnme	frage	wie	# HSK 1
+爱	ài	gefuehl	lieben	# HSK 1
+次	cì	zw	Mal (Zählwort)	# HSK 1
+喜欢	xǐhuan	grund	mögen	# HSK 1
+吃	chī	essen	essen	# HSK 1
+时间	shíjiān	zeit	Zeit	# HSK 1
+还	huán	grund	zurückgeben	# HSK 1
+谁	shéi	frage	wer	# HSK 1
+跟	gēn	grund	mit	# HSK 1
+找	zhǎo	allg	suchen	# HSK 1
+快	kuài	zeit	schnell	# HSK 1
+过	guò	stadt	verbringen	# HSK 1
+两	liǎng	zahl	zwei (mit Zählwort)	# HSK 1
+天	tiān	zeit	Tag	# HSK 1
+比	bǐ	vgl	als (beim Vergleich)	# HSK 1
+小	xiǎo	grund	klein	# HSK 1
+今天	jīntiān	zeit	heute	# HSK 1
+觉得	juéde	gefuehl	finden	# HSK 1
+打	dǎ	freizeit	schlagen	# HSK 1
+最	zuì	vgl	am meisten	# HSK 1
+一起	yīqǐ	grund	zusammen	# HSK 1
+里	lǐ	ort	in	# HSK 1
+新	xīn	allg	neu	# HSK 1
+几	jǐ	frage	wie viele	# HSK 1
+车	chē	stadt	Auto	# HSK 1
+年	nián	zeit	Jahr	# HSK 1
+还有	háiyǒu	grund	außerdem	# HSK 1
+这些	zhèxiē	grund	diese	# HSK 1
+看到	kàndào	allg	sehen	# HSK 1
+非常	fēicháng	grund	äußerst	# HSK 1
+听	tīng	kommu	hören	# HSK 1
+这里	zhèlǐ	grund	hier	# HSK 1
+叫	jiào	person	heißen	# HSK 1
+请	qǐng	gruss	bitte	# HSK 1
+中	zhōng	ort	Mitte	# HSK 1
+见	jiàn	allg	sehen	# HSK 1
+钱	qián	arbeit	Geld	# HSK 1
+出	chū	allg	herausgehen	# HSK 1
+起来	qǐlai	allg	aufstehen	# HSK 1
+别	bié	grund	nicht (Verbot)	# HSK 1
+东西	dōngxi	grund	Sache	# HSK 1
+找到	zhǎodào	allg	finden	# HSK 1
+孩子	háizi	person	Kind	# HSK 1
+买	mǎi	arbeit	kaufen	# HSK 1
+告诉	gàosu	kommu	sagen	# HSK 1
+问	wèn	kommu	fragen	# HSK 1
+话	huà	kommu	Worte	# HSK 1
+后	hòu	ort	nach	# HSK 1
+三	sān	zahl	drei	# HSK 1
+还是	háishi	frage	oder (in Fragen)	# HSK 1
+一样	yīyàng	vgl	gleich	# HSK 1
+重要	zhòngyào	allg	wichtig	# HSK 1
+前	qián	ort	vor	# HSK 1
+开	kāi	allg	öffnen	# HSK 1
+朋友	péngyou	person	Freund	# HSK 1
+本	běn	zw	Zählwort für Bücher	# HSK 1
+地	de	komp	Adverbpartikel	# HSK 1
+住	zhù	wohnen	wohnen	# HSK 1
+手	shǒu	koerper	Hand	# HSK 1
+高	gāo	allg	hoch	# HSK 1
+起	qǐ	wohnen	aufstehen	# HSK 1
+老	lǎo	allg	alt	# HSK 1
+岁	suì	person	Jahre alt	# HSK 1
+回	huí	allg	zurückkehren	# HSK 1
+月	yuè	zeit	Monat	# HSK 1
+一些	yīxiē	grund	einige	# HSK 1
+地	dì	natur	Erde	# HSK 1
+拿	ná	allg	nehmen	# HSK 1
+您	nín	grund	Sie (höflich)	# HSK 1
+最后	zuìhòu	zeit	zuletzt	# HSK 1
+准备	zhǔnbèi	allg	vorbereiten	# HSK 1
+水	shuǐ	essen	Wasser	# HSK 1
+地方	dìfang	stadt	Ort	# HSK 1
+号	hào	zeit	Nummer	# HSK 1
+帮	bāng	allg	helfen	# HSK 1
+写	xiě	schule	schreiben	# HSK 1
+行	xíng	allg	in Ordnung	# HSK 1
+电话	diànhuà	kommu	Telefon	# HSK 1
+笑	xiào	gefuehl	lachen	# HSK 1
+正	zhèng	allg	gerade (dabei)	# HSK 1
+那些	nàxiē	grund	jene	# HSK 1
+女人	nǚrén	person	Frau	# HSK 1
+喝	hē	essen	trinken	# HSK 1
+得到	dédào	allg	bekommen	# HSK 1
+国家	guójiā	person	Staat	# HSK 1
+学校	xuéxiào	schule	Schule	# HSK 1
+门	mén	wohnen	Tür	# HSK 1
+有些	yǒuxiē	allg	einige	# HSK 1
+出来	chūlái	allg	herauskommen	# HSK 1
+先	xiān	zeit	zuerst	# HSK 1
+男人	nánrén	person	Mann	# HSK 1
+进	jìn	allg	eintreten	# HSK 1
+小时	xiǎoshí	zeit	Stunde	# HSK 1
+认识	rènshi	person	kennen	# HSK 1
+明天	míngtiān	zeit	morgen	# HSK 1
+回来	huílai	stadt	zurückkommen	# HSK 1
+正在	zhèngzài	aspekt	gerade dabei sein	# HSK 1
+站	zhàn	stadt	Haltestelle	# HSK 1
+花	huā	arbeit	Blume	# HSK 1
+早	zǎo	zeit	früh	# HSK 1
+睡	shuì	wohnen	schlafen	# HSK 1
+坐	zuò	stadt	sitzen	# HSK 1
+学	xué	schule	lernen	# HSK 1
+多少	duōshao	frage	wie viel	# HSK 1
+放	fàng	allg	legen	# HSK 1
+女	nǚ	person	weiblich	# HSK 1
+谢谢	xièxie	gruss	danke	# HSK 1
+妈妈	māma	familie	Mama	# HSK 1
+送	sòng	allg	schenken	# HSK 1
+日	rì	zeit	Tag	# HSK 1
+错	cuò	allg	falsch	# HSK 1
+别人	biérén	grund	andere Leute	# HSK 1
+哪	nǎ	frage	welcher	# HSK 1
+路	lù	stadt	Weg	# HSK 1
+昨天	zuótiān	zeit	gestern	# HSK 1
+身上	shēnshang	koerper	am Körper	# HSK 1
+回家	huíjiā	wohnen	nach Hause gehen	# HSK 1
+书	shū	schule	Buch	# HSK 1
+晚上	wǎnshang	zeit	Abend	# HSK 1
+难	nán	allg	schwierig	# HSK 1
+分	fēn	zeit	Minute	# HSK 1
+穿	chuān	kleidung	anziehen	# HSK 1
+跑	pǎo	freizeit	rennen	# HSK 1
+们	men	allg	Mehrzahl-Endung	# HSK 1
+真的	zhēnde	grund	wirklich?	# HSK 1
+干	gàn	allg	machen	# HSK 1
+电影	diànyǐng	freizeit	Film	# HSK 1
+四	sì	zahl	vier	# HSK 1
+少	shǎo	grund	wenig	# HSK 1
+五	wǔ	zahl	fünf	# HSK 1
+晚	wǎn	zeit	spät	# HSK 1
+别的	biéde	allg	andere	# HSK 1
+学生	xuésheng	schule	Schüler	# HSK 1
+医院	yīyuàn	koerper	Krankenhaus	# HSK 1
+动	dòng	allg	sich bewegen	# HSK 1
+干	gān	natur	trocken	# HSK 1
+明白	míngbai	schule	verstehen	# HSK 1
+杯	bēi	zw	Zählwort für Tassen und Gläser	# HSK 1
+哪里	nǎli	frage	wo	# HSK 1
+块	kuài	arbeit	Stück	# HSK 1
+外	wài	ort	außen	# HSK 1
+球	qiú	freizeit	Ball	# HSK 1
+中国	Zhōngguó	person	China	# HSK 1
+间	jiān	zw	Zählwort für Räume	# HSK 1
+先生	xiānsheng	person	Herr	# HSK 1
+记得	jìde	allg	sich erinnern	# HSK 1
+那里	nàli	grund	dort	# HSK 1
+男	nán	person	männlich	# HSK 1
+电视	diànshì	wohnen	Fernsehen	# HSK 1
+子	zi	allg	Nomen-Endung	# HSK 1
+学习	xuéxí	schule	lernen	# HSK 1
+二	èr	zahl	zwei	# HSK 1
+儿子	érzi	familie	Sohn	# HSK 1
+老师	lǎoshī	schule	Lehrer	# HSK 1
+包	bāo	kleidung	Tasche	# HSK 1
+重	zhòng	allg	schwer (Gewicht)	# HSK 1
+远	yuǎn	stadt	weit	# HSK 1
+口	kǒu	zw	Mund	# HSK 1
+医生	yīshēng	koerper	Arzt	# HSK 1
+歌	gē	freizeit	Lied	# HSK 1
+半	bàn	zahl	halb	# HSK 1
+出去	chūqù	stadt	hinausgehen	# HSK 1
+十	shí	zahl	zehn	# HSK 1
+楼	lóu	stadt	Gebäude	# HSK 1
+六	liù	zahl	sechs	# HSK 1
+病	bìng	koerper	Krankheit	# HSK 1
+名字	míngzi	person	Name	# HSK 1
+忙	máng	allg	beschäftigt	# HSK 1
+马上	mǎshàng	zeit	sofort	# HSK 1
+爸爸	bàba	familie	Papa	# HSK 1
+说话	shuōhuà	kommu	reden	# HSK 1
+身体	shēntǐ	koerper	Körper	# HSK 1
+飞	fēi	stadt	fliegen	# HSK 1
+下午	xiàwǔ	zeit	Nachmittag	# HSK 1
+看见	kànjiàn	allg	erblicken	# HSK 1
+唱	chàng	freizeit	singen	# HSK 1
+女儿	nǚ'ér	familie	Tochter	# HSK 1
+高兴	gāoxìng	gefuehl	froh	# HSK 1
+她们	tāmen	grund	sie (Frauen)	# HSK 1
+热	rè	natur	heiß	# HSK 1
+试	shì	allg	versuchen	# HSK 1
+睡觉	shuìjiào	wohnen	schlafen gehen	# HSK 1
+字	zì	schule	Schriftzeichen	# HSK 1
+介绍	jièshào	kommu	vorstellen	# HSK 1
+手机	shǒujī	wohnen	Handy	# HSK 1
+听到	tīngdào	kommu	hören (vernehmen)	# HSK 1
+第	dì	zahl	Vorsilbe für Ordnungszahlen	# HSK 1
+大学	dàxué	schule	Universität	# HSK 1
+今年	jīnnián	zeit	dieses Jahr	# HSK 1
+去年	qùnián	zeit	letztes Jahr	# HSK 1
+教	jiāo	schule	unterrichten	# HSK 1
+读	dú	schule	lesen	# HSK 1
+床	chuáng	wohnen	Bett	# HSK 1
+电脑	diànnǎo	wohnen	Computer	# HSK 1
+房子	fángzi	wohnen	Haus	# HSK 1
+元	yuán	arbeit	Yuan	# HSK 1
+冷	lěng	natur	kalt	# HSK 1
+家里	jiālǐ	wohnen	zu Hause	# HSK 1
+早上	zǎoshang	zeit	Morgen	# HSK 1
+汽车	qìchē	stadt	Auto	# HSK 1
+忘	wàng	allg	vergessen	# HSK 1
+认真	rènzhēn	allg	gewissenhaft	# HSK 1
+差	chà	allg	schlecht	# HSK 1
+回答	huídá	schule	antworten	# HSK 1
+白	bái	farbe	weiß	# HSK 1
+来到	láidào	allg	eintreffen	# HSK 1
+不用	bùyòng	allg	nicht nötig	# HSK 1
+累	lèi	koerper	müde	# HSK 1
+票	piào	stadt	Ticket	# HSK 1
+关	guān	allg	schließen	# HSK 1
+打电话	dǎdiànhuà	kommu	telefonieren	# HSK 1
+回到	huídào	stadt	zurückkehren nach	# HSK 1
+山	shān	natur	Berg	# HSK 1
+风	fēng	natur	Wind	# HSK 1
+休息	xiūxi	freizeit	sich ausruhen	# HSK 1
+房间	fángjiān	wohnen	Zimmer	# HSK 1
+常	cháng	zeit	oft	# HSK 1
+坏	huài	allg	schlecht	# HSK 1
+洗	xǐ	wohnen	waschen	# HSK 1
+飞机	fēijī	stadt	Flugzeug	# HSK 1
+回去	huíqu	stadt	zurückgehen	# HSK 1
+班	bān	schule	Klasse	# HSK 1
+吃饭	chīfàn	essen	eine Mahlzeit essen	# HSK 1
+打开	dǎkāi	allg	aufmachen	# HSK 1
+肉	ròu	essen	Fleisch	# HSK 1
+八	bā	zahl	acht	# HSK 1
+七	qī	zahl	sieben	# HSK 1
+西	xī	ort	Westen	# HSK 1
+电	diàn	allg	Strom	# HSK 1
+菜	cài	essen	Gericht	# HSK 1
+饿	è	essen	hungrig	# HSK 1
+记	jì	allg	aufschreiben	# HSK 1
+衣服	yīfu	kleidung	Kleidung	# HSK 1
+有的	yǒude	allg	manche	# HSK 1
+生日	shēngrì	zeit	Geburtstag	# HSK 1
+忘记	wàngjì	allg	vergessen (etwas)	# HSK 1
+姐姐	jiějie	familie	ältere Schwester	# HSK 1
+上班	shàngbān	arbeit	zur Arbeit gehen	# HSK 1
+饭	fàn	essen	Essen	# HSK 1
+病人	bìngrén	koerper	Patient	# HSK 1
+一边	yībiān	allg	gleichzeitig	# HSK 1
+左	zuǒ	ort	links	# HSK 1
+天气	tiānqì	natur	Wetter	# HSK 1
+毛	máo	arbeit	Mao (0,10 Yuan)	# HSK 1
+课	kè	schule	Unterricht	# HSK 1
+国	guó	person	Land	# HSK 1
+最好	zuìhǎo	allg	am besten	# HSK 1
+哥哥	gēge	familie	älterer Bruder	# HSK 1
+树	shù	natur	Baum	# HSK 1
+家人	jiārén	familie	Familienangehörige	# HSK 1
+帮忙	bāngmáng	allg	aushelfen	# HSK 1
+动作	dòngzuò	allg	Bewegung	# HSK 1
+右	yòu	ort	rechts	# HSK 1
+对不起	duìbuqǐ	gruss	Entschuldigung	# HSK 1
+进来	jìnlái	stadt	hereinkommen	# HSK 1
+东	dōng	ort	Osten	# HSK 1
+一半	yībàn	zahl	Hälfte	# HSK 1
+小姐	xiǎojiě	person	Fräulein	# HSK 1
+旁边	pángbiān	ort	neben	# HSK 1
+进去	jìnqu	stadt	hineingehen	# HSK 1
+没什么	méishénme	gruss	nichts Besonderes	# HSK 1
+有时候	yǒushíhou	zeit	manchmal	# HSK 1
+茶	chá	essen	Tee	# HSK 1
+路上	lùshang	stadt	unterwegs	# HSK 1
+慢	màn	allg	langsam	# HSK 1
+同学	tóngxué	schule	Mitschüler	# HSK 1
+雨	yǔ	natur	Regen	# HSK 1
+星期	xīngqī	zeit	Woche	# HSK 1
+九	jiǔ	zahl	neun	# HSK 1
+妹妹	mèimei	familie	jüngere Schwester	# HSK 1
+生气	shēngqì	gefuehl	sich ärgern	# HSK 1
+考试	kǎoshì	schule	Prüfung	# HSK 1
+见面	jiànmiàn	freizeit	sich treffen	# HSK 1
+南	nán	ort	Süden	# HSK 1
+贵	guì	arbeit	teuer	# HSK 1
+北	běi	ort	Norden	# HSK 1
+好看	hǎokàn	kleidung	schön	# HSK 1
+中间	zhōngjiān	ort	Mitte	# HSK 1
+在家	zàijiā	wohnen	zu Hause sein	# HSK 1
+女生	nǚshēng	person	Schülerin	# HSK 1
+地上	dìshang	wohnen	auf dem Boden	# HSK 1
+上午	shàngwǔ	zeit	Vormittag	# HSK 1
+这儿	zhèr	grund	da	# HSK 1
+车上	chēshàng	stadt	im Auto	# HSK 1
+一会儿	yīhuìr	zeit	eine Weile	# HSK 1
+地点	dìdiǎn	stadt	Standort	# HSK 1
+哪儿	nǎr	frage	wo	# HSK 1
+考	kǎo	schule	prüfen	# HSK 1
+下次	xiàcì	zeit	nächstes Mal	# HSK 1
+机场	jīchǎng	stadt	Flughafen	# HSK 1
+弟弟	dìdi	familie	jüngerer Bruder	# HSK 1
+记住	jìzhu	allg	sich merken	# HSK 1
+好吃	hǎochī	essen	lecker	# HSK 1
+知识	zhīshi	schule	Wissen	# HSK 1
+起床	qǐchuáng	wohnen	aufstehen (aus dem Bett)	# HSK 1
+老人	lǎorén	person	alter Mensch	# HSK 1
+学院	xuéyuàn	schule	Hochschule	# HSK 1
+页	yè	schule	Seite (Buch)	# HSK 1
+开车	kāichē	stadt	Auto fahren	# HSK 1
+那边	nàbian	ort	dort drüben	# HSK 1
+明年	míngnián	zeit	nächstes Jahr	# HSK 1
+不对	bùduì	allg	falsch	# HSK 1
+是不是	shìbushì	frage	nicht wahr?	# HSK 1
+干什么	gànshénme	frage	was machen?	# HSK 1
+火车	huǒchē	stadt	Zug	# HSK 1
+唱歌	chànggē	freizeit	ein Lied singen	# HSK 1
+上学	shàngxué	schule	zur Schule gehen	# HSK 1
+工人	gōngrén	arbeit	Arbeiter	# HSK 1
+中午	zhōngwǔ	zeit	Mittag	# HSK 1
+干净	gānjìng	wohnen	sauber	# HSK 1
+女朋友	nǚpéngyou	person	feste Freundin	# HSK 1
+百	bǎi	zahl	hundert	# HSK 1
+网上	wǎngshàng	allg	im Internet	# HSK 1
+再见	zàijiàn	gruss	auf Wiedersehen	# HSK 1
+牛奶	niúnǎi	essen	Kuhmilch	# HSK 1
+这边	zhèbiān	ort	hier	# HSK 1
+常常	chángcháng	zeit	häufig	# HSK 1
+男生	nánshēng	person	Schüler (männlich)	# HSK 1
+男朋友	nánpéngyou	person	fester Freund	# HSK 1
+门口	ménkǒu	stadt	Eingang	# HSK 1
+读书	dúshū	schule	Bücher lesen	# HSK 1
+那儿	nàr	grund	da	# HSK 1
+鸡蛋	jīdàn	essen	Ei	# HSK 1
+奶	nǎi	essen	Milch	# HSK 1
+奶奶	nǎinai	familie	Oma	# HSK 1
+上课	shàngkè	schule	Unterricht haben	# HSK 1
+请问	qǐngwèn	gruss	Entschuldigung, darf ich fragen …?	# HSK 1
+上次	shàngcì	zeit	letztes Mal	# HSK 1
+爷爷	yéye	familie	Opa	# HSK 1
+听见	tīngjiàn	allg	vernehmen	# HSK 1
+水果	shuǐguǒ	essen	Obst	# HSK 1
+坐下	zuòxia	allg	sich hinsetzen	# HSK 1
+桌子	zhuōzi	wohnen	Tisch	# HSK 1
+晚饭	wǎnfàn	essen	Abendessen	# HSK 1
+图书馆	túshūguǎn	schule	Bibliothek	# HSK 1
+新年	xīnnián	zeit	Neujahr	# HSK 1
+商店	shāngdiàn	stadt	Geschäft	# HSK 1
+下班	xiàbān	arbeit	Feierabend machen	# HSK 1
+饭店	fàndiàn	essen	Restaurant	# HSK 1
+没关系	méiguānxi	gruss	macht nichts	# HSK 1
+地图	dìtú	stadt	Landkarte	# HSK 1
+哪些	nǎxiē	frage	welche (Mehrzahl)	# HSK 1
+开玩笑	kāiwánxiào	kommu	Witze machen	# HSK 1
+零	líng	zahl	null	# HSK 1
+面包	miànbāo	essen	Brot	# HSK 1
+生病	shēngbìng	koerper	krank werden	# HSK 1
+外国	wàiguó	person	ausländisch	# HSK 1
+白天	báitiān	zeit	tagsüber	# HSK 1
+国外	guówài	person	Ausland	# HSK 1
+右边	yòubian	ort	rechte Seite	# HSK 1
+好听	hǎotīng	allg	schön klingend	# HSK 1
+小学	xiǎoxué	schule	Grundschule	# HSK 1
+上网	shàngwǎng	freizeit	ins Internet gehen	# HSK 1
+钱包	qiánbāo	arbeit	Geldbeutel	# HSK 1
+大学生	dàxuéshēng	schule	Student	# HSK 1
+走路	zǒulù	stadt	zu Fuß gehen	# HSK 1
+北京	Běijīng	stadt	Peking	# HSK 1
+中学	zhōngxué	schule	Mittelschule	# HSK 1
+午饭	wǔfàn	essen	Mittagessen	# HSK 1
+下雨	xiàyǔ	natur	regnen	# HSK 1
+日期	rìqī	zeit	Datum	# HSK 1
+楼下	lóuxià	wohnen	unten	# HSK 1
+杯子	bēizi	essen	Tasse	# HSK 1
+车站	chēzhàn	stadt	Haltestelle	# HSK 1
+商场	shāngchǎng	stadt	Einkaufszentrum	# HSK 1
+开会	kāihuì	arbeit	eine Sitzung haben	# HSK 1
+中文	Zhōngwén	schule	Chinesisch (Schrift und Sprache)	# HSK 1
+小朋友	xiǎopéngyǒu	person	Kinder (Anrede)	# HSK 1
+左边	zuǒbian	ort	linke Seite	# HSK 1
+有用	yǒuyòng	allg	nützlich	# HSK 1
+放假	fàngjià	freizeit	Ferien haben	# HSK 1
+爱好	àihào	freizeit	Hobby	# HSK 1
+上车	shàngchē	stadt	einsteigen	# HSK 1
+不大	bùdà	allg	nicht sehr	# HSK 1
+早饭	zǎofàn	essen	Frühstück	# HSK 1
+马路	mǎlù	stadt	Straße	# HSK 1
+门票	ménpiào	freizeit	Eintrittskarte	# HSK 1
+下车	xiàchē	stadt	aussteigen	# HSK 1
+星期天	xīngqītiān	zeit	Sonntag (umgangssprachlich)	# HSK 1
+机票	jīpiào	stadt	Flugticket	# HSK 1
+楼上	lóushàng	wohnen	oben	# HSK 1
+电视机	diànshìjī	wohnen	Fernsehgerät	# HSK 1
+电影院	diànyǐngyuàn	stadt	Kino	# HSK 1
+打球	dǎqiú	freizeit	Ball spielen	# HSK 1
+一点儿	yīdiǎnr	grund	ein bisschen	# HSK 1
+有名	yǒumíng	allg	berühmt	# HSK 1
+渴	kě	essen	durstig	# HSK 1
+书店	shūdiàn	stadt	Buchhandlung	# HSK 1
+放学	fàngxué	schule	Schulschluss haben	# HSK 1
+关上	guānshàng	allg	zumachen	# HSK 1
+前天	qiántiān	zeit	vorgestern	# HSK 1
+玩儿	wánr	freizeit	spielen	# HSK 1
+看病	kànbìng	koerper	zum Arzt gehen	# HSK 1
+后天	hòutiān	zeit	übermorgen	# HSK 1
+洗手间	xǐshǒujiān	wohnen	Toilette	# HSK 1
+外语	wàiyǔ	schule	Fremdsprache	# HSK 1
+路口	lùkǒu	stadt	Kreuzung	# HSK 1
+车票	chēpiào	stadt	Fahrkarte	# HSK 1
+米饭	mǐfàn	essen	gekochter Reis	# HSK 1
+下课	xiàkè	schule	Unterrichtsschluss haben	# HSK 1
+半天	bàntiān	zeit	lange Zeit	# HSK 1
+汉语	Hànyǔ	schule	Chinesisch (Sprache)	# HSK 1
+星期日	xīngqīrì	zeit	Sonntag	# HSK 1
+请假	qǐngjià	arbeit	sich freinehmen	# HSK 1
+里边	lǐbian	ort	drinnen	# HSK 1
+没事儿	méishìr	gruss	kein Problem	# HSK 1
+汉字	Hànzì	schule	chinesisches Schriftzeichen	# HSK 1
+一块儿	yīkuàir	grund	zusammen	# HSK 1
+书包	shūbāo	schule	Schultasche	# HSK 1
+小学生	xiǎoxuéshēng	schule	Grundschüler	# HSK 1
+请坐	qǐngzuò	gruss	Bitte setzen Sie sich!	# HSK 1
+课本	kèběn	schule	Lehrbuch	# HSK 1
+外边	wàibian	ort	draußen	# HSK 1
+中学生	zhōngxuéshēng	schule	Mittelschüler	# HSK 1
+打车	dǎchē	stadt	Taxi nehmen	# HSK 1
+北边	běibiān	ort	Nordseite	# HSK 1
+本子	běnzi	schule	Heft	# HSK 1
+后边	hòubian	ort	hinten	# HSK 1
+西边	xībian	ort	Westseite	# HSK 1
+上边	shàngbian	ort	oben	# HSK 1
+东边	dōngbian	ort	Ostseite	# HSK 1
+包子	bāozi	essen	gefüllte Teigtasche	# HSK 1
+不客气	bùkèqi	gruss	gern geschehen	# HSK 1
+南边	nánbian	ort	Südseite	# HSK 1
+女孩儿	nǚháir	person	Mädchen	# HSK 1
+下边	xiàbian	ort	unten	# HSK 1
+请进	qǐngjìn	gruss	Herein!	# HSK 1
+好玩儿	hǎowánr	freizeit	lustig	# HSK 1
+前边	qiánbian	ort	vorne	# HSK 1
+小孩儿	xiǎoháir	person	kleines Kind	# HSK 1
+教学楼	jiàoxuélóu	schule	Unterrichtsgebäude	# HSK 1
+网友	wǎngyǒu	person	Internetfreund	# HSK 1
+课文	kèwén	schule	Lektionstext	# HSK 1
+半年	bànnián	zeit	halbes Jahr	# HSK 1
+听写	tīngxiě	schule	Diktat	# HSK 1
+面条儿	miàntiáor	essen	Nudeln	# HSK 1
+男孩儿	nánháir	person	Junge	# HSK 1
+一下儿	yīxiàr	allg	kurz	# HSK 1
+让	ràng	satz	lassen	# HSK 2
+自己	zìjǐ	grund	selbst	# HSK 2
+得	de	komp	Partikel für Ergänzungen	# HSK 2
+可以	kěyǐ	modal	dürfen	# HSK 2
+过	guo	aspekt	Partikel für Erfahrung	# HSK 2
+多	duō	grund	wie (sehr)	# HSK 2
+啊	a	part	Ausrufpartikel	# HSK 2
+但	dàn	konj	aber	# HSK 2
+已经	yǐjīng	grund	schon	# HSK 2
+这样	zhèyàng	allg	so	# HSK 2
+好	hǎo	grund	ganz schön	# HSK 2
+为	wèi	praep	für	# HSK 2
+那	nà	grund	dann	# HSK 2
+如果	rúguǒ	konj	wenn	# HSK 2
+问题	wèntí	kommu	Frage	# HSK 2
+它	tā	grund	es (Ding, Tier)	# HSK 2
+下	xià	ort	Mal (kurze Handlung)	# HSK 2
+该	gāi	modal	sollen	# HSK 2
+又	yòu	grund	wieder (schon wieder)	# HSK 2
+更	gèng	vgl	noch (mehr)	# HSK 2
+可能	kěnéng	modal	vielleicht	# HSK 2
+像	xiàng	vgl	ähneln	# HSK 2
+这么	zhème	allg	so	# HSK 2
+因为	yīnwèi	konj	weil	# HSK 2
+只	zhǐ	grund	nur	# HSK 2
+但是	dànshì	konj	jedoch	# HSK 2
+才	cái	grund	erst	# HSK 2
+带	dài	allg	mitnehmen	# HSK 2
+所以	suǒyǐ	konj	deshalb	# HSK 2
+认为	rènwéi	kommu	meinen	# HSK 2
+大家	dàjiā	grund	alle	# HSK 2
+不要	bùyào	grund	nicht (tun)!	# HSK 2
+应该	yīnggāi	modal	sollen	# HSK 2
+当	dāng	allg	arbeiten als	# HSK 2
+位	wèi	zw	Zählwort für Personen (höflich)	# HSK 2
+那么	nàme	allg	so	# HSK 2
+一定	yīdìng	allg	bestimmt	# HSK 2
+一直	yīzhí	zeit	die ganze Zeit	# HSK 2
+生活	shēnghuó	allg	Leben	# HSK 2
+必须	bìxū	modal	müssen	# HSK 2
+小	xiǎo	grund	Anrede für Jüngere vor Namen	# HSK 2
+会	huì	modal	Versammlung	# HSK 2
+对	duì	grund	zu (jemandem)	# HSK 2
+得	dé	allg	bekommen	# HSK 2
+长	cháng	allg	lang	# HSK 2
+发现	fāxiàn	allg	entdecken	# HSK 2
+公司	gōngsī	arbeit	Firma	# HSK 2
+两	liǎng	zahl	Liang (50 Gramm)	# HSK 2
+件	jiàn	zw	Zählwort für Kleidung und Angelegenheiten	# HSK 2
+向	xiàng	praep	in Richtung	# HSK 2
+所有	suǒyǒu	allg	alle	# HSK 2
+长	zhǎng	allg	wachsen	# HSK 2
+为什么	wèishénme	frage	warum	# HSK 2
+事情	shìqing	grund	Angelegenheit	# HSK 2
+感觉	gǎnjué	gefuehl	Gefühl	# HSK 2
+其他	qítā	allg	andere	# HSK 2
+等	děng	allg	und so weiter	# HSK 2
+然后	ránhòu	zeit	danach	# HSK 2
+家	jiā	allg	Endung für Fachleute	# HSK 2
+不过	bùguò	konj	aber	# HSK 2
+场	chǎng	zw	Platz	# HSK 2
+名	míng	allg	Platz (Rang)	# HSK 2
+条	tiáo	zw	Zählwort für Langes (Straßen, Fische)	# HSK 2
+成	chéng	allg	zu etwas werden	# HSK 2
+周	zhōu	zeit	Woche	# HSK 2
+而且	érqiě	konj	außerdem	# HSK 2
+见到	jiàndào	allg	treffen	# HSK 2
+成为	chéngwéi	allg	werden (zu)	# HSK 2
+头	tóu	koerper	Kopf	# HSK 2
+老	lǎo	allg	immer (wieder)	# HSK 2
+过去	guòqu	allg	hinübergehen	# HSK 2
+安全	ānquán	allg	sicher	# HSK 2
+完全	wánquán	allg	völlig	# HSK 2
+出现	chūxiàn	allg	erscheinen	# HSK 2
+通过	tōngguò	allg	durch	# HSK 2
+参加	cānjiā	allg	teilnehmen	# HSK 2
+完	wán	allg	fertig	# HSK 2
+信	xìn	kommu	Brief	# HSK 2
+结果	jiéguǒ	allg	Ergebnis	# HSK 2
+不错	bùcuò	allg	nicht schlecht	# HSK 2
+计划	jìhuà	allg	Plan	# HSK 2
+回	huí	zw	Mal	# HSK 2
+老	lǎo	allg	vertraute Anrede vor Namen	# HSK 2
+进行	jìnxíng	allg	durchführen	# HSK 2
+相信	xiāngxìn	gefuehl	glauben	# HSK 2
+或	huò	konj	oder	# HSK 2
+机会	jīhuì	allg	Gelegenheit	# HSK 2
+刚	gāng	zeit	gerade erst	# HSK 2
+接	jiē	stadt	abholen	# HSK 2
+头	tou	allg	Ortsendung	# HSK 2
+分	fēn	allg	teilen	# HSK 2
+发	fā	allg	senden	# HSK 2
+有人	yǒurén	person	jemand	# HSK 2
+或者	huòzhě	konj	oder (in Aussagen)	# HSK 2
+站	zhàn	allg	stehen	# HSK 2
+全	quán	allg	ganz	# HSK 2
+分钟	fēnzhōng	zeit	Minute	# HSK 2
+以后	yǐhòu	zeit	nachher	# HSK 2
+要求	yāoqiú	allg	verlangen	# HSK 2
+花	huā	arbeit	ausgeben (Geld, Zeit)	# HSK 2
+原因	yuányīn	allg	Grund	# HSK 2
+虽然	suīrán	konj	obwohl	# HSK 2
+只要	zhǐyào	konj	solange	# HSK 2
+帮助	bāngzhù	allg	Hilfe	# HSK 2
+完成	wánchéng	allg	erledigen	# HSK 2
+变	biàn	allg	sich verändern	# HSK 2
+人们	rénmen	person	Leute	# HSK 2
+努力	nǔlì	gefuehl	sich anstrengen	# HSK 2
+以前	yǐqián	zeit	früher	# HSK 2
+可是	kěshì	konj	aber (betont)	# HSK 2
+队	duì	freizeit	Mannschaft	# HSK 2
+不同	bùtóng	allg	verschieden	# HSK 2
+当时	dāngshí	zeit	damals	# HSK 2
+接受	jiēshòu	allg	annehmen	# HSK 2
+其中	qízhōng	allg	darunter	# HSK 2
+讲	jiǎng	kommu	sprechen	# HSK 2
+办法	bànfǎ	allg	Methode	# HSK 2
+进入	jìnrù	allg	eintreten	# HSK 2
+离开	líkāi	allg	verlassen	# HSK 2
+道	dào	zw	Weg	# HSK 2
+改变	gǎibiàn	allg	verändern	# HSK 2
+能够	nénggòu	modal	imstande sein	# HSK 2
+加	jiā	allg	hinzufügen	# HSK 2
+掉	diào	allg	fallen	# HSK 2
+以为	yǐwéi	gefuehl	(fälschlich) glauben	# HSK 2
+特别	tèbié	allg	besonders	# HSK 2
+生	shēng	allg	zur Welt bringen	# HSK 2
+卖	mài	arbeit	verkaufen	# HSK 2
+永远	yǒngyuǎn	zeit	für immer	# HSK 2
+拉	lā	allg	ziehen	# HSK 2
+求	qiú	kommu	bitten	# HSK 2
+部分	bùfen	allg	Teil	# HSK 2
+越	yuè	vgl	je … desto	# HSK 2
+真正	zhēnzhèng	allg	echt	# HSK 2
+万	wàn	zahl	zehntausend	# HSK 2
+选	xuǎn	allg	wählen	# HSK 2
+狗	gǒu	natur	Hund	# HSK 2
+片	piàn	allg	Scheibe	# HSK 2
+同时	tóngshí	allg	gleichzeitig	# HSK 2
+直接	zhíjiē	allg	direkt	# HSK 2
+最近	zuìjìn	zeit	in letzter Zeit	# HSK 2
+方法	fāngfǎ	allg	Methode	# HSK 2
+也许	yěxǔ	allg	vielleicht	# HSK 2
+份	fèn	allg	Portion	# HSK 2
+面	miàn	allg	Nudeln	# HSK 2
+脸	liǎn	koerper	Gesicht	# HSK 2
+组	zǔ	zw	Gruppe	# HSK 2
+句	jù	zw	Zählwort für Sätze	# HSK 2
+换	huàn	allg	wechseln	# HSK 2
+来自	láizì	allg	stammen aus	# HSK 2
+影响	yǐngxiǎng	allg	Einfluss	# HSK 2
+靠	kào	allg	sich lehnen an	# HSK 2
+快乐	kuàilè	gefuehl	glücklich	# HSK 2
+懂	dǒng	schule	verstehen	# HSK 2
+方面	fāngmiàn	allg	Aspekt	# HSK 2
+信息	xìnxī	kommu	Information	# HSK 2
+检查	jiǎnchá	koerper	kontrollieren	# HSK 2
+辆	liàng	zw	Zählwort für Fahrzeuge	# HSK 2
+过来	guòlai	allg	herüberkommen	# HSK 2
+使用	shǐyòng	allg	verwenden	# HSK 2
+开心	kāixīn	gefuehl	fröhlich	# HSK 2
+留	liú	allg	bleiben	# HSK 2
+面	miàn	allg	Seite	# HSK 2
+活动	huódòng	allg	Aktivität	# HSK 2
+药	yào	koerper	Medikament	# HSK 2
+段	duàn	zw	Abschnitt	# HSK 2
+中心	zhōngxīn	allg	Zentrum	# HSK 2
+米	mǐ	allg	Meter	# HSK 2
+黑	hēi	farbe	schwarz	# HSK 2
+行动	xíngdòng	allg	handeln	# HSK 2
+卡	kǎ	arbeit	Karte (Bankkarte, Fahrkarte)	# HSK 2
+办	bàn	allg	erledigen	# HSK 2
+店	diàn	stadt	Laden	# HSK 2
+家庭	jiātíng	familie	Familie (als Einheit)	# HSK 2
+套	tào	zw	Satz (Set)	# HSK 2
+刚刚	gānggāng	zeit	soeben	# HSK 2
+愿意	yuànyì	gefuehl	bereit sein	# HSK 2
+带来	dàilái	allg	mitbringen	# HSK 2
+算	suàn	allg	rechnen	# HSK 2
+全部	quánbù	allg	alle	# HSK 2
+音乐	yīnyuè	freizeit	Musik	# HSK 2
+感谢	gǎnxiè	gruss	danken	# HSK 2
+正常	zhèngcháng	allg	normal	# HSK 2
+服务	fúwù	allg	Dienst	# HSK 2
+那样	nàyàng	allg	so	# HSK 2
+好像	hǎoxiàng	allg	scheinen	# HSK 2
+想到	xiǎngdào	allg	daran denken	# HSK 2
+照片	zhàopiàn	freizeit	Foto	# HSK 2
+停	tíng	allg	anhalten	# HSK 2
+交	jiāo	allg	abgeben	# HSK 2
+行为	xíngwéi	allg	Verhalten	# HSK 2
+银行	yínháng	arbeit	Bank (Geld)	# HSK 2
+故事	gùshi	schule	Geschichte	# HSK 2
+往	wǎng	praep	in Richtung	# HSK 2
+挺	tǐng	allg	ziemlich	# HSK 2
+座	zuò	zw	Zählwort für Gebäude und Berge	# HSK 2
+清楚	qīngchu	allg	klar	# HSK 2
+酒	jiǔ	essen	Alkohol	# HSK 2
+感到	gǎndào	gefuehl	sich fühlen	# HSK 2
+气	qì	natur	Luft	# HSK 2
+倒	dǎo	allg	umfallen	# HSK 2
+欢迎	huānyíng	gruss	willkommen	# HSK 2
+红	hóng	farbe	rot	# HSK 2
+可爱	kě'ài	gefuehl	süß	# HSK 2
+眼睛	yǎnjing	koerper	Augen	# HSK 2
+做到	zuòdào	allg	schaffen	# HSK 2
+怎样	zěnyàng	frage	auf welche Weise	# HSK 2
+克	kè	allg	Gramm	# HSK 2
+数	shǔ	allg	zählen	# HSK 2
+装	zhuāng	allg	einpacken	# HSK 2
+倒	dào	allg	eingießen	# HSK 2
+它们	tāmen	grund	sie (Dinge, Tiere)	# HSK 2
+哭	kū	gefuehl	weinen	# HSK 2
+边	biān	ort	Seite	# HSK 2
+一般	yībān	allg	normalerweise	# HSK 2
+眼	yǎn	koerper	Auge	# HSK 2
+怕	pà	gefuehl	Angst haben	# HSK 2
+原来	yuánlái	allg	ursprünglich	# HSK 2
+漂亮	piàoliang	kleidung	schön	# HSK 2
+离	lí	praep	entfernt von	# HSK 2
+经常	jīngcháng	zeit	oft	# HSK 2
+近	jìn	stadt	nah	# HSK 2
+声音	shēngyīn	kommu	Stimme	# HSK 2
+新闻	xīnwén	allg	Nachrichten	# HSK 2
+弄	nòng	allg	machen	# HSK 2
+收	shōu	allg	annehmen	# HSK 2
+表示	biǎoshì	allg	ausdrücken	# HSK 2
+只能	zhǐnéng	modal	nur können	# HSK 2
+健康	jiànkāng	koerper	gesund	# HSK 2
+变成	biànchéng	allg	sich verwandeln in	# HSK 2
+受到	shòudào	allg	erfahren	# HSK 2
+提	tí	allg	tragen (in der Hand)	# HSK 2
+面前	miànqián	ort	vor (jemandem)	# HSK 2
+经过	jīngguò	allg	vorbeikommen	# HSK 2
+意思	yìsi	kommu	Bedeutung	# HSK 2
+重新	chóngxīn	allg	erneut	# HSK 2
+越来越	yuèláiyuè	vgl	immer mehr	# HSK 2
+节目	jiémù	allg	Programm	# HSK 2
+度	dù	natur	Grad	# HSK 2
+低	dī	allg	niedrig	# HSK 2
+讨论	tǎolùn	kommu	diskutieren	# HSK 2
+满	mǎn	allg	voll	# HSK 2
+许多	xǔduō	allg	viele	# HSK 2
+作用	zuòyòng	allg	Wirkung	# HSK 2
+市	shì	stadt	Stadt	# HSK 2
+同样	tóngyàng	vgl	ebenso	# HSK 2
+短	duǎn	allg	kurz	# HSK 2
+意见	yìjiàn	kommu	Meinung	# HSK 2
+就要	jiùyào	zeit	gleich (passiert es)	# HSK 2
+脚	jiǎo	koerper	Fuß	# HSK 2
+说明	shuōmíng	kommu	erklären	# HSK 2
+身边	shēnbiān	ort	an der Seite	# HSK 2
+年轻	niánqīng	person	jung	# HSK 2
+查	chá	allg	nachschlagen	# HSK 2
+不少	bùshǎo	allg	nicht wenige	# HSK 2
+主要	zhǔyào	allg	hauptsächlich	# HSK 2
+猫	māo	natur	Katze	# HSK 2
+超过	chāoguò	allg	überschreiten	# HSK 2
+比如	bǐrú	allg	zum Beispiel	# HSK 2
+假	jiǎ	allg	falsch	# HSK 2
+十分	shífēn	allg	äußerst	# HSK 2
+嘴	zuǐ	koerper	Mund	# HSK 2
+自由	zìyóu	allg	Freiheit	# HSK 2
+改	gǎi	allg	ändern	# HSK 2
+办公室	bàngōngshì	arbeit	Büro	# HSK 2
+加油	jiāyóu	allg	Los!	# HSK 2
+后来	hòulái	zeit	später	# HSK 2
+省	shěng	allg	Provinz	# HSK 2
+够	gòu	allg	genug	# HSK 2
+海	hǎi	natur	Meer	# HSK 2
+夜	yè	zeit	Nacht	# HSK 2
+条件	tiáojiàn	allg	Bedingung	# HSK 2
+正确	zhèngquè	allg	richtig	# HSK 2
+省	shěng	allg	sparen	# HSK 2
+画	huà	freizeit	malen	# HSK 2
+称	chēng	allg	nennen	# HSK 2
+鱼	yú	essen	Fisch	# HSK 2
+运动	yùndòng	freizeit	Sport	# HSK 2
+样子	yàngzi	kleidung	Aussehen	# HSK 2
+广告	guǎnggào	allg	Werbung	# HSK 2
+收到	shōudào	allg	erhalten	# HSK 2
+晚安	wǎn'ān	gruss	gute Nacht	# HSK 2
+提出	tíchū	kommu	vorbringen	# HSK 2
+刚才	gāngcái	zeit	vorhin	# HSK 2
+留下	liúxià	allg	dableiben	# HSK 2
+通	tōng	allg	verbunden sein	# HSK 2
+正是	zhèngshì	allg	genau	# HSK 2
+实现	shíxiàn	allg	verwirklichen	# HSK 2
+笔	bǐ	schule	Stift	# HSK 2
+爱情	àiqíng	gefuehl	Liebe (romantisch)	# HSK 2
+方向	fāngxiàng	stadt	Richtung	# HSK 2
+排	pái	allg	Reihe	# HSK 2
+取	qǔ	arbeit	abholen	# HSK 2
+日子	rìzi	zeit	Tag (Datum)	# HSK 2
+鞋	xié	kleidung	Schuh	# HSK 2
+习惯	xíguàn	allg	Gewohnheit	# HSK 2
+听说	tīngshuō	allg	gehört haben	# HSK 2
+关心	guānxīn	gefuehl	sich kümmern um	# HSK 2
+节	jié	zw	Zählwort für Unterrichtsstunden	# HSK 2
+教育	jiàoyù	allg	Bildung	# HSK 2
+科学	kēxué	allg	Wissenschaft	# HSK 2
+层	céng	allg	Stockwerk	# HSK 2
+腿	tuǐ	koerper	Bein	# HSK 2
+街	jiē	stadt	Straße (in der Stadt)	# HSK 2
+喂	wéi	gruss	hallo (am Telefon)	# HSK 2
+周末	zhōumò	zeit	Wochenende	# HSK 2
+心里	xīnli	allg	im Herzen	# HSK 2
+通知	tōngzhī	kommu	benachrichtigen	# HSK 2
+怎么样	zěnmeyàng	frage	wie (ist es)?	# HSK 2
+目的	mùdì	allg	Zweck	# HSK 2
+全国	quánguó	stadt	ganzes Land	# HSK 2
+油	yóu	allg	Öl	# HSK 2
+船	chuán	stadt	Schiff	# HSK 2
+心情	xīnqíng	gefuehl	Stimmung	# HSK 2
+打算	dǎsuàn	allg	vorhaben	# HSK 2
+国际	guójì	allg	international	# HSK 2
+小心	xiǎoxīn	allg	vorsichtig	# HSK 2
+接着	jiēzhe	allg	dann	# HSK 2
+表	biǎo	allg	Armbanduhr	# HSK 2
+推	tuī	allg	schieben	# HSK 2
+咱们	zánmen	grund	wir (du und ich)	# HSK 2
+实在	shízài	allg	wirklich	# HSK 2
+瓶	píng	zw	Zählwort für Flaschen	# HSK 2
+遍	biàn	allg	Mal (ganz durch)	# HSK 2
+不够	bùgòu	allg	nicht genug	# HSK 2
+怎么办	zěnmebàn	frage	was tun?	# HSK 2
+想法	xiǎngfǎ	allg	Idee	# HSK 2
+不行	bùxíng	allg	geht nicht	# HSK 2
+借	jiè	allg	leihen	# HSK 2
+鸡	jī	essen	Huhn	# HSK 2
+养	yǎng	natur	halten (Tiere)	# HSK 2
+动物	dòngwù	natur	Tier	# HSK 2
+长大	zhǎngdà	allg	aufwachsen	# HSK 2
+普通	pǔtōng	allg	gewöhnlich	# HSK 2
+封	fēng	zw	Zählwort für Briefe	# HSK 2
+流	liú	allg	fließen	# HSK 2
+头发	tóufa	koerper	Haare	# HSK 2
+重点	zhòngdiǎn	allg	Schwerpunkt	# HSK 2
+举行	jǔxíng	allg	veranstalten	# HSK 2
+词	cí	schule	Wort	# HSK 2
+照顾	zhàogù	allg	sich kümmern um	# HSK 2
+明星	míngxīng	allg	Star	# HSK 2
+级	jí	schule	Stufe	# HSK 2
+顺利	shùnlì	allg	reibungslos	# HSK 2
+急	jí	allg	eilig	# HSK 2
+网	wǎng	allg	Netz	# HSK 2
+蛋	dàn	essen	Ei	# HSK 2
+水平	shuǐpíng	allg	Niveau	# HSK 2
+礼物	lǐwù	freizeit	Geschenk	# HSK 2
+鸟	niǎo	natur	Vogel	# HSK 2
+交给	jiāogěi	allg	übergeben an	# HSK 2
+科	kē	schule	Fach	# HSK 2
+出发	chūfā	stadt	aufbrechen	# HSK 2
+想起	xiǎngqǐ	allg	sich erinnern an	# HSK 2
+纸	zhǐ	allg	Papier	# HSK 2
+占	zhàn	allg	einnehmen	# HSK 2
+疼	téng	koerper	wehtun	# HSK 2
+取得	qǔdé	allg	erzielen	# HSK 2
+蓝	lán	farbe	blau	# HSK 2
+一生	yīshēng	zeit	ganzes Leben	# HSK 2
+满意	mǎnyì	gefuehl	zufrieden	# HSK 2
+背	bèi	schule	auswendig lernen	# HSK 2
+态度	tàidu	allg	Einstellung	# HSK 2
+数字	shùzì	zahl	Zahl	# HSK 2
+食物	shíwù	essen	Nahrung	# HSK 2
+酒店	jiǔdiàn	stadt	Hotel	# HSK 2
+亮	liàng	natur	hell	# HSK 2
+小组	xiǎozǔ	allg	Gruppe	# HSK 2
+好多	hǎoduō	allg	sehr viele	# HSK 2
+出口	chūkǒu	stadt	Ausgang	# HSK 2
+篇	piān	zw	Zählwort für Texte und Artikel	# HSK 2
+交通	jiāotōng	stadt	Verkehr	# HSK 2
+黄	huáng	farbe	gelb	# HSK 2
+接到	jiēdào	kommu	erhalten	# HSK 2
+味道	wèidao	essen	Geschmack	# HSK 2
+平	píng	allg	flach	# HSK 2
+颜色	yánsè	farbe	Farbe	# HSK 2
+提高	tígāo	allg	verbessern	# HSK 2
+千	qiān	zahl	tausend	# HSK 2
+墙	qiáng	wohnen	Wand	# HSK 2
+雪	xuě	natur	Schnee	# HSK 2
+轻	qīng	allg	leicht (Gewicht)	# HSK 2
+语言	yǔyán	schule	Sprache	# HSK 2
+司机	sījī	arbeit	Fahrer	# HSK 2
+什么样	shénmeyàng	frage	was für ein	# HSK 2
+大量	dàliàng	allg	große Menge	# HSK 2
+英语	Yīngyǔ	schule	Englisch (Sprache)	# HSK 2
+信号	xìnhào	kommu	Signal	# HSK 2
+网站	wǎngzhàn	allg	Website	# HSK 2
+经理	jīnglǐ	arbeit	Manager	# HSK 2
+多么	duōme	allg	wie sehr!	# HSK 2
+灯	dēng	wohnen	Lampe	# HSK 2
+差不多	chàbuduō	allg	fast	# HSK 2
+吹	chuī	allg	blasen	# HSK 2
+成绩	chéngjì	schule	Note	# HSK 2
+地球	dìqiú	natur	Erde (Planet)	# HSK 2
+可怕	kěpà	allg	schrecklich	# HSK 2
+方便	fāngbiàn	allg	praktisch	# HSK 2
+爬	pá	freizeit	klettern	# HSK 2
+大部分	dàbùfen	allg	größter Teil	# HSK 2
+出生	chūshēng	person	geboren werden	# HSK 2
+角度	jiǎodù	allg	Winkel	# HSK 2
+高中	gāozhōng	schule	Oberschule	# HSK 2
+实际	shíjì	allg	tatsächlich	# HSK 2
+喊	hǎn	kommu	rufen	# HSK 2
+讲话	jiǎnghuà	kommu	eine Rede halten	# HSK 2
+心中	xīnzhōng	gefuehl	im Herzen	# HSK 2
+太阳	tàiyang	natur	Sonne	# HSK 2
+公园	gōngyuán	stadt	Park	# HSK 2
+空气	kōngqì	natur	Luft	# HSK 2
+随便	suíbiàn	allg	beliebig	# HSK 2
+合适	héshì	allg	passend	# HSK 2
+的话	dehuà	konj	falls	# HSK 2
+以下	yǐxià	allg	unter	# HSK 2
+大多数	dàduōshù	allg	Mehrheit	# HSK 2
+随时	suíshí	allg	jederzeit	# HSK 2
+报纸	bàozhǐ	schule	Zeitung	# HSK 2
+以上	yǐshàng	praep	über	# HSK 2
+答应	dāying	kommu	zusagen	# HSK 2
+红色	hóngsè	farbe	Rot (Farbe)	# HSK 2
+一会儿	yīhuìr	zeit	gleich	# HSK 2
+名单	míngdān	allg	Namensliste	# HSK 2
+热情	rèqíng	gefuehl	herzlich	# HSK 2
+到处	dàochù	allg	überall	# HSK 2
+响	xiǎng	allg	klingeln	# HSK 2
+河	hé	natur	Fluss	# HSK 2
+放下	fàngxià	allg	hinlegen	# HSK 2
+观点	guāndiǎn	allg	Standpunkt	# HSK 2
+多久	duōjiǔ	frage	wie lange	# HSK 2
+公平	gōngpíng	allg	gerecht	# HSK 2
+举	jǔ	allg	heben	# HSK 2
+舒服	shūfu	gefuehl	bequem	# HSK 2
+上周	shàngzhōu	zeit	letzte Woche	# HSK 2
+相同	xiāngtóng	vgl	gleich	# HSK 2
+骑	qí	stadt	reiten	# HSK 2
+高级	gāojí	allg	hochwertig	# HSK 2
+旅行	lǚxíng	freizeit	reisen	# HSK 2
+早就	zǎojiù	zeit	schon längst	# HSK 2
+租	zū	wohnen	mieten	# HSK 2
+收入	shōurù	arbeit	Einkommen	# HSK 2
+故意	gùyì	allg	absichtlich	# HSK 2
+练	liàn	schule	üben	# HSK 2
+同事	tóngshì	arbeit	Kollege	# HSK 2
+单位	dānwèi	arbeit	Arbeitsstelle	# HSK 2
+湖	hú	natur	See	# HSK 2
+黑色	hēisè	farbe	Schwarz (Farbe)	# HSK 2
+体育	tǐyù	freizeit	Sport (Fach)	# HSK 2
+角	jiǎo	arbeit	Ecke	# HSK 2
+安静	ānjìng	gefuehl	ruhig	# HSK 2
+球队	qiúduì	freizeit	Ballmannschaft	# HSK 2
+道路	dàolù	stadt	Straße	# HSK 2
+大人	dàren	person	Erwachsener	# HSK 2
+作业	zuòyè	schule	Hausaufgaben	# HSK 2
+绿色	lǜsè	farbe	Grün (Farbe)	# HSK 2
+公路	gōnglù	stadt	Landstraße	# HSK 2
+主人	zhǔrén	person	Gastgeber	# HSK 2
+道理	dàoli	allg	Grund	# HSK 2
+看法	kànfǎ	kommu	Meinung	# HSK 2
+信心	xìnxīn	allg	Selbstvertrauen	# HSK 2
+闻	wén	koerper	riechen	# HSK 2
+好处	hǎochu	allg	Vorteil	# HSK 2
+放心	fàngxīn	gefuehl	beruhigt sein	# HSK 2
+家长	jiāzhǎng	familie	Eltern (der Schüler)	# HSK 2
+草	cǎo	natur	Gras	# HSK 2
+教师	jiàoshī	schule	Lehrkraft	# HSK 2
+重复	chóngfù	schule	wiederholen	# HSK 2
+旅游	lǚyóu	freizeit	Tourismus	# HSK 2
+出租车	chūzūchē	stadt	Taxi	# HSK 2
+小说	xiǎoshuō	freizeit	Roman	# HSK 2
+正好	zhènghǎo	allg	genau richtig	# HSK 2
+白色	báisè	farbe	weiß (Farbe)	# HSK 2
+公里	gōnglǐ	zahl	Kilometer	# HSK 2
+不如	bùrú	allg	nicht so gut wie	# HSK 2
+绿	lǜ	farbe	grün	# HSK 2
+感动	gǎndòng	allg	rühren	# HSK 2
+好事	hǎoshì	allg	gute Sache	# HSK 2
+人口	rénkǒu	person	Bevölkerung	# HSK 2
+顾客	gùkè	arbeit	Kunde	# HSK 2
+院	yuàn	allg	Hof	# HSK 2
+难过	nánguò	gefuehl	traurig	# HSK 2
+不好意思	bùhǎoyìsi	gruss	Entschuldigung (verlegen)	# HSK 2
+理想	lǐxiǎng	allg	Ideal	# HSK 2
+提到	tídào	allg	erwähnen	# HSK 2
+题	tí	schule	Aufgabe	# HSK 2
+碰	pèng	allg	berühren	# HSK 2
+流行	liúxíng	allg	beliebt	# HSK 2
+送给	sònggěi	allg	schenken (jemandem)	# HSK 2
+客人	kèrén	person	Gast	# HSK 2
+便宜	piányi	arbeit	billig	# HSK 2
+蓝色	lánsè	farbe	Blau (Farbe)	# HSK 2
+碗	wǎn	essen	Schüssel	# HSK 2
+组成	zǔchéng	allg	bilden	# HSK 2
+碰到	pèngdào	allg	zufällig treffen	# HSK 2
+夏天	xiàtiān	zeit	Sommer	# HSK 2
+不久	bùjiǔ	zeit	bald	# HSK 2
+早餐	zǎocān	essen	Frühstücksmahlzeit	# HSK 2
+有意思	yǒuyìsi	gefuehl	interessant	# HSK 2
+平时	píngshí	zeit	sonst	# HSK 2
+请求	qǐngqiú	kommu	Bitte	# HSK 2
+好久	hǎojiǔ	zeit	lange Zeit	# HSK 2
+接下来	jiēxiàlái	allg	als Nächstes	# HSK 2
+比如说	bǐrúshuō	allg	beispielsweise	# HSK 2
+准确	zhǔnquè	allg	genau	# HSK 2
+懂得	dǒngde	schule	verstehen	# HSK 2
+出门	chūmén	wohnen	aus dem Haus gehen	# HSK 2
+广场	guǎngchǎng	stadt	Platz (öffentlich)	# HSK 2
+图片	túpiàn	freizeit	Bild	# HSK 2
+车辆	chēliàng	stadt	Fahrzeuge	# HSK 2
+冬天	dōngtiān	zeit	Winter	# HSK 2
+作家	zuòjiā	arbeit	Schriftsteller	# HSK 2
+早晨	zǎochén	zeit	früher Morgen	# HSK 2
+做法	zuòfǎ	allg	Vorgehensweise	# HSK 2
+好人	hǎorén	person	guter Mensch	# HSK 2
+以外	yǐwài	praep	außer	# HSK 2
+全体	quántǐ	allg	alle (Mitglieder)	# HSK 2
+熟	shú	allg	reif	# HSK 2
+自行车	zìxíngchē	stadt	Fahrrad	# HSK 2
+小时候	xiǎoshíhou	person	als Kind	# HSK 2
+全身	quánshēn	koerper	ganzer Körper	# HSK 2
+咱	zán	allg	wir beide	# HSK 2
+停车	tíngchē	stadt	parken	# HSK 2
+练习	liànxí	schule	Übung	# HSK 2
+地铁	dìtiě	stadt	U-Bahn	# HSK 2
+平安	píng'ān	allg	wohlbehalten	# HSK 2
+大声	dàshēng	kommu	laut	# HSK 2
+队长	duìzhǎng	freizeit	Mannschaftskapitän	# HSK 2
+人数	rénshù	allg	Anzahl der Personen	# HSK 2
+友好	yǒuhǎo	gefuehl	freundlich	# HSK 2
+洗澡	xǐzǎo	wohnen	baden	# HSK 2
+相机	xiàngjī	freizeit	Kamera	# HSK 2
+亿	yì	zahl	hundert Millionen	# HSK 2
+南方	nánfāng	stadt	Süden (Region)	# HSK 2
+姓	xìng	person	Familienname	# HSK 2
+对话	duìhuà	kommu	Dialog	# HSK 2
+云	yún	natur	Wolke	# HSK 2
+分开	fēnkāi	allg	trennen	# HSK 2
+晚餐	wǎncān	essen	Abendmahlzeit	# HSK 2
+花园	huāyuán	wohnen	Garten	# HSK 2
+青年	qīngnián	person	Jugendliche	# HSK 2
+市长	shìzhǎng	arbeit	Bürgermeister	# HSK 2
+计算机	jìsuànjī	wohnen	Rechner	# HSK 2
+等于	děngyú	zahl	gleich sein	# HSK 2
+校长	xiàozhǎng	schule	Schulleiter	# HSK 2
+影片	yǐngpiàn	freizeit	Spielfilm	# HSK 2
+笑话	xiàohua	kommu	auslachen	# HSK 2
+温度	wēndù	natur	Temperatur	# HSK 2
+周年	zhōunián	zeit	Jahrestag	# HSK 2
+节日	jiérì	zeit	Feiertag	# HSK 2
+凉	liáng	natur	kühl	# HSK 2
+例如	lìrú	allg	zum Beispiel (schriftlich)	# HSK 2
+重视	zhòngshì	gefuehl	ernst nehmen	# HSK 2
+今后	jīnhòu	zeit	künftig	# HSK 2
+平常	píngcháng	zeit	gewöhnlich	# HSK 2
+大大	dàdà	allg	stark	# HSK 2
+大门	dàmén	wohnen	Haupttor	# HSK 2
+篮球	lánqiú	freizeit	Basketball	# HSK 2
+午餐	wǔcān	essen	Mittagsmahlzeit	# HSK 2
+晚会	wǎnhuì	freizeit	Abendveranstaltung	# HSK 2
+大小	dàxiǎo	allg	Größe	# HSK 2
+少年	shàonián	person	Jugendlicher	# HSK 2
+等到	děngdào	allg	warten bis	# HSK 2
+难受	nánshòu	koerper	sich unwohl fühlen	# HSK 2
+刻	kè	zeit	Viertelstunde	# HSK 2
+不一定	bùyīdìng	allg	nicht unbedingt	# HSK 2
+半夜	bànyè	zeit	Mitternacht	# HSK 2
+对面	duìmiàn	ort	gegenüber	# HSK 2
+参观	cānguān	freizeit	besichtigen	# HSK 2
+太太	tàitai	familie	Ehefrau	# HSK 2
+椅子	yǐzi	wohnen	Stuhl	# HSK 2
+信用卡	xìnyòngkǎ	arbeit	Kreditkarte	# HSK 2
+笔记本	bǐjìběn	schule	Notizbuch	# HSK 2
+青少年	qīngshàonián	person	Teenager	# HSK 2
+商量	shāngliang	kommu	besprechen	# HSK 2
+黄色	huángsè	farbe	Gelb (Farbe)	# HSK 2
+特点	tèdiǎn	allg	Merkmal	# HSK 2
+不但	bùdàn	konj	nicht nur	# HSK 2
+饱	bǎo	essen	satt	# HSK 2
+姓名	xìngmíng	person	vollständiger Name	# HSK 2
+排队	páiduì	stadt	Schlange stehen	# HSK 2
+一部分	yībùfen	allg	ein Teil	# HSK 2
+春天	chūntiān	zeit	Frühling	# HSK 2
+超市	chāoshì	stadt	Supermarkt	# HSK 2
+阴	yīn	natur	bewölkt	# HSK 2
+校园	xiàoyuán	schule	Campus	# HSK 2
+例子	lìzi	allg	Beispiel	# HSK 2
+爱人	àiren	familie	Ehepartner	# HSK 2
+多数	duōshù	allg	Mehrzahl	# HSK 2
+住院	zhùyuàn	koerper	im Krankenhaus liegen	# HSK 2
+快要	kuàiyào	zeit	bald	# HSK 2
+座位	zuòwèi	stadt	Sitzplatz	# HSK 2
+西方	xīfāng	stadt	Westen (Kultur)	# HSK 2
+球场	qiúchǎng	freizeit	Spielfeld	# HSK 2
+多云	duōyún	natur	bewölkt	# HSK 2
+假期	jiàqī	freizeit	Ferien	# HSK 2
+教学	jiàoxué	schule	Unterricht	# HSK 2
+游客	yóukè	freizeit	Tourist	# HSK 2
+网球	wǎngqiú	freizeit	Tennis	# HSK 2
+拿到	nádào	allg	bekommen	# HSK 2
+报名	bàomíng	schule	sich anmelden	# HSK 2
+脏	zāng	wohnen	schmutzig	# HSK 2
+起飞	qǐfēi	stadt	starten (Flugzeug)	# HSK 2
+全家	quánjiā	familie	ganze Familie	# HSK 2
+从小	cóngxiǎo	zeit	von klein auf	# HSK 2
+一共	yīgòng	zahl	insgesamt	# HSK 2
+做饭	zuòfàn	essen	kochen	# HSK 2
+忽然	hūrán	zeit	plötzlich	# HSK 2
+月亮	yuèliang	natur	Mond	# HSK 2
+公斤	gōngjīn	zahl	Kilogramm	# HSK 2
+月份	yuèfèn	zeit	Monat (im Kalender)	# HSK 2
+平等	píngděng	allg	gleichberechtigt	# HSK 2
+北方	běifāng	stadt	Norden (Region)	# HSK 2
+打工	dǎgōng	arbeit	jobben	# HSK 2
+天上	tiānshàng	natur	am Himmel	# HSK 2
+不满	bùmǎn	allg	unzufrieden	# HSK 2
+星星	xīngxing	natur	Stern	# HSK 2
+教室	jiàoshì	schule	Klassenzimmer	# HSK 2
+入口	rùkǒu	stadt	Eingang	# HSK 2
+常见	chángjiàn	allg	häufig vorkommend	# HSK 2
+商人	shāngrén	arbeit	Geschäftsmann	# HSK 2
+东方	dōngfāng	stadt	Osten	# HSK 2
+音乐会	yīnyuèhuì	freizeit	Konzert	# HSK 2
+少数	shǎoshù	allg	Minderheit	# HSK 2
+走过	zǒuguò	allg	vorübergehen	# HSK 2
+得出	déchū	allg	zu einem Ergebnis kommen	# HSK 2
+手表	shǒubiǎo	kleidung	Armbanduhr	# HSK 2
+大海	dàhǎi	natur	Meer	# HSK 2
+老是	lǎoshi	zeit	ständig	# HSK 2
+停车场	tíngchēchǎng	stadt	Parkplatz	# HSK 2
+出国	chūguó	stadt	ins Ausland gehen	# HSK 2
+出租	chūzū	wohnen	vermieten	# HSK 2
+这时候	zhèshíhou	allg	in diesem Moment	# HSK 2
+坏人	huàirén	person	schlechter Mensch	# HSK 2
+秋天	qiūtiān	zeit	Herbst	# HSK 2
+旅客	lǚkè	stadt	Reisender	# HSK 2
+大衣	dàyī	kleidung	Mantel	# HSK 2
+学期	xuéqī	schule	Semester	# HSK 2
+下雪	xiàxuě	natur	schneien	# HSK 2
+路边	lùbiān	stadt	Straßenrand	# HSK 2
+难题	nántí	schule	schwierige Frage	# HSK 2
+点头	diǎntóu	allg	nicken	# HSK 2
+英文	Yīngwén	schule	Englisch (Schrift und Sprache)	# HSK 2
+实习	shíxí	arbeit	Praktikum	# HSK 2
+院长	yuànzhǎng	arbeit	Direktor (Institut, Klinik)	# HSK 2
+夜里	yèli	zeit	nachts	# HSK 2
+护照	hùzhào	allg	Reisepass	# HSK 2
+东北	dōngběi	ort	Nordosten	# HSK 2
+中年	zhōngnián	person	mittleres Alter	# HSK 2
+院子	yuànzi	wohnen	Hof	# HSK 2
+老朋友	lǎopéngyou	person	alter Freund	# HSK 2
+找出	zhǎochū	allg	herausfinden	# HSK 2
+名称	míngchēng	kommu	Bezeichnung	# HSK 2
+瓶子	píngzi	essen	Flasche	# HSK 2
+出院	chūyuàn	koerper	aus dem Krankenhaus entlassen werden	# HSK 2
+画家	huàjiā	arbeit	Maler	# HSK 2
+分数	fēnshù	schule	Punktzahl	# HSK 2
+举手	jǔshǒu	koerper	die Hand heben	# HSK 2
+动物园	dòngwùyuán	stadt	Zoo	# HSK 2
+复习	fùxí	schule	wiederholen (Lernstoff)	# HSK 2
+课堂	kètáng	schule	Unterrichtsraum	# HSK 2
+骑车	qíchē	stadt	Rad fahren	# HSK 2
+笔记	bǐjì	schule	Notizen	# HSK 2
+海边	hǎibiān	natur	Strand	# HSK 2
+气温	qìwēn	natur	Lufttemperatur	# HSK 2
+西南	xīnán	ort	Südwesten	# HSK 2
+请客	qǐngkè	essen	einladen (bezahlen)	# HSK 2
+休假	xiūjià	freizeit	Urlaub machen	# HSK 2
+西北	xīběi	ort	Nordwesten	# HSK 2
+住房	zhùfáng	wohnen	Wohnung	# HSK 2
+走进	zǒujìn	allg	hineingehen	# HSK 2
+小声	xiǎoshēng	kommu	leise	# HSK 2
+体育馆	tǐyùguǎn	freizeit	Sporthalle	# HSK 2
+菜单	càidān	essen	Speisekarte	# HSK 2
+筷子	kuàizi	essen	Essstäbchen	# HSK 2
+斤	jīn	zahl	Jin (Pfund, 500 g)	# HSK 2
+草地	cǎodì	natur	Wiese	# HSK 2
+年级	niánjí	schule	Klassenstufe	# HSK 2
+晴	qíng	natur	heiter	# HSK 2
+个子	gèzi	koerper	Körpergröße	# HSK 2
+走开	zǒukāi	stadt	weggehen	# HSK 2
+外地	wàidì	stadt	auswärts	# HSK 2
+有点儿	yǒudiǎnr	grund	ein bisschen (zu)	# HSK 2
+开学	kāixué	schule	Schulbeginn	# HSK 2
+大自然	dàzìrán	natur	Natur	# HSK 2
+送到	sòngdào	stadt	liefern nach	# HSK 2
+快餐	kuàicān	essen	Fastfood	# HSK 2
+饺子	jiǎozi	essen	Jiaozi	# HSK 2
+打印	dǎyìn	arbeit	drucken	# HSK 2
+老年	lǎonián	person	hohes Alter	# HSK 2
+字典	zìdiǎn	schule	Zeichenlexikon	# HSK 2
+照相	zhàoxiàng	freizeit	fotografieren	# HSK 2
+药店	yàodiàn	koerper	Apotheke	# HSK 2
+回国	huíguó	stadt	in die Heimat zurückkehren	# HSK 2
+排球	páiqiú	freizeit	Volleyball	# HSK 2
+关机	guānjī	wohnen	ausschalten (Gerät)	# HSK 2
+班长	bānzhǎng	schule	Klassensprecher	# HSK 2
+常用	chángyòng	allg	gebräuchlich	# HSK 2
+普通话	pǔtōnghuà	schule	Hochchinesisch	# HSK 2
+里头	lǐtou	ort	drinnen	# HSK 2
+日报	rìbào	kommu	Tageszeitung	# HSK 2
+行人	xíngrén	stadt	Fußgänger	# HSK 2
+中餐	zhōngcān	essen	chinesisches Essen	# HSK 2
+公共汽车	gōnggòngqìchē	stadt	Linienbus	# HSK 2
+洗衣机	xǐyījī	wohnen	Waschmaschine	# HSK 2
+词语	cíyǔ	schule	Ausdruck	# HSK 2
+流利	liúlì	schule	fließend	# HSK 2
+句子	jùzi	schule	Satz	# HSK 2
+体育场	tǐyùchǎng	freizeit	Stadion	# HSK 2
+组长	zǔzhǎng	arbeit	Gruppenleiter	# HSK 2
+交朋友	jiāopéngyou	person	Freundschaft schließen	# HSK 2
+全年	quánnián	zeit	ganzes Jahr	# HSK 2
+作文	zuòwén	schule	Aufsatz	# HSK 2
+东南	dōngnán	ort	Südosten	# HSK 2
+外卖	wàimài	essen	Essen zum Mitnehmen	# HSK 2
+词典	cídiǎn	schule	Wörterbuch	# HSK 2
+难看	nánkàn	kleidung	hässlich	# HSK 2
+地铁站	dìtiězhàn	stadt	U-Bahn-Station	# HSK 2
+药水	yàoshuǐ	koerper	flüssige Arznei	# HSK 2
+问路	wènlù	stadt	nach dem Weg fragen	# HSK 2
+站住	zhànzhù	allg	stehen bleiben	# HSK 2
+开机	kāijī	wohnen	einschalten (Gerät)	# HSK 2
+音节	yīnjié	allg	Silbe	# HSK 2
+碰见	pèngjiàn	allg	begegnen	# HSK 2
+一点点	yīdiǎndiǎn	allg	ein klein wenig	# HSK 2
+春节	Chūnjié	zeit	Frühlingsfest (chinesisches Neujahr)	# HSK 2
+干杯	gānbēi	essen	Prost!	# HSK 2
+阴天	yīntiān	natur	trüber Tag	# HSK 2
+过年	guònián	zeit	Neujahr feiern	# HSK 2
+零下	língxià	natur	unter null	# HSK 2
+拿出	náchū	allg	herausnehmen	# HSK 2
+晴天	qíngtiān	natur	sonniger Tag	# HSK 2
+爬山	páshān	freizeit	bergsteigen	# HSK 2
+那会儿	nàhuìr	zeit	damals	# HSK 2
+黑板	hēibǎn	schule	Tafel (Schule)	# HSK 2
+方便面	fāngbiànmiàn	essen	Instantnudeln	# HSK 2
+饭馆	fànguǎn	essen	Gaststätte	# HSK 2
+不太	bùtài	grund	nicht so	# HSK 2
+球鞋	qiúxié	kleidung	Turnschuhe	# HSK 2
+一路顺风	yīlùshùnfēng	gruss	gute Fahrt!	# HSK 2
+短信	duǎnxìn	kommu	SMS	# HSK 2
+公交车	gōngjiāochē	stadt	Bus	# HSK 2
+见过	jiànguo	allg	schon einmal gesehen haben	# HSK 2
+晚报	wǎnbào	kommu	Abendzeitung	# HSK 2
+难听	nántīng	allg	unschön klingend	# HSK 2
+中医	zhōngyī	koerper	chinesische Medizin	# HSK 2
+下周	xiàzhōu	zeit	nächste Woche	# HSK 2
+坏处	huàichu	allg	Nachteil	# HSK 2
+前年	qiánnián	zeit	vorletztes Jahr	# HSK 2
+千克	qiānkè	zahl	Kilogramm (offiziell)	# HSK 2
+挺好	tǐnghǎo	allg	ziemlich gut	# HSK 2
+叫作	jiàozuò	kommu	genannt werden	# HSK 2
+凉快	liángkuai	natur	angenehm kühl	# HSK 2
+午睡	wǔshuì	wohnen	Mittagsschlaf	# HSK 2
+那时候	nàshíhou	zeit	zu jener Zeit	# HSK 2
+药片	yàopiàn	koerper	Tablette	# HSK 2
+中级	zhōngjí	schule	Mittelstufe	# HSK 2
+留学生	liúxuéshēng	schule	Auslandsstudent	# HSK 2
+西医	xīyī	koerper	westliche Medizin	# HSK 2
+听讲	tīngjiǎng	schule	dem Unterricht zuhören	# HSK 2
+考生	kǎoshēng	schule	Prüfling	# HSK 2
+读音	dúyīn	schule	Aussprache	# HSK 2
+中小学	zhōngxiǎoxué	schule	Grund- und Mittelschulen	# HSK 2
+西餐	xīcān	essen	westliches Essen	# HSK 2
+一路平安	yīlùpíng'ān	gruss	gute Reise!	# HSK 2
+不一会儿	bùyīhuìr	zeit	kurz darauf	# HSK 2
+干活儿	gànhuór	arbeit	arbeiten (körperlich)	# HSK 2
+生词	shēngcí	schule	neue Vokabel	# HSK 2
+画儿	huàr	freizeit	Bild	# HSK 2
+快点儿	kuàidiǎnr	allg	schneller!	# HSK 2
+笑话儿	xiàohuar	kommu	Witz	# HSK 2
+银行卡	yínhángkǎ	arbeit	Bankkarte	# HSK 2
+有空儿	yǒukòngr	zeit	Zeit haben	# HSK 2
+把	bǎ	satz	Objektmarker	# HSK 3
+了	liǎo	allg	schaffen (nach 得/不)	# HSK 3
+被	bèi	satz	Passivmarker	# HSK 3
+需要	xūyào	modal	brauchen	# HSK 3
+开始	kāishǐ	allg	anfangen	# HSK 3
+只	zhī	zw	Zählwort für Tiere	# HSK 3
+时	shí	zeit	Zeit	# HSK 3
+就是	jiùshì	allg	genau	# HSK 3
+种	zhǒng	allg	Art	# HSK 3
+希望	xīwàng	gefuehl	hoffen	# HSK 3
+发生	fāshēng	allg	passieren	# HSK 3
+并	bìng	allg	und außerdem	# HSK 3
+所	suǒ	zw	Institut	# HSK 3
+世界	shìjiè	person	Welt	# HSK 3
+只是	zhǐshì	allg	nur	# HSK 3
+情况	qíngkuàng	allg	Lage	# HSK 3
+每	měi	allg	jeder	# HSK 3
+为	wéi	allg	als (etwas) dienen	# HSK 3
+继续	jìxù	allg	fortsetzen	# HSK 3
+为了	wèile	konj	um zu	# HSK 3
+张	zhāng	zw	Zählwort für Flaches (Papier, Tische)	# HSK 3
+心	xīn	koerper	Herz	# HSK 3
+总	zǒng	zeit	immer	# HSK 3
+美	měi	allg	schön	# HSK 3
+一切	yīqiè	allg	alles	# HSK 3
+决定	juédìng	allg	entscheiden	# HSK 3
+把	bǎ	zw	Zählwort für Dinge mit Griff	# HSK 3
+比赛	bǐsài	freizeit	Wettkampf	# HSK 3
+任何	rènhé	allg	jeder beliebige	# HSK 3
+关系	guānxi	allg	Beziehung	# HSK 3
+如何	rúhé	frage	wie (förmlich)	# HSK 3
+内	nèi	allg	innen	# HSK 3
+只有	zhǐyǒu	konj	nur (wenn)	# HSK 3
+为	wèi	praep	wegen	# HSK 3
+受	shòu	allg	erleiden	# HSK 3
+已	yǐ	allg	bereits (schriftlich)	# HSK 3
+由	yóu	praep	von	# HSK 3
+部	bù	zw	Teil	# HSK 3
+死	sǐ	koerper	sterben	# HSK 3
+当然	dāngrán	allg	natürlich	# HSK 3
+消息	xiāoxi	kommu	Nachricht	# HSK 3
+结束	jiéshù	allg	beenden	# HSK 3
+叫	jiào	satz	Passivmarker (umgangssprachlich)	# HSK 3
+解决	jiějué	allg	lösen (Problem)	# HSK 3
+成功	chénggōng	allg	Erfolg	# HSK 3
+行	háng	allg	Branche	# HSK 3
+正	zhèng	allg	aufrecht	# HSK 3
+过去	guòqù	zeit	Vergangenheit	# HSK 3
+转	zhuǎn	allg	wenden	# HSK 3
+使	shǐ	satz	veranlassen	# HSK 3
+头	tóu	koerper	erster	# HSK 3
+信	xìn	gefuehl	glauben	# HSK 3
+美元	Měiyuán	arbeit	US-Dollar	# HSK 3
+者	zhě	allg	Endung für Handelnde	# HSK 3
+其实	qíshí	allg	eigentlich	# HSK 3
+表现	biǎoxiàn	allg	Leistung	# HSK 3
+注意	zhùyì	allg	aufpassen	# HSK 3
+方式	fāngshì	allg	Art und Weise	# HSK 3
+活	huó	koerper	leben	# HSK 3
+调查	diàochá	allg	untersuchen	# HSK 3
+保护	bǎohù	allg	schützen	# HSK 3
+处理	chǔlǐ	allg	behandeln	# HSK 3
+强	qiáng	allg	stark	# HSK 3
+能力	nénglì	allg	Fähigkeit	# HSK 3
+保证	bǎozhèng	allg	garantieren	# HSK 3
+根本	gēnběn	allg	grundsätzlich	# HSK 3
+城市	chéngshì	stadt	Großstadt	# HSK 3
+支持	zhīchí	allg	unterstützen	# HSK 3
+拍	pāi	freizeit	fotografieren	# HSK 3
+马	mǎ	natur	Pferd	# HSK 3
+比较	bǐjiào	vgl	ziemlich	# HSK 3
+个人	gèrén	allg	Einzelperson	# HSK 3
+目前	mùqián	allg	gegenwärtig	# HSK 3
+连	lián	allg	sogar	# HSK 3
+管	guǎn	allg	sich kümmern um	# HSK 3
+终于	zhōngyú	zeit	endlich	# HSK 3
+下来	xiàlai	allg	herunterkommen	# HSK 3
+除了	chúle	praep	außer	# HSK 3
+总是	zǒngshì	zeit	immer	# HSK 3
+生	shēng	allg	roh	# HSK 3
+保持	bǎochí	allg	beibehalten	# HSK 3
+游戏	yóuxì	freizeit	Spiel	# HSK 3
+整个	zhěnggè	allg	ganz (gesamt)	# HSK 3
+极了	jíle	komp	äußerst (nach Adjektiv)	# HSK 3
+里面	lǐmiàn	ort	innen	# HSK 3
+存在	cúnzài	allg	existieren	# HSK 3
+重	chóng	allg	erneut	# HSK 3
+突然	tūrán	zeit	plötzlich	# HSK 3
+确定	quèdìng	allg	festlegen	# HSK 3
+区	qū	allg	Bezirk	# HSK 3
+目标	mùbiāo	allg	Ziel	# HSK 3
+容易	róngyì	allg	leicht	# HSK 3
+联系	liánxì	kommu	Kontakt	# HSK 3
+现场	xiànchǎng	stadt	vor Ort	# HSK 3
+精神	jīngshén	allg	Geist	# HSK 3
+双	shuāng	zw	Paar	# HSK 3
+台	tái	zw	Bühne	# HSK 3
+指	zhǐ	koerper	zeigen auf	# HSK 3
+代表	dàibiǎo	allg	Vertreter	# HSK 3
+任务	rènwu	arbeit	Aufgabe	# HSK 3
+报告	bàogào	kommu	Bericht	# HSK 3
+米	mǐ	essen	Reis (roh)	# HSK 3
+合作	hézuò	allg	zusammenarbeiten	# HSK 3
+因此	yīncǐ	konj	daher	# HSK 3
+生命	shēngmìng	koerper	Leben (Lebewesen)	# HSK 3
+简单	jiǎndān	allg	einfach	# HSK 3
+按	àn	allg	drücken	# HSK 3
+到底	dàodǐ	frage	eigentlich (in Fragen)	# HSK 3
+曾经	céngjīng	zeit	einmal (früher)	# HSK 3
+线	xiàn	allg	Linie	# HSK 3
+派	pài	allg	schicken (Person)	# HSK 3
+明显	míngxiǎn	allg	offensichtlich	# HSK 3
+绝对	juéduì	allg	absolut	# HSK 3
+好好	hǎohǎo	allg	ordentlich	# HSK 3
+建议	jiànyì	kommu	vorschlagen	# HSK 3
+坚持	jiānchí	allg	durchhalten	# HSK 3
+父亲	fùqīn	familie	Vater (förmlich)	# HSK 3
+精神	jīngshen	allg	munter	# HSK 3
+人员	rényuán	allg	Personal	# HSK 3
+伤	shāng	allg	Verletzung	# HSK 3
+抓	zhuā	allg	greifen	# HSK 3
+另外	lìngwài	konj	außerdem	# HSK 3
+利用	lìyòng	allg	nutzen	# HSK 3
+性	xìng	allg	Endung für Eigenschaften	# HSK 3
+光	guāng	allg	Licht	# HSK 3
+血	xuè	koerper	Blut	# HSK 3
+技术	jìshù	allg	Technik	# HSK 3
+设计	shèjì	allg	entwerfen	# HSK 3
+证明	zhèngmíng	allg	beweisen	# HSK 3
+各位	gèwèi	allg	meine Damen und Herren	# HSK 3
+约	yuē	allg	verabreden	# HSK 3
+谈	tán	kommu	sprechen über	# HSK 3
+下去	xiàqu	allg	hinuntergehen	# HSK 3
+力	lì	allg	Kraft	# HSK 3
+意义	yìyì	kommu	Bedeutung (Sinn)	# HSK 3
+并且	bìngqiě	konj	und zudem	# HSK 3
+负责	fùzé	allg	verantwortlich sein	# HSK 3
+社会	shèhuì	allg	Gesellschaft	# HSK 3
+记者	jìzhě	arbeit	Journalist	# HSK 3
+理解	lǐjiě	schule	verstehen	# HSK 3
+父母	fùmǔ	familie	Eltern	# HSK 3
+至少	zhìshǎo	allg	mindestens	# HSK 3
+确实	quèshí	allg	tatsächlich	# HSK 3
+发展	fāzhǎn	allg	entwickeln	# HSK 3
+安排	ānpái	allg	planen	# HSK 3
+交易	jiāoyì	arbeit	Handel	# HSK 3
+金	jīn	allg	Gold	# HSK 3
+首先	shǒuxiān	zeit	zuerst	# HSK 3
+敢	gǎn	allg	wagen	# HSK 3
+报道	bàodào	kommu	Bericht	# HSK 3
+会议	huìyì	arbeit	Konferenz	# HSK 3
+幸福	xìngfú	gefuehl	glücklich	# HSK 3
+随	suí	allg	folgen	# HSK 3
+城	chéng	stadt	Stadt	# HSK 3
+怕	pà	allg	womöglich	# HSK 3
+人生	rénshēng	koerper	Leben (eines Menschen)	# HSK 3
+失去	shīqù	allg	verlieren	# HSK 3
+赢	yíng	freizeit	gewinnen	# HSK 3
+力量	lìliang	allg	Stärke	# HSK 3
+支	zhī	zw	Zählwort für Stifte und Lieder	# HSK 3
+结婚	jiéhūn	familie	heiraten	# HSK 3
+某	mǒu	allg	ein gewisser	# HSK 3
+造成	zàochéng	allg	verursachen	# HSK 3
+自然	zìrán	natur	Natur	# HSK 3
+母亲	mǔqīn	familie	Mutter (förmlich)	# HSK 3
+责任	zérèn	allg	Verantwortung	# HSK 3
+同意	tóngyì	allg	zustimmen	# HSK 3
+白	bái	allg	umsonst	# HSK 3
+深	shēn	allg	tief	# HSK 3
+步	bù	allg	Schritt	# HSK 3
+人民	rénmín	person	Volk	# HSK 3
+报	bào	schule	Zeitung	# HSK 3
+值得	zhíde	allg	sich lohnen	# HSK 3
+压力	yālì	allg	Druck	# HSK 3
+面对	miànduì	allg	gegenüberstehen	# HSK 3
+事件	shìjiàn	allg	Ereignis	# HSK 3
+亲	qīn	allg	verwandt	# HSK 3
+部门	bùmén	allg	Abteilung	# HSK 3
+由于	yóuyú	konj	aufgrund	# HSK 3
+仍然	réngrán	zeit	immer noch	# HSK 3
+紧张	jǐnzhāng	gefuehl	nervös	# HSK 3
+训练	xùnliàn	freizeit	trainieren	# HSK 3
+过程	guòchéng	allg	Prozess	# HSK 3
+选手	xuǎnshǒu	freizeit	Spieler	# HSK 3
+事实	shìshí	allg	Tatsache	# HSK 3
+各	gè	allg	jeder	# HSK 3
+显示	xiǎnshì	allg	anzeigen	# HSK 3
+属于	shǔyú	allg	gehören zu	# HSK 3
+挂	guà	allg	aufhängen	# HSK 3
+跳	tiào	allg	springen	# HSK 3
+久	jiǔ	allg	lange	# HSK 3
+人类	rénlèi	allg	Menschheit	# HSK 3
+警察	jǐngchá	arbeit	Polizist	# HSK 3
+经历	jīnglì	allg	Erlebnis	# HSK 3
+仅	jǐn	allg	nur	# HSK 3
+本来	běnlái	allg	ursprünglich	# HSK 3
+相当	xiāngdāng	allg	ziemlich	# HSK 3
+仍	réng	allg	noch	# HSK 3
+基本	jīběn	allg	grundlegend	# HSK 3
+类	lèi	allg	Art	# HSK 3
+困难	kùnnan	allg	Schwierigkeit	# HSK 3
+专家	zhuānjiā	arbeit	Experte	# HSK 3
+以来	yǐlái	praep	seit	# HSK 3
+关注	guānzhù	allg	Aufmerksamkeit schenken	# HSK 3
+照	zhào	allg	scheinen	# HSK 3
+反应	fǎnyìng	allg	Reaktion	# HSK 3
+表演	biǎoyǎn	freizeit	aufführen	# HSK 3
+价值	jiàzhí	allg	Wert	# HSK 3
+火	huǒ	natur	Feuer	# HSK 3
+专业	zhuānyè	allg	Studienfach	# HSK 3
+牛	niú	natur	Rind	# HSK 3
+难道	nándào	frage	etwa (in rhetorischen Fragen)	# HSK 3
+必要	bìyào	allg	notwendig	# HSK 3
+地区	dìqū	allg	Region	# HSK 3
+规定	guīdìng	allg	Vorschrift	# HSK 3
+对方	duìfāng	allg	Gegenseite	# HSK 3
+祝	zhù	allg	wünschen	# HSK 3
+群	qún	allg	Gruppe	# HSK 3
+产生	chǎnshēng	allg	entstehen	# HSK 3
+状态	zhuàngtài	allg	Zustand	# HSK 3
+危险	wēixiǎn	allg	gefährlich	# HSK 3
+环境	huánjìng	natur	Umwelt	# HSK 3
+老板	lǎobǎn	arbeit	Chef	# HSK 3
+市场	shìchǎng	stadt	Markt	# HSK 3
+从来	cónglái	zeit	schon immer	# HSK 3
+乱	luàn	allg	unordentlich	# HSK 3
+建立	jiànlì	allg	aufbauen	# HSK 3
+适合	shìhé	allg	passen	# HSK 3
+救	jiù	allg	retten	# HSK 3
+实际上	shíjìshang	allg	in Wirklichkeit	# HSK 3
+更加	gèngjiā	vgl	noch mehr	# HSK 3
+图	tú	freizeit	Bild	# HSK 3
+痛	tòng	koerper	schmerzhaft	# HSK 3
+达到	dádào	allg	erreichen (Ziel)	# HSK 3
+排	pái	allg	aufreihen	# HSK 3
+正式	zhèngshì	allg	offiziell	# HSK 3
+美丽	měilì	allg	schön (schriftlich)	# HSK 3
+现实	xiànshí	allg	Realität	# HSK 3
+管理	guǎnlǐ	allg	verwalten	# HSK 3
+内容	nèiróng	allg	Inhalt	# HSK 3
+理由	lǐyóu	allg	Begründung	# HSK 3
+不断	bùduàn	allg	ununterbrochen	# HSK 3
+上面	shàngmian	ort	oben	# HSK 3
+追	zhuī	allg	verfolgen	# HSK 3
+刀	dāo	allg	Messer	# HSK 3
+变化	biànhuà	allg	Veränderung	# HSK 3
+媒体	méitǐ	allg	Medien	# HSK 3
+经验	jīngyàn	allg	Erfahrung	# HSK 3
+感受	gǎnshòu	gefuehl	Eindruck	# HSK 3
+观众	guānzhòng	freizeit	Zuschauer	# HSK 3
+完美	wánměi	allg	perfekt	# HSK 3
+错误	cuòwù	allg	Fehler	# HSK 3
+直到	zhídào	praep	bis (zeitlich)	# HSK 3
+真实	zhēnshí	allg	wahr	# HSK 3
+整	zhěng	allg	ganz	# HSK 3
+集中	jízhōng	allg	sich konzentrieren	# HSK 3
+空	kōng	allg	leer	# HSK 3
+传	chuán	allg	weitergeben	# HSK 3
+感情	gǎnqíng	gefuehl	Gefühle	# HSK 3
+记录	jìlù	allg	aufzeichnen	# HSK 3
+职业	zhíyè	arbeit	Beruf	# HSK 3
+后面	hòumian	ort	hinten	# HSK 3
+标准	biāozhǔn	allg	Standard	# HSK 3
+毛	máo	koerper	Fell	# HSK 3
+外面	wàimian	ort	draußen	# HSK 3
+破	pò	allg	kaputt	# HSK 3
+值	zhí	allg	wert sein	# HSK 3
+精彩	jīngcǎi	allg	großartig	# HSK 3
+左右	zuǒyòu	allg	ungefähr	# HSK 3
+朝	cháo	praep	in Richtung	# HSK 3
+痛苦	tòngkǔ	gefuehl	Leid	# HSK 3
+范围	fànwéi	allg	Bereich	# HSK 3
+经济	jīngjì	allg	Wirtschaft	# HSK 3
+事业	shìyè	allg	Karriere	# HSK 3
+速度	sùdù	allg	Geschwindigkeit	# HSK 3
+效果	xiàoguǒ	allg	Wirkung	# HSK 3
+架	jià	zw	Gestell	# HSK 3
+状况	zhuàngkuàng	allg	Zustand	# HSK 3
+反对	fǎnduì	allg	dagegen sein	# HSK 3
+文件	wénjiàn	allg	Dokument	# HSK 3
+输	shū	freizeit	verlieren (Spiel)	# HSK 3
+有效	yǒuxiào	allg	wirksam	# HSK 3
+按照	ànzhào	praep	gemäß	# HSK 3
+室	shì	wohnen	Raum	# HSK 3
+要是	yàoshi	konj	falls (umgangssprachlich)	# HSK 3
+显然	xiǎnrán	allg	offensichtlich	# HSK 3
+时代	shídài	allg	Zeitalter	# HSK 3
+系	xì	allg	Fakultät	# HSK 3
+受伤	shòushāng	koerper	verletzt werden	# HSK 3
+作品	zuòpǐn	allg	Werk (Kunst, Literatur)	# HSK 3
+伟大	wěidà	allg	großartig	# HSK 3
+哈哈	hāhā	allg	haha	# HSK 3
+直	zhí	allg	gerade	# HSK 3
+准	zhǔn	allg	genau	# HSK 3
+充满	chōngmǎn	allg	voller …	# HSK 3
+皮	pí	allg	Haut	# HSK 3
+不仅	bùjǐn	konj	nicht nur (schriftlich)	# HSK 3
+增加	zēngjiā	allg	erhöhen	# HSK 3
+保险	bǎoxiǎn	allg	Versicherung	# HSK 3
+成员	chéngyuán	allg	Mitglied	# HSK 3
+理论	lǐlùn	allg	Theorie	# HSK 3
+领导	lǐngdǎo	allg	Leitung	# HSK 3
+胜利	shènglì	allg	Sieg	# HSK 3
+年代	niándài	allg	Jahrzehnt	# HSK 3
+事故	shìgù	allg	Unfall	# HSK 3
+代	dài	allg	Generation	# HSK 3
+下面	xiàmian	ort	unten	# HSK 3
+程度	chéngdù	allg	Grad	# HSK 3
+麻烦	máfan	allg	Mühe machen	# HSK 3
+美好	měihǎo	allg	wunderbar	# HSK 3
+期	qī	allg	Ausgabe (Heft)	# HSK 3
+宣布	xuānbù	kommu	verkünden	# HSK 3
+害怕	hàipà	gefuehl	sich fürchten	# HSK 3
+调	tiáo	allg	einstellen	# HSK 3
+艺术	yìshù	freizeit	Kunst	# HSK 3
+抓住	zhuāzhù	allg	festhalten	# HSK 3
+猪	zhū	natur	Schwein	# HSK 3
+姑娘	gūniang	person	Mädchen	# HSK 3
+创造	chuàngzào	allg	schaffen	# HSK 3
+武器	wǔqì	allg	Waffe	# HSK 3
+消失	xiāoshī	allg	verschwinden	# HSK 3
+等待	děngdài	allg	warten auf (förmlich)	# HSK 3
+调	diào	allg	versetzen	# HSK 3
+各种	gèzhǒng	allg	allerlei	# HSK 3
+演出	yǎnchū	freizeit	Aufführung	# HSK 3
+配	pèi	allg	passen zu	# HSK 3
+思想	sīxiǎng	allg	Gedanken	# HSK 3
+破坏	pòhuài	allg	zerstören	# HSK 3
+共同	gòngtóng	allg	gemeinsam	# HSK 3
+龙	lóng	natur	Drache	# HSK 3
+乐	lè	gefuehl	froh	# HSK 3
+满足	mǎnzú	gefuehl	zufrieden sein	# HSK 3
+停止	tíngzhǐ	allg	aufhören	# HSK 3
+事实上	shìshíshàng	allg	tatsächlich	# HSK 3
+超级	chāojí	allg	super	# HSK 3
+设备	shèbèi	allg	Ausrüstung	# HSK 3
+奇怪	qíguài	allg	seltsam	# HSK 3
+世纪	shìjì	allg	Jahrhundert	# HSK 3
+制造	zhìzào	allg	herstellen	# HSK 3
+保	bǎo	allg	schützen	# HSK 3
+文化	wénhuà	allg	Kultur	# HSK 3
+紧	jǐn	allg	eng	# HSK 3
+对手	duìshǒu	allg	Gegner	# HSK 3
+不得不	bùdébù	modal	gezwungen sein	# HSK 3
+演员	yǎnyuán	freizeit	Schauspieler	# HSK 3
+证	zhèng	allg	Ausweis	# HSK 3
+当地	dāngdì	allg	örtlich	# HSK 3
+大概	dàgài	allg	ungefähr	# HSK 3
+慢慢	mànmàn	allg	langsam (allmählich)	# HSK 3
+演	yǎn	freizeit	spielen (Rolle)	# HSK 3
+顿	dùn	zw	Zählwort für Mahlzeiten	# HSK 3
+团	tuán	allg	Gruppe	# HSK 3
+咖啡	kāfēi	essen	Kaffee	# HSK 3
+杂志	zázhì	schule	Zeitschrift	# HSK 3
+背	bēi	koerper	auf dem Rücken tragen	# HSK 3
+合	hé	allg	schließen (Augen, Buch)	# HSK 3
+建	jiàn	allg	bauen	# HSK 3
+复杂	fùzá	allg	kompliziert	# HSK 3
+具体	jùtǐ	allg	konkret	# HSK 3
+表达	biǎodá	allg	ausdrücken (Gedanken)	# HSK 3
+足够	zúgòu	allg	ausreichend	# HSK 3
+胜	shèng	allg	siegen	# HSK 3
+周围	zhōuwéi	allg	Umgebung	# HSK 3
+确保	quèbǎo	allg	sicherstellen	# HSK 3
+钟	zhōng	zeit	Uhr (Wanduhr)	# HSK 3
+压	yā	allg	drücken	# HSK 3
+队员	duìyuán	allg	Teammitglied	# HSK 3
+布	bù	allg	Stoff	# HSK 3
+接近	jiējìn	stadt	sich nähern	# HSK 3
+采取	cǎiqǔ	allg	ergreifen (Maßnahmen)	# HSK 3
+风险	fēngxiǎn	allg	Risiko	# HSK 3
+意外	yìwài	allg	unerwartet	# HSK 3
+和平	hépíng	allg	Frieden	# HSK 3
+时刻	shíkè	allg	Moment	# HSK 3
+背	bèi	koerper	Rücken	# HSK 3
+观察	guānchá	allg	beobachten	# HSK 3
+修	xiū	allg	reparieren	# HSK 3
+重大	zhòngdà	allg	bedeutend	# HSK 3
+持续	chíxù	allg	andauern	# HSK 3
+断	duàn	allg	brechen	# HSK 3
+前面	qiánmiàn	ort	vorne	# HSK 3
+千万	qiānwàn	allg	unbedingt	# HSK 3
+具有	jùyǒu	allg	besitzen	# HSK 3
+价格	jiàgé	arbeit	Preis	# HSK 3
+旧	jiù	allg	alt (gebraucht)	# HSK 3
+板	bǎn	allg	Brett	# HSK 3
+发表	fābiǎo	allg	veröffentlichen	# HSK 3
+幸运	xìngyùn	gefuehl	Glück haben	# HSK 3
+付	fù	arbeit	bezahlen	# HSK 3
+表明	biǎomíng	allg	deutlich machen	# HSK 3
+相关	xiāngguān	allg	zusammenhängend	# HSK 3
+退	tuì	allg	zurückgeben	# HSK 3
+困	kùn	allg	schläfrig	# HSK 3
+证据	zhèngjù	allg	Beweis	# HSK 3
+交流	jiāoliú	allg	sich austauschen	# HSK 3
+强大	qiángdà	allg	mächtig	# HSK 3
+立刻	lìkè	zeit	sofort	# HSK 3
+教练	jiàoliàn	allg	Trainer	# HSK 3
+简直	jiǎnzhí	gefuehl	geradezu	# HSK 3
+公开	gōngkāi	allg	offen	# HSK 3
+通常	tōngcháng	allg	normalerweise	# HSK 3
+制作	zhìzuò	allg	anfertigen	# HSK 3
+员工	yuángōng	allg	Mitarbeiter	# HSK 3
+全球	quánqiú	allg	weltweit	# HSK 3
+浪费	làngfèi	allg	verschwenden	# HSK 3
+升	shēng	allg	steigen	# HSK 3
+资金	zījīn	allg	Kapital	# HSK 3
+经营	jīngyíng	arbeit	betreiben	# HSK 3
+合理	hélǐ	allg	vernünftig	# HSK 3
+初	chū	allg	Anfang	# HSK 3
+员	yuán	allg	Endung für Personen (Tätigkeit)	# HSK 3
+实验	shíyàn	allg	Experiment	# HSK 3
+文章	wénzhāng	allg	Artikel	# HSK 3
+信任	xìnrèn	allg	vertrauen	# HSK 3
+任	rèn	allg	ernennen	# HSK 3
+香	xiāng	essen	duftend	# HSK 3
+不必	bùbì	modal	nicht müssen	# HSK 3
+取消	qǔxiāo	allg	absagen	# HSK 3
+对象	duìxiàng	allg	Zielgruppe	# HSK 3
+反正	fǎnzhèng	allg	sowieso	# HSK 3
+赶紧	gǎnjǐn	zeit	schnell	# HSK 3
+任	rèn	allg	egal (wer, was)	# HSK 3
+成熟	chéngshú	allg	reif	# HSK 3
+糖	táng	essen	Zucker	# HSK 3
+互相	hùxiāng	allg	gegenseitig	# HSK 3
+内心	nèixīn	allg	Innerstes	# HSK 3
+发出	fāchū	allg	aussenden	# HSK 3
+费	fèi	allg	Gebühr	# HSK 3
+印象	yìnxiàng	allg	Eindruck	# HSK 3
+进一步	jìnyībù	allg	weiter	# HSK 3
+化	huà	allg	-isierung (Endung)	# HSK 3
+现金	xiànjīn	allg	Bargeld	# HSK 3
+桥	qiáo	stadt	Brücke	# HSK 3
+迷	mí	allg	Fan	# HSK 3
+防	fáng	allg	verhüten	# HSK 3
+舞台	wǔtái	allg	Bühne	# HSK 3
+到达	dàodá	stadt	ankommen (förmlich)	# HSK 3
+紧急	jǐnjí	allg	dringend	# HSK 3
+调整	tiáozhěng	allg	anpassen	# HSK 3
+阳光	yángguāng	allg	Sonnenschein	# HSK 3
+游	yóu	stadt	schwimmen	# HSK 3
+宣传	xuānchuán	allg	werben	# HSK 3
+优势	yōushì	allg	Vorteil	# HSK 3
+科技	kējì	allg	Wissenschaft und Technik	# HSK 3
+进展	jìnzhǎn	allg	Fortschritt	# HSK 3
+生意	shēngyi	arbeit	Geschäft	# HSK 3
+领	lǐng	allg	führen	# HSK 3
+导演	dǎoyǎn	freizeit	Regisseur	# HSK 3
+存	cún	arbeit	aufbewahren	# HSK 3
+评价	píngjià	allg	bewerten	# HSK 3
+主任	zhǔrèn	allg	Leiter	# HSK 3
+适应	shìyìng	allg	sich anpassen	# HSK 3
+汤	tāng	essen	Suppe	# HSK 3
+烟	yān	allg	Rauch	# HSK 3
+赶	gǎn	allg	sich beeilen	# HSK 3
+形象	xíngxiàng	freizeit	Bild (Image)	# HSK 3
+搬	bān	wohnen	tragen (Schweres)	# HSK 3
+上去	shàngqu	allg	hinaufgehen	# HSK 3
+仅仅	jǐnjǐn	allg	lediglich	# HSK 3
+商业	shāngyè	arbeit	Handel	# HSK 3
+尽量	jǐnliàng	allg	möglichst	# HSK 3
+基础	jīchǔ	allg	Grundlage	# HSK 3
+功能	gōngnéng	allg	Funktion	# HSK 3
+生产	shēngchǎn	allg	produzieren	# HSK 3
+自从	zìcóng	praep	seit (Zeitpunkt)	# HSK 3
+女子	nǚzǐ	person	Frau (förmlich)	# HSK 3
+成长	chéngzhǎng	allg	heranwachsen	# HSK 3
+指导	zhǐdǎo	allg	anleiten	# HSK 3
+组合	zǔhé	allg	Kombination	# HSK 3
+积极	jījí	allg	aktiv	# HSK 3
+恐怕	kǒngpà	allg	fürchten (dass)	# HSK 3
+试验	shìyàn	allg	Versuch	# HSK 3
+亲自	qīnzì	allg	persönlich	# HSK 3
+类似	lèisì	vgl	ähnlich	# HSK 3
+食品	shípǐn	allg	Lebensmittel	# HSK 3
+大约	dàyuē	allg	etwa	# HSK 3
+及时	jíshí	allg	rechtzeitig	# HSK 3
+资格	zīgé	allg	Qualifikation	# HSK 3
+背后	bèihòu	koerper	hinter	# HSK 3
+联合	liánhé	allg	sich verbünden	# HSK 3
+胖	pàng	koerper	dick (Person)	# HSK 3
+铁	tiě	allg	Eisen	# HSK 3
+录	lù	allg	aufnehmen	# HSK 3
+提前	tíqián	allg	vorverlegen	# HSK 3
+念	niàn	gefuehl	vorlesen	# HSK 3
+强烈	qiángliè	gefuehl	heftig	# HSK 3
+争取	zhēngqǔ	allg	sich bemühen um	# HSK 3
+命运	mìngyùn	allg	Schicksal	# HSK 3
+进步	jìnbù	allg	Fortschritte machen	# HSK 3
+专门	zhuānmén	allg	speziell	# HSK 3
+工具	gōngjù	allg	Werkzeug	# HSK 3
+快速	kuàisù	allg	schnell	# HSK 3
+缺	quē	allg	fehlen	# HSK 3
+连续	liánxù	allg	ununterbrochen	# HSK 3
+决赛	juésài	allg	Finale	# HSK 3
+厂	chǎng	arbeit	Werk	# HSK 3
+甜	tián	essen	süß	# HSK 3
+配合	pèihé	allg	zusammenwirken	# HSK 3
+形成	xíngchéng	allg	bilden	# HSK 3
+显得	xiǎnde	allg	wirken	# HSK 3
+村	cūn	stadt	Dorf	# HSK 3
+费用	fèiyong	arbeit	Kosten	# HSK 3
+公共	gōnggòng	allg	öffentlich	# HSK 3
+自动	zìdòng	allg	automatisch	# HSK 3
+足球	zúqiú	freizeit	Fußball	# HSK 3
+明确	míngquè	allg	eindeutig	# HSK 3
+当中	dāngzhōng	allg	unter	# HSK 3
+男子	nánzǐ	person	Mann (förmlich)	# HSK 3
+伤心	shāngxīn	gefuehl	traurig	# HSK 3
+结合	jiéhé	allg	verbinden	# HSK 3
+生存	shēngcún	allg	überleben	# HSK 3
+土	tǔ	natur	Erdboden	# HSK 3
+苹果	píngguǒ	essen	Apfel	# HSK 3
+现象	xiànxiàng	allg	Phänomen	# HSK 3
+对待	duìdài	allg	behandeln	# HSK 3
+实力	shílì	allg	Stärke (tatsächlich)	# HSK 3
+区别	qūbié	allg	Unterschied	# HSK 3
+主动	zhǔdòng	allg	aus eigener Initiative	# HSK 3
+形式	xíngshì	allg	Form	# HSK 3
+服装	fúzhuāng	allg	Bekleidung	# HSK 3
+将来	jiānglái	zeit	Zukunft	# HSK 3
+判断	pànduàn	allg	beurteilen	# HSK 3
+前往	qiánwǎng	allg	sich begeben nach	# HSK 3
+相互	xiānghù	allg	wechselseitig	# HSK 3
+啤酒	píjiǔ	essen	Bier	# HSK 3
+工资	gōngzī	arbeit	Lohn	# HSK 3
+深刻	shēnkè	allg	tiefgehend	# HSK 3
+成立	chénglì	allg	gründen	# HSK 3
+工厂	gōngchǎng	arbeit	Fabrik	# HSK 3
+庆祝	qìngzhù	allg	feiern	# HSK 3
+现代	xiàndài	allg	modern	# HSK 3
+眼前	yǎnqián	koerper	vor Augen	# HSK 3
+机器	jīqì	allg	Maschine	# HSK 3
+全面	quánmiàn	allg	umfassend	# HSK 3
+体验	tǐyàn	allg	erleben	# HSK 3
+话题	huàtí	allg	Gesprächsthema	# HSK 3
+看上去	kànshangqu	allg	wirken	# HSK 3
+坚强	jiānqiáng	gefuehl	stark (Charakter)	# HSK 3
+古	gǔ	allg	alt (antik)	# HSK 3
+合法	héfǎ	allg	legal	# HSK 3
+离婚	líhūn	familie	sich scheiden lassen	# HSK 3
+羊	yáng	natur	Schaf	# HSK 3
+个性	gèxìng	gefuehl	Persönlichkeit	# HSK 3
+批准	pīzhǔn	allg	genehmigen	# HSK 3
+环	huán	allg	Ring	# HSK 3
+造	zào	allg	bauen	# HSK 3
+银	yín	allg	Silber	# HSK 3
+前进	qiánjìn	allg	vorwärtsgehen	# HSK 3
+赶快	gǎnkuài	allg	schleunigst	# HSK 3
+举办	jǔbàn	allg	ausrichten	# HSK 3
+公布	gōngbù	allg	bekannt geben	# HSK 3
+人才	réncái	person	Talent (Person)	# HSK 3
+吵	chǎo	kommu	laut	# HSK 3
+双方	shuāngfāng	allg	beide Seiten	# HSK 3
+退出	tuìchū	allg	austreten	# HSK 3
+支付	zhīfù	arbeit	bezahlen (förmlich)	# HSK 3
+作者	zuòzhě	allg	Autor	# HSK 3
+温暖	wēnnuǎn	natur	warm (herzlich)	# HSK 3
+指出	zhǐchū	allg	hinweisen auf	# HSK 3
+整理	zhěnglǐ	wohnen	aufräumen	# HSK 3
+公民	gōngmín	person	Bürger	# HSK 3
+齐	qí	allg	vollständig	# HSK 3
+表面	biǎomiàn	allg	Oberfläche	# HSK 3
+丰富	fēngfù	allg	reichhaltig	# HSK 3
+上升	shàngshēng	allg	steigen	# HSK 3
+围	wéi	allg	umgeben	# HSK 3
+谈判	tánpàn	allg	verhandeln	# HSK 3
+动力	dònglì	allg	Antrieb	# HSK 3
+赶到	gǎndào	stadt	rechtzeitig ankommen	# HSK 3
+当初	dāngchū	zeit	damals (am Anfang)	# HSK 3
+人群	rénqún	allg	Menschenmenge	# HSK 3
+领先	lǐngxiān	allg	führen (in Führung liegen)	# HSK 3
+订	dìng	allg	buchen	# HSK 3
+声明	shēngmíng	kommu	Erklärung	# HSK 3
+保安	bǎo'ān	allg	Wachmann	# HSK 3
+路线	lùxiàn	allg	Route	# HSK 3
+歌手	gēshǒu	freizeit	Sänger	# HSK 3
+完整	wánzhěng	allg	vollständig	# HSK 3
+飞行	fēixíng	stadt	Flug	# HSK 3
+较	jiào	allg	verhältnismäßig	# HSK 3
+性格	xìnggé	gefuehl	Charakter	# HSK 3
+纪念	jìniàn	allg	gedenken	# HSK 3
+福	fú	allg	Glück	# HSK 3
+补	bǔ	allg	ergänzen	# HSK 3
+分别	fēnbié	allg	jeweils	# HSK 3
+课程	kèchéng	schule	Kurs	# HSK 3
+看起来	kànqǐlai	allg	sieht aus wie	# HSK 3
+愿望	yuànwàng	allg	Wunsch	# HSK 3
+果然	guǒrán	allg	wie erwartet	# HSK 3
+放到	fàngdào	allg	stellen auf	# HSK 3
+长期	chángqī	allg	langfristig	# HSK 3
+数量	shùliàng	allg	Menge	# HSK 3
+静	jìng	gefuehl	still	# HSK 3
+保留	bǎoliú	allg	behalten	# HSK 3
+谈话	tánhuà	allg	Gespräch	# HSK 3
+相比	xiāngbǐ	vgl	im Vergleich	# HSK 3
+转变	zhuǎnbiàn	allg	Wandel	# HSK 3
+能不能	néngbunéng	modal	kann man …?	# HSK 3
+深入	shēnrù	allg	eindringen	# HSK 3
+石油	shíyóu	allg	Erdöl	# HSK 3
+至今	zhìjīn	zeit	bis heute	# HSK 3
+上来	shànglái	allg	heraufkommen	# HSK 3
+情感	qínggǎn	gefuehl	Emotion	# HSK 3
+称为	chēngwéi	allg	bezeichnet werden als	# HSK 3
+访问	fǎngwèn	freizeit	besuchen (offiziell)	# HSK 3
+计算	jìsuàn	allg	berechnen	# HSK 3
+才能	cáinéng	allg	Begabung	# HSK 3
+开发	kāifā	allg	entwickeln	# HSK 3
+始终	shǐzhōng	zeit	von Anfang bis Ende	# HSK 3
+玩具	wánjù	allg	Spielzeug	# HSK 3
+争	zhēng	allg	streiten	# HSK 3
+卫生	wèishēng	wohnen	Hygiene	# HSK 3
+年纪	niánjì	person	Alter (Person)	# HSK 3
+富	fù	allg	reich	# HSK 3
+加强	jiāqiáng	allg	verstärken	# HSK 3
+实验室	shíyànshì	allg	Labor	# HSK 3
+工业	gōngyè	allg	Industrie	# HSK 3
+采用	cǎiyòng	allg	verwenden	# HSK 3
+开放	kāifàng	allg	öffnen	# HSK 3
+各地	gèdì	allg	überall	# HSK 3
+广播	guǎngbō	allg	Rundfunk	# HSK 3
+手指	shǒuzhǐ	koerper	Finger	# HSK 3
+团结	tuánjié	allg	sich zusammenschließen	# HSK 3
+展开	zhǎnkāi	allg	ausbreiten	# HSK 3
+交往	jiāowǎng	allg	Umgang haben	# HSK 3
+天空	tiānkōng	natur	Himmel	# HSK 3
+把握	bǎwò	allg	Zuversicht	# HSK 3
+成就	chéngjiù	allg	Leistung	# HSK 3
+退休	tuìxiū	allg	in Rente gehen	# HSK 3
+发动	fādòng	allg	starten	# HSK 3
+需求	xūqiú	allg	Bedarf	# HSK 3
+只好	zhǐhǎo	allg	notgedrungen	# HSK 3
+整天	zhěngtiān	zeit	den ganzen Tag	# HSK 3
+国内	guónèi	allg	Inland	# HSK 3
+传说	chuánshuō	allg	Legende	# HSK 3
+后果	hòuguǒ	allg	Folge	# HSK 3
+批评	pīpíng	allg	kritisieren	# HSK 3
+打破	dǎpò	allg	zerbrechen	# HSK 3
+石头	shítou	natur	Stein	# HSK 3
+主持	zhǔchí	allg	leiten	# HSK 3
+主意	zhǔyi	allg	Idee	# HSK 3
+先进	xiānjìn	allg	fortschrittlich	# HSK 3
+文明	wénmíng	allg	Zivilisation	# HSK 3
+西部	xībù	allg	westlicher Teil	# HSK 3
+感冒	gǎnmào	koerper	Erkältung	# HSK 3
+防止	fángzhǐ	allg	verhindern	# HSK 3
+从事	cóngshì	allg	tätig sein in	# HSK 3
+制度	zhìdù	allg	System	# HSK 3
+应当	yīngdāng	modal	sollen (förmlich)	# HSK 3
+不论	bùlùn	konj	egal ob	# HSK 3
+改造	gǎizào	allg	umgestalten	# HSK 3
+制定	zhìdìng	allg	ausarbeiten	# HSK 3
+游泳	yóuyǒng	freizeit	schwimmen	# HSK 3
+直播	zhíbō	allg	Liveübertragung	# HSK 3
+概念	gàiniàn	allg	Begriff	# HSK 3
+成果	chéngguǒ	allg	Ergebnis	# HSK 3
+据说	jùshuō	allg	angeblich	# HSK 3
+裤子	kùzi	kleidung	Hose	# HSK 3
+各自	gèzì	allg	jeder für sich	# HSK 3
+创作	chuàngzuò	allg	künstlerisch schaffen	# HSK 3
+好奇	hàoqí	allg	neugierig	# HSK 3
+自身	zìshēn	allg	selbst	# HSK 3
+去世	qùshì	allg	versterben	# HSK 3
+增长	zēngzhǎng	allg	Wachstum	# HSK 3
+沙发	shāfā	wohnen	Sofa	# HSK 3
+部长	bùzhǎng	allg	Minister	# HSK 3
+体会	tǐhuì	allg	erfahren	# HSK 3
+否认	fǒurèn	allg	abstreiten	# HSK 3
+功夫	gōngfu	allg	Kung-Fu	# HSK 3
+民族	mínzú	person	Volk	# HSK 3
+集体	jítǐ	allg	Kollektiv	# HSK 3
+高速	gāosù	allg	Hochgeschwindigkeit	# HSK 3
+预计	yùjì	allg	voraussichtlich	# HSK 3
+演唱会	yǎnchànghuì	allg	Gesangskonzert	# HSK 3
+跳舞	tiàowǔ	freizeit	tanzen	# HSK 3
+观看	guānkàn	allg	zuschauen	# HSK 3
+发明	fāmíng	allg	erfinden	# HSK 3
+推进	tuījìn	allg	voranbringen	# HSK 3
+安装	ānzhuāng	allg	installieren	# HSK 3
+欢乐	huānlè	gefuehl	Freude	# HSK 3
+邮件	yóujiàn	kommu	Post	# HSK 3
+修改	xiūgǎi	allg	überarbeiten	# HSK 3
+团体	tuántǐ	allg	Organisation	# HSK 3
+房屋	fángwū	stadt	Gebäude	# HSK 3
+乐观	lèguān	allg	optimistisch	# HSK 3
+相似	xiāngsì	vgl	ähneln	# HSK 3
+得分	défēn	allg	Punkte erzielen	# HSK 3
+纪录	jìlù	allg	Rekord	# HSK 3
+可靠	kěkào	allg	zuverlässig	# HSK 3
+基本上	jīběnshang	allg	im Grunde	# HSK 3
+农民	nóngmín	arbeit	Bauer	# HSK 3
+商品	shāngpǐn	arbeit	Ware	# HSK 3
+克服	kèfú	allg	überwinden	# HSK 3
+文字	wénzì	schule	Schrift	# HSK 3
+属	shǔ	allg	gehören zu	# HSK 3
+运输	yùnshū	allg	transportieren	# HSK 3
+热爱	rè'ài	gefuehl	innig lieben	# HSK 3
+家具	jiājù	wohnen	Möbel	# HSK 3
+传播	chuánbō	allg	verbreiten	# HSK 3
+落后	luòhòu	allg	zurückbleiben	# HSK 3
+特色	tèsè	allg	Besonderheit	# HSK 3
+电视剧	diànshìjù	freizeit	Fernsehserie	# HSK 3
+身份证	shēnfènzhèng	allg	Personalausweis	# HSK 3
+强调	qiángdiào	allg	betonen	# HSK 3
+加快	jiākuài	allg	beschleunigen	# HSK 3
+考验	kǎoyàn	schule	Prüfung (Bewährung)	# HSK 3
+建设	jiànshè	allg	Aufbau	# HSK 3
+文学	wénxué	allg	Literatur	# HSK 3
+分配	fēnpèi	allg	verteilen	# HSK 3
+乐队	yuèduì	allg	Band	# HSK 3
+屋子	wūzi	wohnen	Zimmer	# HSK 3
+演唱	yǎnchàng	freizeit	auftreten (singen)	# HSK 3
+保存	bǎocún	allg	aufbewahren	# HSK 3
+电视台	diànshìtái	freizeit	Fernsehsender	# HSK 3
+播放	bōfàng	allg	abspielen	# HSK 3
+家乡	jiāxiāng	allg	Heimatort	# HSK 3
+突出	tūchū	allg	hervorragend	# HSK 3
+其次	qícì	konj	zweitens	# HSK 3
+会员	huìyuán	allg	Mitglied (Verein)	# HSK 3
+热烈	rèliè	allg	lebhaft	# HSK 3
+联合国	Liánhéguó	allg	Vereinte Nationen	# HSK 3
+吵架	chǎojià	allg	sich streiten	# HSK 3
+往往	wǎngwǎng	zeit	oft	# HSK 3
+带领	dàilǐng	allg	anführen	# HSK 3
+首都	shǒudū	stadt	Hauptstadt	# HSK 3
+决心	juéxīn	allg	Entschlossenheit	# HSK 3
+球迷	qiúmí	freizeit	Fußballfan	# HSK 3
+补充	bǔchōng	allg	ergänzen	# HSK 3
+整整	zhěngzhěng	zeit	ganze	# HSK 3
+巧	qiǎo	allg	geschickt	# HSK 3
+有利	yǒulì	allg	vorteilhaft	# HSK 3
+体现	tǐxiàn	allg	verkörpern	# HSK 3
+不安	bù'ān	allg	unruhig	# HSK 3
+告别	gàobié	allg	sich verabschieden	# HSK 3
+亲人	qīnrén	familie	nahe Verwandte	# HSK 3
+生长	shēngzhǎng	allg	wachsen	# HSK 3
+整体	zhěngtǐ	allg	Gesamtheit	# HSK 3
+收费	shōufèi	allg	Gebühren erheben	# HSK 3
+空调	kōngtiáo	wohnen	Klimaanlage	# HSK 3
+迎接	yíngjiē	allg	empfangen	# HSK 3
+没用	méiyòng	allg	nutzlos	# HSK 3
+改进	gǎijìn	allg	verbessern	# HSK 3
+难度	nándù	allg	Schwierigkeitsgrad	# HSK 3
+头脑	tóunǎo	koerper	Verstand	# HSK 3
+铁路	tiělù	allg	Eisenbahnstrecke	# HSK 3
+行李	xíngli	stadt	Gepäck	# HSK 3
+通信	tōngxìn	allg	korrespondieren	# HSK 3
+缺少	quēshǎo	allg	fehlen an	# HSK 3
+衬衫	chènshān	kleidung	Hemd	# HSK 3
+环保	huánbǎo	allg	Umweltschutz	# HSK 3
+发送	fāsòng	kommu	senden (Nachricht)	# HSK 3
+播出	bōchū	allg	ausstrahlen	# HSK 3
+读者	dúzhě	allg	Leser	# HSK 3
+提问	tíwèn	kommu	eine Frage stellen	# HSK 3
+消费	xiāofèi	allg	konsumieren	# HSK 3
+实行	shíxíng	allg	durchführen	# HSK 3
+发言	fāyán	schule	das Wort ergreifen	# HSK 3
+从前	cóngqián	zeit	früher	# HSK 3
+日常	rìcháng	allg	alltäglich	# HSK 3
+缺点	quēdiǎn	allg	Schwäche	# HSK 3
+观念	guānniàn	allg	Vorstellung	# HSK 3
+反复	fǎnfù	zeit	wiederholt	# HSK 3
+场所	chǎngsuǒ	stadt	Ort	# HSK 3
+写作	xiězuò	schule	Schreiben	# HSK 3
+早已	zǎoyǐ	allg	längst	# HSK 3
+手续	shǒuxù	allg	Formalitäten	# HSK 3
+初步	chūbù	allg	vorläufig	# HSK 3
+比例	bǐlì	allg	Verhältnis	# HSK 3
+输入	shūrù	allg	eingeben	# HSK 3
+创新	chuàngxīn	allg	Innovation	# HSK 3
+总结	zǒngjié	allg	zusammenfassen	# HSK 3
+接待	jiēdài	allg	empfangen (Gäste)	# HSK 3
+南部	nánbù	allg	südlicher Teil	# HSK 3
+另一方面	lìngyīfāngmiàn	konj	andererseits	# HSK 3
+营养	yíngyǎng	allg	Ernährung	# HSK 3
+排名	páimíng	allg	Rangliste	# HSK 3
+裙子	qúnzi	kleidung	Rock (Kleidung)	# HSK 3
+互联网	hùliánwǎng	allg	Internet	# HSK 3
+毛病	máobìng	allg	Fehler	# HSK 3
+场合	chǎnghé	allg	Anlass	# HSK 3
+香蕉	xiāngjiāo	essen	Banane	# HSK 3
+牌子	páizi	allg	Schild	# HSK 3
+光明	guāngmíng	zeit	hell	# HSK 3
+合格	hégé	allg	qualifiziert	# HSK 3
+工程师	gōngchéngshī	arbeit	Ingenieur	# HSK 3
+旅馆	lǚguǎn	stadt	Gasthaus	# HSK 3
+东部	dōngbù	allg	östlicher Teil	# HSK 3
+认可	rènkě	allg	anerkennen	# HSK 3
+优点	yōudiǎn	allg	Vorzug	# HSK 3
+家属	jiāshǔ	familie	Angehörige	# HSK 3
+坚决	jiānjué	allg	entschlossen	# HSK 3
+传来	chuánlái	kommu	herüberdringen (Nachricht, Ton)	# HSK 3
+设立	shèlì	allg	einrichten	# HSK 3
+预防	yùfáng	allg	vorbeugen	# HSK 3
+价钱	jiàqian	arbeit	Preis (umgangssprachlich)	# HSK 3
+必然	bìrán	allg	zwangsläufig	# HSK 3
+危害	wēihài	allg	gefährden	# HSK 3
+干吗	gànmá	frage	wozu?	# HSK 3
+底下	dǐxia	ort	unter	# HSK 3
+外交	wàijiāo	allg	Diplomatie	# HSK 3
+本事	běnshi	allg	Können	# HSK 3
+高速公路	gāosùgōnglù	allg	Autobahn	# HSK 3
+种子	zhǒngzi	natur	Samen	# HSK 3
+录音	lùyīn	allg	Tonaufnahme	# HSK 3
+散步	sànbù	freizeit	spazieren gehen	# HSK 3
+推动	tuīdòng	allg	vorantreiben	# HSK 3
+北部	běibù	allg	nördlicher Teil	# HSK 3
+适用	shìyòng	allg	anwendbar	# HSK 3
+大夫	dàifu	koerper	Doktor (Arzt)	# HSK 3
+客观	kèguān	allg	objektiv	# HSK 3
+应用	yìngyòng	allg	Anwendung	# HSK 3
+电台	diàntái	freizeit	Radiosender	# HSK 3
+金牌	jīnpái	allg	Goldmedaille	# HSK 3
+完善	wánshàn	allg	vervollkommnen	# HSK 3
+志愿者	zhìyuànzhě	allg	Freiwilliger	# HSK 3
+发达	fādá	allg	entwickelt	# HSK 3
+认出	rènchū	allg	erkennen (wiedererkennen)	# HSK 3
+人工	réngōng	allg	künstlich	# HSK 3
+亲切	qīnqiè	allg	herzlich	# HSK 3
+气候	qìhòu	natur	Klima	# HSK 3
+普遍	pǔbiàn	allg	allgemein	# HSK 3
+爱心	àixīn	gefuehl	Mitgefühl	# HSK 3
+形状	xíngzhuàng	allg	Form	# HSK 3
+短期	duǎnqī	allg	kurzfristig	# HSK 3
+全场	quánchǎng	allg	ganzes Publikum	# HSK 3
+证件	zhèngjiàn	allg	Ausweispapiere	# HSK 3
+握手	wòshǒu	koerper	sich die Hand geben	# HSK 3
+共有	gòngyǒu	allg	insgesamt haben	# HSK 3
+题目	tímù	schule	Thema	# HSK 3
+开展	kāizhǎn	allg	durchführen	# HSK 3
+跑步	pǎobù	freizeit	joggen	# HSK 3
+美食	měishí	essen	gutes Essen	# HSK 3
+推广	tuīguǎng	allg	verbreiten	# HSK 3
+卫生间	wèishēngjiān	wohnen	Badezimmer	# HSK 3
+不光	bùguāng	konj	nicht nur (umgangssprachlich)	# HSK 3
+古代	gǔdài	zeit	Altertum	# HSK 3
+子女	zǐnǚ	person	Kinder (Söhne und Töchter)	# HSK 3
+中华民族	Zhōnghuámínzú	person	chinesische Nation	# HSK 3
+建成	jiànchéng	allg	fertig bauen	# HSK 3
+打听	dǎting	allg	sich erkundigen	# HSK 3
+农业	nóngyè	allg	Landwirtschaft	# HSK 3
+面积	miànjī	allg	Fläche	# HSK 3
+前后	qiánhòu	zeit	ungefähr (Zeit)	# HSK 3
+加工	jiāgōng	allg	verarbeiten	# HSK 3
+果汁	guǒzhī	essen	Fruchtsaft	# HSK 3
+学费	xuéfèi	schule	Schulgeld	# HSK 3
+中部	zhōngbù	allg	mittlerer Teil	# HSK 3
+歌声	gēshēng	allg	Gesang	# HSK 3
+剧场	jùchǎng	freizeit	Theater (Gebäude)	# HSK 3
+搬家	bānjiā	wohnen	umziehen (Wohnung)	# HSK 3
+束	shù	zw	Bündel	# HSK 3
+节约	jiéyuē	allg	sparen	# HSK 3
+否定	fǒudìng	allg	verneinen	# HSK 3
+主张	zhǔzhāng	allg	befürworten	# HSK 3
+性别	xìngbié	allg	Geschlecht	# HSK 3
+办理	bànlǐ	allg	bearbeiten	# HSK 3
+规范	guīfàn	allg	Norm	# HSK 3
+暖和	nuǎnhuo	natur	angenehm warm	# HSK 3
+被子	bèizi	wohnen	Bettdecke	# HSK 3
+可乐	kělè	essen	Cola	# HSK 3
+农村	nóngcūn	stadt	Land (ländliche Gegend)	# HSK 3
+世界杯	Shìjièbēi	allg	Weltmeisterschaft	# HSK 3
+听众	tīngzhòng	allg	Zuhörer	# HSK 3
+近期	jìnqī	zeit	in naher Zukunft	# HSK 3
+邮箱	yóuxiāng	kommu	Briefkasten	# HSK 3
+预报	yùbào	allg	Vorhersage	# HSK 3
+自主	zìzhǔ	allg	selbstständig	# HSK 3
+歌迷	gēmí	freizeit	Musikfan	# HSK 3
+整齐	zhěngqí	allg	ordentlich	# HSK 3
+木头	mùtou	natur	Holz	# HSK 3
+熟人	shúrén	person	Bekannter	# HSK 3
+民间	mínjiān	person	Volks-	# HSK 3
+景色	jǐngsè	natur	Landschaft	# HSK 3
+解开	jiěkāi	allg	aufknoten	# HSK 3
+初中	chūzhōng	schule	Unterstufe der Mittelschule	# HSK 3
+将近	jiāngjìn	allg	fast	# HSK 3
+功课	gōngkè	schule	Schulaufgaben	# HSK 3
+认得	rènde	allg	kennen	# HSK 3
+老太太	lǎotàitai	person	alte Dame	# HSK 3
+上衣	shàngyī	kleidung	Oberteil	# HSK 3
+定期	dìngqī	allg	regelmäßig	# HSK 3
+一方面	yīfāngmiàn	konj	einerseits	# HSK 3
+动人	dòngrén	allg	bewegend	# HSK 3
+老百姓	lǎobǎixìng	person	einfache Leute	# HSK 3
+开业	kāiyè	arbeit	eröffnen (Geschäft)	# HSK 3
+收音机	shōuyīnjī	allg	Radio (Gerät)	# HSK 3
+生动	shēngdòng	allg	lebendig	# HSK 3
+就业	jiùyè	arbeit	Arbeit finden	# HSK 3
+长城	Chángchéng	allg	Große Mauer	# HSK 3
+电子邮件	diànzǐyóujiàn	kommu	E-Mail	# HSK 3
+彩色	cǎisè	allg	farbig	# HSK 3
+信封	xìnfēng	kommu	Briefumschlag	# HSK 3
+单元	dānyuán	schule	Einheit	# HSK 3
+海关	hǎiguān	allg	Zoll	# HSK 3
+班级	bānjí	schule	Schulklasse	# HSK 3
+自觉	zìjué	allg	bewusst	# HSK 3
+收看	shōukàn	freizeit	fernsehen	# HSK 3
+公务员	gōngwùyuán	arbeit	Beamter	# HSK 3
+变为	biànwéi	allg	sich verwandeln zu	# HSK 3
+旅行社	lǚxíngshè	stadt	Reisebüro	# HSK 3
+标题	biāotí	allg	Überschrift	# HSK 3
+志愿	zhìyuàn	allg	Wunsch (Lebensziel)	# HSK 3
+职工	zhígōng	allg	Belegschaft	# HSK 3
+分组	fēnzǔ	allg	in Gruppen einteilen	# HSK 3
+请教	qǐngjiào	kommu	um Rat fragen	# HSK 3
+报到	bàodào	stadt	sich melden	# HSK 3
+表格	biǎogé	allg	Formular	# HSK 3
+美术	měishù	allg	bildende Kunst	# HSK 3
+故乡	gùxiāng	allg	Heimat	# HSK 3
+邮票	yóupiào	kommu	Briefmarke	# HSK 3
+房租	fángzū	wohnen	Miete	# HSK 3
+武术	wǔshù	allg	Kampfkunst	# HSK 3
+理发	lǐfà	koerper	Haare schneiden	# HSK 3
+推开	tuīkāi	allg	aufstoßen	# HSK 3
+短裤	duǎnkù	kleidung	kurze Hose	# HSK 3
+房东	fángdōng	wohnen	Vermieter	# HSK 3
+华人	Huárén	person	Chinese (ethnisch)	# HSK 3
+广大	guǎngdà	allg	weit	# HSK 3
+收听	shōutīng	kommu	hören (Radio)	# HSK 3
+初级	chūjí	schule	Grundstufe	# HSK 3
+听力	tīnglì	schule	Hörverständnis	# HSK 3
+衬衣	chènyī	kleidung	Oberhemd	# HSK 3
+绿茶	lǜchá	essen	grüner Tee	# HSK 3
+结实	jiēshi	allg	robust	# HSK 3
+留学	liúxué	schule	im Ausland studieren	# HSK 3
+书架	shūjià	wohnen	Bücherregal	# HSK 3
+专题	zhuāntí	allg	Sonderthema	# HSK 3
+工夫	gōngfu	zeit	Zeit	# HSK 3
+教材	jiàocái	schule	Lehrmaterial	# HSK 3
+创业	chuàngyè	arbeit	ein Unternehmen gründen	# HSK 3
+奶茶	nǎichá	essen	Milchtee	# HSK 3
+本领	běnlǐng	allg	Fähigkeit	# HSK 3
+红茶	hóngchá	essen	Schwarztee	# HSK 3
+话剧	huàjù	freizeit	Theaterstück	# HSK 3
+大使馆	dàshǐguǎn	allg	Botschaft (diplomatisch)	# HSK 3
+沙子	shāzi	natur	Sand	# HSK 3
+年底	niándǐ	zeit	Jahresende	# HSK 3
+带动	dàidòng	allg	antreiben	# HSK 3
+交警	jiāojǐng	arbeit	Verkehrspolizist	# HSK 3
+代表团	dàibiǎotuán	allg	Delegation	# HSK 3
+影视	yǐngshì	freizeit	Film und Fernsehen	# HSK 3
+国庆	Guóqìng	allg	Nationalfeiertag	# HSK 3
+做客	zuòkè	person	zu Gast sein	# HSK 3
+所长	suǒzhǎng	allg	Institutsleiter	# HSK 3
+票价	piàojià	allg	Fahrpreis	# HSK 3
+有的是	yǒudeshì	allg	jede Menge	# HSK 3
+皮包	píbāo	kleidung	Ledertasche	# HSK 3
+连续剧	liánxùjù	freizeit	Serie (Fernsehen)	# HSK 3
+红酒	hóngjiǔ	essen	Rotwein	# HSK 3
+复印	fùyìn	allg	kopieren (Fotokopie)	# HSK 3
+图画	túhuà	freizeit	Zeichnung	# HSK 3
+长处	chángchù	allg	Stärke	# HSK 3
+短处	duǎnchù	allg	Schwäche	# HSK 3
+白菜	báicài	essen	Chinakohl	# HSK 3
+普及	pǔjí	allg	verbreiten	# HSK 3
+年初	niánchū	zeit	Jahresanfang	# HSK 3
+试题	shìtí	schule	Prüfungsaufgabe	# HSK 3
+银牌	yínpái	allg	Silbermedaille	# HSK 3
+人民币	rénmínbì	allg	Renminbi (Währung)	# HSK 3
+老头儿	lǎotóur	person	alter Mann	# HSK 3
+划船	huáchuán	stadt	rudern	# HSK 3
+交费	jiāofèi	arbeit	Gebühren bezahlen	# HSK 3
+凉水	liángshuǐ	essen	kaltes Wasser	# HSK 3
+跳高	tiàogāo	freizeit	Hochsprung	# HSK 3
+衣架	yījià	wohnen	Kleiderbügel	# HSK 3
+外文	wàiwén	allg	Fremdsprache (Schrift)	# HSK 3
+空儿	kòngr	zeit	freie Zeit	# HSK 3
+预习	yùxí	schule	vorbereiten (Lernstoff)	# HSK 3
+跳远	tiàoyuǎn	freizeit	Weitsprung	# HSK 3
+京剧	jīngjù	freizeit	Peking-Oper	# HSK 3
+后年	hòunián	zeit	übernächstes Jahr	# HSK 3
+连忙	liánmáng	zeit	eilig	# HSK 3

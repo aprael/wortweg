@@ -1,0 +1,1734 @@
+{
+  "_info": "Lehrplan für de-es-wortschatz: Abschnitte von leicht nach schwer. Einheiten mit „themen“ nehmen die häufigsten noch freien Lemmata dieser Themen (Codes wie in themen.tsv), Einheiten mit „woerter“ sind feste Formen/Wendungen (Regeln). „zeitform“ schaltet Sätze dieser Zeitform ab dieser Einheit frei; vorher kommen nur Sätze im Präsens. Was übrig bleibt, verteilt „rest“ nach Häufigkeit und Thema.",
+  "themenNamen": {
+    "grund": "Wichtige kleine Wörter",
+    "gruss": "Hallo und danke",
+    "person": "Menschen",
+    "familie": "Familie und Freunde",
+    "zahl": "Zahlen und Mengen",
+    "zeit": "Zeit und Kalender",
+    "essen": "Essen und Trinken",
+    "wohnen": "Zuhause",
+    "schule": "Schule und Lernen",
+    "arbeit": "Arbeit und Geld",
+    "stadt": "Stadt und unterwegs",
+    "freizeit": "Freizeit",
+    "koerper": "Körper und Gesundheit",
+    "kleidung": "Kleidung und Aussehen",
+    "natur": "Natur, Wetter und Tiere",
+    "gefuehl": "Gefühle und Charakter",
+    "kommu": "Sprechen und Fragen",
+    "farbe": "Farben",
+    "praep": "Präpositionen",
+    "konj": "Bindewörter",
+    "allg": "Grundwortschatz"
+  },
+  "stufen": [
+    {
+      "titel": "Erste Schritte",
+      "einheiten": [
+        {
+          "themen": [
+            "grund"
+          ],
+          "anzahl": 16,
+          "titel": "Ich, du und die ersten Wörter"
+        },
+        {
+          "themen": [
+            "gruss"
+          ],
+          "anzahl": 12,
+          "titel": "Hallo und danke"
+        },
+        {
+          "themen": [
+            "grund"
+          ],
+          "anzahl": 16,
+          "titel": "Wichtige kleine Wörter"
+        },
+        {
+          "themen": [
+            "zahl"
+          ],
+          "anzahl": 16,
+          "maxRang": 3000,
+          "titel": "Zahlen"
+        },
+        {
+          "themen": [
+            "farbe"
+          ],
+          "anzahl": 12,
+          "titel": "Farben"
+        },
+        {
+          "themen": [
+            "grund"
+          ],
+          "anzahl": 16,
+          "titel": "Wichtige kleine Wörter 2"
+        }
+      ]
+    },
+    {
+      "titel": "Kennenlernen",
+      "einheiten": [
+        {
+          "themen": [
+            "person"
+          ],
+          "anzahl": 16,
+          "titel": "Menschen und Herkunft"
+        },
+        {
+          "themen": [
+            "familie"
+          ],
+          "anzahl": 16,
+          "titel": "Familie und Freunde"
+        },
+        {
+          "themen": [
+            "kommu"
+          ],
+          "anzahl": 16,
+          "titel": "Sprechen und Fragen"
+        },
+        {
+          "themen": [
+            "grund"
+          ],
+          "anzahl": 16,
+          "titel": "Wichtige kleine Wörter 3"
+        },
+        {
+          "themen": [
+            "person",
+            "familie"
+          ],
+          "anzahl": 16,
+          "maxRang": 2500,
+          "titel": "Menschen und Familie 2"
+        },
+        {
+          "themen": [
+            "grund"
+          ],
+          "anzahl": 16,
+          "titel": "Wichtige kleine Wörter 4"
+        },
+        {
+          "themen": [
+            "allg"
+          ],
+          "anzahl": 16,
+          "titel": "Grundwortschatz 1"
+        }
+      ]
+    },
+    {
+      "titel": "Alltag",
+      "einheiten": [
+        {
+          "themen": [
+            "zeit"
+          ],
+          "anzahl": 16,
+          "titel": "Zeit und Kalender"
+        },
+        {
+          "themen": [
+            "essen"
+          ],
+          "anzahl": 16,
+          "titel": "Essen und Trinken"
+        },
+        {
+          "themen": [
+            "wohnen"
+          ],
+          "anzahl": 16,
+          "titel": "Zuhause und Tagesablauf"
+        },
+        {
+          "themen": [
+            "grund"
+          ],
+          "anzahl": 16,
+          "titel": "Wichtige kleine Wörter 5"
+        },
+        {
+          "themen": [
+            "allg"
+          ],
+          "anzahl": 16,
+          "titel": "Grundwortschatz 2"
+        },
+        {
+          "themen": [
+            "zeit"
+          ],
+          "anzahl": 16,
+          "maxRang": 2500,
+          "titel": "Zeit und Kalender 2"
+        },
+        {
+          "themen": [
+            "essen"
+          ],
+          "anzahl": 16,
+          "maxRang": 2500,
+          "titel": "Essen und Trinken 2"
+        },
+        {
+          "themen": [
+            "allg"
+          ],
+          "anzahl": 16,
+          "titel": "Grundwortschatz 3"
+        }
+      ]
+    },
+    {
+      "titel": "Schule und Arbeit",
+      "einheiten": [
+        {
+          "themen": [
+            "schule"
+          ],
+          "anzahl": 16,
+          "titel": "Schule und Lernen"
+        },
+        {
+          "themen": [
+            "arbeit"
+          ],
+          "anzahl": 16,
+          "titel": "Arbeit und Geld"
+        },
+        {
+          "themen": [
+            "grund"
+          ],
+          "anzahl": 16,
+          "titel": "Wichtige kleine Wörter 6"
+        },
+        {
+          "themen": [
+            "allg"
+          ],
+          "anzahl": 16,
+          "titel": "Grundwortschatz 4"
+        },
+        {
+          "themen": [
+            "schule",
+            "arbeit"
+          ],
+          "anzahl": 16,
+          "maxRang": 2500,
+          "titel": "Schule und Arbeit 2"
+        },
+        {
+          "themen": [
+            "allg"
+          ],
+          "anzahl": 16,
+          "titel": "Grundwortschatz 5"
+        }
+      ]
+    },
+    {
+      "titel": "Unterwegs",
+      "einheiten": [
+        {
+          "themen": [
+            "stadt"
+          ],
+          "anzahl": 16,
+          "titel": "In der Stadt"
+        },
+        {
+          "themen": [
+            "stadt"
+          ],
+          "anzahl": 16,
+          "titel": "Einkaufen und Reisen"
+        },
+        {
+          "themen": [
+            "grund"
+          ],
+          "anzahl": 16,
+          "titel": "Wichtige kleine Wörter 7"
+        },
+        {
+          "themen": [
+            "allg"
+          ],
+          "anzahl": 16,
+          "titel": "Grundwortschatz 6"
+        },
+        {
+          "themen": [
+            "wohnen"
+          ],
+          "anzahl": 16,
+          "maxRang": 2500,
+          "titel": "Zuhause 2"
+        },
+        {
+          "themen": [
+            "allg"
+          ],
+          "anzahl": 16,
+          "titel": "Grundwortschatz 7"
+        }
+      ]
+    },
+    {
+      "titel": "Freizeit und Gesundheit",
+      "einheiten": [
+        {
+          "themen": [
+            "freizeit"
+          ],
+          "anzahl": 16,
+          "titel": "Freizeit und Hobbys"
+        },
+        {
+          "themen": [
+            "koerper"
+          ],
+          "anzahl": 16,
+          "titel": "Körper und Gesundheit"
+        },
+        {
+          "themen": [
+            "kleidung"
+          ],
+          "anzahl": 16,
+          "titel": "Kleidung und Aussehen"
+        },
+        {
+          "themen": [
+            "grund"
+          ],
+          "anzahl": 16,
+          "titel": "Wichtige kleine Wörter 8"
+        },
+        {
+          "themen": [
+            "allg"
+          ],
+          "anzahl": 16,
+          "titel": "Grundwortschatz 8"
+        },
+        {
+          "themen": [
+            "freizeit",
+            "koerper"
+          ],
+          "anzahl": 16,
+          "maxRang": 2500,
+          "titel": "Freizeit und Gesundheit 2"
+        },
+        {
+          "themen": [
+            "allg"
+          ],
+          "anzahl": 16,
+          "titel": "Grundwortschatz 9"
+        }
+      ]
+    },
+    {
+      "titel": "Natur und Gefühle",
+      "einheiten": [
+        {
+          "themen": [
+            "natur"
+          ],
+          "anzahl": 16,
+          "titel": "Natur, Wetter und Tiere"
+        },
+        {
+          "themen": [
+            "gefuehl"
+          ],
+          "anzahl": 16,
+          "titel": "Gefühle und Charakter"
+        },
+        {
+          "themen": [
+            "grund"
+          ],
+          "anzahl": 16,
+          "titel": "Wichtige kleine Wörter 9"
+        },
+        {
+          "themen": [
+            "allg"
+          ],
+          "anzahl": 16,
+          "titel": "Grundwortschatz 10"
+        },
+        {
+          "themen": [
+            "natur",
+            "gefuehl"
+          ],
+          "anzahl": 16,
+          "maxRang": 2500,
+          "titel": "Natur und Gefühle 2"
+        },
+        {
+          "themen": [
+            "allg"
+          ],
+          "anzahl": 16,
+          "titel": "Grundwortschatz 11"
+        }
+      ]
+    },
+    {
+      "titel": "Regeln: Präpositionen und Bindewörter",
+      "einheiten": [
+        {
+          "themen": [
+            "praep"
+          ],
+          "anzahl": 20,
+          "titel": "Präpositionen",
+          "intro": "Präpositionen zeigen Ort, Richtung, Zeit und Grund. Die wichtigsten (de, a, en, con, por, para) kennst du schon.\n• sobre = über, auf · entre = zwischen · sin = ohne · hasta = bis · desde = seit, von … aus · hacia = in Richtung · contra = gegen · durante = während\n• Nach Präpositionen stehen mí und ti statt yo und tú: para mí, sin ti. Ausnahme: entre tú y yo.\n• Mit „con“ verschmelzen sie: conmigo, contigo."
+        },
+        {
+          "themen": [
+            "konj"
+          ],
+          "anzahl": 16,
+          "titel": "Bindewörter",
+          "intro": "Bindewörter verbinden Sätze.\n• aunque = obwohl · mientras = während · sino = sondern (nach Verneinung: no es rojo, sino azul) · ni … ni = weder … noch · pues = denn, also\n• y wird vor i-/hi- zu e (padres e hijos), o vor o-/ho- zu u (siete u ocho)."
+        },
+        {
+          "titel": "Kleine Wörter, große Regeln",
+          "intro": "Feste Wendungen mit Präpositionen lernt man am besten als Ganzes.\n• a + el = al, de + el = del (voy al cine, vengo del trabajo). Mit „la“ verschmilzt nichts: a la, de la.\n• por = Grund, Weg, Zeitraum, Tausch (por eso, por la mañana, gracias por …)\n• para = Ziel, Zweck, Empfänger, Frist (para mí, para aprender, para el lunes)\n• Uhrzeit: a las tres = um drei Uhr; Ort: en casa = zu Hause.",
+          "woerter": [
+            {
+              "ziel": [
+                "por la mañana"
+              ],
+              "deutsch": [
+                "am Morgen",
+                "morgens"
+              ],
+              "formen": [
+                "por",
+                "mañana"
+              ],
+              "hinweis": "por + Tageszeit: por la tarde = am Nachmittag, por la noche = in der Nacht."
+            },
+            {
+              "ziel": [
+                "por eso"
+              ],
+              "deutsch": [
+                "deshalb",
+                "darum"
+              ],
+              "formen": [
+                "por",
+                "eso"
+              ]
+            },
+            {
+              "ziel": [
+                "por fin"
+              ],
+              "deutsch": [
+                "endlich"
+              ],
+              "formen": [
+                "por",
+                "fin"
+              ]
+            },
+            {
+              "ziel": [
+                "por ejemplo"
+              ],
+              "deutsch": [
+                "zum Beispiel"
+              ],
+              "formen": [
+                "por",
+                "ejemplo"
+              ]
+            },
+            {
+              "ziel": [
+                "para mí"
+              ],
+              "deutsch": [
+                "für mich"
+              ],
+              "formen": [
+                "para",
+                "mí"
+              ],
+              "hinweis": "Nach Präpositionen: mí, ti – aber conmigo, contigo."
+            },
+            {
+              "ziel": [
+                "para qué"
+              ],
+              "deutsch": [
+                "wozu",
+                "wofür"
+              ],
+              "formen": [
+                "para",
+                "qué"
+              ],
+              "hinweis": "¿Por qué? fragt nach dem Grund, ¿para qué? nach dem Zweck."
+            },
+            {
+              "ziel": [
+                "para que"
+              ],
+              "deutsch": [
+                "damit"
+              ],
+              "formen": [
+                "para",
+                "que"
+              ],
+              "hinweis": "Nach „para que“ folgt der Subjuntivo: para que lo sepas."
+            },
+            {
+              "ziel": [
+                "a las tres"
+              ],
+              "deutsch": [
+                "um drei Uhr"
+              ],
+              "formen": [
+                "a",
+                "las",
+                "tres"
+              ],
+              "hinweis": "Uhrzeit mit a las …; aber: a la una (um ein Uhr)."
+            },
+            {
+              "ziel": [
+                "al",
+                "a el"
+              ],
+              "deutsch": [
+                "zum, zur (a + el)"
+              ],
+              "formen": [
+                "al"
+              ],
+              "hinweis": "a + el wird immer zu al: voy al médico."
+            },
+            {
+              "ziel": [
+                "del",
+                "de el"
+              ],
+              "deutsch": [
+                "vom, von dem (de + el)"
+              ],
+              "formen": [
+                "del"
+              ],
+              "hinweis": "de + el wird immer zu del: la casa del profesor."
+            },
+            {
+              "ziel": [
+                "en casa"
+              ],
+              "deutsch": [
+                "zu Hause"
+              ],
+              "formen": [
+                "en",
+                "casa"
+              ],
+              "hinweis": "Ohne Artikel: estoy en casa. Nach Hause: a casa."
+            },
+            {
+              "ziel": [
+                "de nada"
+              ],
+              "deutsch": [
+                "gern geschehen",
+                "keine Ursache"
+              ],
+              "formen": [
+                "de",
+                "nada"
+              ]
+            },
+            {
+              "ziel": [
+                "a pie"
+              ],
+              "deutsch": [
+                "zu Fuß"
+              ],
+              "formen": [
+                "a",
+                "pie"
+              ],
+              "hinweis": "Aber mit Fahrzeugen „en“: en coche, en tren, en autobús."
+            },
+            {
+              "ziel": [
+                "a veces"
+              ],
+              "deutsch": [
+                "manchmal"
+              ],
+              "formen": [
+                "a",
+                "veces"
+              ]
+            },
+            {
+              "ziel": [
+                "de vez en cuando"
+              ],
+              "deutsch": [
+                "ab und zu",
+                "hin und wieder"
+              ],
+              "formen": [
+                "de",
+                "vez",
+                "en",
+                "cuando"
+              ]
+            },
+            {
+              "ziel": [
+                "al final"
+              ],
+              "deutsch": [
+                "am Ende",
+                "schließlich"
+              ],
+              "formen": [
+                "al",
+                "final"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "titel": "Regeln: Vergangenheit",
+      "einheiten": [
+        {
+          "titel": "Perfekt: he hecho",
+          "zeitform": "vergangenheit",
+          "intro": "Das Perfekt (pretérito perfecto) bildet man mit haber + Partizip: he comido = ich habe gegessen.\n• haber: he, has, ha, hemos, habéis, han\n• Partizip regelmäßig: -ar → -ado (hablado), -er/-ir → -ido (comido, vivido)\n• Unregelmäßig: hecho (hacer), dicho (decir), visto (ver), puesto (poner), escrito (escribir), vuelto (volver), abierto (abrir), roto (romper)\n• Man benutzt es für Vergangenes, das noch mit heute zu tun hat: Hoy he trabajado mucho.",
+          "woerter": [
+            {
+              "ziel": [
+                "he"
+              ],
+              "deutsch": [
+                "ich habe (+ Partizip)"
+              ],
+              "formen": [
+                "he"
+              ]
+            },
+            {
+              "ziel": [
+                "has"
+              ],
+              "deutsch": [
+                "du hast (+ Partizip)"
+              ],
+              "formen": [
+                "has"
+              ]
+            },
+            {
+              "ziel": [
+                "ha"
+              ],
+              "deutsch": [
+                "er/sie hat (+ Partizip)"
+              ],
+              "formen": [
+                "ha"
+              ]
+            },
+            {
+              "ziel": [
+                "hemos"
+              ],
+              "deutsch": [
+                "wir haben (+ Partizip)"
+              ],
+              "formen": [
+                "hemos"
+              ]
+            },
+            {
+              "ziel": [
+                "han"
+              ],
+              "deutsch": [
+                "sie haben (+ Partizip)"
+              ],
+              "formen": [
+                "han"
+              ]
+            },
+            {
+              "ziel": [
+                "hecho"
+              ],
+              "deutsch": [
+                "gemacht"
+              ],
+              "formen": [
+                "hecho"
+              ],
+              "hinweis": "Partizip von hacer (unregelmäßig)."
+            },
+            {
+              "ziel": [
+                "dicho"
+              ],
+              "deutsch": [
+                "gesagt"
+              ],
+              "formen": [
+                "dicho"
+              ],
+              "hinweis": "Partizip von decir (unregelmäßig)."
+            },
+            {
+              "ziel": [
+                "visto"
+              ],
+              "deutsch": [
+                "gesehen"
+              ],
+              "formen": [
+                "visto"
+              ],
+              "hinweis": "Partizip von ver (unregelmäßig)."
+            },
+            {
+              "ziel": [
+                "puesto"
+              ],
+              "deutsch": [
+                "gestellt, gelegt"
+              ],
+              "formen": [
+                "puesto"
+              ],
+              "hinweis": "Partizip von poner (unregelmäßig)."
+            },
+            {
+              "ziel": [
+                "escrito"
+              ],
+              "deutsch": [
+                "geschrieben"
+              ],
+              "formen": [
+                "escrito"
+              ],
+              "hinweis": "Partizip von escribir (unregelmäßig)."
+            },
+            {
+              "ziel": [
+                "vuelto"
+              ],
+              "deutsch": [
+                "zurückgekommen"
+              ],
+              "formen": [
+                "vuelto"
+              ],
+              "hinweis": "Partizip von volver (unregelmäßig)."
+            },
+            {
+              "ziel": [
+                "abierto"
+              ],
+              "deutsch": [
+                "geöffnet"
+              ],
+              "formen": [
+                "abierto"
+              ],
+              "hinweis": "Partizip von abrir (unregelmäßig)."
+            },
+            {
+              "ziel": [
+                "hablado"
+              ],
+              "deutsch": [
+                "gesprochen"
+              ],
+              "formen": [
+                "hablado"
+              ],
+              "hinweis": "Regelmäßig: -ar → -ado."
+            },
+            {
+              "ziel": [
+                "comido"
+              ],
+              "deutsch": [
+                "gegessen"
+              ],
+              "formen": [
+                "comido"
+              ],
+              "hinweis": "Regelmäßig: -er → -ido."
+            },
+            {
+              "ziel": [
+                "ido"
+              ],
+              "deutsch": [
+                "gegangen"
+              ],
+              "formen": [
+                "ido"
+              ],
+              "hinweis": "Partizip von ir."
+            },
+            {
+              "ziel": [
+                "estado"
+              ],
+              "deutsch": [
+                "gewesen"
+              ],
+              "formen": [
+                "estado"
+              ],
+              "hinweis": "Partizip von estar und ser (sido)."
+            }
+          ]
+        },
+        {
+          "titel": "Indefinido: regelmäßige Verben",
+          "intro": "Das Indefinido erzählt abgeschlossene Ereignisse: Ayer comí paella. = Gestern aß ich Paella.\n• -ar: hablé, hablaste, habló, hablamos, hablasteis, hablaron\n• -er/-ir: comí, comiste, comió, comimos, comisteis, comieron\n• Achtung Rechtschreibung: llegar → llegué, buscar → busqué, empezar → empecé\n• Typische Signalwörter: ayer, anoche, el año pasado, una vez.",
+          "woerter": [
+            {
+              "ziel": [
+                "hablé"
+              ],
+              "deutsch": [
+                "ich sprach"
+              ],
+              "formen": [
+                "hablé"
+              ]
+            },
+            {
+              "ziel": [
+                "habló"
+              ],
+              "deutsch": [
+                "er/sie sprach"
+              ],
+              "formen": [
+                "habló"
+              ]
+            },
+            {
+              "ziel": [
+                "comí"
+              ],
+              "deutsch": [
+                "ich aß"
+              ],
+              "formen": [
+                "comí"
+              ]
+            },
+            {
+              "ziel": [
+                "comió"
+              ],
+              "deutsch": [
+                "er/sie aß"
+              ],
+              "formen": [
+                "comió"
+              ]
+            },
+            {
+              "ziel": [
+                "viví"
+              ],
+              "deutsch": [
+                "ich lebte"
+              ],
+              "formen": [
+                "viví"
+              ]
+            },
+            {
+              "ziel": [
+                "vivió"
+              ],
+              "deutsch": [
+                "er/sie lebte"
+              ],
+              "formen": [
+                "vivió"
+              ]
+            },
+            {
+              "ziel": [
+                "llegué"
+              ],
+              "deutsch": [
+                "ich kam an"
+              ],
+              "formen": [
+                "llegué"
+              ],
+              "hinweis": "g → gu vor e: llegar → llegué."
+            },
+            {
+              "ziel": [
+                "llegó"
+              ],
+              "deutsch": [
+                "er/sie kam an"
+              ],
+              "formen": [
+                "llegó"
+              ]
+            },
+            {
+              "ziel": [
+                "compré"
+              ],
+              "deutsch": [
+                "ich kaufte"
+              ],
+              "formen": [
+                "compré"
+              ]
+            },
+            {
+              "ziel": [
+                "trabajé"
+              ],
+              "deutsch": [
+                "ich arbeitete"
+              ],
+              "formen": [
+                "trabajé"
+              ]
+            },
+            {
+              "ziel": [
+                "salí"
+              ],
+              "deutsch": [
+                "ich ging hinaus"
+              ],
+              "formen": [
+                "salí"
+              ]
+            },
+            {
+              "ziel": [
+                "conocí"
+              ],
+              "deutsch": [
+                "ich lernte kennen"
+              ],
+              "formen": [
+                "conocí"
+              ],
+              "hinweis": "conocer im Indefinido = kennenlernen."
+            }
+          ]
+        },
+        {
+          "titel": "Indefinido: unregelmäßige Verben",
+          "intro": "Die häufigsten Verben sind im Indefinido unregelmäßig – und haben keine Akzente.\n• ser und ir sind gleich: fui, fuiste, fue, fuimos, fueron (fui a casa = ich ging nach Hause; fue fácil = es war leicht)\n• Stamm ändert sich: tener → tuv- (tuve), estar → estuv- (estuve), hacer → hic- (hice, hizo), decir → dij- (dije), poder → pud- (pude), querer → quis- (quise), venir → vin- (vine), poner → pus- (puse), saber → sup- (supe)\n• ver und dar: vi, vio · di, dio.",
+          "woerter": [
+            {
+              "ziel": [
+                "fui"
+              ],
+              "deutsch": [
+                "ich war / ich ging"
+              ],
+              "formen": [
+                "fui"
+              ],
+              "hinweis": "Indefinido von ser und ir – der Satz zeigt, was gemeint ist."
+            },
+            {
+              "ziel": [
+                "fue"
+              ],
+              "deutsch": [
+                "er/sie war / ging"
+              ],
+              "formen": [
+                "fue"
+              ]
+            },
+            {
+              "ziel": [
+                "estuve"
+              ],
+              "deutsch": [
+                "ich war (Ort, Zustand)"
+              ],
+              "formen": [
+                "estuve"
+              ]
+            },
+            {
+              "ziel": [
+                "tuve"
+              ],
+              "deutsch": [
+                "ich hatte"
+              ],
+              "formen": [
+                "tuve"
+              ]
+            },
+            {
+              "ziel": [
+                "hice"
+              ],
+              "deutsch": [
+                "ich machte"
+              ],
+              "formen": [
+                "hice"
+              ]
+            },
+            {
+              "ziel": [
+                "hizo"
+              ],
+              "deutsch": [
+                "er/sie machte"
+              ],
+              "formen": [
+                "hizo"
+              ],
+              "hinweis": "c → z vor o: hizo."
+            },
+            {
+              "ziel": [
+                "dije"
+              ],
+              "deutsch": [
+                "ich sagte"
+              ],
+              "formen": [
+                "dije"
+              ]
+            },
+            {
+              "ziel": [
+                "dijo"
+              ],
+              "deutsch": [
+                "er/sie sagte"
+              ],
+              "formen": [
+                "dijo"
+              ]
+            },
+            {
+              "ziel": [
+                "pude"
+              ],
+              "deutsch": [
+                "ich konnte"
+              ],
+              "formen": [
+                "pude"
+              ]
+            },
+            {
+              "ziel": [
+                "quise"
+              ],
+              "deutsch": [
+                "ich wollte"
+              ],
+              "formen": [
+                "quise"
+              ]
+            },
+            {
+              "ziel": [
+                "vine"
+              ],
+              "deutsch": [
+                "ich kam"
+              ],
+              "formen": [
+                "vine"
+              ]
+            },
+            {
+              "ziel": [
+                "vi"
+              ],
+              "deutsch": [
+                "ich sah"
+              ],
+              "formen": [
+                "vi"
+              ]
+            },
+            {
+              "ziel": [
+                "vio"
+              ],
+              "deutsch": [
+                "er/sie sah"
+              ],
+              "formen": [
+                "vio"
+              ]
+            },
+            {
+              "ziel": [
+                "di"
+              ],
+              "deutsch": [
+                "ich gab"
+              ],
+              "formen": [
+                "di"
+              ]
+            },
+            {
+              "ziel": [
+                "dio"
+              ],
+              "deutsch": [
+                "er/sie gab"
+              ],
+              "formen": [
+                "dio"
+              ]
+            },
+            {
+              "ziel": [
+                "supe"
+              ],
+              "deutsch": [
+                "ich erfuhr"
+              ],
+              "formen": [
+                "supe"
+              ],
+              "hinweis": "saber im Indefinido = erfahren."
+            }
+          ]
+        },
+        {
+          "titel": "Imperfecto: so war es früher",
+          "intro": "Das Imperfecto beschreibt, wie etwas war oder was man immer wieder tat: De niño vivía en Madrid.\n• -ar: hablaba, hablabas, hablaba … · -er/-ir: comía, comías, comía …\n• Nur drei Ausnahmen: ser → era, ir → iba, ver → veía\n• Indefinido = was geschah (eine Handlung), Imperfecto = wie es war (Hintergrund, Gewohnheit): Estaba en casa cuando sonó el teléfono.",
+          "woerter": [
+            {
+              "ziel": [
+                "era"
+              ],
+              "deutsch": [
+                "ich war / er war (früher)"
+              ],
+              "formen": [
+                "era"
+              ],
+              "hinweis": "Ausnahme: ser → era."
+            },
+            {
+              "ziel": [
+                "estaba"
+              ],
+              "deutsch": [
+                "ich war (gerade)"
+              ],
+              "formen": [
+                "estaba"
+              ]
+            },
+            {
+              "ziel": [
+                "tenía"
+              ],
+              "deutsch": [
+                "ich hatte (früher)"
+              ],
+              "formen": [
+                "tenía"
+              ]
+            },
+            {
+              "ziel": [
+                "había"
+              ],
+              "deutsch": [
+                "es gab"
+              ],
+              "formen": [
+                "había"
+              ],
+              "hinweis": "Imperfecto von hay."
+            },
+            {
+              "ziel": [
+                "iba"
+              ],
+              "deutsch": [
+                "ich ging (gewöhnlich)"
+              ],
+              "formen": [
+                "iba"
+              ],
+              "hinweis": "Ausnahme: ir → iba."
+            },
+            {
+              "ziel": [
+                "hacía"
+              ],
+              "deutsch": [
+                "ich machte (gewöhnlich)"
+              ],
+              "formen": [
+                "hacía"
+              ]
+            },
+            {
+              "ziel": [
+                "quería"
+              ],
+              "deutsch": [
+                "ich wollte"
+              ],
+              "formen": [
+                "quería"
+              ]
+            },
+            {
+              "ziel": [
+                "podía"
+              ],
+              "deutsch": [
+                "ich konnte (damals)"
+              ],
+              "formen": [
+                "podía"
+              ]
+            },
+            {
+              "ziel": [
+                "sabía"
+              ],
+              "deutsch": [
+                "ich wusste"
+              ],
+              "formen": [
+                "sabía"
+              ]
+            },
+            {
+              "ziel": [
+                "vivía"
+              ],
+              "deutsch": [
+                "ich wohnte"
+              ],
+              "formen": [
+                "vivía"
+              ]
+            },
+            {
+              "ziel": [
+                "trabajaba"
+              ],
+              "deutsch": [
+                "ich arbeitete (damals)"
+              ],
+              "formen": [
+                "trabajaba"
+              ]
+            },
+            {
+              "ziel": [
+                "hablaba"
+              ],
+              "deutsch": [
+                "ich sprach (damals)"
+              ],
+              "formen": [
+                "hablaba"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "titel": "Regeln: Zukunft und Möglichkeitsform",
+      "einheiten": [
+        {
+          "titel": "Zukunft",
+          "zeitform": "zukunft",
+          "intro": "Zukunft auf zwei Arten:\n• ir a + Infinitiv (sehr häufig): Voy a comer. = Ich werde (gleich) essen.\n• Futur: Infinitiv + Endung -é, -ás, -á, -emos, -éis, -án: hablaré, comeré\n• Unregelmäßige Stämme: tener → tendr-, hacer → har-, decir → dir-, poder → podr-, venir → vendr-, salir → saldr-, haber → habr-, saber → sabr-, poner → pondr-.",
+          "woerter": [
+            {
+              "ziel": [
+                "voy a"
+              ],
+              "deutsch": [
+                "ich werde (gleich) …"
+              ],
+              "formen": [
+                "voy",
+                "a"
+              ],
+              "hinweis": "ir a + Infinitiv: voy a llamar, vamos a ver."
+            },
+            {
+              "ziel": [
+                "seré"
+              ],
+              "deutsch": [
+                "ich werde sein"
+              ],
+              "formen": [
+                "seré"
+              ]
+            },
+            {
+              "ziel": [
+                "será"
+              ],
+              "deutsch": [
+                "er/sie/es wird sein"
+              ],
+              "formen": [
+                "será"
+              ]
+            },
+            {
+              "ziel": [
+                "estaré"
+              ],
+              "deutsch": [
+                "ich werde sein (Ort, Zustand)"
+              ],
+              "formen": [
+                "estaré"
+              ]
+            },
+            {
+              "ziel": [
+                "tendré"
+              ],
+              "deutsch": [
+                "ich werde haben"
+              ],
+              "formen": [
+                "tendré"
+              ]
+            },
+            {
+              "ziel": [
+                "haré"
+              ],
+              "deutsch": [
+                "ich werde machen"
+              ],
+              "formen": [
+                "haré"
+              ]
+            },
+            {
+              "ziel": [
+                "diré"
+              ],
+              "deutsch": [
+                "ich werde sagen"
+              ],
+              "formen": [
+                "diré"
+              ]
+            },
+            {
+              "ziel": [
+                "podré"
+              ],
+              "deutsch": [
+                "ich werde können"
+              ],
+              "formen": [
+                "podré"
+              ]
+            },
+            {
+              "ziel": [
+                "vendré"
+              ],
+              "deutsch": [
+                "ich werde kommen"
+              ],
+              "formen": [
+                "vendré"
+              ]
+            },
+            {
+              "ziel": [
+                "iré"
+              ],
+              "deutsch": [
+                "ich werde gehen"
+              ],
+              "formen": [
+                "iré"
+              ]
+            },
+            {
+              "ziel": [
+                "habrá"
+              ],
+              "deutsch": [
+                "es wird geben"
+              ],
+              "formen": [
+                "habrá"
+              ]
+            },
+            {
+              "ziel": [
+                "sabré"
+              ],
+              "deutsch": [
+                "ich werde wissen"
+              ],
+              "formen": [
+                "sabré"
+              ]
+            }
+          ]
+        },
+        {
+          "titel": "Konditional: würde und könnte",
+          "intro": "Das Konditional drückt aus, was wäre: Me gustaría viajar. = Ich würde gern reisen.\n• Infinitiv + -ía, -ías, -ía, -íamos, -íais, -ían: hablaría, comería\n• Gleiche unregelmäßige Stämme wie im Futur: tendría, haría, diría, podría, vendría, saldría, habría, sabría\n• Höflich bitten: ¿Podría ayudarme? = Könnten Sie mir helfen?",
+          "woerter": [
+            {
+              "ziel": [
+                "sería"
+              ],
+              "deutsch": [
+                "ich wäre / es wäre"
+              ],
+              "formen": [
+                "sería"
+              ]
+            },
+            {
+              "ziel": [
+                "estaría"
+              ],
+              "deutsch": [
+                "ich wäre (Ort, Zustand)"
+              ],
+              "formen": [
+                "estaría"
+              ]
+            },
+            {
+              "ziel": [
+                "tendría"
+              ],
+              "deutsch": [
+                "ich hätte"
+              ],
+              "formen": [
+                "tendría"
+              ]
+            },
+            {
+              "ziel": [
+                "haría"
+              ],
+              "deutsch": [
+                "ich würde machen"
+              ],
+              "formen": [
+                "haría"
+              ]
+            },
+            {
+              "ziel": [
+                "podría"
+              ],
+              "deutsch": [
+                "ich könnte"
+              ],
+              "formen": [
+                "podría"
+              ],
+              "hinweis": "Höflich: ¿Podría …? = Könnten Sie …?"
+            },
+            {
+              "ziel": [
+                "me gustaría"
+              ],
+              "deutsch": [
+                "ich hätte gern",
+                "ich würde gern"
+              ],
+              "formen": [
+                "me",
+                "gustaría"
+              ]
+            },
+            {
+              "ziel": [
+                "debería"
+              ],
+              "deutsch": [
+                "ich sollte"
+              ],
+              "formen": [
+                "debería"
+              ]
+            },
+            {
+              "ziel": [
+                "diría"
+              ],
+              "deutsch": [
+                "ich würde sagen"
+              ],
+              "formen": [
+                "diría"
+              ]
+            },
+            {
+              "ziel": [
+                "iría"
+              ],
+              "deutsch": [
+                "ich würde gehen"
+              ],
+              "formen": [
+                "iría"
+              ]
+            },
+            {
+              "ziel": [
+                "habría"
+              ],
+              "deutsch": [
+                "es gäbe"
+              ],
+              "formen": [
+                "habría"
+              ]
+            },
+            {
+              "ziel": [
+                "querría"
+              ],
+              "deutsch": [
+                "ich würde wollen"
+              ],
+              "formen": [
+                "querría"
+              ],
+              "hinweis": "Höflicher klingt oft „quisiera“ = ich hätte gern."
+            },
+            {
+              "ziel": [
+                "sabría"
+              ],
+              "deutsch": [
+                "ich wüsste"
+              ],
+              "formen": [
+                "sabría"
+              ]
+            }
+          ]
+        },
+        {
+          "titel": "Subjuntivo: Wünsche und Zweifel",
+          "zeitform": "subjuntivo",
+          "intro": "Der Subjuntivo steht nach Wünschen, Gefühlen, Zweifeln und bestimmten Bindewörtern: Quiero que vengas. = Ich will, dass du kommst.\n• Typische Auslöser: querer que, esperar que, ojalá, para que, cuando (bei Zukunft), no creo que\n• Bildung: 1. Person Präsens, -o weg, „Gegenvokal“: hablar → hable, comer → coma, vivir → viva\n• Unregelmäßig: ser → sea, estar → esté, ir → vaya, haber → haya, saber → sepa, dar → dé.",
+          "woerter": [
+            {
+              "ziel": [
+                "sea"
+              ],
+              "deutsch": [
+                "(dass) es ist (sea)"
+              ],
+              "formen": [
+                "sea"
+              ]
+            },
+            {
+              "ziel": [
+                "esté"
+              ],
+              "deutsch": [
+                "(dass) es ist (esté)"
+              ],
+              "formen": [
+                "esté"
+              ]
+            },
+            {
+              "ziel": [
+                "tenga"
+              ],
+              "deutsch": [
+                "(dass) ich habe"
+              ],
+              "formen": [
+                "tenga"
+              ]
+            },
+            {
+              "ziel": [
+                "haga"
+              ],
+              "deutsch": [
+                "(dass) ich mache"
+              ],
+              "formen": [
+                "haga"
+              ]
+            },
+            {
+              "ziel": [
+                "pueda"
+              ],
+              "deutsch": [
+                "(dass) ich kann"
+              ],
+              "formen": [
+                "pueda"
+              ]
+            },
+            {
+              "ziel": [
+                "vaya"
+              ],
+              "deutsch": [
+                "(dass) ich gehe"
+              ],
+              "formen": [
+                "vaya"
+              ]
+            },
+            {
+              "ziel": [
+                "quiera"
+              ],
+              "deutsch": [
+                "(dass) ich will"
+              ],
+              "formen": [
+                "quiera"
+              ]
+            },
+            {
+              "ziel": [
+                "sepa"
+              ],
+              "deutsch": [
+                "(dass) ich weiß"
+              ],
+              "formen": [
+                "sepa"
+              ]
+            },
+            {
+              "ziel": [
+                "venga"
+              ],
+              "deutsch": [
+                "(dass) ich komme"
+              ],
+              "formen": [
+                "venga"
+              ],
+              "hinweis": "Auch als Ausruf: ¡Venga! = Komm schon!"
+            },
+            {
+              "ziel": [
+                "diga"
+              ],
+              "deutsch": [
+                "(dass) ich sage"
+              ],
+              "formen": [
+                "diga"
+              ]
+            },
+            {
+              "ziel": [
+                "haya"
+              ],
+              "deutsch": [
+                "(dass) es gibt"
+              ],
+              "formen": [
+                "haya"
+              ]
+            },
+            {
+              "ziel": [
+                "ojalá"
+              ],
+              "deutsch": [
+                "hoffentlich"
+              ],
+              "formen": [
+                "ojalá"
+              ],
+              "hinweis": "Nach ojalá folgt immer der Subjuntivo: ¡Ojalá llueva!"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "titel": "Wortschatz erweitern",
+      "rest": true,
+      "proStufe": 400,
+      "anzahl": 16
+    }
+  ]
+}

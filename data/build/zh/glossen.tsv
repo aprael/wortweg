@@ -1,0 +1,2250 @@
+# Deutsche Bedeutungen der HSK-3.0-Wörter (Stufe 1–3), von Hand geprüft und bereinigt.
+# Spalten (Tab-getrennt): Schlüssel (Stufe-Nummer der HSK-3.0-Liste) · Hanzi (Hauptform, zur Kontrolle) ·
+#   Pinyin (je Form, mit „|“ getrennt) · Bedeutungen („; “ getrennt, die erste ist die Hauptbedeutung) · Hinweis (optional)
+# „=Schlüssel“ statt Bedeutungen: Eintrag wird mit dem genannten zusammengeführt (doppelter Listeneintrag).
+# Kandidaten aus HanDeDict/Wiktionary: node scripts/build-course-zh.mjs --kandidaten
+1-1	爱	ài	lieben; Liebe
+1-2	爱好	àihào	Hobby; Vorliebe
+1-3	八	bā	acht
+1-4	爸爸	bàba|bà	Papa; Vater
+1-5	吧	ba	Partikel für Vorschläge; wohl	Am Satzende: Vorschlag oder Vermutung, z. B. 我们走吧 – Lass uns gehen.
+1-6	白	bái	weiß; hell
+1-7	白天	báitiān	tagsüber; am Tag
+1-8	百	bǎi	hundert
+1-9	班	bān	Klasse; Gruppe; Schicht
+1-10	半	bàn	halb; Hälfte
+1-11	半年	bànnián	halbes Jahr
+1-12	半天	bàntiān	lange Zeit; halber Tag
+1-13	帮	bāng	helfen
+1-14	帮忙	bāngmáng	aushelfen; einen Gefallen tun
+1-15	包	bāo	Tasche; Paket; einpacken
+1-16	包子	bāozi	gefüllte Teigtasche; Baozi
+1-17	杯	bēi	Zählwort für Tassen und Gläser
+1-18	杯子	bēizi	Tasse; Becher; Glas
+1-19	北	běi	Norden; nördlich
+1-20	北边	běibiān	Nordseite; im Norden
+1-21	北京	Běijīng	Peking; Beijing
+1-22	本	běn	Zählwort für Bücher
+1-23	本子	běnzi	Heft; Notizbuch
+1-24	比	bǐ	als (beim Vergleich); vergleichen	Vergleich: A 比 B 大 – A ist größer als B.
+1-25	别	bié	nicht (Verbot); lass das	Verbot vor dem Verb: 别走 – Geh nicht!
+1-26	别的	biéde	andere; anderes
+1-27	别人	biérén	andere Leute; jemand anders
+1-28	病	bìng	Krankheit; krank
+1-29	病人	bìngrén	Patient; Kranker
+1-30	不大	bùdà	nicht sehr; kaum
+1-31	不对	bùduì	falsch; nicht richtig
+1-32	不客气	bùkèqi	gern geschehen; keine Ursache
+1-33	不用	bùyòng	nicht nötig; nicht brauchen
+1-34	不	bù	nicht; nein	Vor einer Silbe im 4. Ton spricht man bú: 不是 búshì.
+1-35	菜	cài	Gericht; Gemüse; Speise
+1-36	茶	chá	Tee
+1-37	差	chà	schlecht; fehlen
+1-38	常	cháng	oft
+1-39	常常	chángcháng	häufig; oft
+1-40	唱	chàng	singen
+1-41	唱歌	chànggē	ein Lied singen; singen
+1-42	车	chē	Auto; Fahrzeug; Wagen
+1-43	车票	chēpiào	Fahrkarte
+1-44	车上	chēshàng	im Auto; im Fahrzeug
+1-45	车站	chēzhàn	Haltestelle; Bahnhof
+1-46	吃	chī	essen
+1-47	吃饭	chīfàn	eine Mahlzeit essen; essen
+1-48	出	chū	herausgehen; erscheinen
+1-49	出来	chūlái	herauskommen
+1-50	出去	chūqù	hinausgehen; ausgehen
+1-51	穿	chuān	anziehen; tragen (Kleidung)
+1-52	床	chuáng	Bett
+1-53	次	cì	Mal (Zählwort)
+1-54	从	cóng	von; aus; seit
+1-55	错	cuò	falsch; Fehler
+1-56	打	dǎ	schlagen; spielen (Ballspiel)
+1-57	打车	dǎchē	Taxi nehmen
+1-58	打电话	dǎdiànhuà	telefonieren; anrufen
+1-59	打开	dǎkāi	aufmachen; einschalten
+1-60	打球	dǎqiú	Ball spielen
+1-61	大	dà	groß; alt (Alter)
+1-62	大学	dàxué	Universität
+1-63	大学生	dàxuéshēng	Student; Studentin
+1-64	到	dào	ankommen; bis
+1-65	得到	dédào	bekommen; erhalten
+1-66	地	de	Adverbpartikel	Verbindet Adverb und Verb: 慢慢地走 – langsam gehen.
+1-67	的	de	Besitzpartikel; Attributpartikel	Verbindet Bestimmung und Nomen: 我的书 – mein Buch.
+1-68	等	děng	warten
+1-69	地	dì	Erde; Boden
+1-70	地点	dìdiǎn	Standort; Treffpunkt
+1-71	地方	dìfang	Ort; Platz; Gegend
+1-72	地上	dìshang	auf dem Boden
+1-73	地图	dìtú	Landkarte; Karte
+1-74	弟弟	dìdi|dì	jüngerer Bruder
+1-75	第	dì	Vorsilbe für Ordnungszahlen	第一 – der erste, 第二 – der zweite.
+1-76	点	diǎn	Uhr (Uhrzeit); Punkt
+1-77	电	diàn	Strom; Elektrizität
+1-78	电话	diànhuà	Telefon; Anruf
+1-79	电脑	diànnǎo	Computer
+1-80	电视	diànshì	Fernsehen; Fernseher
+1-81	电视机	diànshìjī	Fernsehgerät
+1-82	电影	diànyǐng	Film; Kinofilm
+1-83	电影院	diànyǐngyuàn	Kino
+1-84	东	dōng	Osten; östlich
+1-85	东边	dōngbian	Ostseite; im Osten
+1-86	东西	dōngxi	Sache; Ding; Zeug
+1-87	动	dòng	sich bewegen; bewegen
+1-88	动作	dòngzuò	Bewegung; Handlung
+1-89	都	dōu	alle; beide; schon
+1-90	读	dú	lesen; vorlesen
+1-91	读书	dúshū	Bücher lesen; lernen
+1-92	对	duì	richtig; stimmt
+1-93	对不起	duìbuqǐ	Entschuldigung; es tut mir leid
+1-94	多	duō	viel; viele
+1-95	多少	duōshao	wie viel; wie viele
+1-96	饿	è	hungrig
+1-97	儿子	érzi	Sohn
+1-98	二	èr	zwei
+1-99	饭	fàn	Essen; Mahlzeit
+1-100	饭店	fàndiàn	Restaurant; Hotel
+1-101	房间	fángjiān	Zimmer; Raum
+1-102	房子	fángzi	Haus
+1-103	放	fàng	legen; stellen; freilassen
+1-104	放假	fàngjià	Ferien haben; frei haben
+1-105	放学	fàngxué	Schulschluss haben
+1-106	飞	fēi	fliegen
+1-107	飞机	fēijī	Flugzeug
+1-108	非常	fēicháng	äußerst; sehr
+1-109	分	fēn	Minute; Punkt (Wertung); Fen (Geld)
+1-110	风	fēng	Wind
+1-111	干	gān	trocken
+1-112	干净	gānjìng	sauber
+1-113	干	gàn	machen; tun
+1-114	干什么	gànshénme	was machen?; wozu?
+1-115	高	gāo	hoch; groß (Körper)
+1-116	高兴	gāoxìng	froh; erfreut
+1-117	告诉	gàosu	sagen; mitteilen; erzählen
+1-118	哥哥	gēge|gē	älterer Bruder
+1-119	歌	gē	Lied
+1-120	个	gè	allgemeines Zählwort	Steht zwischen Zahl und Nomen: 一个人 – ein Mensch.
+1-121	给	gěi	geben; für
+1-122	跟	gēn	mit; folgen
+1-123	工人	gōngrén	Arbeiter; Arbeiterin
+1-124	工作	gōngzuò	Arbeit; arbeiten
+1-125	关	guān	schließen; ausschalten
+1-126	关上	guānshàng	zumachen
+1-127	贵	guì	teuer; wertvoll
+1-128	国	guó	Land; Staat
+1-129	国家	guójiā	Staat; Land
+1-130	国外	guówài	Ausland; im Ausland
+1-131	过	guò	verbringen; überqueren; vorbeigehen
+1-132	还	hái	noch; außerdem
+1-133	还是	háishi	oder (in Fragen); immer noch
+1-134	还有	háiyǒu	außerdem; und auch
+1-135	孩子	háizi	Kind
+1-136	汉语	Hànyǔ	Chinesisch (Sprache)
+1-137	汉字	Hànzì	chinesisches Schriftzeichen
+1-138	好	hǎo	gut
+1-139	好吃	hǎochī	lecker
+1-140	好看	hǎokàn	schön; hübsch
+1-141	好听	hǎotīng	schön klingend
+1-142	好玩儿	hǎowánr	lustig; macht Spaß
+1-143	号	hào	Nummer; Tag (Datum)
+1-144	喝	hē	trinken
+1-145	和	hé	und; mit
+1-146	很	hěn	sehr
+1-147	后	hòu	nach; hinter
+1-148	后边	hòubian	hinten; Rückseite
+1-149	后天	hòutiān	übermorgen
+1-150	花	huā	Blume; Blüte
+1-151	话	huà	Worte; Rede
+1-152	坏	huài	schlecht; kaputt
+1-153	还	huán	zurückgeben
+1-154	回	huí	zurückkehren
+1-155	回答	huídá	antworten; Antwort
+1-156	回到	huídào	zurückkehren nach
+1-157	回家	huíjiā	nach Hause gehen; heimkehren
+1-158	回来	huílai	zurückkommen
+1-159	回去	huíqu	zurückgehen
+1-160	会	huì	können (gelernt); werden
+1-161	火车	huǒchē	Zug; Eisenbahn
+1-162	机场	jīchǎng	Flughafen
+1-163	机票	jīpiào	Flugticket
+1-164	鸡蛋	jīdàn	Ei; Hühnerei
+1-165	几	jǐ	wie viele; einige
+1-166	记	jì	aufschreiben; sich merken
+1-167	记得	jìde	sich erinnern
+1-168	记住	jìzhu	sich merken; behalten
+1-169	家	jiā	Familie; Zuhause
+1-170	家里	jiālǐ	zu Hause; daheim
+1-171	家人	jiārén	Familienangehörige
+1-172	间	jiān	Zählwort für Räume; zwischen
+1-173	见	jiàn	sehen; treffen
+1-174	见面	jiànmiàn	sich treffen
+1-175	教	jiāo	unterrichten; beibringen
+1-176	叫	jiào	heißen; rufen; nennen
+1-177	教学楼	jiàoxuélóu	Unterrichtsgebäude
+1-178	姐姐	jiějie|jiě	ältere Schwester
+1-179	介绍	jièshào	vorstellen; einführen
+1-180	今年	jīnnián	dieses Jahr
+1-181	今天	jīntiān	heute
+1-182	进	jìn	eintreten; hineingehen
+1-183	进来	jìnlái	hereinkommen
+1-184	进去	jìnqu	hineingehen
+1-185	九	jiǔ	neun
+1-186	就	jiù	dann; sofort; eben
+1-187	觉得	juéde	finden; meinen; fühlen
+1-188	开	kāi	öffnen; fahren (Auto); einschalten
+1-189	开车	kāichē	Auto fahren
+1-190	开会	kāihuì	eine Sitzung haben
+1-191	开玩笑	kāiwánxiào	Witze machen; scherzen
+1-192	看	kàn	anschauen; lesen; besuchen
+1-193	看病	kànbìng	zum Arzt gehen
+1-194	看到	kàndào	sehen
+1-195	看见	kànjiàn	erblicken; zu sehen bekommen
+1-196	考	kǎo	prüfen; eine Prüfung machen
+1-197	考试	kǎoshì	Prüfung; Test
+1-198	渴	kě	durstig
+1-199	课	kè	Unterricht; Lektion
+1-200	课本	kèběn	Lehrbuch
+1-201	课文	kèwén	Lektionstext
+1-202	口	kǒu	Mund; Zählwort für Personen im Haushalt
+1-203	块	kuài	Stück; Yuan (umgangssprachlich)
+1-204	快	kuài	schnell; bald
+1-205	来	lái	kommen
+1-206	来到	láidào	eintreffen
+1-207	老	lǎo	alt
+1-208	老人	lǎorén	alter Mensch; Senioren
+1-209	老师	lǎoshī	Lehrer; Lehrerin
+1-210	了	le	Partikel für Abgeschlossenes	Nach dem Verb: Handlung abgeschlossen (我吃了 – ich habe gegessen); am Satzende: neue Lage (下雨了 – jetzt regnet es).
+1-211	累	lèi	müde
+1-212	冷	lěng	kalt
+1-213	里	lǐ	in; innen
+1-214	里边	lǐbian	drinnen; Innenseite
+1-215	两	liǎng	zwei (mit Zählwort)	Vor Zählwörtern steht 两 statt 二: 两个人 – zwei Personen.
+1-216	零	líng|líng	null
+1-217	六	liù	sechs
+1-218	楼	lóu	Gebäude; Stockwerk
+1-219	楼上	lóushàng	oben; obere Etage
+1-220	楼下	lóuxià	unten; untere Etage
+1-221	路	lù	Weg; Straße; Linie (Bus)
+1-222	路口	lùkǒu	Kreuzung
+1-223	路上	lùshang	unterwegs
+1-224	妈妈	māma|mā	Mama; Mutter
+1-225	马路	mǎlù	Straße
+1-226	马上	mǎshàng	sofort; gleich
+1-227	吗	ma	Fragepartikel	Macht aus einer Aussage eine Ja-Nein-Frage: 你好吗？
+1-228	买	mǎi	kaufen
+1-229	慢	màn	langsam
+1-230	忙	máng	beschäftigt
+1-231	毛	máo	Mao (0,10 Yuan)
+1-232	没	méi	nicht (Vergangenheit); nicht haben	Verneint 有 und abgeschlossene Handlungen: 我没去 – ich bin nicht gegangen.
+1-233	没关系	méiguānxi	macht nichts; schon gut
+1-234	没什么	méishénme	nichts Besonderes; nicht schlimm
+1-235	没事儿	méishìr	kein Problem; alles gut
+1-236	没有	méiyǒu	nicht haben; es gibt nicht
+1-237	妹妹	mèimei|mèi	jüngere Schwester
+1-238	门	mén	Tür; Tor
+1-239	门口	ménkǒu	Eingang
+1-240	门票	ménpiào	Eintrittskarte
+1-241	们	men	Mehrzahl-Endung	Nach Pronomen und Personen: 我们 – wir, 朋友们 – Freunde.
+1-242	米饭	mǐfàn	gekochter Reis; Reis
+1-243	面包	miànbāo	Brot
+1-244	面条儿	miàntiáor	Nudeln
+1-245	名字	míngzi	Name
+1-246	明白	míngbai	verstehen; klar
+1-247	明年	míngnián	nächstes Jahr
+1-248	明天	míngtiān	morgen
+1-249	拿	ná	nehmen; halten; holen
+1-250	哪	nǎ	welcher; welche
+1-251	哪里	nǎli	wo; wohin
+1-252	哪儿	nǎr	wo
+1-253	哪些	nǎxiē	welche (Mehrzahl)
+1-254	那	nà	jenes; das da
+1-255	那边	nàbian	dort drüben
+1-256	那里	nàli	dort
+1-257	那儿	nàr	da; dort (umgangssprachlich)
+1-258	那些	nàxiē	jene; die da
+1-259	奶	nǎi	Milch
+1-260	奶奶	nǎinai	Oma; Großmutter
+1-261	男	nán	männlich; Mann
+1-262	男孩儿	nánháir	Junge
+1-263	男朋友	nánpéngyou	fester Freund
+1-264	男人	nánrén	Mann
+1-265	男生	nánshēng	Schüler (männlich); junger Mann
+1-266	南	nán	Süden; südlich
+1-267	南边	nánbian	Südseite; im Süden
+1-268	难	nán	schwierig; schwer
+1-269	呢	ne	Partikel für Rückfragen; und …?	你呢？ – Und du? Am Satzende auch: gerade dabei (他睡觉呢).
+1-270	能	néng	können (möglich); dürfen
+1-271	你	nǐ	du
+1-272	你们	nǐmen	ihr
+1-273	年	nián	Jahr
+1-274	您	nín	Sie (höflich)
+1-275	牛奶	niúnǎi	Kuhmilch; Milch
+1-276	女	nǚ	weiblich; Frau
+1-277	女儿	nǚ'ér	Tochter
+1-278	女孩儿	nǚháir	Mädchen
+1-279	女朋友	nǚpéngyou	feste Freundin
+1-280	女人	nǚrén	Frau
+1-281	女生	nǚshēng	Schülerin; junge Frau
+1-282	旁边	pángbiān	neben; daneben
+1-283	跑	pǎo	rennen; laufen
+1-284	朋友	péngyou	Freund; Freundin
+1-285	票	piào	Ticket; Karte
+1-286	七	qī	sieben
+1-287	起	qǐ	aufstehen; sich erheben
+1-288	起床	qǐchuáng	aufstehen (aus dem Bett)
+1-289	起来	qǐlai	aufstehen; hoch
+1-290	汽车	qìchē	Auto; Kraftfahrzeug
+1-291	前	qián	vor; vorne
+1-292	前边	qiánbian	vorne; Vorderseite
+1-293	前天	qiántiān	vorgestern
+1-294	钱	qián	Geld
+1-295	钱包	qiánbāo	Geldbeutel
+1-296	请	qǐng	bitte; einladen; bitten
+1-297	请假	qǐngjià	sich freinehmen; Urlaub beantragen
+1-298	请进	qǐngjìn	Herein!; bitte eintreten
+1-299	请问	qǐngwèn	Entschuldigung, darf ich fragen …?
+1-300	请坐	qǐngzuò	Bitte setzen Sie sich!
+1-301	球	qiú	Ball
+1-302	去	qù	gehen; hingehen; fahren
+1-303	去年	qùnián	letztes Jahr
+1-304	热	rè	heiß; warm
+1-305	人	rén	Mensch; Person
+1-306	认识	rènshi	kennen; kennenlernen
+1-307	认真	rènzhēn	gewissenhaft; ernsthaft
+1-308	日	rì	Tag; Sonne
+1-309	日期	rìqī	Datum
+1-310	肉	ròu	Fleisch
+1-311	三	sān	drei
+1-312	山	shān	Berg
+1-313	商场	shāngchǎng	Einkaufszentrum; Kaufhaus
+1-314	商店	shāngdiàn	Geschäft; Laden
+1-315	上	shàng	oben; auf; hinaufgehen
+1-316	上班	shàngbān	zur Arbeit gehen
+1-317	上边	shàngbian	oben; Oberseite
+1-318	上车	shàngchē	einsteigen
+1-319	上次	shàngcì	letztes Mal
+1-320	上课	shàngkè	Unterricht haben; Unterricht beginnen
+1-321	上网	shàngwǎng	ins Internet gehen; surfen
+1-322	上午	shàngwǔ	Vormittag
+1-323	上学	shàngxué	zur Schule gehen
+1-324	少	shǎo	wenig
+1-325	谁	shéi	wer
+1-326	身上	shēnshang	am Körper; bei sich
+1-327	身体	shēntǐ	Körper; Gesundheit
+1-328	什么	shénme	was
+1-329	生病	shēngbìng	krank werden
+1-330	生气	shēngqì	sich ärgern; wütend werden
+1-331	生日	shēngrì	Geburtstag
+1-332	十	shí	zehn
+1-333	时候	shíhou	Zeit; Zeitpunkt
+1-334	时间	shíjiān	Zeit
+1-335	事	shì	Sache; Angelegenheit
+1-336	试	shì	versuchen; ausprobieren
+1-337	是	shì	sein; ja
+1-338	是不是	shìbushì	nicht wahr?; ist es so?
+1-339	手	shǒu	Hand
+1-340	手机	shǒujī	Handy
+1-341	书	shū	Buch
+1-342	书包	shūbāo	Schultasche
+1-343	书店	shūdiàn	Buchhandlung
+1-344	树	shù	Baum
+1-345	水	shuǐ	Wasser
+1-346	水果	shuǐguǒ	Obst
+1-347	睡	shuì	schlafen; liegen
+1-348	睡觉	shuìjiào	schlafen gehen; schlafen
+1-349	说	shuō	sprechen; sagen
+1-350	说话	shuōhuà	reden; sich unterhalten
+1-351	四	sì	vier
+1-352	送	sòng	schenken; bringen; begleiten
+1-353	岁	suì	Jahre alt; Lebensjahr
+1-354	他	tā	er
+1-355	他们	tāmen	sie (Mehrzahl)
+1-356	她	tā	sie (eine Frau)
+1-357	她们	tāmen	sie (Frauen)
+1-358	太	tài	zu (sehr); allzu
+1-359	天	tiān	Tag; Himmel
+1-360	天气	tiānqì	Wetter
+1-361	听	tīng	hören; zuhören
+1-362	听到	tīngdào	hören (vernehmen)
+1-363	听见	tīngjiàn	vernehmen; mitbekommen
+1-364	听写	tīngxiě	Diktat
+1-365	同学	tóngxué	Mitschüler; Klassenkamerad
+1-366	图书馆	túshūguǎn	Bibliothek
+1-367	外	wài	außen; draußen
+1-368	外边	wàibian	draußen; Außenseite
+1-369	外国	wàiguó	ausländisch; fremdes Land
+1-370	外语	wàiyǔ	Fremdsprache
+1-371	玩儿	wánr	spielen; sich amüsieren
+1-372	晚	wǎn	spät; Abend
+1-373	晚饭	wǎnfàn	Abendessen
+1-374	晚上	wǎnshang	Abend; abends
+1-375	网上	wǎngshàng	im Internet; online
+1-376	网友	wǎngyǒu	Internetfreund
+1-377	忘	wàng	vergessen
+1-378	忘记	wàngjì	vergessen (etwas)
+1-379	问	wèn	fragen
+1-380	我	wǒ	ich
+1-381	我们	wǒmen	wir
+1-382	五	wǔ	fünf
+1-383	午饭	wǔfàn	Mittagessen
+1-384	西	xī	Westen; westlich
+1-385	西边	xībian	Westseite; im Westen
+1-386	洗	xǐ	waschen
+1-387	洗手间	xǐshǒujiān	Toilette
+1-388	喜欢	xǐhuan	mögen; gern haben
+1-389	下	xià	unten; hinuntergehen; nächster
+1-390	下班	xiàbān	Feierabend machen
+1-391	下边	xiàbian	unten; Unterseite
+1-392	下车	xiàchē	aussteigen
+1-393	下次	xiàcì	nächstes Mal
+1-394	下课	xiàkè	Unterrichtsschluss haben
+1-395	下午	xiàwǔ	Nachmittag
+1-396	下雨	xiàyǔ	regnen
+1-397	先	xiān	zuerst
+1-398	先生	xiānsheng	Herr; Ehemann
+1-399	现在	xiànzài	jetzt
+1-400	想	xiǎng	möchten; denken; vermissen
+1-401	小	xiǎo	klein; jung
+1-402	小孩儿	xiǎoháir	kleines Kind
+1-403	小姐	xiǎojiě	Fräulein; junge Dame
+1-404	小朋友	xiǎopéngyǒu	Kinder (Anrede); Kleiner
+1-405	小时	xiǎoshí	Stunde
+1-406	小学	xiǎoxué	Grundschule
+1-407	小学生	xiǎoxuéshēng	Grundschüler
+1-408	笑	xiào	lachen; lächeln
+1-409	写	xiě	schreiben
+1-410	谢谢	xièxie	danke
+1-411	新	xīn	neu
+1-412	新年	xīnnián	Neujahr; neues Jahr
+1-413	星期	xīngqī	Woche
+1-414	星期日	xīngqīrì	Sonntag
+1-415	星期天	xīngqītiān	Sonntag (umgangssprachlich)
+1-416	行	xíng	in Ordnung; okay; geht
+1-417	休息	xiūxi	sich ausruhen; Pause machen
+1-418	学	xué	lernen
+1-419	学生	xuésheng	Schüler; Schülerin
+1-420	学习	xuéxí	lernen; studieren
+1-421	学校	xuéxiào	Schule
+1-422	学院	xuéyuàn	Hochschule; Fakultät
+1-423	要	yào	wollen; brauchen
+1-424	爷爷	yéye	Opa; Großvater
+1-425	也	yě	auch
+1-426	页	yè	Seite (Buch)
+1-427	一	yī	eins	Der Ton ändert sich je nach Folgesilbe: 一个 yí ge, 一起 yìqǐ.
+1-428	衣服	yīfu	Kleidung
+1-429	医生	yīshēng	Arzt; Ärztin
+1-430	医院	yīyuàn	Krankenhaus
+1-431	一半	yībàn	Hälfte; halb
+1-432	一会儿	yīhuìr	eine Weile; einen Moment
+1-433	一块儿	yīkuàir	zusammen; gemeinsam
+1-434	一下儿	yīxiàr	kurz; mal (eben)	Nach dem Verb macht es die Handlung kurz oder höflich: 看一下 – mal schauen.
+1-435	一样	yīyàng	gleich; genauso
+1-436	一边	yībiān	gleichzeitig; eine Seite
+1-437	一点儿	yīdiǎnr	ein bisschen
+1-438	一起	yīqǐ	zusammen; miteinander
+1-439	一些	yīxiē	einige; etwas
+1-440	用	yòng	benutzen; verwenden
+1-441	有	yǒu	haben; es gibt
+1-442	有的	yǒude	manche
+1-443	有名	yǒumíng	berühmt; bekannt
+1-444	有时候	yǒushíhou|yǒushí	manchmal
+1-445	有些	yǒuxiē|yǒuyīxiē	einige; manche; etwas
+1-446	有用	yǒuyòng	nützlich
+1-447	右	yòu	rechts
+1-448	右边	yòubian	rechte Seite
+1-449	雨	yǔ	Regen
+1-450	元	yuán	Yuan
+1-451	远	yuǎn	weit; fern
+1-452	月	yuè	Monat; Mond
+1-453	再	zài	noch einmal; wieder
+1-454	再见	zàijiàn	auf Wiedersehen; tschüss
+1-455	在	zài	in; sich befinden; gerade (dabei)
+1-456	在家	zàijiā	zu Hause sein
+1-457	早	zǎo	früh; guten Morgen
+1-458	早饭	zǎofàn	Frühstück
+1-459	早上	zǎoshang	Morgen; morgens
+1-460	怎么	zěnme	wie; warum
+1-461	站	zhàn	Haltestelle; Station
+1-462	找	zhǎo	suchen
+1-463	找到	zhǎodào	finden
+1-464	这	zhè	dies; das hier
+1-465	这边	zhèbiān	hier; diese Seite
+1-466	这里	zhèlǐ	hier
+1-467	这儿	zhèr	da; hier (umgangssprachlich)
+1-468	这些	zhèxiē	diese
+1-469	着	zhe	Partikel für Andauern	Nach dem Verb: Zustand dauert an, z. B. 坐着 – sitzend, 开着 – geöffnet.
+1-470	真	zhēn	wirklich; echt
+1-471	真的	zhēnde	wirklich?; tatsächlich
+1-472	正	zhèng	gerade (dabei); genau
+1-473	正在	zhèngzài	gerade dabei sein
+1-474	知道	zhīdào	wissen
+1-475	知识	zhīshi	Wissen; Kenntnisse
+1-476	中	zhōng	Mitte; mittlerer; in
+1-477	中国	Zhōngguó	China
+1-478	中间	zhōngjiān	Mitte; zwischen
+1-479	中文	Zhōngwén	Chinesisch (Schrift und Sprache)
+1-480	中午	zhōngwǔ	Mittag
+1-481	中学	zhōngxué	Mittelschule
+1-482	中学生	zhōngxuéshēng	Mittelschüler
+1-483	重	zhòng	schwer (Gewicht)
+1-484	重要	zhòngyào	wichtig
+1-485	住	zhù	wohnen
+1-486	准备	zhǔnbèi	vorbereiten; vorhaben
+1-487	桌子	zhuōzi	Tisch
+1-488	字	zì	Schriftzeichen
+1-489	子	zi	Nomen-Endung	Bildet Nomen, z. B. 桌子 – Tisch, 杯子 – Tasse.
+1-490	走	zǒu	gehen; weggehen
+1-491	走路	zǒulù	zu Fuß gehen
+1-492	最	zuì	am meisten; am …-sten
+1-493	最好	zuìhǎo	am besten
+1-494	最后	zuìhòu	zuletzt; schließlich
+1-495	昨天	zuótiān	gestern
+1-496	左	zuǒ	links
+1-497	左边	zuǒbian	linke Seite
+1-498	坐	zuò	sitzen; fahren (mit)
+1-499	坐下	zuòxia	sich hinsetzen
+1-500	做	zuò	machen; tun; kochen
+2-1	啊	a	Ausrufpartikel; ach	Am Satzende macht es den Satz lebhafter: 好啊！ – Gern!
+2-2	爱情	àiqíng	Liebe (romantisch)
+2-3	爱人	àiren	Ehepartner; Ehemann; Ehefrau
+2-4	安静	ānjìng	ruhig; still
+2-5	安全	ānquán	sicher; Sicherheit
+2-6	白色	báisè	weiß (Farbe); Weiß
+2-7	班长	bānzhǎng	Klassensprecher
+2-8	办	bàn	erledigen; machen
+2-9	办法	bànfǎ	Methode; Ausweg; Lösung
+2-10	办公室	bàngōngshì	Büro
+2-11	半夜	bànyè	Mitternacht; mitten in der Nacht
+2-12	帮助	bāngzhù	Hilfe; helfen (unterstützen)
+2-13	饱	bǎo	satt
+2-14	报名	bàomíng	sich anmelden
+2-15	报纸	bàozhǐ	Zeitung
+2-16	北方	běifāng	Norden (Region)
+2-17	背	bèi	auswendig lernen; den Rücken zuwenden
+2-18	比如	bǐrú	zum Beispiel
+2-19	比如说	bǐrúshuō	beispielsweise
+2-20	笔	bǐ	Stift
+2-21	笔记	bǐjì	Notizen; Mitschrift
+2-22	笔记本	bǐjìběn	Notizbuch; Laptop
+2-23	必须	bìxū	müssen; unbedingt
+2-24	边	biān	Seite; Rand
+2-25	变	biàn	sich verändern; verändern
+2-26	变成	biànchéng	sich verwandeln in
+2-27	遍	biàn	Mal (ganz durch)
+2-28	表	biǎo	Armbanduhr; Tabelle
+2-29	表示	biǎoshì	ausdrücken; zeigen
+2-30	不错	bùcuò	nicht schlecht; ziemlich gut
+2-31	不但	bùdàn	nicht nur
+2-32	不够	bùgòu	nicht genug
+2-33	不过	bùguò	aber; allerdings
+2-34	不太	bùtài	nicht so; nicht besonders
+2-35	不要	bùyào	nicht (tun)!; nicht wollen
+2-36	不好意思	bùhǎoyìsi	Entschuldigung (verlegen); peinlich
+2-37	不久	bùjiǔ	bald; kurz danach
+2-38	不满	bùmǎn	unzufrieden
+2-39	不如	bùrú	nicht so gut wie; lieber
+2-40	不少	bùshǎo	nicht wenige; ziemlich viele
+2-41	不同	bùtóng	verschieden; unterschiedlich
+2-42	不行	bùxíng	geht nicht; nicht erlaubt
+2-43	不一定	bùyīdìng	nicht unbedingt
+2-44	不一会儿	bùyīhuìr	kurz darauf
+2-45	部分	bùfen	Teil
+2-46	才	cái	erst; gerade erst
+2-47	菜单	càidān	Speisekarte
+2-48	参观	cānguān	besichtigen
+2-49	参加	cānjiā	teilnehmen
+2-50	草	cǎo	Gras
+2-51	草地	cǎodì	Wiese; Rasen
+2-52	层	céng	Stockwerk; Schicht
+2-53	查	chá	nachschlagen; überprüfen
+2-54	差不多	chàbuduō	fast; ungefähr; ähnlich
+2-55	长	cháng	lang
+2-56	常见	chángjiàn	häufig vorkommend
+2-57	常用	chángyòng	gebräuchlich; oft benutzt
+2-58	场	chǎng	Platz; Zählwort für Spiele und Vorstellungen
+2-59	超过	chāoguò	überschreiten; überholen
+2-60	超市	chāoshì	Supermarkt
+2-61	车辆	chēliàng	Fahrzeuge
+2-62	称	chēng	nennen; bezeichnen als
+2-63	成	chéng	zu etwas werden; gelingen
+2-64	成绩	chéngjì	Note; Leistung; Ergebnis
+2-65	成为	chéngwéi	werden (zu)
+2-66	重复	chóngfù	wiederholen
+2-67	重新	chóngxīn	erneut; von Neuem
+2-68	出发	chūfā	aufbrechen; losfahren
+2-69	出国	chūguó	ins Ausland gehen
+2-70	出口	chūkǒu	Ausgang; Ausfahrt
+2-71	出门	chūmén	aus dem Haus gehen
+2-72	出生	chūshēng	geboren werden
+2-73	出现	chūxiàn	erscheinen; auftauchen
+2-74	出院	chūyuàn	aus dem Krankenhaus entlassen werden
+2-75	出租	chūzū	vermieten
+2-76	出租车	chūzūchē	Taxi
+2-77	船	chuán	Schiff; Boot
+2-78	吹	chuī	blasen; wehen
+2-79	春节	Chūnjié	Frühlingsfest (chinesisches Neujahr)
+2-80	春天	chūntiān	Frühling
+2-81	词	cí	Wort
+2-82	词典	cídiǎn	Wörterbuch
+2-83	词语	cíyǔ	Ausdruck; Wörter
+2-84	从小	cóngxiǎo	von klein auf
+2-85	答应	dāying	zusagen; versprechen; antworten
+2-86	打工	dǎgōng	jobben; arbeiten gehen
+2-87	打算	dǎsuàn	vorhaben; planen; Plan
+2-88	打印	dǎyìn	drucken; ausdrucken
+2-89	大部分	dàbùfen	größter Teil; größtenteils
+2-90	大大	dàdà	stark; enorm
+2-91	大多数	dàduōshù	Mehrheit; die meisten
+2-92	大海	dàhǎi	Meer; offene See
+2-93	大家	dàjiā	alle; jeder
+2-94	大量	dàliàng	große Menge; massenhaft
+2-95	大门	dàmén	Haupttor; Haupteingang
+2-96	大人	dàren	Erwachsener
+2-97	大声	dàshēng	laut
+2-98	大小	dàxiǎo	Größe
+2-99	大衣	dàyī	Mantel
+2-100	大自然	dàzìrán	Natur
+2-101	带	dài	mitnehmen; mitbringen; Band
+2-102	带来	dàilái	mitbringen; bringen
+2-103	单位	dānwèi	Arbeitsstelle; Einheit
+2-104	但	dàn	aber
+2-105	但是	dànshì	jedoch; aber
+2-106	蛋	dàn	Ei
+2-107	当	dāng	arbeiten als; als (zur Zeit)
+2-108	当时	dāngshí	damals
+2-109	倒	dǎo	umfallen; umstürzen
+2-110	到处	dàochù	überall
+2-111	倒	dào	eingießen; umgekehrt
+2-112	道	dào	Weg; Zählwort für Aufgaben
+2-113	道理	dàoli	Grund; Vernunft; Sinn
+2-114	道路	dàolù	Straße; Weg (übertragen)
+2-115	得	dé	bekommen; erhalten (Note, Preis)
+2-116	得出	déchū	zu einem Ergebnis kommen
+2-117	的话	dehuà	falls; wenn
+2-118	得	de	Partikel für Ergänzungen	Verbindet Verb und Bewertung: 他跑得很快 – Er läuft sehr schnell.
+2-119	灯	dēng	Lampe; Licht
+2-120	等	děng	und so weiter; Rang
+2-121	等到	děngdào	warten bis; sobald
+2-122	等于	děngyú	gleich sein; entsprechen
+2-123	低	dī	niedrig; tief
+2-124	地球	dìqiú	Erde (Planet)
+2-125	地铁	dìtiě	U-Bahn
+2-126	地铁站	dìtiězhàn	U-Bahn-Station
+2-127	点头	diǎntóu	nicken
+2-128	店	diàn	Laden; Geschäft
+2-129	掉	diào	fallen; herunterfallen; verlieren
+2-130	东北	dōngběi	Nordosten
+2-131	东方	dōngfāng	Osten; Orient
+2-132	东南	dōngnán	Südosten
+2-133	冬天	dōngtiān	Winter
+2-134	懂	dǒng	verstehen
+2-135	懂得	dǒngde	verstehen; wissen (wie)
+2-136	动物	dòngwù	Tier
+2-137	动物园	dòngwùyuán	Zoo
+2-138	读音	dúyīn	Aussprache
+2-139	度	dù	Grad
+2-140	短	duǎn	kurz
+2-141	短信	duǎnxìn	SMS; Kurznachricht
+2-142	段	duàn	Abschnitt; Zählwort für Strecken und Zeitspannen
+2-143	队	duì	Mannschaft; Team; Schlange (Warteschlange)
+2-144	队长	duìzhǎng	Mannschaftskapitän; Teamleiter
+2-145	对	duì	zu (jemandem); gegenüber; für
+2-146	对话	duìhuà	Dialog; Gespräch
+2-147	对面	duìmiàn	gegenüber
+2-148	多	duō	wie (sehr); mehr als
+2-149	多久	duōjiǔ	wie lange
+2-150	多么	duōme	wie sehr!; was für
+2-151	多数	duōshù	Mehrzahl; die meisten
+2-152	多云	duōyún	bewölkt
+2-153	而且	érqiě	außerdem; sondern auch
+2-154	发	fā	senden; schicken
+2-155	发现	fāxiàn	entdecken; bemerken
+2-156	饭馆	fànguǎn	Gaststätte; Restaurant
+2-157	方便	fāngbiàn	praktisch; bequem
+2-158	方便面	fāngbiànmiàn	Instantnudeln
+2-159	方法	fāngfǎ	Methode
+2-160	方面	fāngmiàn	Aspekt; Hinsicht; Seite
+2-161	方向	fāngxiàng	Richtung
+2-162	放下	fàngxià	hinlegen; ablegen
+2-163	放心	fàngxīn	beruhigt sein; sich keine Sorgen machen
+2-164	分	fēn	teilen; trennen
+2-165	分开	fēnkāi	trennen; sich trennen
+2-166	分数	fēnshù	Punktzahl; Note
+2-167	分钟	fēnzhōng	Minute
+2-168	份	fèn	Portion; Exemplar
+2-169	封	fēng	Zählwort für Briefe
+2-170	服务	fúwù	Dienst; Service; dienen
+2-171	复习	fùxí	wiederholen (Lernstoff)
+2-172	该	gāi	sollen; an der Reihe sein
+2-173	改	gǎi	ändern; korrigieren
+2-174	改变	gǎibiàn	verändern
+2-175	干杯	gānbēi	Prost!; anstoßen
+2-176	感到	gǎndào	sich fühlen; empfinden
+2-177	感动	gǎndòng	rühren; gerührt sein
+2-178	感觉	gǎnjué	Gefühl; spüren
+2-179	感谢	gǎnxiè	danken; Dank
+2-180	干活儿	gànhuór	arbeiten (körperlich); schuften
+2-181	刚	gāng	gerade erst; eben
+2-182	刚才	gāngcái	vorhin; gerade eben
+2-183	刚刚	gānggāng	soeben
+2-184	高级	gāojí	hochwertig; fortgeschritten
+2-185	高中	gāozhōng	Oberschule; gymnasiale Oberstufe
+2-186	个子	gèzi	Körpergröße
+2-187	更	gèng	noch (mehr); noch …-er
+2-188	公共汽车	gōnggòngqìchē	Linienbus
+2-189	公交车	gōngjiāochē	Bus
+2-190	公斤	gōngjīn	Kilogramm
+2-191	公里	gōnglǐ	Kilometer
+2-192	公路	gōnglù	Landstraße; Fernstraße
+2-193	公平	gōngpíng	gerecht; fair
+2-194	公司	gōngsī	Firma; Unternehmen
+2-195	公园	gōngyuán	Park
+2-196	狗	gǒu	Hund
+2-197	够	gòu	genug; reichen
+2-198	故事	gùshi	Geschichte; Erzählung
+2-199	故意	gùyì	absichtlich
+2-200	顾客	gùkè	Kunde; Kundin
+2-201	关机	guānjī	ausschalten (Gerät)
+2-202	关心	guānxīn	sich kümmern um; Anteil nehmen
+2-203	观点	guāndiǎn	Standpunkt; Ansicht
+2-204	广场	guǎngchǎng	Platz (öffentlich)
+2-205	广告	guǎnggào	Werbung; Anzeige
+2-206	国际	guójì	international
+2-207	过来	guòlai	herüberkommen
+2-208	过年	guònián	Neujahr feiern
+2-209	过去	guòqu	hinübergehen; vorbeigehen
+2-210	过	guo	Partikel für Erfahrung	Nach dem Verb: schon einmal erlebt, z. B. 我去过中国 – Ich war schon einmal in China.
+2-211	海	hǎi	Meer
+2-212	海边	hǎibiān	Strand; Küste
+2-213	喊	hǎn	rufen; schreien
+2-214	好	hǎo	ganz schön; so (sehr)
+2-215	好处	hǎochu	Vorteil; Nutzen
+2-216	好多	hǎoduō	sehr viele; eine Menge
+2-217	好久	hǎojiǔ	lange Zeit
+2-218	好人	hǎorén	guter Mensch
+2-219	好事	hǎoshì	gute Sache; Glücksfall
+2-220	好像	hǎoxiàng	scheinen; als ob
+2-221	合适	héshì	passend; geeignet
+2-222	河	hé	Fluss
+2-223	黑	hēi	schwarz; dunkel
+2-224	黑板	hēibǎn	Tafel (Schule)
+2-225	黑色	hēisè	Schwarz (Farbe)
+2-226	红	hóng	rot
+2-227	红色	hóngsè	Rot (Farbe)
+2-228	后来	hòulái	später; danach
+2-229	忽然	hūrán	plötzlich
+2-230	湖	hú	See
+2-231	护照	hùzhào	Reisepass
+2-232	花	huā	ausgeben (Geld, Zeit)
+2-233	花园	huāyuán	Garten
+2-234	画	huà	malen; zeichnen; Bild
+2-235	画家	huàjiā	Maler; Malerin
+2-236	画儿	huàr	Bild; Gemälde
+2-237	坏处	huàichu	Nachteil; Schaden
+2-238	坏人	huàirén	schlechter Mensch; Bösewicht
+2-239	欢迎	huānyíng	willkommen; begrüßen
+2-240	换	huàn	wechseln; tauschen
+2-241	黄	huáng	gelb
+2-242	黄色	huángsè	Gelb (Farbe)
+2-243	回	huí	Mal; Zählwort für Ereignisse
+2-244	回国	huíguó	in die Heimat zurückkehren
+2-245	会	huì	Versammlung; Treffen; Sitzung
+2-246	活动	huódòng	Aktivität; Veranstaltung; sich bewegen
+2-247	或	huò	oder; vielleicht
+2-248	或者	huòzhě	oder (in Aussagen)
+2-249	机会	jīhuì	Gelegenheit; Chance
+2-250	鸡	jī	Huhn
+2-251	级	jí	Stufe; Klasse (Jahrgang)
+2-252	急	jí	eilig; dringend; ungeduldig
+2-253	计划	jìhuà	Plan; planen
+2-254	计算机	jìsuànjī	Rechner; Computer (fachsprachlich)
+2-255	加	jiā	hinzufügen; plus
+2-256	加油	jiāyóu	Los!; tanken	Anfeuerungsruf: 加油！ – Gib alles!
+2-257	家	jiā	Endung für Fachleute	科学家 – Wissenschaftler, 画家 – Maler.
+2-258	家庭	jiātíng	Familie (als Einheit); Haushalt
+2-259	家长	jiāzhǎng	Eltern (der Schüler); Erziehungsberechtigte
+2-260	假	jiǎ	falsch; unecht
+2-261	假期	jiàqī	Ferien; Urlaubszeit
+2-262	检查	jiǎnchá	kontrollieren; untersuchen
+2-263	见到	jiàndào	treffen; zu sehen bekommen
+2-264	见过	jiànguo	schon einmal gesehen haben
+2-265	件	jiàn	Zählwort für Kleidung und Angelegenheiten
+2-266	健康	jiànkāng	gesund; Gesundheit
+2-267	讲	jiǎng	sprechen; erklären; erzählen
+2-268	讲话	jiǎnghuà	eine Rede halten; Rede
+2-269	交	jiāo	abgeben; übergeben
+2-270	交给	jiāogěi	übergeben an
+2-271	交朋友	jiāopéngyou	Freundschaft schließen
+2-272	交通	jiāotōng	Verkehr
+2-273	角	jiǎo	Ecke; Jiao (0,10 Yuan)
+2-274	角度	jiǎodù	Winkel; Blickwinkel
+2-275	饺子	jiǎozi	Jiaozi; gefüllte Teigtaschen (gekocht)
+2-276	脚	jiǎo	Fuß
+2-277	叫作	jiàozuò	genannt werden; heißen
+2-278	教师	jiàoshī	Lehrkraft
+2-279	教室	jiàoshì	Klassenzimmer
+2-280	教学	jiàoxué	Unterricht; Lehre
+2-281	教育	jiàoyù	Bildung; Erziehung; erziehen
+2-282	接	jiē	abholen; annehmen (Anruf)
+2-283	接到	jiēdào	erhalten; abholen
+2-284	接受	jiēshòu	annehmen; akzeptieren
+2-285	接下来	jiēxiàlái	als Nächstes; anschließend
+2-286	接着	jiēzhe	dann; weitermachen
+2-287	街	jiē	Straße (in der Stadt)
+2-288	节	jié	Zählwort für Unterrichtsstunden; Fest
+2-289	节目	jiémù	Programm; Sendung
+2-290	节日	jiérì	Feiertag; Fest
+2-291	结果	jiéguǒ	Ergebnis; schließlich
+2-292	借	jiè	leihen; ausleihen
+2-293	斤	jīn	Jin (Pfund, 500 g)
+2-294	今后	jīnhòu	künftig; von nun an
+2-295	进入	jìnrù	eintreten; betreten
+2-296	进行	jìnxíng	durchführen; im Gange sein
+2-297	近	jìn	nah
+2-298	经常	jīngcháng	oft; regelmäßig
+2-299	经过	jīngguò	vorbeikommen; durch; Verlauf
+2-300	经理	jīnglǐ	Manager; Geschäftsführer
+2-301	酒	jiǔ	Alkohol; Schnaps; Wein
+2-302	酒店	jiǔdiàn	Hotel
+2-303	就要	jiùyào	gleich (passiert es); im Begriff sein
+2-304	举	jǔ	heben; hochheben
+2-305	举手	jǔshǒu	die Hand heben
+2-306	举行	jǔxíng	veranstalten; abhalten
+2-307	句	jù	Zählwort für Sätze
+2-308	句子	jùzi	Satz
+2-309	卡	kǎ	Karte (Bankkarte, Fahrkarte)
+2-310	开机	kāijī	einschalten (Gerät)
+2-311	开心	kāixīn	fröhlich; glücklich
+2-312	开学	kāixué	Schulbeginn; Semesterbeginn
+2-313	看法	kànfǎ	Meinung; Ansicht
+2-314	考生	kǎoshēng	Prüfling
+2-315	靠	kào	sich lehnen an; sich verlassen auf
+2-316	科	kē	Fach; Abteilung
+2-317	科学	kēxué	Wissenschaft; wissenschaftlich
+2-318	可爱	kě'ài	süß; niedlich; liebenswert
+2-319	可能	kěnéng	vielleicht; möglich
+2-320	可怕	kěpà	schrecklich; furchtbar
+2-321	可是	kěshì	aber (betont)
+2-322	可以	kěyǐ	dürfen; können
+2-323	克	kè	Gramm
+2-324	刻	kè	Viertelstunde
+2-325	客人	kèrén	Gast
+2-326	课堂	kètáng	Unterrichtsraum; im Unterricht
+2-327	空气	kōngqì	Luft
+2-328	哭	kū	weinen
+2-329	快餐	kuàicān	Fastfood; Schnellimbiss
+2-330	快点儿	kuàidiǎnr	schneller!; beeil dich
+2-331	快乐	kuàilè	glücklich; fröhlich; froh (Feiertag)
+2-332	快要	kuàiyào	bald; gleich
+2-333	筷子	kuàizi	Essstäbchen
+2-334	拉	lā	ziehen
+2-335	来自	láizì	stammen aus; kommen aus
+2-336	蓝	lán	blau
+2-337	蓝色	lánsè	Blau (Farbe)
+2-338	篮球	lánqiú	Basketball
+2-339	老	lǎo	immer (wieder)
+2-340	老	lǎo	vertraute Anrede vor Namen	老王 – der alte Wang (vertraute Anrede unter Bekannten).
+2-341	老年	lǎonián	hohes Alter; Senioren-
+2-342	老朋友	lǎopéngyou	alter Freund
+2-343	老是	lǎoshi	ständig; dauernd
+2-344	离	lí	entfernt von; von
+2-345	离开	líkāi	verlassen; weggehen
+2-346	礼物	lǐwù	Geschenk
+2-347	里头	lǐtou	drinnen; innen
+2-348	理想	lǐxiǎng	Ideal; Traum; ideal
+2-349	例如	lìrú	zum Beispiel (schriftlich)
+2-350	例子	lìzi	Beispiel
+2-351	脸	liǎn	Gesicht
+2-352	练	liàn	üben; trainieren
+2-353	练习	liànxí	Übung; üben
+2-354	凉	liáng	kühl; kalt
+2-355	凉快	liángkuai	angenehm kühl
+2-356	两	liǎng	Liang (50 Gramm)
+2-357	亮	liàng	hell
+2-358	辆	liàng	Zählwort für Fahrzeuge
+2-359	零下	língxià	unter null
+2-360	留	liú	bleiben; behalten; hinterlassen
+2-361	留下	liúxià	dableiben; zurücklassen
+2-362	留学生	liúxuéshēng	Auslandsstudent
+2-363	流	liú	fließen
+2-364	流利	liúlì	fließend
+2-365	流行	liúxíng	beliebt; in Mode
+2-366	路边	lùbiān	Straßenrand
+2-367	旅客	lǚkè	Reisender; Fahrgast
+2-368	旅行	lǚxíng	reisen; Reise
+2-369	旅游	lǚyóu	Tourismus; Urlaubsreise machen
+2-370	绿	lǜ	grün
+2-371	绿色	lǜsè	Grün (Farbe); umweltfreundlich
+2-372	卖	mài	verkaufen
+2-373	满	mǎn	voll
+2-374	满意	mǎnyì	zufrieden
+2-375	猫	māo	Katze
+2-376	米	mǐ	Meter
+2-377	面	miàn	Seite; Oberfläche
+2-378	面	miàn	Nudeln; Mehl
+2-379	面前	miànqián	vor (jemandem)
+2-380	名	míng	Platz (Rang); Name
+2-381	名称	míngchēng	Bezeichnung
+2-382	名单	míngdān	Namensliste
+2-383	明星	míngxīng	Star; Berühmtheit
+2-384	目的	mùdì	Zweck; Ziel
+2-385	拿出	náchū	herausnehmen; hervorholen
+2-386	拿到	nádào	bekommen; in die Hand bekommen
+2-387	那	nà	dann; in dem Fall
+2-388	那会儿	nàhuìr	damals; zu der Zeit
+2-389	那么	nàme	so; dann; also
+2-390	那时候	nàshíhou|nàshí	zu jener Zeit
+2-391	那样	nàyàng	so; auf diese Art
+2-392	南方	nánfāng	Süden (Region)
+2-393	难过	nánguò	traurig
+2-394	难看	nánkàn	hässlich
+2-395	难受	nánshòu	sich unwohl fühlen; unerträglich
+2-396	难题	nántí	schwierige Frage; Problem
+2-397	难听	nántīng	unschön klingend
+2-398	能够	nénggòu	imstande sein
+2-399	年级	niánjí	Klassenstufe; Jahrgang
+2-400	年轻	niánqīng	jung
+2-401	鸟	niǎo	Vogel
+2-402	弄	nòng	machen; erledigen; herrichten
+2-403	努力	nǔlì	sich anstrengen; fleißig
+2-404	爬	pá	klettern; kriechen
+2-405	爬山	páshān	bergsteigen; wandern (Berg)
+2-406	怕	pà	Angst haben; fürchten
+2-407	排	pái	Reihe
+2-408	排队	páiduì	Schlange stehen
+2-409	排球	páiqiú	Volleyball
+2-410	碰	pèng	berühren; stoßen
+2-411	碰到	pèngdào	zufällig treffen; stoßen auf
+2-412	碰见	pèngjiàn	begegnen
+2-413	篇	piān	Zählwort für Texte und Artikel
+2-414	便宜	piányi	billig; günstig
+2-415	片	piàn	Scheibe; Stück
+2-416	漂亮	piàoliang	schön; hübsch
+2-417	平	píng	flach; eben
+2-418	平安	píng'ān	wohlbehalten; sicher
+2-419	平常	píngcháng	gewöhnlich; normalerweise
+2-420	平等	píngděng	gleichberechtigt; Gleichheit
+2-421	平时	píngshí	sonst; im Alltag
+2-422	瓶	píng	Zählwort für Flaschen; Flasche
+2-423	瓶子	píngzi	Flasche
+2-424	普通	pǔtōng	gewöhnlich; normal
+2-425	普通话	pǔtōnghuà	Hochchinesisch; Mandarin
+2-426	其他	qítā	andere; übrige
+2-427	其中	qízhōng	darunter; davon
+2-428	骑	qí	reiten; fahren (Rad)
+2-429	骑车	qíchē	Rad fahren
+2-430	起飞	qǐfēi	starten (Flugzeug); abheben
+2-431	气	qì	Luft; Atem; Ärger
+2-432	气温	qìwēn	Lufttemperatur
+2-433	千	qiān	tausend
+2-434	千克	qiānkè	Kilogramm (offiziell)
+2-435	前年	qiánnián	vorletztes Jahr
+2-436	墙	qiáng	Wand; Mauer
+2-437	青年	qīngnián	Jugendliche; junge Leute
+2-438	青少年	qīngshàonián	Teenager; Jugendliche
+2-439	轻	qīng	leicht (Gewicht)
+2-440	清楚	qīngchu	klar; deutlich
+2-441	晴	qíng	heiter; sonnig
+2-442	晴天	qíngtiān	sonniger Tag
+2-443	请客	qǐngkè	einladen (bezahlen); einen ausgeben
+2-444	请求	qǐngqiú	Bitte; ersuchen
+2-445	秋天	qiūtiān	Herbst
+2-446	求	qiú	bitten; anflehen
+2-447	球场	qiúchǎng	Spielfeld; Sportplatz
+2-448	球队	qiúduì	Ballmannschaft
+2-449	球鞋	qiúxié	Turnschuhe; Sportschuhe
+2-450	取	qǔ	abholen; abheben (Geld)
+2-451	取得	qǔdé	erzielen; erlangen
+2-452	全	quán	ganz; vollständig
+2-453	全部	quánbù	alle; gesamt
+2-454	全国	quánguó	ganzes Land; landesweit
+2-455	全家	quánjiā	ganze Familie
+2-456	全年	quánnián	ganzes Jahr
+2-457	全身	quánshēn	ganzer Körper
+2-458	全体	quántǐ	alle (Mitglieder); Gesamtheit
+2-459	然后	ránhòu	danach; dann
+2-460	让	ràng	lassen; veranlassen
+2-461	热情	rèqíng	herzlich; begeistert
+2-462	人口	rénkǒu	Bevölkerung
+2-463	人们	rénmen	Leute; Menschen
+2-464	人数	rénshù	Anzahl der Personen
+2-465	认为	rènwéi	meinen; halten für
+2-466	日报	rìbào	Tageszeitung
+2-467	日子	rìzi	Tag (Datum); Leben (Alltag)
+2-468	如果	rúguǒ	wenn; falls
+2-469	入口	rùkǒu	Eingang
+2-470	商量	shāngliang	besprechen; sich beraten
+2-471	商人	shāngrén	Geschäftsmann; Händler
+2-472	上周	shàngzhōu	letzte Woche
+2-473	少数	shǎoshù	Minderheit; wenige
+2-474	少年	shàonián	Jugendlicher; Junge
+2-475	身边	shēnbiān	an der Seite; bei sich
+2-476	什么样	shénmeyàng	was für ein; wie
+2-477	生	shēng	zur Welt bringen; entstehen
+2-478	生词	shēngcí	neue Vokabel
+2-479	生活	shēnghuó	Leben; leben
+2-480	声音	shēngyīn	Stimme; Geräusch
+2-481	省	shěng	Provinz
+2-482	省	shěng	sparen
+2-483	十分	shífēn	äußerst; ganz und gar
+2-484	实际	shíjì	tatsächlich; Wirklichkeit
+2-485	实习	shíxí	Praktikum; ein Praktikum machen
+2-486	实现	shíxiàn	verwirklichen
+2-487	实在	shízài	wirklich; tatsächlich; ehrlich
+2-488	实在	shízài	=2-487
+2-489	食物	shíwù	Nahrung; Lebensmittel
+2-490	使用	shǐyòng	verwenden; gebrauchen
+2-491	市	shì	Stadt
+2-492	市长	shìzhǎng	Bürgermeister
+2-493	事情	shìqing	Angelegenheit; Sache
+2-494	收	shōu	annehmen; einsammeln
+2-495	收到	shōudào	erhalten; bekommen (Post)
+2-496	收入	shōurù	Einkommen
+2-497	手表	shǒubiǎo	Armbanduhr
+2-498	受到	shòudào	erfahren; erhalten (Lob, Kritik)
+2-499	舒服	shūfu	bequem; angenehm
+2-500	熟	shú	reif; gar; vertraut
+2-501	数	shǔ	zählen
+2-502	数字	shùzì	Zahl; Ziffer
+2-503	水平	shuǐpíng	Niveau
+2-504	顺利	shùnlì	reibungslos; problemlos
+2-505	说明	shuōmíng	erklären; Erklärung
+2-506	司机	sījī	Fahrer
+2-507	送到	sòngdào	liefern nach; bringen zu
+2-508	送给	sònggěi	schenken (jemandem)
+2-509	算	suàn	rechnen; zählen als
+2-510	虽然	suīrán	obwohl
+2-511	随便	suíbiàn	beliebig; wie du willst
+2-512	随时	suíshí	jederzeit
+2-513	所以	suǒyǐ	deshalb; also
+2-514	所有	suǒyǒu	alle; sämtliche
+2-515	它	tā	es (Ding, Tier)
+2-516	它们	tāmen	sie (Dinge, Tiere)
+2-517	太太	tàitai	Ehefrau; Frau (Anrede)
+2-518	太阳	tàiyang	Sonne
+2-519	态度	tàidu	Einstellung; Haltung
+2-520	讨论	tǎolùn	diskutieren; Diskussion
+2-521	套	tào	Satz (Set); Zählwort für Wohnungen und Sets
+2-522	特别	tèbié	besonders
+2-523	特点	tèdiǎn	Merkmal; Besonderheit
+2-524	疼	téng	wehtun; Schmerzen haben
+2-525	提	tí	tragen (in der Hand); erwähnen
+2-526	提出	tíchū	vorbringen; vorschlagen
+2-527	提到	tídào	erwähnen
+2-528	提高	tígāo	verbessern; erhöhen
+2-529	题	tí	Aufgabe; Frage (Prüfung)
+2-530	体育	tǐyù	Sport (Fach)
+2-531	体育场	tǐyùchǎng	Stadion
+2-532	体育馆	tǐyùguǎn	Sporthalle
+2-533	天上	tiānshàng	am Himmel
+2-534	条	tiáo	Zählwort für Langes (Straßen, Fische)
+2-535	条件	tiáojiàn	Bedingung; Voraussetzung
+2-536	听讲	tīngjiǎng	dem Unterricht zuhören
+2-537	听说	tīngshuō	gehört haben; man sagt
+2-538	停	tíng	anhalten; aufhören
+2-539	停车	tíngchē	parken; anhalten
+2-540	停车场	tíngchēchǎng	Parkplatz
+2-541	挺	tǐng	ziemlich; recht
+2-542	挺好	tǐnghǎo	ziemlich gut
+2-543	通	tōng	verbunden sein; durchkommen
+2-544	通过	tōngguò	durch; bestehen (Prüfung)
+2-545	通知	tōngzhī	benachrichtigen; Mitteilung
+2-546	同时	tóngshí	gleichzeitig
+2-547	同事	tóngshì	Kollege; Kollegin
+2-548	同样	tóngyàng	ebenso; gleich
+2-549	头	tóu	Kopf; Zählwort für Rinder
+2-550	头	tou	Ortsendung	Bildet Ortswörter: 里头 – drinnen, 外头 – draußen, 前头 – vorne.
+2-551	头发	tóufa	Haare; Haar
+2-552	图片	túpiàn	Bild; Foto
+2-553	推	tuī	schieben; drücken
+2-554	腿	tuǐ	Bein
+2-555	外地	wàidì	auswärts; andere Gegend
+2-556	外卖	wàimài	Essen zum Mitnehmen; Lieferessen
+2-557	完	wán	fertig; zu Ende
+2-558	完成	wánchéng	erledigen; abschließen
+2-559	完全	wánquán	völlig; ganz
+2-560	晚安	wǎn'ān	gute Nacht
+2-561	晚报	wǎnbào	Abendzeitung
+2-562	晚餐	wǎncān	Abendmahlzeit
+2-563	晚会	wǎnhuì	Abendveranstaltung; Party
+2-564	碗	wǎn	Schüssel; Schale
+2-565	万	wàn	zehntausend
+2-566	网	wǎng	Netz; Internet
+2-567	网球	wǎngqiú	Tennis
+2-568	网站	wǎngzhàn	Website
+2-569	往	wǎng	in Richtung; nach
+2-570	为	wèi	für
+2-571	为什么	wèishénme	warum
+2-572	位	wèi	Zählwort für Personen (höflich)
+2-573	味道	wèidao	Geschmack
+2-574	喂	wéi	hallo (am Telefon)
+2-575	温度	wēndù	Temperatur
+2-576	闻	wén	riechen
+2-577	问路	wènlù	nach dem Weg fragen
+2-578	问题	wèntí	Frage; Problem
+2-579	午餐	wǔcān	Mittagsmahlzeit
+2-580	午睡	wǔshuì	Mittagsschlaf
+2-581	西北	xīběi	Nordwesten
+2-582	西餐	xīcān	westliches Essen
+2-583	西方	xīfāng	Westen (Kultur); westlich
+2-584	西南	xīnán	Südwesten
+2-585	西医	xīyī	westliche Medizin
+2-586	习惯	xíguàn	Gewohnheit; sich gewöhnen
+2-587	洗衣机	xǐyījī	Waschmaschine
+2-588	洗澡	xǐzǎo	baden; duschen
+2-589	下	xià	Mal (kurze Handlung)
+2-590	下雪	xiàxuě	schneien
+2-591	下周	xiàzhōu	nächste Woche
+2-592	夏天	xiàtiān	Sommer
+2-593	相同	xiāngtóng	gleich; identisch
+2-594	相信	xiāngxìn	glauben; vertrauen
+2-595	响	xiǎng	klingeln; ertönen; laut
+2-596	想到	xiǎngdào	daran denken; einfallen
+2-597	想法	xiǎngfǎ	Idee; Gedanke
+2-598	想起	xiǎngqǐ	sich erinnern an
+2-599	向	xiàng	in Richtung; zu
+2-600	相机	xiàngjī	Kamera
+2-601	像	xiàng	ähneln; aussehen wie
+2-602	小	xiǎo	Anrede für Jüngere vor Namen	小王 – der kleine Wang (vertraute Anrede für Jüngere).
+2-603	小声	xiǎoshēng	leise
+2-604	小时候	xiǎoshíhou	als Kind; in der Kindheit
+2-605	小说	xiǎoshuō	Roman
+2-606	小心	xiǎoxīn	vorsichtig; Vorsicht!
+2-607	小组	xiǎozǔ	Gruppe; Arbeitsgruppe
+2-608	校园	xiàoyuán	Campus; Schulgelände
+2-609	校长	xiàozhǎng	Schulleiter; Rektor
+2-610	笑话	xiàohua	auslachen; Witz
+2-611	笑话儿	xiàohuar	Witz
+2-612	鞋	xié	Schuh
+2-613	心里	xīnli	im Herzen; innerlich
+2-614	心情	xīnqíng	Stimmung; Laune
+2-615	心中	xīnzhōng	im Herzen
+2-616	新闻	xīnwén	Nachrichten
+2-617	信	xìn	Brief
+2-618	信号	xìnhào	Signal; Empfang (Handy)
+2-619	信息	xìnxī	Information; Nachricht
+2-620	信心	xìnxīn	Selbstvertrauen; Zuversicht
+2-621	信用卡	xìnyòngkǎ	Kreditkarte
+2-622	星星	xīngxing	Stern
+2-623	行动	xíngdòng	handeln; Aktion
+2-624	行人	xíngrén	Fußgänger
+2-625	行为	xíngwéi	Verhalten; Handlung
+2-626	姓	xìng	Familienname; heißen (mit Nachnamen)
+2-627	姓名	xìngmíng	vollständiger Name
+2-628	休假	xiūjià	Urlaub machen
+2-629	许多	xǔduō	viele
+2-630	选	xuǎn	wählen; auswählen
+2-631	学期	xuéqī	Semester; Schulhalbjahr
+2-632	雪	xuě	Schnee
+2-633	颜色	yánsè	Farbe
+2-634	眼	yǎn	Auge; Blick
+2-635	眼睛	yǎnjing	Augen
+2-636	养	yǎng	halten (Tiere); aufziehen
+2-637	样子	yàngzi	Aussehen; Art
+2-638	要求	yāoqiú	verlangen; Anforderung
+2-639	药	yào	Medikament; Arznei
+2-640	药店	yàodiàn	Apotheke
+2-641	药片	yàopiàn	Tablette
+2-642	药水	yàoshuǐ	flüssige Arznei; Tropfen
+2-643	也许	yěxǔ	vielleicht; womöglich
+2-644	夜	yè	Nacht
+2-645	夜里	yèli	nachts; in der Nacht
+2-646	一部分	yībùfen	ein Teil
+2-647	一定	yīdìng	bestimmt; unbedingt
+2-648	一共	yīgòng	insgesamt
+2-649	一会儿	yīhuìr	gleich; in einem Moment
+2-650	一路平安	yīlùpíng'ān	gute Reise!; komm gut an
+2-651	一路顺风	yīlùshùnfēng	gute Fahrt!
+2-652	已经	yǐjīng	schon; bereits
+2-653	以后	yǐhòu	nachher; später; nach
+2-654	以前	yǐqián	früher; vorher; vor
+2-655	以上	yǐshàng	über; mehr als
+2-656	以外	yǐwài	außer; außerhalb
+2-657	以为	yǐwéi	(fälschlich) glauben
+2-658	以下	yǐxià	unter; weniger als
+2-659	椅子	yǐzi	Stuhl
+2-660	一般	yībān	normalerweise; gewöhnlich
+2-661	一点点	yīdiǎndiǎn	ein klein wenig
+2-662	一生	yīshēng	ganzes Leben
+2-663	一直	yīzhí	die ganze Zeit; geradeaus
+2-664	亿	yì	hundert Millionen
+2-665	意见	yìjiàn	Meinung; Einwand
+2-666	意思	yìsi	Bedeutung; Sinn
+2-667	因为	yīnwèi	weil
+2-668	阴	yīn	bewölkt; bedeckt
+2-669	阴天	yīntiān	trüber Tag
+2-670	音节	yīnjié	Silbe
+2-671	音乐	yīnyuè	Musik
+2-672	音乐会	yīnyuèhuì	Konzert
+2-673	银行	yínháng	Bank (Geld)
+2-674	银行卡	yínhángkǎ	Bankkarte
+2-675	应该	yīnggāi	sollen; sollte
+2-676	英文	Yīngwén	Englisch (Schrift und Sprache)
+2-677	英语	Yīngyǔ	Englisch (Sprache)
+2-678	影片	yǐngpiàn	Spielfilm
+2-679	影响	yǐngxiǎng	Einfluss; beeinflussen
+2-680	永远	yǒngyuǎn	für immer; ewig
+2-681	油	yóu	Öl; Fett
+2-682	游客	yóukè	Tourist; Besucher
+2-683	友好	yǒuhǎo	freundlich; freundschaftlich
+2-684	有空儿	yǒukòngr	Zeit haben; frei sein
+2-685	有人	yǒurén	jemand; manche Leute
+2-686	有点儿	yǒudiǎnr|yǒuyīdiǎnr	ein bisschen (zu); etwas	Vor Adjektiven, meist bei Unangenehmem: 有点儿冷 – etwas kalt.
+2-687	有意思	yǒuyìsi	interessant
+2-688	又	yòu	wieder (schon wieder); und auch
+2-689	鱼	yú	Fisch
+2-690	语言	yǔyán	Sprache
+2-691	原来	yuánlái	ursprünglich; eigentlich
+2-692	原因	yuányīn	Grund; Ursache
+2-693	院	yuàn	Hof; Institut
+2-694	院长	yuànzhǎng	Direktor (Institut, Klinik)
+2-695	院子	yuànzi	Hof; Innenhof
+2-696	愿意	yuànyì	bereit sein; gern wollen
+2-697	月份	yuèfèn	Monat (im Kalender)
+2-698	月亮	yuèliang	Mond
+2-699	越	yuè	je … desto	越…越…: 越快越好 – je schneller, desto besser.
+2-700	越来越	yuèláiyuè	immer mehr; immer …-er
+2-701	云	yún	Wolke
+2-702	运动	yùndòng	Sport; sich bewegen
+2-703	咱	zán	wir beide; ich (umgangssprachlich)
+2-704	咱们	zánmen	wir (du und ich)
+2-705	脏	zāng	schmutzig
+2-706	早餐	zǎocān	Frühstücksmahlzeit
+2-707	早晨	zǎochén	früher Morgen
+2-708	早就	zǎojiù	schon längst
+2-709	怎么办	zěnmebàn	was tun?; was soll man machen?
+2-710	怎么样	zěnmeyàng	wie (ist es)?; wie wär's?
+2-711	怎样	zěnyàng	auf welche Weise; wie
+2-712	占	zhàn	einnehmen; besetzen
+2-713	站	zhàn	stehen
+2-714	站住	zhànzhù	stehen bleiben
+2-715	长	zhǎng	wachsen; älter
+2-716	长大	zhǎngdà	aufwachsen; groß werden
+2-717	找出	zhǎochū	herausfinden; ausfindig machen
+2-718	照顾	zhàogù	sich kümmern um; pflegen
+2-719	照片	zhàopiàn	Foto
+2-720	照相	zhàoxiàng	fotografieren
+2-721	这么	zhème	so; derart
+2-722	这时候	zhèshíhou|zhèshí	in diesem Moment
+2-723	这样	zhèyàng	so; auf diese Weise
+2-724	真正	zhēnzhèng	echt; wahr; wirklich
+2-725	正常	zhèngcháng	normal
+2-726	正好	zhènghǎo	genau richtig; zufällig gerade
+2-727	正确	zhèngquè	richtig; korrekt
+2-728	正是	zhèngshì	genau; eben
+2-729	直接	zhíjiē	direkt
+2-730	只	zhǐ	nur
+2-731	只能	zhǐnéng	nur können; müssen
+2-732	只要	zhǐyào	solange; wenn nur
+2-733	纸	zhǐ	Papier
+2-734	中餐	zhōngcān	chinesisches Essen
+2-735	中级	zhōngjí	Mittelstufe
+2-736	中年	zhōngnián	mittleres Alter
+2-737	中小学	zhōngxiǎoxué	Grund- und Mittelschulen
+2-738	中心	zhōngxīn	Zentrum; Mittelpunkt
+2-739	中医	zhōngyī	chinesische Medizin
+2-740	重点	zhòngdiǎn	Schwerpunkt
+2-741	重视	zhòngshì	ernst nehmen; Wert legen auf
+2-742	周	zhōu	Woche
+2-743	周末	zhōumò	Wochenende
+2-744	周年	zhōunián	Jahrestag
+2-745	主人	zhǔrén	Gastgeber; Besitzer
+2-746	主要	zhǔyào	hauptsächlich; wichtigste
+2-747	住房	zhùfáng	Wohnung; Unterkunft
+2-748	住院	zhùyuàn	im Krankenhaus liegen
+2-749	装	zhuāng	einpacken; einbauen; vortäuschen
+2-750	准确	zhǔnquè	genau; präzise
+2-751	自己	zìjǐ	selbst
+2-752	自行车	zìxíngchē	Fahrrad
+2-753	自由	zìyóu	Freiheit; frei
+2-754	字典	zìdiǎn	Zeichenlexikon; Wörterbuch (Zeichen)
+2-755	走过	zǒuguò	vorübergehen
+2-756	走进	zǒujìn	hineingehen; betreten
+2-757	走开	zǒukāi	weggehen; geh weg!
+2-758	租	zū	mieten; Miete
+2-759	组	zǔ	Gruppe; Zählwort für Gruppen
+2-760	组成	zǔchéng	bilden; bestehen aus
+2-761	组长	zǔzhǎng	Gruppenleiter
+2-762	嘴	zuǐ	Mund
+2-763	最近	zuìjìn	in letzter Zeit; kürzlich
+2-764	作家	zuòjiā	Schriftsteller
+2-765	作文	zuòwén	Aufsatz
+2-766	作业	zuòyè	Hausaufgaben
+2-767	作用	zuòyòng	Wirkung; Funktion
+2-768	座	zuò	Zählwort für Gebäude und Berge; Sitz
+2-769	座位	zuòwèi	Sitzplatz
+2-770	做到	zuòdào	schaffen; erreichen
+2-771	做法	zuòfǎ	Vorgehensweise; Methode (Zubereitung)
+2-772	做饭	zuòfàn	kochen
+3-1	爱心	àixīn	Mitgefühl; Liebe (zu anderen)
+3-2	安排	ānpái	planen; arrangieren; Plan
+3-3	安装	ānzhuāng	installieren; montieren
+3-4	按	àn	drücken; gemäß
+3-5	按照	ànzhào	gemäß; entsprechend
+3-6	把	bǎ	Objektmarker	Stellt das Objekt vor das Verb: 把门关上 – Mach die Tür zu.
+3-7	把	bǎ	Zählwort für Dinge mit Griff
+3-8	把握	bǎwò	Zuversicht; im Griff haben
+3-9	白	bái	umsonst; vergeblich
+3-10	白菜	báicài	Chinakohl
+3-11	班级	bānjí	Schulklasse
+3-12	搬	bān	tragen (Schweres); umziehen
+3-13	搬家	bānjiā	umziehen (Wohnung)
+3-14	板	bǎn	Brett; Platte
+3-15	办理	bànlǐ	bearbeiten; erledigen (Formalitäten)
+3-16	保	bǎo	schützen; bewahren
+3-17	保安	bǎo'ān	Wachmann; Sicherheitsdienst
+3-18	保持	bǎochí	beibehalten; halten
+3-19	保存	bǎocún	aufbewahren; speichern
+3-20	保护	bǎohù	schützen; Schutz
+3-21	保留	bǎoliú	behalten; bewahren
+3-22	保险	bǎoxiǎn	Versicherung; sicher
+3-23	保证	bǎozhèng	garantieren; Garantie
+3-24	报	bào	Zeitung
+3-25	报到	bàodào	sich melden; sich anmelden (vor Ort)
+3-26	报道	bàodào	Bericht; berichten (Medien)
+3-27	报告	bàogào	Bericht; melden; Vortrag
+3-28	背	bēi	auf dem Rücken tragen
+3-29	北部	běibù	nördlicher Teil
+3-30	背	bèi	Rücken
+3-31	背后	bèihòu	hinter; hinter dem Rücken
+3-32	被	bèi	Passivmarker; von (im Passiv)	Passiv: 我的自行车被偷了 – Mein Fahrrad wurde gestohlen.
+3-33	被子	bèizi	Bettdecke
+3-34	本来	běnlái	ursprünglich; eigentlich
+3-35	本领	běnlǐng	Fähigkeit; Geschick
+3-36	本事	běnshi	Können; Talent
+3-37	比较	bǐjiào	ziemlich; vergleichen
+3-38	比例	bǐlì	Verhältnis; Anteil
+3-39	比赛	bǐsài	Wettkampf; Spiel
+3-40	必然	bìrán	zwangsläufig; unvermeidlich
+3-41	必要	bìyào	notwendig; nötig
+3-42	变化	biànhuà	Veränderung; sich verändern
+3-43	变为	biànwéi	sich verwandeln zu
+3-44	标题	biāotí	Überschrift; Titel
+3-45	标准	biāozhǔn	Standard; Norm; korrekt
+3-46	表达	biǎodá	ausdrücken (Gedanken)
+3-47	表格	biǎogé	Formular; Tabelle (Vordruck)
+3-48	表面	biǎomiàn	Oberfläche; äußerlich
+3-49	表明	biǎomíng	deutlich machen; zeigen
+3-50	表现	biǎoxiàn	Leistung; sich zeigen
+3-51	表演	biǎoyǎn	aufführen; Vorstellung
+3-52	并	bìng	und außerdem; gar nicht (vor Verneinung)
+3-53	并且	bìngqiě	und zudem; außerdem
+3-54	播出	bōchū	ausstrahlen; senden
+3-55	播放	bōfàng	abspielen; senden
+3-56	不必	bùbì	nicht müssen; unnötig
+3-57	不断	bùduàn	ununterbrochen; ständig
+3-58	不论	bùlùn	egal ob; ganz gleich
+3-59	补	bǔ	ergänzen; flicken; nachholen
+3-60	补充	bǔchōng	ergänzen; Ergänzung
+3-61	不安	bù'ān	unruhig; besorgt
+3-62	不得不	bùdébù	gezwungen sein; nicht umhinkönnen
+3-63	不光	bùguāng	nicht nur (umgangssprachlich)
+3-64	不仅	bùjǐn	nicht nur (schriftlich)
+3-65	布	bù	Stoff; Tuch
+3-66	步	bù	Schritt
+3-67	部	bù	Teil; Abteilung; Zählwort für Filme
+3-68	部门	bùmén	Abteilung
+3-69	部长	bùzhǎng	Minister
+3-70	才能	cáinéng	Begabung; Talent
+3-71	采取	cǎiqǔ	ergreifen (Maßnahmen)
+3-72	采用	cǎiyòng	verwenden; übernehmen
+3-73	彩色	cǎisè	farbig; bunt
+3-74	曾经	céngjīng	einmal (früher); schon einmal
+3-75	产生	chǎnshēng	entstehen; hervorbringen
+3-76	长城	Chángchéng	Große Mauer
+3-77	长处	chángchù	Stärke; Vorzug
+3-78	长期	chángqī	langfristig
+3-79	厂	chǎng	Werk; Fabrik
+3-80	场合	chǎnghé	Anlass; Situation
+3-81	场所	chǎngsuǒ	Ort; Stätte
+3-82	超级	chāojí	super; Super-
+3-83	朝	cháo	in Richtung; zugewandt
+3-84	吵	chǎo	laut; lärmen; streiten
+3-85	吵架	chǎojià	sich streiten
+3-86	衬衫	chènshān	Hemd; Bluse
+3-87	衬衣	chènyī	Oberhemd; Unterhemd
+3-88	称为	chēngwéi	bezeichnet werden als
+3-89	成功	chénggōng	Erfolg; erfolgreich sein
+3-90	成果	chéngguǒ	Ergebnis; Errungenschaft
+3-91	成就	chéngjiù	Leistung; Errungenschaft (großartig)
+3-92	成立	chénglì	gründen
+3-93	成熟	chéngshú	reif
+3-94	成员	chéngyuán	Mitglied
+3-95	成长	chéngzhǎng	heranwachsen
+3-96	城	chéng	Stadt; Stadtmauer
+3-97	城市	chéngshì	Großstadt; Stadt
+3-98	程度	chéngdù	Grad; Ausmaß
+3-99	持续	chíxù	andauern; anhalten
+3-100	充满	chōngmǎn	voller …; erfüllt von
+3-101	重	chóng	erneut; noch einmal
+3-102	初	chū	Anfang; Anfangs-	Vor Tageszahlen: 初一 – der erste Tag (des Mondmonats).
+3-103	初	chū	=3-102
+3-104	初步	chūbù	vorläufig; erster Schritt
+3-105	初级	chūjí	Grundstufe; Anfänger-
+3-106	初中	chūzhōng	Unterstufe der Mittelschule
+3-107	除了	chúle	außer
+3-108	处理	chǔlǐ	behandeln; erledigen
+3-109	传	chuán	weitergeben; verbreiten
+3-110	传播	chuánbō	verbreiten
+3-111	传来	chuánlái	herüberdringen (Nachricht, Ton)
+3-112	传说	chuánshuō	Legende; Sage
+3-113	创新	chuàngxīn	Innovation; erneuern
+3-114	创业	chuàngyè	ein Unternehmen gründen
+3-115	创造	chuàngzào	schaffen; erschaffen
+3-116	创作	chuàngzuò	künstlerisch schaffen; Werk
+3-117	从来	cónglái	schon immer; noch nie (verneint)
+3-118	从前	cóngqián	früher; einst
+3-119	从事	cóngshì	tätig sein in
+3-120	村	cūn	Dorf
+3-121	存	cún	aufbewahren; einzahlen (Geld)
+3-122	存在	cúnzài	existieren; vorhanden sein
+3-123	错误	cuòwù	Fehler; Irrtum
+3-124	达到	dádào	erreichen (Ziel)
+3-125	打破	dǎpò	zerbrechen; brechen (Rekord)
+3-126	打听	dǎting	sich erkundigen
+3-127	大概	dàgài	ungefähr; wahrscheinlich
+3-128	大使馆	dàshǐguǎn	Botschaft (diplomatisch)
+3-129	大约	dàyuē	etwa; circa
+3-130	大夫	dàifu	Doktor (Arzt)
+3-131	代	dài	Generation; ersetzen
+3-132	代表	dàibiǎo	Vertreter; vertreten
+3-133	代表团	dàibiǎotuán	Delegation
+3-134	带动	dàidòng	antreiben; mitreißen
+3-135	带领	dàilǐng	anführen; leiten
+3-136	单元	dānyuán	Einheit; Lektion (Lehrbuch)
+3-137	当初	dāngchū	damals (am Anfang)
+3-138	当地	dāngdì	örtlich; lokal
+3-139	当然	dāngrán	natürlich; selbstverständlich
+3-140	当中	dāngzhōng	unter; inmitten
+3-141	刀	dāo	Messer
+3-142	导演	dǎoyǎn	Regisseur; Regie führen
+3-143	到达	dàodá	ankommen (förmlich)
+3-144	到底	dàodǐ	eigentlich (in Fragen); letztendlich
+3-145	得分	défēn	Punkte erzielen; Punktestand
+3-146	等待	děngdài	warten auf (förmlich)
+3-147	底下	dǐxia	unter; darunter
+3-148	地区	dìqū	Region; Gebiet
+3-149	电视剧	diànshìjù	Fernsehserie
+3-150	电视台	diànshìtái	Fernsehsender
+3-151	电台	diàntái	Radiosender
+3-152	电子邮件	diànzǐyóujiàn	E-Mail
+3-153	调	diào	versetzen; Melodie
+3-154	调查	diàochá	untersuchen; Umfrage
+3-155	订	dìng	buchen; bestellen
+3-156	定期	dìngqī	regelmäßig
+3-157	东部	dōngbù	östlicher Teil
+3-158	动力	dònglì	Antrieb; Motivation
+3-159	动人	dòngrén	bewegend; ergreifend
+3-160	读者	dúzhě	Leser; Leserin
+3-161	短处	duǎnchù	Schwäche; Mangel
+3-162	短裤	duǎnkù	kurze Hose; Shorts
+3-163	短期	duǎnqī	kurzfristig
+3-164	断	duàn	brechen; abbrechen; unterbrechen
+3-165	队员	duìyuán	Teammitglied
+3-166	对待	duìdài	behandeln; umgehen mit
+3-167	对方	duìfāng	Gegenseite; andere Seite
+3-168	对手	duìshǒu	Gegner
+3-169	对象	duìxiàng	Zielgruppe; Partner (Beziehung)
+3-170	顿	dùn	Zählwort für Mahlzeiten
+3-171	发表	fābiǎo	veröffentlichen; äußern
+3-172	发出	fāchū	aussenden; von sich geben
+3-173	发达	fādá	entwickelt
+3-174	发动	fādòng	starten; in Gang setzen
+3-175	发明	fāmíng	erfinden; Erfindung
+3-176	发生	fāshēng	passieren; geschehen
+3-177	发送	fāsòng	senden (Nachricht)
+3-178	发言	fāyán	das Wort ergreifen; Redebeitrag
+3-179	发展	fāzhǎn	entwickeln; Entwicklung
+3-180	反对	fǎnduì	dagegen sein; ablehnen
+3-181	反复	fǎnfù	wiederholt; immer wieder
+3-182	反应	fǎnyìng	Reaktion; reagieren
+3-183	反正	fǎnzhèng	sowieso; jedenfalls
+3-184	范围	fànwéi	Bereich; Umfang
+3-185	方式	fāngshì	Art und Weise
+3-186	防	fáng	verhüten; sich schützen vor
+3-187	防止	fángzhǐ	verhindern; vorbeugen
+3-188	房东	fángdōng	Vermieter
+3-189	房屋	fángwū	Gebäude; Häuser
+3-190	房租	fángzū	Miete
+3-191	访问	fǎngwèn	besuchen (offiziell); Besuch
+3-192	放到	fàngdào	stellen auf; legen in
+3-193	飞行	fēixíng	Flug; fliegen (Luftfahrt)
+3-194	费	fèi	Gebühr; verbrauchen
+3-195	费用	fèiyong	Kosten; Ausgaben
+3-196	分别	fēnbié	jeweils; sich trennen
+3-197	分配	fēnpèi	verteilen; zuteilen
+3-198	分组	fēnzǔ	in Gruppen einteilen
+3-199	丰富	fēngfù	reichhaltig; vielfältig
+3-200	风险	fēngxiǎn	Risiko
+3-201	否定	fǒudìng	verneinen; negativ
+3-202	否认	fǒurèn	abstreiten; leugnen
+3-203	服装	fúzhuāng	Bekleidung; Kostüm
+3-204	福	fú	Glück; Segen
+3-205	父母	fùmǔ	Eltern
+3-206	父亲	fùqīn	Vater (förmlich)
+3-207	付	fù	bezahlen
+3-208	负责	fùzé	verantwortlich sein
+3-209	复印	fùyìn	kopieren (Fotokopie)
+3-210	复杂	fùzá	kompliziert
+3-211	富	fù	reich
+3-212	改进	gǎijìn	verbessern
+3-213	改造	gǎizào	umgestalten; umbauen
+3-214	概念	gàiniàn	Begriff; Konzept
+3-215	赶	gǎn	sich beeilen; einholen
+3-216	赶到	gǎndào	rechtzeitig ankommen
+3-217	赶紧	gǎnjǐn	schnell; sofort
+3-218	赶快	gǎnkuài	schleunigst; beeil dich
+3-219	敢	gǎn	wagen; sich trauen
+3-220	感冒	gǎnmào	Erkältung; sich erkälten
+3-221	感情	gǎnqíng	Gefühle; Zuneigung
+3-222	感受	gǎnshòu	Eindruck; empfinden
+3-223	干吗	gànmá	wozu?; was machst du?
+3-224	高速	gāosù	Hochgeschwindigkeit
+3-225	高速公路	gāosùgōnglù	Autobahn
+3-226	告别	gàobié	sich verabschieden; Abschied
+3-227	歌迷	gēmí	Musikfan
+3-228	歌声	gēshēng	Gesang
+3-229	歌手	gēshǒu	Sänger; Sängerin
+3-230	个人	gèrén	Einzelperson; persönlich
+3-231	个性	gèxìng	Persönlichkeit; Charakter
+3-232	各	gè	jeder; jeweils
+3-233	各地	gèdì	überall; verschiedene Orte
+3-234	各位	gèwèi	meine Damen und Herren; alle
+3-235	各种	gèzhǒng	allerlei; verschiedene
+3-236	各自	gèzì	jeder für sich; jeweils
+3-237	根本	gēnběn	grundsätzlich; überhaupt (nicht)
+3-238	更加	gèngjiā	noch mehr
+3-239	工厂	gōngchǎng	Fabrik
+3-240	工程师	gōngchéngshī	Ingenieur; Ingenieurin
+3-241	工夫	gōngfu	Zeit; Mühe
+3-242	工具	gōngjù	Werkzeug
+3-243	工业	gōngyè	Industrie
+3-244	工资	gōngzī	Lohn; Gehalt
+3-245	公布	gōngbù	bekannt geben
+3-246	公共	gōnggòng	öffentlich
+3-247	公开	gōngkāi	offen; öffentlich machen
+3-248	公民	gōngmín	Bürger
+3-249	公务员	gōngwùyuán	Beamter
+3-250	功夫	gōngfu	Kung-Fu; Können
+3-251	功课	gōngkè	Schulaufgaben; Lernstoff
+3-252	功能	gōngnéng	Funktion
+3-253	共同	gòngtóng	gemeinsam
+3-254	共有	gòngyǒu	insgesamt haben; gemeinsam besitzen
+3-255	姑娘	gūniang	Mädchen; junge Frau
+3-256	古	gǔ	alt (antik)
+3-257	古代	gǔdài	Altertum; in alter Zeit
+3-258	故乡	gùxiāng	Heimat; Heimatort
+3-259	挂	guà	aufhängen; hängen
+3-260	关系	guānxi	Beziehung; Verbindung
+3-261	关注	guānzhù	Aufmerksamkeit schenken; verfolgen
+3-262	观察	guānchá	beobachten
+3-263	观看	guānkàn	zuschauen; ansehen
+3-264	观念	guānniàn	Vorstellung; Denkweise
+3-265	观众	guānzhòng	Zuschauer; Publikum
+3-266	管	guǎn	sich kümmern um; verwalten
+3-267	管理	guǎnlǐ	verwalten; Management
+3-268	光	guāng	Licht; nur; aufgebraucht
+3-269	光明	guāngmíng	hell; strahlend (Zukunft)
+3-270	广播	guǎngbō	Rundfunk; Durchsage
+3-271	广大	guǎngdà	weit; breit (Masse)
+3-272	规定	guīdìng	Vorschrift; festlegen
+3-273	规范	guīfàn	Norm; normgerecht
+3-274	国内	guónèi	Inland; inländisch
+3-275	国庆	Guóqìng	Nationalfeiertag
+3-276	果然	guǒrán	wie erwartet; tatsächlich
+3-277	果汁	guǒzhī	Fruchtsaft
+3-278	过程	guòchéng	Prozess; Verlauf
+3-279	过去	guòqù	Vergangenheit; früher
+3-280	哈哈	hāhā	haha
+3-281	海关	hǎiguān	Zoll
+3-282	害怕	hàipà	sich fürchten
+3-283	行	háng	Branche; Reihe
+3-284	好好	hǎohǎo	ordentlich; gründlich
+3-285	好奇	hàoqí	neugierig
+3-286	合	hé	schließen (Augen, Buch); passen
+3-287	合法	héfǎ	legal; gesetzlich
+3-288	合格	hégé	qualifiziert; bestanden
+3-289	合理	hélǐ	vernünftig; angemessen
+3-290	合作	hézuò	zusammenarbeiten; Zusammenarbeit
+3-291	和平	hépíng	Frieden; friedlich
+3-292	红茶	hóngchá	Schwarztee
+3-293	红酒	hóngjiǔ	Rotwein
+3-294	后果	hòuguǒ	Folge; Konsequenz
+3-295	后面	hòumian	hinten; hinter
+3-296	后年	hòunián	übernächstes Jahr
+3-297	互联网	hùliánwǎng	Internet
+3-298	互相	hùxiāng	gegenseitig; einander
+3-299	划船	huáchuán	rudern; Boot fahren
+3-300	华人	Huárén	Chinese (ethnisch); Auslandschinese
+3-301	化	huà	-isierung (Endung)	Bildet Verben und Nomen: 现代化 – Modernisierung.
+3-302	话剧	huàjù	Theaterstück
+3-303	话题	huàtí	Gesprächsthema
+3-304	欢乐	huānlè	Freude; fröhlich
+3-305	环	huán	Ring
+3-306	环保	huánbǎo	Umweltschutz
+3-307	环境	huánjìng	Umwelt; Umgebung
+3-308	会议	huìyì	Konferenz; Besprechung
+3-309	会员	huìyuán	Mitglied (Verein)
+3-310	活	huó	leben; lebendig
+3-311	火	huǒ	Feuer
+3-312	机器	jīqì	Maschine
+3-313	积极	jījí	aktiv; positiv
+3-314	基本	jīběn	grundlegend
+3-315	基本上	jīběnshang	im Grunde; im Wesentlichen
+3-316	基础	jīchǔ	Grundlage; Basis
+3-317	及时	jíshí	rechtzeitig
+3-318	极了	jíle	äußerst (nach Adjektiv)	Steht nach dem Adjektiv: 好极了 – ausgezeichnet!
+3-319	集体	jítǐ	Kollektiv; Gruppe
+3-320	集中	jízhōng	sich konzentrieren; sammeln
+3-321	计算	jìsuàn	berechnen
+3-322	记录	jìlù	aufzeichnen; Protokoll
+3-323	记者	jìzhě	Journalist; Reporter
+3-324	纪录	jìlù	Rekord
+3-325	纪念	jìniàn	gedenken; Andenken
+3-326	技术	jìshù	Technik; Technologie
+3-327	继续	jìxù	fortsetzen; weitermachen
+3-328	加工	jiāgōng	verarbeiten; bearbeiten
+3-329	加快	jiākuài	beschleunigen
+3-330	加强	jiāqiáng	verstärken
+3-331	家具	jiājù	Möbel
+3-332	家属	jiāshǔ	Angehörige
+3-333	家乡	jiāxiāng	Heimatort
+3-334	价格	jiàgé	Preis
+3-335	价钱	jiàqian	Preis (umgangssprachlich)
+3-336	价值	jiàzhí	Wert
+3-337	架	jià	Gestell; Zählwort für Flugzeuge und Geräte
+3-338	坚持	jiānchí	durchhalten; bestehen auf
+3-339	坚决	jiānjué	entschlossen
+3-340	坚强	jiānqiáng	stark (Charakter); standhaft
+3-341	简单	jiǎndān	einfach
+3-342	简直	jiǎnzhí	geradezu; einfach
+3-343	建	jiàn	bauen
+3-344	建成	jiànchéng	fertig bauen
+3-345	建立	jiànlì	aufbauen; gründen
+3-346	建设	jiànshè	Aufbau; aufbauen
+3-347	建议	jiànyì	vorschlagen; Vorschlag
+3-348	将近	jiāngjìn	fast; beinahe
+3-349	将来	jiānglái	Zukunft; künftig
+3-350	交费	jiāofèi	Gebühren bezahlen
+3-351	交警	jiāojǐng	Verkehrspolizist
+3-352	交流	jiāoliú	sich austauschen; Austausch
+3-353	交往	jiāowǎng	Umgang haben; verkehren mit
+3-354	交易	jiāoyì	Handel; Geschäft
+3-355	叫	jiào	Passivmarker (umgangssprachlich)
+3-356	较	jiào	verhältnismäßig; ziemlich
+3-357	教材	jiàocái	Lehrmaterial
+3-358	教练	jiàoliàn	Trainer
+3-359	结实	jiēshi	robust; kräftig
+3-360	接待	jiēdài	empfangen (Gäste)
+3-361	接近	jiējìn	sich nähern; nahe
+3-362	节约	jiéyuē	sparen; sparsam
+3-363	结合	jiéhé	verbinden; kombinieren
+3-364	结婚	jiéhūn	heiraten
+3-365	结束	jiéshù	beenden; enden
+3-366	解决	jiějué	lösen (Problem)
+3-367	解开	jiěkāi	aufknoten; lösen
+3-368	金	jīn	Gold
+3-369	金牌	jīnpái	Goldmedaille
+3-370	仅	jǐn	nur; bloß
+3-371	仅仅	jǐnjǐn	lediglich
+3-372	尽量	jǐnliàng	möglichst; nach Kräften
+3-373	紧	jǐn	eng; fest
+3-374	紧急	jǐnjí	dringend; Notfall
+3-375	紧张	jǐnzhāng	nervös; angespannt
+3-376	进步	jìnbù	Fortschritte machen; Fortschritt
+3-377	进一步	jìnyībù	weiter; einen Schritt weiter
+3-378	进展	jìnzhǎn	Fortschritt; vorankommen
+3-379	近期	jìnqī	in naher Zukunft; in letzter Zeit
+3-380	京剧	jīngjù	Peking-Oper
+3-381	经济	jīngjì	Wirtschaft
+3-382	经历	jīnglì	Erlebnis; erleben
+3-383	经验	jīngyàn	Erfahrung
+3-384	经营	jīngyíng	betreiben; führen (Geschäft)
+3-385	精彩	jīngcǎi	großartig; spannend
+3-386	精神	jīngshén	Geist; Geisteshaltung
+3-387	精神	jīngshen	munter; lebhaft
+3-388	景色	jǐngsè	Landschaft; Aussicht
+3-389	警察	jǐngchá	Polizist; Polizei
+3-390	静	jìng	still; ruhig
+3-391	久	jiǔ	lange
+3-392	旧	jiù	alt (gebraucht)
+3-393	救	jiù	retten
+3-394	就是	jiùshì	genau; eben; nämlich
+3-395	就业	jiùyè	Arbeit finden; Beschäftigung
+3-396	举办	jǔbàn	ausrichten; veranstalten
+3-397	具体	jùtǐ	konkret
+3-398	具有	jùyǒu	besitzen; aufweisen
+3-399	剧场	jùchǎng	Theater (Gebäude)
+3-400	据说	jùshuō	angeblich; man sagt
+3-401	决定	juédìng	entscheiden; Entscheidung
+3-402	决赛	juésài	Finale
+3-403	决心	juéxīn	Entschlossenheit; sich vornehmen
+3-404	绝对	juéduì	absolut; unbedingt
+3-405	咖啡	kāfēi	Kaffee
+3-406	开发	kāifā	entwickeln; erschließen
+3-407	开放	kāifàng	öffnen; offen
+3-408	开始	kāishǐ	anfangen; Anfang
+3-409	开业	kāiyè	eröffnen (Geschäft)
+3-410	开展	kāizhǎn	durchführen; entfalten
+3-411	看起来	kànqǐlai	sieht aus wie; anscheinend
+3-412	看上去	kànshangqu	wirken; aussehen
+3-413	考验	kǎoyàn	Prüfung (Bewährung); auf die Probe stellen
+3-414	科技	kējì	Wissenschaft und Technik
+3-415	可靠	kěkào	zuverlässig
+3-416	可乐	kělè	Cola
+3-417	克服	kèfú	überwinden
+3-418	客观	kèguān	objektiv
+3-419	课程	kèchéng	Kurs; Lehrplan
+3-420	空	kōng	leer
+3-421	空调	kōngtiáo	Klimaanlage
+3-422	恐怕	kǒngpà	fürchten (dass); wahrscheinlich
+3-423	空儿	kòngr	freie Zeit
+3-424	裤子	kùzi	Hose
+3-425	快速	kuàisù	schnell; Schnell-
+3-426	困	kùn	schläfrig
+3-427	困难	kùnnan	Schwierigkeit; schwierig
+3-428	浪费	làngfèi	verschwenden
+3-429	老百姓	lǎobǎixìng	einfache Leute; Volk
+3-430	老板	lǎobǎn	Chef; Inhaber
+3-431	老太太	lǎotàitai	alte Dame
+3-432	老头儿	lǎotóur	alter Mann
+3-433	乐	lè	froh; lachen
+3-434	乐观	lèguān	optimistisch
+3-435	类	lèi	Art; Sorte; Kategorie
+3-436	类似	lèisì	ähnlich
+3-437	离婚	líhūn	sich scheiden lassen
+3-438	里面	lǐmiàn	innen; drinnen (förmlich)
+3-439	理发	lǐfà	Haare schneiden
+3-440	理解	lǐjiě	verstehen; Verständnis
+3-441	理论	lǐlùn	Theorie
+3-442	理由	lǐyóu	Begründung; Grund
+3-443	力	lì	Kraft
+3-444	力量	lìliang	Stärke; Macht
+3-445	立刻	lìkè	sofort
+3-446	利用	lìyòng	nutzen; ausnutzen
+3-447	连	lián	sogar; verbinden	连…都/也: sogar, z. B. 他连饭都没吃 – Er hat nicht einmal gegessen.
+3-448	连忙	liánmáng	eilig; sofort
+3-449	连续	liánxù	ununterbrochen; nacheinander
+3-450	连续剧	liánxùjù	Serie (Fernsehen)
+3-451	联合	liánhé	sich verbünden; gemeinsam
+3-452	联合国	Liánhéguó	Vereinte Nationen
+3-453	联系	liánxì	Kontakt; kontaktieren
+3-454	凉水	liángshuǐ	kaltes Wasser
+3-455	了	liǎo	schaffen (nach 得/不)	Nach Verb + 得/不: können bzw. nicht schaffen, z. B. 我吃不了 – Ich schaffe es nicht (aufzuessen).
+3-456	领	lǐng	führen; abholen (in Empfang nehmen)
+3-457	领导	lǐngdǎo	Leitung; Vorgesetzter; führen
+3-458	领先	lǐngxiān	führen (in Führung liegen)
+3-459	另外	lìngwài	außerdem; andere
+3-460	另一方面	lìngyīfāngmiàn	andererseits
+3-461	留学	liúxué	im Ausland studieren
+3-462	龙	lóng	Drache
+3-463	录	lù	aufnehmen; aufzeichnen
+3-464	录音	lùyīn	Tonaufnahme; aufnehmen
+3-465	路线	lùxiàn	Route; Linie
+3-466	旅馆	lǚguǎn	Gasthaus; Pension
+3-467	旅行社	lǚxíngshè	Reisebüro
+3-468	绿茶	lǜchá	grüner Tee
+3-469	乱	luàn	unordentlich; durcheinander
+3-470	落后	luòhòu	zurückbleiben; rückständig
+3-471	麻烦	máfan	Mühe machen; lästig; Ärger
+3-472	马	mǎ	Pferd
+3-473	满足	mǎnzú	zufrieden sein; befriedigen
+3-474	慢慢	mànmàn	langsam (allmählich)
+3-475	毛	máo	Fell; Haar (Körper); Wolle
+3-476	毛病	máobìng	Fehler; Macke; Defekt
+3-477	没用	méiyòng	nutzlos
+3-478	媒体	méitǐ	Medien
+3-479	每	měi	jeder; jede
+3-480	美	měi	schön
+3-481	美好	měihǎo	wunderbar; schön (Leben, Zukunft)
+3-482	美丽	měilì	schön (schriftlich)
+3-483	美食	měishí	gutes Essen; Delikatessen
+3-484	美术	měishù	bildende Kunst
+3-485	美元	Měiyuán	US-Dollar
+3-486	迷	mí	Fan; begeistert sein; sich verirren
+3-487	米	mǐ	Reis (roh)
+3-488	面对	miànduì	gegenüberstehen; sich stellen
+3-489	面积	miànjī	Fläche
+3-490	民间	mínjiān	Volks-; unter dem Volk
+3-491	民族	mínzú	Volk; Nation; Volksgruppe
+3-492	明确	míngquè	eindeutig; klarstellen
+3-493	明显	míngxiǎn	offensichtlich
+3-494	命运	mìngyùn	Schicksal
+3-495	某	mǒu	ein gewisser; irgendein
+3-496	母亲	mǔqīn	Mutter (förmlich)
+3-497	木头	mùtou	Holz
+3-498	目标	mùbiāo	Ziel
+3-499	目前	mùqián	gegenwärtig; zurzeit
+3-500	奶茶	nǎichá	Milchtee
+3-501	男子	nánzǐ	Mann (förmlich)
+3-502	南部	nánbù	südlicher Teil
+3-503	难道	nándào	etwa (in rhetorischen Fragen)
+3-504	难度	nándù	Schwierigkeitsgrad
+3-505	内	nèi	innen; innerhalb
+3-506	内容	nèiróng	Inhalt
+3-507	内心	nèixīn	Innerstes; innerlich
+3-508	能不能	néngbunéng	kann man …?; ob … kann
+3-509	能力	nénglì	Fähigkeit
+3-510	年初	niánchū	Jahresanfang
+3-511	年代	niándài	Jahrzehnt; Zeitalter
+3-512	年底	niándǐ	Jahresende
+3-513	年纪	niánjì	Alter (Person)
+3-514	念	niàn	vorlesen; vermissen
+3-515	牛	niú	Rind; Kuh
+3-516	农村	nóngcūn	Land (ländliche Gegend)
+3-517	农民	nóngmín	Bauer; Bäuerin
+3-518	农业	nóngyè	Landwirtschaft
+3-519	女子	nǚzǐ	Frau (förmlich)
+3-520	暖和	nuǎnhuo	angenehm warm
+3-521	怕	pà	womöglich; ich fürchte
+3-522	拍	pāi	fotografieren; klatschen
+3-523	排	pái	aufreihen; anordnen
+3-524	排名	páimíng	Rangliste; Platzierung
+3-525	牌子	páizi	Schild; Marke
+3-526	派	pài	schicken (Person); Gruppe
+3-527	判断	pànduàn	beurteilen; Urteil
+3-528	胖	pàng	dick (Person)
+3-529	跑步	pǎobù	joggen; laufen
+3-530	配	pèi	passen zu; ausstatten
+3-531	配合	pèihé	zusammenwirken; mitmachen
+3-532	批评	pīpíng	kritisieren; Kritik
+3-533	批准	pīzhǔn	genehmigen
+3-534	皮	pí	Haut; Leder; Schale
+3-535	皮包	píbāo	Ledertasche; Handtasche
+3-536	啤酒	píjiǔ	Bier
+3-537	票价	piàojià	Fahrpreis; Eintrittspreis
+3-538	评价	píngjià	bewerten; Bewertung
+3-539	苹果	píngguǒ	Apfel
+3-540	破	pò	kaputt; zerbrechen
+3-541	破坏	pòhuài	zerstören; beschädigen
+3-542	普遍	pǔbiàn	allgemein; weit verbreitet
+3-543	普及	pǔjí	verbreiten; populär
+3-544	期	qī	Ausgabe (Heft); Periode
+3-545	齐	qí	vollständig; ordentlich
+3-546	其次	qícì	zweitens; als Nächstes
+3-547	其实	qíshí	eigentlich; in Wirklichkeit
+3-548	奇怪	qíguài	seltsam; merkwürdig
+3-549	气候	qìhòu	Klima
+3-550	千万	qiānwàn	unbedingt; auf jeden Fall
+3-551	前后	qiánhòu	ungefähr (Zeit); vorne und hinten
+3-552	前进	qiánjìn	vorwärtsgehen; Fortschritte machen
+3-553	前面	qiánmiàn	vorne; vor
+3-554	前往	qiánwǎng	sich begeben nach
+3-555	强	qiáng	stark
+3-556	强大	qiángdà	mächtig; stark (Land, Kraft)
+3-557	强调	qiángdiào	betonen
+3-558	强烈	qiángliè	heftig; stark (Gefühl)
+3-559	桥	qiáo	Brücke
+3-560	巧	qiǎo	geschickt; zufällig
+3-561	亲	qīn	verwandt; lieb; küssen
+3-562	亲切	qīnqiè	herzlich; vertraut
+3-563	亲人	qīnrén	nahe Verwandte
+3-564	亲自	qīnzì	persönlich; selbst
+3-565	情感	qínggǎn	Emotion; Gefühl
+3-566	情况	qíngkuàng	Lage; Situation
+3-567	请教	qǐngjiào	um Rat fragen
+3-568	庆祝	qìngzhù	feiern
+3-569	球迷	qiúmí	Fußballfan; Sportfan
+3-570	区	qū	Bezirk; Gebiet
+3-571	区别	qūbié	Unterschied; unterscheiden
+3-572	取消	qǔxiāo	absagen; streichen
+3-573	去世	qùshì	versterben
+3-574	全场	quánchǎng	ganzes Publikum; ganze Halle
+3-575	全面	quánmiàn	umfassend
+3-576	全球	quánqiú	weltweit; global
+3-577	缺	quē	fehlen; mangeln
+3-578	缺点	quēdiǎn	Schwäche; Nachteil
+3-579	缺少	quēshǎo	fehlen an; ermangeln
+3-580	确保	quèbǎo	sicherstellen
+3-581	确定	quèdìng	festlegen; sicher sein
+3-582	确实	quèshí	tatsächlich; wirklich (bestätigend)
+3-583	裙子	qúnzi	Rock (Kleidung)
+3-584	群	qún	Gruppe; Herde; Menge
+3-585	热爱	rè'ài	innig lieben
+3-586	热烈	rèliè	lebhaft; begeistert
+3-587	人才	réncái	Talent (Person); Fachkräfte
+3-588	人工	réngōng	künstlich; Arbeitskraft
+3-589	人类	rénlèi	Menschheit
+3-590	人民	rénmín	Volk
+3-591	人民币	rénmínbì	Renminbi (Währung)
+3-592	人群	rénqún	Menschenmenge
+3-593	人生	rénshēng	Leben (eines Menschen)
+3-594	人员	rényuán	Personal
+3-595	认出	rènchū	erkennen (wiedererkennen)
+3-596	认得	rènde	kennen; wiedererkennen
+3-597	认可	rènkě	anerkennen; billigen
+3-598	任	rèn	ernennen; Amt
+3-599	任	rèn	egal (wer, was)
+3-600	任何	rènhé	jeder beliebige; irgendein
+3-601	任务	rènwu	Aufgabe; Auftrag
+3-602	仍	réng	noch; weiterhin
+3-603	仍然	réngrán	immer noch
+3-604	日常	rìcháng	alltäglich
+3-605	容易	róngyì	leicht; einfach (zu tun)
+3-606	如何	rúhé	wie (förmlich)
+3-607	散步	sànbù	spazieren gehen
+3-608	沙发	shāfā	Sofa
+3-609	沙子	shāzi	Sand
+3-610	伤	shāng	Verletzung; verletzen
+3-611	伤心	shāngxīn	traurig; betrübt
+3-612	商品	shāngpǐn	Ware
+3-613	商业	shāngyè	Handel; Geschäftswelt
+3-614	上来	shànglái	heraufkommen
+3-615	上面	shàngmian	oben; auf
+3-616	上去	shàngqu	hinaufgehen
+3-617	上升	shàngshēng	steigen; ansteigen
+3-618	上衣	shàngyī	Oberteil; Jacke
+3-619	设备	shèbèi	Ausrüstung; Geräte
+3-620	设计	shèjì	entwerfen; Design
+3-621	设立	shèlì	einrichten; gründen
+3-622	社会	shèhuì	Gesellschaft
+3-623	身份证	shēnfènzhèng	Personalausweis
+3-624	深	shēn	tief; dunkel (Farbe)
+3-625	深刻	shēnkè	tiefgehend; nachhaltig
+3-626	深入	shēnrù	eindringen; gründlich
+3-627	升	shēng	steigen; Liter
+3-628	生	shēng	roh; fremd
+3-629	生产	shēngchǎn	produzieren; Produktion
+3-630	生存	shēngcún	überleben; existieren
+3-631	生动	shēngdòng	lebendig; anschaulich
+3-632	生命	shēngmìng	Leben (Lebewesen)
+3-633	生意	shēngyi	Geschäft; Handel
+3-634	生长	shēngzhǎng	wachsen; gedeihen
+3-635	声明	shēngmíng	Erklärung; erklären (öffentlich)
+3-636	胜	shèng	siegen; übertreffen
+3-637	胜利	shènglì	Sieg
+3-638	失去	shīqù	verlieren
+3-639	石头	shítou	Stein
+3-640	石油	shíyóu	Erdöl
+3-641	时	shí	Zeit; Stunde
+3-642	时代	shídài	Zeitalter; Epoche
+3-643	时刻	shíkè	Moment; jederzeit
+3-644	实际上	shíjìshang	in Wirklichkeit
+3-645	实力	shílì	Stärke (tatsächlich)
+3-646	实行	shíxíng	durchführen; umsetzen
+3-647	实验	shíyàn	Experiment
+3-648	实验室	shíyànshì	Labor
+3-649	食品	shípǐn	Lebensmittel; Nahrungsmittel
+3-650	使	shǐ	veranlassen; benutzen
+3-651	始终	shǐzhōng	von Anfang bis Ende; stets
+3-652	世纪	shìjì	Jahrhundert
+3-653	世界	shìjiè	Welt
+3-654	世界杯	Shìjièbēi	Weltmeisterschaft
+3-655	市场	shìchǎng	Markt
+3-656	事故	shìgù	Unfall
+3-657	事件	shìjiàn	Ereignis; Vorfall
+3-658	事实	shìshí	Tatsache
+3-659	事实上	shìshíshàng	tatsächlich; faktisch
+3-660	事业	shìyè	Karriere; Lebenswerk
+3-661	试题	shìtí	Prüfungsaufgabe
+3-662	试验	shìyàn	Versuch; testen
+3-663	适合	shìhé	passen; geeignet sein
+3-664	适应	shìyìng	sich anpassen
+3-665	适用	shìyòng	anwendbar; geeignet
+3-666	室	shì	Raum; Zimmer
+3-667	收费	shōufèi	Gebühren erheben; gebührenpflichtig
+3-668	收看	shōukàn	fernsehen; anschauen (Sendung)
+3-669	收听	shōutīng	hören (Radio)
+3-670	收音机	shōuyīnjī	Radio (Gerät)
+3-671	手续	shǒuxù	Formalitäten
+3-672	手指	shǒuzhǐ	Finger
+3-673	首都	shǒudū	Hauptstadt
+3-674	首先	shǒuxiān	zuerst; vor allem
+3-675	受	shòu	erleiden; erhalten
+3-676	受伤	shòushāng	verletzt werden
+3-677	书架	shūjià	Bücherregal
+3-678	输	shū	verlieren (Spiel)
+3-679	输入	shūrù	eingeben; Eingabe
+3-680	熟人	shúrén	Bekannter
+3-681	属	shǔ	gehören zu; im Tierzeichen geboren sein	Chinesischer Tierkreis: 我属狗 – Ich bin im Jahr des Hundes geboren.
+3-682	属于	shǔyú	gehören zu
+3-683	束	shù	Bündel; Zählwort für Sträuße
+3-684	数量	shùliàng	Menge; Anzahl
+3-685	双	shuāng	Paar; doppelt
+3-686	双方	shuāngfāng	beide Seiten
+3-687	思想	sīxiǎng	Gedanken; Denken
+3-688	死	sǐ	sterben; tot
+3-689	速度	sùdù	Geschwindigkeit
+3-690	随	suí	folgen; mit
+3-691	所	suǒ	Institut; Zählwort für Schulen und Gebäude
+3-692	所长	suǒzhǎng	Institutsleiter
+3-693	台	tái	Bühne; Zählwort für Maschinen
+3-694	谈	tán	sprechen über; sich unterhalten
+3-695	谈话	tánhuà	Gespräch; sich unterhalten
+3-696	谈判	tánpàn	verhandeln; Verhandlung
+3-697	汤	tāng	Suppe
+3-698	糖	táng	Zucker; Süßigkeit
+3-699	特色	tèsè	Besonderheit; typisch
+3-700	提前	tíqián	vorverlegen; im Voraus
+3-701	提问	tíwèn	eine Frage stellen
+3-702	题目	tímù	Thema; Aufgabe
+3-703	体会	tǐhuì	erfahren; Erkenntnis
+3-704	体现	tǐxiàn	verkörpern; zum Ausdruck bringen
+3-705	体验	tǐyàn	erleben; Erlebnis
+3-706	天空	tiānkōng	Himmel
+3-707	甜	tián	süß
+3-708	调	tiáo	einstellen; regulieren
+3-709	调整	tiáozhěng	anpassen; justieren
+3-710	跳	tiào	springen
+3-711	跳高	tiàogāo	Hochsprung
+3-712	跳舞	tiàowǔ	tanzen
+3-713	跳远	tiàoyuǎn	Weitsprung
+3-714	铁	tiě	Eisen
+3-715	铁路	tiělù	Eisenbahnstrecke
+3-716	听力	tīnglì	Hörverständnis; Gehör
+3-717	听众	tīngzhòng	Zuhörer
+3-718	停止	tíngzhǐ	aufhören; einstellen
+3-719	通常	tōngcháng	normalerweise
+3-720	通信	tōngxìn	korrespondieren; Kommunikation
+3-721	同意	tóngyì	zustimmen; einverstanden sein
+3-722	痛	tòng	schmerzhaft; weh
+3-723	痛苦	tòngkǔ	Leid; qualvoll
+3-724	头	tóu	erster; vorderster
+3-725	头脑	tóunǎo	Verstand; Kopf
+3-726	突出	tūchū	hervorragend; hervorheben
+3-727	突然	tūrán	plötzlich; überraschend
+3-728	图	tú	Bild; Abbildung
+3-729	图画	túhuà	Zeichnung; Bild (gemalt)
+3-730	土	tǔ	Erdboden; Erde (Material)
+3-731	团	tuán	Gruppe; Klumpen
+3-732	团结	tuánjié	sich zusammenschließen; Einigkeit
+3-733	团体	tuántǐ	Organisation; Gruppe
+3-734	推动	tuīdòng	vorantreiben
+3-735	推广	tuīguǎng	verbreiten; fördern
+3-736	推进	tuījìn	voranbringen
+3-737	推开	tuīkāi	aufstoßen; wegschieben
+3-738	退	tuì	zurückgeben; zurückgehen
+3-739	退出	tuìchū	austreten; verlassen
+3-740	退休	tuìxiū	in Rente gehen
+3-741	外交	wàijiāo	Diplomatie; Außenpolitik
+3-742	外面	wàimian	draußen; außen
+3-743	外文	wàiwén	Fremdsprache (Schrift)
+3-744	完美	wánměi	perfekt; vollkommen
+3-745	完善	wánshàn	vervollkommnen; vollständig
+3-746	完整	wánzhěng	vollständig; intakt
+3-747	玩具	wánjù	Spielzeug
+3-748	往往	wǎngwǎng	oft; meistens
+3-749	危害	wēihài	gefährden; Schaden
+3-750	危险	wēixiǎn	gefährlich; Gefahr
+3-751	为	wéi	als (etwas) dienen; sein
+3-752	为	wèi	wegen; um … willen
+3-753	围	wéi	umgeben; umkreisen
+3-754	伟大	wěidà	großartig; bedeutend
+3-755	卫生	wèishēng	Hygiene; sauber
+3-756	卫生间	wèishēngjiān	Badezimmer; WC
+3-757	为了	wèile	um zu; für
+3-758	温暖	wēnnuǎn	warm (herzlich)
+3-759	文化	wénhuà	Kultur; Bildung
+3-760	文件	wénjiàn	Dokument; Datei
+3-761	文明	wénmíng	Zivilisation; zivilisiert
+3-762	文学	wénxué	Literatur
+3-763	文章	wénzhāng	Artikel; Aufsatz
+3-764	文字	wénzì	Schrift; Text
+3-765	握手	wòshǒu	sich die Hand geben
+3-766	屋子	wūzi	Zimmer; Raum
+3-767	武器	wǔqì	Waffe
+3-768	武术	wǔshù	Kampfkunst
+3-769	舞台	wǔtái	Bühne
+3-770	西部	xībù	westlicher Teil
+3-771	希望	xīwàng	hoffen; Hoffnung
+3-772	系	xì	Fakultät; Fachbereich
+3-773	下来	xiàlai	herunterkommen
+3-774	下面	xiàmian	unten; folgend
+3-775	下去	xiàqu	hinuntergehen; weitermachen
+3-776	先进	xiānjìn	fortschrittlich
+3-777	显得	xiǎnde	wirken; erscheinen
+3-778	显然	xiǎnrán	offensichtlich
+3-779	显示	xiǎnshì	anzeigen; zeigen
+3-780	现场	xiànchǎng	vor Ort; Schauplatz
+3-781	现代	xiàndài	modern; Gegenwart
+3-782	现金	xiànjīn	Bargeld
+3-783	现实	xiànshí	Realität; realistisch
+3-784	现象	xiànxiàng	Phänomen; Erscheinung
+3-785	线	xiàn	Linie; Faden
+3-786	相比	xiāngbǐ	im Vergleich; vergleichen
+3-787	相当	xiāngdāng	ziemlich; entsprechen
+3-788	相关	xiāngguān	zusammenhängend; betreffend
+3-789	相互	xiānghù	wechselseitig
+3-790	相似	xiāngsì	ähneln; ähnlich
+3-791	香	xiāng	duftend; lecker
+3-792	香蕉	xiāngjiāo	Banane
+3-793	消费	xiāofèi	konsumieren; Konsum
+3-794	消失	xiāoshī	verschwinden
+3-795	消息	xiāoxi	Nachricht; Neuigkeit
+3-796	效果	xiàoguǒ	Wirkung; Effekt
+3-797	写作	xiězuò	Schreiben; schreiben (Texte verfassen)
+3-798	血	xuè	Blut
+3-799	心	xīn	Herz
+3-800	信	xìn	glauben
+3-801	信封	xìnfēng	Briefumschlag
+3-802	信任	xìnrèn	vertrauen; Vertrauen
+3-803	行李	xíngli	Gepäck
+3-804	形成	xíngchéng	bilden; entstehen
+3-805	形式	xíngshì	Form
+3-806	形象	xíngxiàng	Bild (Image); Gestalt
+3-807	形状	xíngzhuàng	Form; Gestalt (äußerlich)
+3-808	幸福	xìngfú	glücklich; Glück
+3-809	幸运	xìngyùn	Glück haben; glücklich (Zufall)
+3-810	性	xìng	Endung für Eigenschaften	Bildet Nomen: 积极性 – Eifer, 可能性 – Möglichkeit.
+3-811	性别	xìngbié	Geschlecht
+3-812	性格	xìnggé	Charakter
+3-813	修	xiū	reparieren; bauen
+3-814	修改	xiūgǎi	überarbeiten; ändern
+3-815	需求	xūqiú	Bedarf; Nachfrage
+3-816	需要	xūyào	brauchen; Bedarf
+3-817	宣布	xuānbù	verkünden; bekannt geben
+3-818	宣传	xuānchuán	werben; Werbung
+3-819	选手	xuǎnshǒu	Spieler; Wettkämpfer
+3-820	学费	xuéfèi	Schulgeld; Studiengebühr
+3-821	训练	xùnliàn	trainieren; Training
+3-822	压	yā	drücken; pressen
+3-823	压力	yālì	Druck; Stress
+3-824	烟	yān	Rauch; Zigarette
+3-825	眼前	yǎnqián	vor Augen; im Moment
+3-826	演	yǎn	spielen (Rolle); aufführen
+3-827	演唱	yǎnchàng	auftreten (singen)
+3-828	演唱会	yǎnchànghuì	Gesangskonzert
+3-829	演出	yǎnchū	Aufführung; auftreten
+3-830	演员	yǎnyuán	Schauspieler
+3-831	羊	yáng	Schaf; Ziege
+3-832	阳光	yángguāng	Sonnenschein; Sonnenlicht
+3-833	要是	yàoshi	falls (umgangssprachlich)
+3-834	衣架	yījià	Kleiderbügel
+3-835	一切	yīqiè	alles
+3-836	已	yǐ	bereits (schriftlich)
+3-837	以来	yǐlái	seit
+3-838	一方面	yīfāngmiàn	einerseits
+3-839	艺术	yìshù	Kunst
+3-840	意外	yìwài	unerwartet; Unfall
+3-841	意义	yìyì	Bedeutung (Sinn); Wert
+3-842	因此	yīncǐ	daher; deswegen
+3-843	银	yín	Silber
+3-844	银牌	yínpái	Silbermedaille
+3-845	印象	yìnxiàng	Eindruck
+3-846	应当	yīngdāng	sollen (förmlich)
+3-847	迎接	yíngjiē	empfangen; begrüßen
+3-848	营养	yíngyǎng	Ernährung; Nährstoffe
+3-849	赢	yíng	gewinnen
+3-850	影视	yǐngshì	Film und Fernsehen
+3-851	应用	yìngyòng	Anwendung; anwenden
+3-852	优点	yōudiǎn	Vorzug; Stärke
+3-853	优势	yōushì	Vorteil; Überlegenheit
+3-854	由	yóu	von; durch
+3-855	由于	yóuyú	aufgrund; weil
+3-856	邮件	yóujiàn	Post; E-Mail
+3-857	邮票	yóupiào	Briefmarke
+3-858	邮箱	yóuxiāng	Briefkasten; Postfach
+3-859	游	yóu	schwimmen; reisen
+3-860	游戏	yóuxì	Spiel
+3-861	游泳	yóuyǒng	schwimmen
+3-862	有的是	yǒudeshì	jede Menge; reichlich
+3-863	有利	yǒulì	vorteilhaft; günstig
+3-864	有效	yǒuxiào	wirksam; gültig
+3-865	预报	yùbào	Vorhersage
+3-866	预防	yùfáng	vorbeugen; Vorbeugung
+3-867	预计	yùjì	voraussichtlich; schätzen
+3-868	预习	yùxí	vorbereiten (Lernstoff)
+3-869	员	yuán	Endung für Personen (Tätigkeit)	服务员 – Kellner, 运动员 – Sportler.
+3-870	员工	yuángōng	Mitarbeiter; Belegschaft
+3-871	愿望	yuànwàng	Wunsch
+3-872	约	yuē	verabreden; etwa
+3-873	乐队	yuèduì	Band; Orchester
+3-874	运输	yùnshū	transportieren; Transport
+3-875	杂志	zázhì	Zeitschrift
+3-876	早已	zǎoyǐ	längst
+3-877	造	zào	bauen; herstellen
+3-878	造成	zàochéng	verursachen
+3-879	责任	zérèn	Verantwortung
+3-880	增加	zēngjiā	erhöhen; zunehmen
+3-881	增长	zēngzhǎng	Wachstum; wachsen (Zahl)
+3-882	展开	zhǎnkāi	ausbreiten; entfalten
+3-883	张	zhāng	Zählwort für Flaches (Papier, Tische)
+3-884	照	zhào	scheinen; fotografieren; gemäß
+3-885	者	zhě	Endung für Handelnde	志愿者 – Freiwilliger, 读者 – Leser.
+3-886	真实	zhēnshí	wahr; echt (der Wahrheit entsprechend)
+3-887	争	zhēng	streiten; wetteifern
+3-888	争取	zhēngqǔ	sich bemühen um; erkämpfen
+3-889	整	zhěng	ganz; vollständig
+3-890	整个	zhěnggè	ganz (gesamt)
+3-891	整理	zhěnglǐ	aufräumen; ordnen
+3-892	整齐	zhěngqí	ordentlich; aufgeräumt
+3-893	整体	zhěngtǐ	Gesamtheit; insgesamt
+3-894	整天	zhěngtiān	den ganzen Tag
+3-895	整整	zhěngzhěng	ganze; volle (Zeit, Menge)
+3-896	正	zhèng	aufrecht; richtig
+3-897	正式	zhèngshì	offiziell; förmlich
+3-898	证	zhèng	Ausweis; Bescheinigung
+3-899	证件	zhèngjiàn	Ausweispapiere
+3-900	证据	zhèngjù	Beweis
+3-901	证明	zhèngmíng	beweisen; Bescheinigung
+3-902	支	zhī	Zählwort für Stifte und Lieder
+3-903	支持	zhīchí	unterstützen
+3-904	支付	zhīfù	bezahlen (förmlich); Zahlung
+3-905	只	zhī	Zählwort für Tiere
+3-906	直	zhí	gerade; direkt
+3-907	直播	zhíbō	Liveübertragung
+3-908	直到	zhídào	bis (zeitlich)
+3-909	值	zhí	wert sein
+3-910	值得	zhíde	sich lohnen; wert sein
+3-911	职工	zhígōng	Belegschaft; Arbeitnehmer
+3-912	职业	zhíyè	Beruf
+3-913	只好	zhǐhǎo	notgedrungen; nichts anderes übrig bleiben
+3-914	只是	zhǐshì	nur; bloß
+3-915	只有	zhǐyǒu	nur (wenn)
+3-916	指	zhǐ	zeigen auf; Finger
+3-917	指出	zhǐchū	hinweisen auf
+3-918	指导	zhǐdǎo	anleiten; Betreuer
+3-919	至今	zhìjīn	bis heute
+3-920	至少	zhìshǎo	mindestens
+3-921	志愿	zhìyuàn	Wunsch (Lebensziel); freiwillig
+3-922	志愿者	zhìyuànzhě	Freiwilliger
+3-923	制定	zhìdìng	ausarbeiten; festlegen
+3-924	制度	zhìdù	System; Regelwerk
+3-925	制造	zhìzào	herstellen; verursachen
+3-926	制作	zhìzuò	anfertigen; produzieren
+3-927	中部	zhōngbù	mittlerer Teil
+3-928	中华民族	Zhōnghuámínzú	chinesische Nation
+3-929	终于	zhōngyú	endlich
+3-930	钟	zhōng	Uhr (Wanduhr); Glocke
+3-931	种	zhǒng	Art; Sorte
+3-932	种子	zhǒngzi	Samen
+3-933	重大	zhòngdà	bedeutend; schwerwiegend
+3-934	周围	zhōuwéi	Umgebung; rundherum
+3-935	猪	zhū	Schwein
+3-936	主持	zhǔchí	leiten; moderieren
+3-937	主动	zhǔdòng	aus eigener Initiative
+3-938	主任	zhǔrèn	Leiter; Vorsitzender
+3-939	主意	zhǔyi	Idee; Einfall
+3-940	主张	zhǔzhāng	befürworten; Standpunkt
+3-941	注意	zhùyì	aufpassen; beachten
+3-942	祝	zhù	wünschen
+3-943	抓	zhuā	greifen; fangen
+3-944	抓住	zhuāzhù	festhalten; ergreifen
+3-945	专家	zhuānjiā	Experte; Fachmann
+3-946	专门	zhuānmén	speziell; eigens
+3-947	专题	zhuāntí	Sonderthema
+3-948	专业	zhuānyè	Studienfach; Fachgebiet; professionell
+3-949	转	zhuǎn	wenden; weiterleiten
+3-950	转变	zhuǎnbiàn	Wandel; sich wandeln
+3-951	状况	zhuàngkuàng	Zustand; Lage
+3-952	状态	zhuàngtài	Zustand; Verfassung
+3-953	追	zhuī	verfolgen; jagen
+3-954	准	zhǔn	genau; erlauben
+3-955	资格	zīgé	Qualifikation; Berechtigung
+3-956	资金	zījīn	Kapital; Geldmittel
+3-957	子女	zǐnǚ	Kinder (Söhne und Töchter)
+3-958	自从	zìcóng	seit (Zeitpunkt)
+3-959	自动	zìdòng	automatisch
+3-960	自觉	zìjué	bewusst; aus eigenem Antrieb
+3-961	自然	zìrán	Natur; natürlich
+3-962	自身	zìshēn	selbst; eigen
+3-963	自主	zìzhǔ	selbstständig; selbstbestimmt
+3-964	总	zǒng	immer; insgesamt
+3-965	总结	zǒngjié	zusammenfassen; Zusammenfassung
+3-966	总是	zǒngshì	immer
+3-967	足够	zúgòu	ausreichend
+3-968	足球	zúqiú	Fußball
+3-969	组合	zǔhé	Kombination; zusammenstellen
+3-970	左右	zuǒyòu	ungefähr; links und rechts
+3-971	作品	zuòpǐn	Werk (Kunst, Literatur)
+3-972	作者	zuòzhě	Autor; Verfasser
+3-973	做客	zuòkè	zu Gast sein

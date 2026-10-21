@@ -1,0 +1,279 @@
+{
+  "_info": "Lehrplan für de-zh: je HSK-Stufe Abschnitte von leicht nach schwer. Einheiten mit „themen“ nehmen die häufigsten noch freien Wörter dieser Themen derselben HSK-Stufe (Codes wie in themen.tsv); „alle“: so viele Einheiten à „anzahl“ (Standard 16), bis die Themen leer sind (Titel durchnummeriert). Hat eine Einheit weniger als 4 Wörter, wird sie mit den häufigsten freien Wörtern der Stufe aufgefüllt. Regel-Einheiten (Zählwörter, Partikeln, 了/着/过, 把/被 …) stehen am Ende jeder Stufe; Sätze mit ihren Wörtern erscheinen erst ab dort. „rest“ verteilt die übrigen Wörter der Stufe nach Häufigkeit (Bänder à „proStufe“), darin nach Thema gruppiert.",
+  "themenNamen": {
+    "grund": "Wichtige kleine Wörter",
+    "gruss": "Hallo und danke",
+    "person": "Menschen",
+    "familie": "Familie",
+    "zahl": "Zahlen",
+    "zeit": "Zeit und Kalender",
+    "essen": "Essen und Trinken",
+    "wohnen": "Zuhause",
+    "schule": "Schule und Lernen",
+    "arbeit": "Arbeit und Geld",
+    "stadt": "Stadt und unterwegs",
+    "ort": "Orte und Richtungen",
+    "freizeit": "Freizeit",
+    "koerper": "Körper und Gesundheit",
+    "kleidung": "Kleidung und Aussehen",
+    "natur": "Natur und Wetter",
+    "gefuehl": "Gefühle und Charakter",
+    "kommu": "Sprechen und zuhören",
+    "farbe": "Farben",
+    "frage": "Fragewörter",
+    "zw": "Zählwörter",
+    "modal": "Können und müssen",
+    "part": "Satzpartikeln",
+    "vgl": "Vergleiche",
+    "komp": "Ergänzungen",
+    "aspekt": "Verlauf von Handlungen",
+    "satz": "Besondere Satzmuster",
+    "konj": "Bindewörter",
+    "praep": "Präpositionen",
+    "allg": "Grundwortschatz"
+  },
+  "stufen": [
+    {
+      "titel": "HSK 1 · Erste Schritte",
+      "hsk": 1,
+      "einheiten": [
+        {
+          "themen": ["grund"],
+          "titel": "Ich, du und die ersten Wörter",
+          "intro": "Chinesisch ist einfacher, als es aussieht: Verben werden nicht konjugiert, es gibt keine Artikel und keine Fälle.\n• 我是学生。 = Ich bin Schüler. · 他是学生。 = Er ist Schüler. – 是 bleibt immer gleich.\n• 不 vor dem Verb verneint: 我不是老师。 = Ich bin kein Lehrer.\n• Die Reihenfolge ist wie im Deutschen: Wer – macht – was. 我喝水。 = Ich trinke Wasser.\n• Pinyin zeigt die Aussprache. Die Striche über den Vokalen sind die vier Töne: mā má mǎ mà."
+        },
+        { "themen": ["gruss"], "titel": "Hallo und danke" },
+        {
+          "themen": ["zahl"],
+          "titel": "Zahlen",
+          "intro": "Chinesische Zahlen sind sehr regelmäßig.\n• 十一 = 10 + 1 = elf · 二十 = 2 × 10 = zwanzig · 二十五 = fünfundzwanzig\n• Vor einem Zählwort steht 两 statt 二: 两个人 = zwei Menschen (aber 第二 = der Zweite).\n• Zwischen Zahl und Nomen steht ein Zählwort, meistens 个: 三个朋友 = drei Freunde."
+        },
+        { "themen": ["grund"], "titel": "Wichtige kleine Wörter" }
+      ]
+    },
+    {
+      "titel": "HSK 1 · Kennenlernen",
+      "hsk": 1,
+      "einheiten": [
+        { "themen": ["person"], "titel": "Menschen und Länder" },
+        { "themen": ["familie"], "titel": "Familie" },
+        {
+          "themen": ["frage"],
+          "titel": "Fragen stellen",
+          "intro": "Fragen bauen ist leicht: Die Wortstellung bleibt wie im Aussagesatz.\n• Ja/Nein-Frage: 吗 ans Ende. 你是学生吗？ = Bist du Schüler?\n• Das Fragewort steht dort, wo die Antwort steht: 你叫什么？ – 我叫小明。 · 他是谁？ – 他是我朋友。\n• 哪儿 = wo · 几 = wie viele (kleine Zahl) · 多少 = wie viel · 怎么 = wie\n• Mit Fragewort kein 吗!\n• 还是 = oder in Fragen: 你喝茶还是喝咖啡？"
+        },
+        { "themen": ["kommu"], "titel": "Sprechen und zuhören" },
+        { "themen": ["grund"], "titel": "Wichtige kleine Wörter 2" },
+        { "themen": ["person"], "titel": "Menschen 2" }
+      ]
+    },
+    {
+      "titel": "HSK 1 · Alltag",
+      "hsk": 1,
+      "einheiten": [
+        { "themen": ["zeit"], "titel": "Zeit und Kalender" },
+        { "themen": ["essen"], "titel": "Essen und Trinken" },
+        { "themen": ["wohnen"], "titel": "Zuhause" },
+        { "themen": ["grund"], "titel": "Wichtige kleine Wörter 3" },
+        { "themen": ["zeit"], "titel": "Zeit und Kalender 2" },
+        { "themen": ["essen", "wohnen"], "titel": "Essen und Wohnen" },
+        { "themen": ["zeit"], "titel": "Zeit und Kalender 3" }
+      ]
+    },
+    {
+      "titel": "HSK 1 · Schule und unterwegs",
+      "hsk": 1,
+      "einheiten": [
+        { "themen": ["schule"], "titel": "Schule und Lernen", "alle": true },
+        { "themen": ["stadt"], "titel": "Stadt und unterwegs", "alle": true },
+        {
+          "themen": ["ort"],
+          "titel": "Wo ist was?",
+          "alle": true,
+          "intro": "Ortsangaben stehen vor dem Verb und beginnen oft mit 在.\n• 在 + Ort + 上/下/里: 书在桌子上。 = Das Buch liegt auf dem Tisch.\n• 我在家吃饭。 = Ich esse zu Hause. (Der Ort steht vor dem Verb!)\n• Mit -边 werden daraus eigene Wörter: 左边 = links, 外边 = draußen, 前边 = vorne.\n• Himmelsrichtungen: 东 Osten, 南 Süden, 西 Westen, 北 Norden."
+        }
+      ]
+    },
+    {
+      "titel": "HSK 1 · Freizeit, Arbeit, Körper",
+      "hsk": 1,
+      "einheiten": [
+        { "themen": ["freizeit"], "titel": "Freizeit", "alle": true },
+        { "themen": ["arbeit"], "titel": "Arbeit und Geld", "alle": true },
+        { "themen": ["koerper", "kleidung", "farbe"], "titel": "Körper und Kleidung", "alle": true },
+        { "themen": ["natur", "gefuehl"], "titel": "Natur und Gefühle", "alle": true }
+      ]
+    },
+    {
+      "titel": "HSK 1 · Regeln",
+      "hsk": 1,
+      "einheiten": [
+        {
+          "themen": ["zw"],
+          "titel": "Zählwörter",
+          "intro": "Zwischen Zahl (oder 这, 那, 几) und Nomen steht immer ein Zählwort.\n• 个 passt fast immer: 一个人 · 这个问题\n• 本 für Bücher: 一本书 · 杯 für Tassen und Gläser: 一杯茶\n• 口 für Personen im Haushalt: 我家有四口人。\n• 次 zählt, wie oft etwas passiert: 我去过两次。\n• Vor Zählwörtern heißt zwei 两, nicht 二."
+        },
+        {
+          "themen": ["modal", "part"],
+          "titel": "Können, Rückfragen und Vorschläge",
+          "intro": "• 会 = können, weil man es gelernt hat: 我会说汉语。 Auch: wird (Zukunft): 明天会下雨。\n• 能 = können, weil es möglich oder erlaubt ist: 我今天不能去。\n• 呢 = und …? als Rückfrage: 我很好，你呢？ Auch: gerade dabei: 他睡觉呢。\n• 吧 = Vorschlag oder Vermutung: 我们走吧！ = Lass uns gehen! · 你是学生吧？ = Du bist wohl Schüler?"
+        },
+        {
+          "themen": ["vgl", "komp"],
+          "titel": "Vergleichen mit 比",
+          "intro": "• A 比 B + Adjektiv: 他比我高。 = Er ist größer als ich. (Hier ohne 很!)\n• 最 = am …-sten: 最好 = am besten · 她最高。 = Sie ist die Größte.\n• A 跟 B 一样 + Adjektiv: 我跟你一样高。 = Ich bin so groß wie du.\n• 地 macht aus einem Adjektiv ein Adverb vor dem Verb: 他高兴地说 = er sagt fröhlich."
+        },
+        {
+          "themen": ["aspekt"],
+          "titel": "Fertig oder gerade dabei: 了, 着, 正在",
+          "intro": "Chinesisch hat keine Zeitformen. Kleine Wörter zeigen, wie eine Handlung verläuft.\n• 了 nach dem Verb: abgeschlossen. 我吃了饭。 = Ich habe gegessen.\n• 了 am Satzende: etwas hat sich geändert. 下雨了。 = Jetzt regnet es.\n• 正在 (oder 在) vor dem Verb: gerade dabei. 他正在看书。 = Er liest gerade.\n• 着 nach dem Verb: ein Zustand dauert an. 门开着。 = Die Tür steht offen.\n• Vergangenes wird mit 没 verneint, dann ohne 了: 我没去。 = Ich bin nicht hingegangen."
+        }
+      ]
+    },
+    { "titel": "HSK 1 · Wortschatz", "hsk": 1, "rest": true, "proStufe": 400 },
+    {
+      "titel": "HSK 2 · Menschen und Alltag",
+      "hsk": 2,
+      "einheiten": [
+        { "themen": ["grund"], "titel": "Wichtige kleine Wörter 4", "alle": true },
+        { "themen": ["person"], "titel": "Menschen", "alle": true },
+        { "themen": ["familie", "gruss"], "titel": "Familie und Höflichkeit", "alle": true },
+        { "themen": ["zeit"], "titel": "Zeit und Kalender", "alle": true },
+        { "themen": ["essen"], "titel": "Essen und Trinken", "alle": true },
+        { "themen": ["wohnen"], "titel": "Zuhause", "alle": true }
+      ]
+    },
+    {
+      "titel": "HSK 2 · Schule, Arbeit, Stadt",
+      "hsk": 2,
+      "einheiten": [
+        { "themen": ["schule"], "titel": "Schule und Lernen", "alle": true },
+        { "themen": ["arbeit"], "titel": "Arbeit und Geld", "alle": true },
+        { "themen": ["stadt"], "titel": "Stadt und unterwegs", "alle": true },
+        { "themen": ["zahl"], "titel": "Zahlen und Mengen", "alle": true }
+      ]
+    },
+    {
+      "titel": "HSK 2 · Freizeit, Körper, Natur",
+      "hsk": 2,
+      "einheiten": [
+        { "themen": ["freizeit"], "titel": "Freizeit", "alle": true },
+        { "themen": ["koerper", "kleidung"], "titel": "Körper und Kleidung", "alle": true },
+        { "themen": ["natur", "farbe"], "titel": "Natur und Farben", "alle": true },
+        { "themen": ["gefuehl"], "titel": "Gefühle und Charakter", "alle": true },
+        { "themen": ["kommu"], "titel": "Sprechen und zuhören", "alle": true }
+      ]
+    },
+    {
+      "titel": "HSK 2 · Regeln",
+      "hsk": 2,
+      "einheiten": [
+        {
+          "themen": ["aspekt", "frage", "part"],
+          "titel": "Erfahrungen mit 过 und mehr Fragen",
+          "intro": "• 过 nach dem Verb: das hat man schon einmal erlebt. 我去过中国。 = Ich war schon einmal in China. Verneint: 我没去过。\n• 为什么 = warum · 怎么样 = wie ist es? / wie wär's? · 多久 = wie lange\n• 啊 am Satzende macht den Satz weicher oder freundlicher: 好啊！ = Gern!"
+        },
+        {
+          "themen": ["vgl", "komp", "satz"],
+          "titel": "Vergleichen, 得 und 让",
+          "intro": "• 更 = noch …-er: 今天更冷。 · 越来越 = immer …-er: 越来越好\n• 得 nach dem Verb sagt, wie gut oder wie etwas gemacht wird: 他说得很快。 = Er spricht schnell. · 你汉语说得很好。\n• 让 = lassen, veranlassen: 妈妈让我早点回家。 = Mama will, dass ich früh nach Hause komme."
+        },
+        {
+          "themen": ["modal"],
+          "titel": "Dürfen, sollen, müssen",
+          "intro": "• 可以 = dürfen, können (erlaubt): 我可以进来吗？\n• 应该 = sollen: 你应该休息。 · 必须 = müssen (unbedingt)\n• 可能 = vielleicht, möglich: 他可能不来。\n• Verneinung: 不可以 = nicht dürfen · 不用 = nicht müssen (nicht: 不必须)"
+        },
+        {
+          "themen": ["zw"],
+          "titel": "Zählwörter 2",
+          "alle": true,
+          "intro": "• 件 für Kleidung und Angelegenheiten: 一件衣服 · 一件事\n• 条 für Langes: 一条路 · 一条鱼 · 位 höflich für Personen: 一位老师\n• 辆 für Fahrzeuge, 瓶 für Flaschen, 封 für Briefe, 篇 für Texte\n• Auch Zeitspannen und Ereignisse werden gezählt: 一段时间 · 一场比赛"
+        },
+        {
+          "themen": ["konj"],
+          "titel": "Sätze verbinden",
+          "alle": true,
+          "intro": "Viele Bindewörter kommen paarweise:\n• 因为 …，所以 … = weil …, deshalb …\n• 虽然 …，但是 … = obwohl …, (trotzdem) …\n• 如果 …（的话），就 … = wenn …, dann …\n• 不但 …，而且 … = nicht nur …, sondern auch …\n• 或者 = oder in Aussagen · 还是 = oder in Fragen"
+        },
+        {
+          "themen": ["ort", "praep"],
+          "titel": "Orte und Richtungen",
+          "alle": true,
+          "intro": "• 离 = entfernt von: 我家离学校很近。 = Ich wohne nah an der Schule.\n• 往 / 向 = in Richtung: 往前走 = geradeaus gehen · 向左 = nach links\n• 为 = für: 我为你高兴。 · 除了 … 以外 = außer …\n• Himmelsrichtungen: 东北 = Nordosten, 西南 = Südwesten (Osten und Westen zuerst)."
+        }
+      ]
+    },
+    { "titel": "HSK 2 · Wortschatz", "hsk": 2, "rest": true, "proStufe": 400 },
+    {
+      "titel": "HSK 3 · Menschen und Alltag",
+      "hsk": 3,
+      "einheiten": [
+        { "themen": ["person"], "titel": "Menschen", "alle": true },
+        { "themen": ["familie"], "titel": "Familie", "alle": true },
+        { "themen": ["zeit"], "titel": "Zeit", "alle": true },
+        { "themen": ["essen"], "titel": "Essen und Trinken", "alle": true },
+        { "themen": ["wohnen"], "titel": "Zuhause", "alle": true }
+      ]
+    },
+    {
+      "titel": "HSK 3 · Schule, Arbeit, Stadt",
+      "hsk": 3,
+      "einheiten": [
+        { "themen": ["schule"], "titel": "Schule und Lernen", "alle": true },
+        { "themen": ["arbeit"], "titel": "Arbeit und Geld", "alle": true },
+        { "themen": ["stadt"], "titel": "Stadt und unterwegs", "alle": true },
+        { "themen": ["kommu"], "titel": "Sprechen und zuhören", "alle": true }
+      ]
+    },
+    {
+      "titel": "HSK 3 · Freizeit, Körper, Natur",
+      "hsk": 3,
+      "einheiten": [
+        { "themen": ["freizeit"], "titel": "Freizeit", "alle": true },
+        { "themen": ["koerper", "kleidung"], "titel": "Körper und Kleidung", "alle": true },
+        { "themen": ["natur"], "titel": "Natur", "alle": true },
+        { "themen": ["gefuehl"], "titel": "Gefühle und Charakter", "alle": true }
+      ]
+    },
+    {
+      "titel": "HSK 3 · Regeln",
+      "hsk": 3,
+      "einheiten": [
+        {
+          "themen": ["satz"],
+          "titel": "Sätze mit 把 und 被",
+          "intro": "• 把 holt das Objekt vor das Verb – man sagt, was mit etwas geschieht: 我把书放在桌子上。 = Ich lege das Buch auf den Tisch.\n• Nach 把 + Objekt + Verb muss noch etwas folgen (Ergebnis, Ort oder 了): 他把饭吃了。\n• 被 bildet das Passiv: 我的自行车被偷了。 = Mein Fahrrad wurde gestohlen. Umgangssprachlich auch 叫 oder 让.\n• 使 = bewirken, dass: 这件事使我很高兴。"
+        },
+        {
+          "themen": ["zw"],
+          "titel": "Zählwörter 3",
+          "alle": true,
+          "intro": "• 张 für Flaches: 一张纸 · 一张桌子 · 只 für Tiere: 一只猫\n• 双 für Paare: 一双鞋 · 台 für Maschinen: 一台电脑 · 部 für Filme: 一部电影\n• 顿 für Mahlzeiten: 一顿饭 · 把 für Dinge mit Griff: 一把椅子"
+        },
+        {
+          "themen": ["konj"],
+          "titel": "Sätze verbinden 2",
+          "alle": true,
+          "intro": "• 只有 …，才 … = nur wenn …, (erst dann) …\n• 不论 …，都 … = egal ob …, immer …\n• 为了 = um … zu: 为了学汉语，他去了中国。\n• 由于 …，因此 … = aufgrund …, daher … (schriftlich)\n• 一方面 …，另一方面 … = einerseits …, andererseits …"
+        },
+        {
+          "themen": ["vgl", "komp"],
+          "titel": "Wie sehr? Vergleiche",
+          "intro": "• 比较 = ziemlich (vor Adjektiven): 比较难 · 更加 = noch mehr\n• 极了 nach Adjektiven = äußerst: 好极了！ = Ausgezeichnet!\n• 跟 … 相比 = im Vergleich zu … · 跟 … 相似 = … ähnlich"
+        },
+        {
+          "themen": ["frage", "modal"],
+          "titel": "Nachfragen und Notwendigkeit",
+          "intro": "• 到底 = eigentlich (in drängenden Fragen): 你到底去不去？\n• 难道 … 吗？ = etwa …? (rhetorisch): 难道你不知道吗？ = Weißt du das etwa nicht?\n• 如何 = wie (förmlich) · 干吗 = wozu? (umgangssprachlich)\n• 需要 = brauchen, müssen · 不得不 = nicht umhinkönnen · 不必 = nicht nötig"
+        },
+        {
+          "themen": ["praep", "ort"],
+          "titel": "Präpositionen und Orte",
+          "alle": true,
+          "intro": "• 自从 … 以来 = seit … · 直到 = bis (zeitlich)\n• 按照 = gemäß · 朝 = in Richtung, zugewandt · 由 = von, durch (wer etwas macht)\n• 除了 …（以外），还/都 … = außer … auch / alle …\n• 里面, 外面, 上面, 下面 = innen, außen, oben, unten (wie die Wörter mit -边)"
+        }
+      ]
+    },
+    { "titel": "HSK 3 · Wortschatz", "hsk": 3, "rest": true, "proStufe": 330 }
+  ]
+}

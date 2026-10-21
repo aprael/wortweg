@@ -1,0 +1,172 @@
+{
+  "id": "de-it",
+  "title": "Italienisch",
+  "subtitle": "Italienisch lernen von Deutsch aus (Demo)",
+  "nativeLang": "de",
+  "targetLang": "it",
+  "ttsLang": "it-IT",
+  "demo": true,
+  "license": "Eigene Demo-Inhalte (Wortweg-Projekt), CC0 1.0",
+  "levels": [
+    {
+      "id": "a1",
+      "title": "A1 · Einstieg",
+      "units": [
+        {
+          "id": "it-a1-saluti",
+          "title": "Begrüßung",
+          "description": "Hallo sagen, sich vorstellen, höflich sein",
+          "words": [
+            { "native": ["Hallo"], "target": ["ciao", "salve"], "note": "„ciao“ heißt auch „Tschüss“ und passt nur unter Bekannten; „salve“ ist neutraler." },
+            { "native": ["Guten Tag"], "target": ["buongiorno", "buon giorno"] },
+            { "native": ["danke"], "target": ["grazie"], "note": "Das „z“ klingt wie „ts“, das „e“ am Ende wird mitgesprochen." },
+            { "native": ["bitte"], "target": ["per favore", "per piacere"], "note": "Als Antwort auf „grazie“ sagt man „prego“." },
+            { "native": ["ja"], "target": ["sì"], "note": "Mit Akzent = ja; ohne Akzent ist „si“ ein Pronomen (sich)." },
+            { "native": ["nein"], "target": ["no"] },
+            { "native": ["Herr"], "target": ["signore"], "note": "Vor einem Namen: „signor Rossi“. Frau = „signora“." },
+            { "native": ["Abend"], "target": ["sera"], "note": "„Guten Abend“ = „buonasera“." }
+          ],
+          "sentences": [
+            { "native": ["Hallo, ich bin Giulia."], "target": ["Ciao, sono Giulia.", "Ciao, io sono Giulia.", "Salve, sono Giulia."], "note": "„sono“ = ich bin. Das Pronomen „io“ lässt man meist weg." },
+            { "native": ["Wie heißt du?"], "target": ["Come ti chiami?", "Tu come ti chiami?"], "note": "„chiamarsi“ = heißen. „ch“ spricht man wie „k“." },
+            { "native": ["Ich heiße Marco."], "target": ["Mi chiamo Marco.", "Io mi chiamo Marco."], "note": "Wörtlich „Ich nenne mich Marco“." },
+            { "native": ["Guten Abend, Herr Rossi."], "target": ["Buonasera, signor Rossi.", "Buona sera, signor Rossi."], "note": "Vor einem Namen fällt das „-e“ weg: „signore“ → „signor Rossi“." },
+            { "native": ["Guten Tag, wie geht es Ihnen?"], "target": ["Buongiorno, come sta?", "Buongiorno, come sta Lei?", "Buon giorno, come sta?"], "note": "„come sta?“ ist die höfliche Form (Lei). Zu Freunden sagt man „come stai?“." },
+            { "native": ["Danke, gut."], "target": ["Grazie, bene.", "Bene, grazie."], "note": "„bene“ = gut, wenn es darum geht, wie es einem geht." },
+            { "native": ["Ja, bitte."], "target": ["Sì, per favore.", "Sì, per piacere."], "note": "„sì“ trägt einen Akzent auf dem „i“." },
+            { "native": ["Nein, danke. Tschüss!"], "target": ["No, grazie. Ciao!"], "note": "„ciao“ heißt Hallo und Tschüss zugleich." }
+          ]
+        },
+        {
+          "id": "it-a1-io",
+          "title": "Ich & du",
+          "description": "Herkunft, Wohnort, Sprachen und Alter",
+          "words": [
+            { "native": ["wohnen"], "target": ["abitare"] },
+            { "native": ["sprechen"], "target": ["parlare"] },
+            { "native": ["Deutschland"], "target": ["Germania"], "note": "Mit Artikel: „la Germania“. „ge“ spricht man wie „dsche“." },
+            { "native": ["Italienisch"], "target": ["italiano"], "note": "Sprachen schreibt man klein." },
+            { "native": ["Jahr"], "target": ["anno"], "note": "Plural: „anni“. Das doppelte „n“ spricht man länger." },
+            { "native": ["Student"], "target": ["studente"], "note": "Studentin = „studentessa“." },
+            { "native": ["arbeiten"], "target": ["lavorare"] },
+            { "native": ["Freund"], "target": ["amico"], "note": "Freundin = „amica“. Plural: „amici“ (gesprochen „amitschi“)." }
+          ],
+          "sentences": [
+            { "native": ["Ich wohne in Berlin."], "target": ["Abito a Berlino.", "Io abito a Berlino.", "Vivo a Berlino."], "note": "Vor Städten steht „a“. Berlin heißt auf Italienisch „Berlino“." },
+            { "native": ["Woher kommst du?"], "target": ["Di dove sei?", "Tu di dove sei?", "Da dove vieni?"], "note": "Wörtlich „Von wo bist du?“. „sei“ = du bist (von „essere“)." },
+            { "native": ["Ich komme aus Deutschland."], "target": ["Vengo dalla Germania.", "Io vengo dalla Germania."], "note": "„dalla“ = da + la: Länder stehen mit Artikel („la Germania“)." },
+            { "native": ["Sprichst du Italienisch?"], "target": ["Parli italiano?", "Tu parli italiano?", "Parli l'italiano?"], "note": "Die Endung -i zeigt „du“: parlare → parli. Eine Frage erkennt man nur an der Satzmelodie." },
+            { "native": ["Ich spreche ein bisschen Italienisch."], "target": ["Parlo un po' di italiano.", "Parlo un po' italiano.", "Io parlo un po' di italiano.", "Parlo un poco di italiano."], "note": "„un po'“ ist die Kurzform von „un poco“ – mit Apostroph, nicht mit Akzent." },
+            { "native": ["Ich bin zwanzig Jahre alt."], "target": ["Ho vent'anni.", "Ho venti anni.", "Io ho vent'anni."], "note": "Alter mit „avere“ (haben). Das „h“ in „ho“ ist stumm." },
+            { "native": ["Bist du Student?"], "target": ["Sei studente?", "Tu sei studente?", "Sei uno studente?"], "note": "Vor „st“ heißt der unbestimmte Artikel „uno“; meist lässt man ihn hier weg." },
+            { "native": ["Mein Freund arbeitet in Rom."], "target": ["Il mio amico lavora a Roma."], "note": "Vor dem Possessivpronomen steht der Artikel: „il mio amico“." }
+          ]
+        },
+        {
+          "id": "it-a1-cibo",
+          "title": "Essen & Trinken",
+          "description": "Bestellen, mögen und ablehnen",
+          "words": [
+            { "native": ["Wasser"], "target": ["acqua"] },
+            { "native": ["Brot"], "target": ["pane"] },
+            { "native": ["Kaffee"], "target": ["caffè"], "note": "Ein „caffè“ ist in Italien ein Espresso." },
+            { "native": ["Käse"], "target": ["formaggio"] },
+            { "native": ["Apfel"], "target": ["mela"] },
+            { "native": ["essen"], "target": ["mangiare"], "note": "„gia“ spricht man wie „dscha“." },
+            { "native": ["trinken"], "target": ["bere"], "note": "Unregelmäßig: „io bevo“, „noi beviamo“." },
+            { "native": ["Wein"], "target": ["vino"] }
+          ],
+          "sentences": [
+            { "native": ["Ich trinke Wasser."], "target": ["Bevo acqua.", "Bevo dell'acqua.", "Io bevo acqua."], "note": "„bevo“ kommt von „bere“ – mit dem unregelmäßigen Stamm „bev-“." },
+            { "native": ["Ich mag Käse."], "target": ["Mi piace il formaggio."], "note": "Wörtlich „Mir gefällt der Käse“ – mit Artikel." },
+            { "native": ["Einen Kaffee, bitte."], "target": ["Un caffè, per favore.", "Un caffè, per piacere."], "note": "„caffè“ wird auf der letzten Silbe betont, deshalb der Akzent." },
+            { "native": ["Wir essen Brot und Käse."], "target": ["Mangiamo pane e formaggio.", "Noi mangiamo pane e formaggio."], "note": "Die Endung -iamo zeigt „wir“. „e“ = und." },
+            { "native": ["Lisa isst einen Apfel."], "target": ["Lisa mangia una mela."], "note": "„mela“ ist weiblich → „una“." },
+            { "native": ["Das Brot ist gut."], "target": ["Il pane è buono."], "note": "„è“ mit Akzent = ist; „e“ ohne Akzent = und." },
+            { "native": ["Ich trinke keinen Wein."], "target": ["Non bevo vino.", "Io non bevo vino."], "note": "Verneinung: „non“ steht vor dem Verb. Ein eigenes Wort für „kein“ braucht man nicht." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a1-alltag",
+      "title": "A1 · Alltag",
+      "units": [
+        {
+          "id": "it-a1-tempo",
+          "title": "Zahlen & Zeit",
+          "description": "Uhrzeit, Preise und Tage",
+          "words": [
+            { "native": ["eins"], "target": ["uno"], "note": "Als Artikel: „un caffè“, „una mela“." },
+            { "native": ["zwei"], "target": ["due"] },
+            { "native": ["drei"], "target": ["tre"] },
+            { "native": ["zehn"], "target": ["dieci"], "note": "„ci“ spricht man wie „tschi“: „djetschi“." },
+            { "native": ["heute"], "target": ["oggi"], "note": "Doppelkonsonanten spricht man länger: „od-dschi“." },
+            { "native": ["morgen"], "target": ["domani"] },
+            { "native": ["Stunde"], "target": ["ora"], "note": "„ora“ heißt auch „jetzt“." },
+            { "native": ["Tag"], "target": ["giorno"] }
+          ],
+          "sentences": [
+            { "native": ["Wie spät ist es?"], "target": ["Che ora è?", "Che ore sono?"], "note": "Beide Fragen sind üblich: Singular „Che ora è?“ oder Plural „Che ore sono?“." },
+            { "native": ["Es ist ein Uhr."], "target": ["È l'una."], "note": "Bei ein Uhr Singular: „è l'una“. Großes „È“ schreibt man ebenfalls mit Akzent." },
+            { "native": ["Es ist drei Uhr."], "target": ["Sono le tre."], "note": "Ab zwei Uhr Plural: „sono le …“ – gemeint sind „le ore“." },
+            { "native": ["Heute habe ich Zeit."], "target": ["Oggi ho tempo.", "Ho tempo oggi."], "note": "„tempo“ = Zeit (auch: Wetter). Das „h“ in „ho“ ist stumm." },
+            { "native": ["Bis morgen!"], "target": ["A domani!"], "note": "„a“ = bis/zu. „domani“ wird auf der zweiten Silbe betont." },
+            { "native": ["Ein Kaffee kostet zwei Euro."], "target": ["Un caffè costa due euro."], "note": "„euro“ bleibt im Plural unverändert: „due euro“." },
+            { "native": ["Ich lerne jeden Tag."], "target": ["Studio ogni giorno.", "Imparo ogni giorno.", "Studio tutti i giorni.", "Imparo tutti i giorni."], "note": "„ogni“ (jeder) steht immer mit dem Singular: „ogni giorno“." },
+            { "native": ["Der Zug kommt in zehn Minuten."], "target": ["Il treno arriva tra dieci minuti.", "Il treno arriva fra dieci minuti."], "note": "„tra“ oder „fra“ + Zeitangabe = in (in der Zukunft)." }
+          ]
+        },
+        {
+          "id": "it-a1-famiglia",
+          "title": "Familie",
+          "description": "Familienmitglieder vorstellen",
+          "words": [
+            { "native": ["Mutter"], "target": ["madre"], "note": "Umgangssprachlich: „mamma“." },
+            { "native": ["Vater"], "target": ["padre"], "note": "Umgangssprachlich: „papà“." },
+            { "native": ["Bruder"], "target": ["fratello"] },
+            { "native": ["Schwester"], "target": ["sorella"] },
+            { "native": ["Sohn"], "target": ["figlio"], "note": "Tochter = „figlia“. „gli“ spricht man ähnlich wie „lj“." },
+            { "native": ["Großmutter", "Oma"], "target": ["nonna"], "note": "Großvater = „nonno“." },
+            { "native": ["Familie"], "target": ["famiglia"] },
+            { "native": ["klein"], "target": ["piccolo"], "note": "Weiblich: „piccola“." }
+          ],
+          "sentences": [
+            { "native": ["Das ist meine Mutter."], "target": ["Questa è mia madre."], "note": "Bei Familienmitgliedern im Singular entfällt der Artikel: „mia madre“, nicht „la mia madre“." },
+            { "native": ["Mein Vater heißt Paolo."], "target": ["Mio padre si chiama Paolo."], "note": "„si chiama“ = er heißt. Auch hier ohne Artikel: „mio padre“." },
+            { "native": ["Ich habe einen Bruder und eine Schwester."], "target": ["Ho un fratello e una sorella.", "Io ho un fratello e una sorella."], "note": "„un“ vor männlichen, „una“ vor weiblichen Nomen." },
+            { "native": ["Meine Großmutter wohnt in Neapel.", "Meine Oma wohnt in Neapel."], "target": ["Mia nonna abita a Napoli.", "Mia nonna vive a Napoli."], "note": "Neapel heißt auf Italienisch „Napoli“. „mia nonna“ ohne Artikel (Familie, Singular)." },
+            { "native": ["Wir sind eine große Familie."], "target": ["Siamo una grande famiglia.", "Siamo una famiglia grande.", "Noi siamo una grande famiglia."], "note": "„siamo“ = wir sind (von „essere“). „grande“ kann vor oder nach dem Nomen stehen." },
+            { "native": ["Unser Sohn ist klein."], "target": ["Nostro figlio è piccolo."], "note": "„nostro“ = unser; bei einem einzelnen Familienmitglied ohne Artikel." },
+            { "native": ["Hast du Geschwister?"], "target": ["Hai fratelli?", "Tu hai fratelli?", "Hai fratelli o sorelle?"], "note": "„fratelli“ (Plural) heißt Brüder oder allgemein Geschwister." }
+          ]
+        },
+        {
+          "id": "it-a1-citta",
+          "title": "Stadt & Wege",
+          "description": "Nach dem Weg fragen und Wege beschreiben",
+          "words": [
+            { "native": ["Stadt"], "target": ["città"], "note": "Betont auf dem letzten „à“; im Plural unverändert." },
+            { "native": ["Straße"], "target": ["strada", "via"], "note": "Vor Straßennamen sagt man „via“: „via Roma“." },
+            { "native": ["Bahnhof"], "target": ["stazione"] },
+            { "native": ["links"], "target": ["sinistra"], "note": "„a sinistra“ = nach links." },
+            { "native": ["rechts"], "target": ["destra"], "note": "„a destra“ = nach rechts." },
+            { "native": ["geradeaus"], "target": ["dritto", "diritto", "sempre dritto"] },
+            { "native": ["nah", "in der Nähe"], "target": ["vicino"], "note": "Gegenteil: „lontano“ (weit weg)." },
+            { "native": ["wo"], "target": ["dove"], "note": "„dove“ + „è“ wird zu „dov'è“." }
+          ],
+          "sentences": [
+            { "native": ["Wo ist der Bahnhof?"], "target": ["Dov'è la stazione?", "Dove è la stazione?"], "note": "„dov'è“ ist die Kurzform von „dove è“. „stazione“ ist weiblich." },
+            { "native": ["Der Bahnhof ist in der Nähe.", "Der Bahnhof ist nah."], "target": ["La stazione è vicina.", "La stazione è qui vicino.", "La stazione è vicino."], "note": "Als Adjektiv passt sich „vicino“ an: „la stazione è vicina“." },
+            { "native": ["Bieg links ab."], "target": ["Gira a sinistra."], "note": "„gira“ ist die Befehlsform für „du“ (von „girare“)." },
+            { "native": ["Geh geradeaus."], "target": ["Vai dritto.", "Va' dritto.", "Vai sempre dritto.", "Va' sempre dritto.", "Vai diritto."], "note": "„vai“ = geh (von „andare“). „sempre dritto“ = immer geradeaus." },
+            { "native": ["Das Hotel ist rechts."], "target": ["L'hotel è a destra.", "L'albergo è a destra."], "note": "„a destra“ = rechts. „hotel“ und „albergo“ sind beide üblich." },
+            { "native": ["Ich suche eine Apotheke."], "target": ["Cerco una farmacia.", "Io cerco una farmacia.", "Sto cercando una farmacia."], "note": "„cercare“ = suchen, ohne Präposition. „ce“ spricht man wie „tsche“." },
+            { "native": ["Die Stadt ist sehr schön."], "target": ["La città è molto bella.", "La città è bellissima."], "note": "„città“ ist weiblich → „bella“. „molto“ = sehr." },
+            { "native": ["Ich wohne in dieser Straße."], "target": ["Abito in questa strada.", "Abito in questa via.", "Vivo in questa strada."], "note": "„questa“ = diese (weiblich). Bei Straßen sagt man „in“: „in via Roma“." }
+          ]
+        }
+      ]
+    }
+  ]
+}

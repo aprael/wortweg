@@ -1,0 +1,172 @@
+{
+  "id": "de-fr",
+  "title": "Französisch",
+  "subtitle": "Französisch lernen von Deutsch aus (Demo)",
+  "nativeLang": "de",
+  "targetLang": "fr",
+  "ttsLang": "fr-FR",
+  "demo": true,
+  "license": "Eigene Demo-Inhalte (Wortweg-Projekt), CC0 1.0",
+  "levels": [
+    {
+      "id": "a1",
+      "title": "A1 · Einstieg",
+      "units": [
+        {
+          "id": "fr-a1-bonjour",
+          "title": "Begrüßung",
+          "description": "Hallo sagen, sich vorstellen, höflich sein",
+          "words": [
+            { "native": ["Hallo"], "target": ["bonjour", "salut"], "note": "„bonjour“ passt immer (auch: Guten Tag), „salut“ nur unter Freunden." },
+            { "native": ["auf Wiedersehen"], "target": ["au revoir"] },
+            { "native": ["danke"], "target": ["merci"] },
+            { "native": ["bitte"], "target": ["s'il te plaît", "s'il vous plaît"], "note": "„s'il te plaît“ zu jemandem, den man duzt; „s'il vous plaît“ beim Siezen." },
+            { "native": ["ja"], "target": ["oui"] },
+            { "native": ["nein"], "target": ["non"], "note": "Nasal gesprochen: Das „n“ am Ende hört man kaum." },
+            { "native": ["Herr"], "target": ["monsieur"], "note": "Gesprochen etwa „mössjöh“. Frau (Anrede) = „madame“." },
+            { "native": ["Abend"], "target": ["soir"], "note": "„Guten Abend“ = „bonsoir“." }
+          ],
+          "sentences": [
+            { "native": ["Hallo, ich bin Léa."], "target": ["Bonjour, je suis Léa.", "Salut, je suis Léa."], "note": "„je suis“ = ich bin (von „être“). Das Subjektpronomen „je“ ist im Französischen Pflicht." },
+            { "native": ["Wie heißt du?"], "target": ["Comment tu t'appelles ?", "Tu t'appelles comment ?", "Comment t'appelles-tu ?"], "note": "Wörtlich „Wie nennst du dich?“ – „s'appeler“ ist reflexiv: „je m'appelle“, „tu t'appelles“." },
+            { "native": ["Ich heiße Paul."], "target": ["Je m'appelle Paul."], "note": "„me“ wird vor einem Vokal zu „m'“. Die Endung von „appelle“ ist stumm." },
+            { "native": ["Guten Abend, Herr Martin."], "target": ["Bonsoir, monsieur Martin.", "Bonsoir, Monsieur Martin."], "note": "„bonsoir“ = guten Abend. Ab dem späten Nachmittag sagt man es statt „bonjour“." },
+            { "native": ["Danke, auf Wiedersehen!"], "target": ["Merci, au revoir !"], "note": "„au revoir“ heißt wörtlich „bis zum Wiedersehen“. Vor „!“ und „?“ steht im Französischen ein Leerzeichen." },
+            { "native": ["Ja, bitte."], "target": ["Oui, s'il te plaît.", "Oui, s'il vous plaît."], "note": "Der deutsche Satz lässt offen, ob man duzt oder siezt – beide Formen sind richtig." },
+            { "native": ["Nein, danke."], "target": ["Non, merci."], "note": "„merci“ wird auf der letzten Silbe betont, wie fast alle französischen Wörter." },
+            { "native": ["Wie geht es dir?"], "target": ["Comment ça va ?", "Ça va ?", "Comment vas-tu ?", "Tu vas bien ?"], "note": "„ça va“ heißt wörtlich „das geht“. Die Antwort kann ebenfalls „Ça va.“ sein." }
+          ]
+        },
+        {
+          "id": "fr-a1-moi",
+          "title": "Ich & du",
+          "description": "Herkunft, Wohnort, Sprachen und Alter",
+          "words": [
+            { "native": ["wohnen"], "target": ["habiter"], "note": "Das „h“ ist stumm: „j'habite“." },
+            { "native": ["sprechen"], "target": ["parler"] },
+            { "native": ["Deutschland"], "target": ["Allemagne"], "note": "Weiblich: „l'Allemagne“." },
+            { "native": ["Französisch"], "target": ["français"], "note": "Die Sprache schreibt man klein; „le Français“ (groß) = der Franzose." },
+            { "native": ["Jahr"], "target": ["an", "année"], "note": "Bei Altersangaben immer „an“: „vingt ans“." },
+            { "native": ["Student"], "target": ["étudiant"], "note": "Studentin = „étudiante“." },
+            { "native": ["arbeiten"], "target": ["travailler"], "note": "Das „ill“ spricht man wie ein deutsches „j“." },
+            { "native": ["Freund"], "target": ["ami"], "note": "Freundin = „amie“ – gleiche Aussprache." }
+          ],
+          "sentences": [
+            { "native": ["Ich wohne in Berlin."], "target": ["J'habite à Berlin."], "note": "Vor Städten steht „à“. „je“ wird vor Vokal und stummem „h“ zu „j'“." },
+            { "native": ["Woher kommst du?"], "target": ["Tu viens d'où ?", "D'où viens-tu ?", "D'où tu viens ?", "Tu es d'où ?"], "note": "„où“ mit Akzent = wo; „ou“ ohne Akzent = oder. „d'où“ = von wo." },
+            { "native": ["Ich komme aus Deutschland."], "target": ["Je viens d'Allemagne."], "note": "Bei weiblichen Ländern steht nach „venir“ nur „de“ ohne Artikel, vor Vokal „d'“." },
+            { "native": ["Sprichst du Französisch?"], "target": ["Tu parles français ?", "Tu parles le français ?", "Parles-tu français ?", "Est-ce que tu parles français ?"], "note": "Im Alltag reicht die Satzmelodie für eine Frage. „Est-ce que …“ ist die neutrale Frageform." },
+            { "native": ["Ich spreche ein bisschen Französisch."], "target": ["Je parle un peu français.", "Je parle un peu le français."], "note": "„un peu“ = ein bisschen. Das „-e“ am Ende von „parle“ ist stumm." },
+            { "native": ["Ich bin zwanzig Jahre alt."], "target": ["J'ai vingt ans."], "note": "Alter mit „avoir“ (haben): wörtlich „Ich habe zwanzig Jahre“. In „vingt“ ist das „gt“ stumm." },
+            { "native": ["Bist du Student?"], "target": ["Tu es étudiant ?", "Es-tu étudiant ?", "Est-ce que tu es étudiant ?"], "note": "Bei Berufen und Status steht nach „être“ kein Artikel." },
+            { "native": ["Mein Freund arbeitet in Paris."], "target": ["Mon ami travaille à Paris."], "note": "„mon ami“ wird gebunden gesprochen: „mon‿ami“ (das „n“ klingt hinüber)." }
+          ]
+        },
+        {
+          "id": "fr-a1-repas",
+          "title": "Essen & Trinken",
+          "description": "Bestellen, mögen und ablehnen",
+          "words": [
+            { "native": ["Wasser"], "target": ["eau"], "note": "Gesprochen „o“. Weiblich: „l'eau“." },
+            { "native": ["Brot"], "target": ["pain"], "note": "Nasal gesprochen, das „n“ hört man nicht einzeln." },
+            { "native": ["Kaffee"], "target": ["café"] },
+            { "native": ["Käse"], "target": ["fromage"] },
+            { "native": ["Apfel"], "target": ["pomme"], "note": "„pomme de terre“ (wörtlich Erdapfel) = Kartoffel." },
+            { "native": ["essen"], "target": ["manger"] },
+            { "native": ["trinken"], "target": ["boire"], "note": "Unregelmäßig: „je bois“, „nous buvons“." },
+            { "native": ["Wein"], "target": ["vin"] }
+          ],
+          "sentences": [
+            { "native": ["Ich trinke Wasser."], "target": ["Je bois de l'eau."], "note": "Bei unbestimmten Mengen steht der Teilungsartikel: „de l'eau“ = (etwas) Wasser." },
+            { "native": ["Ich mag Käse."], "target": ["J'aime le fromage."], "note": "Nach „aimer“ steht der bestimmte Artikel: „le fromage“." },
+            { "native": ["Einen Kaffee, bitte."], "target": ["Un café, s'il vous plaît.", "Un café, s'il te plaît."], "note": "Im Café sagt man meist „s'il vous plaît“; der deutsche Satz lässt beides offen." },
+            { "native": ["Wir essen Brot und Käse."], "target": ["Nous mangeons du pain et du fromage.", "On mange du pain et du fromage."], "note": "„mangeons“ behält das „e“, damit das „g“ weich bleibt. „du“ = de + le (Teilungsartikel)." },
+            { "native": ["Lisa isst einen Apfel."], "target": ["Lisa mange une pomme."], "note": "„pomme“ ist weiblich → „une“. Das „-e“ in „mange“ ist stumm." },
+            { "native": ["Das Brot ist gut."], "target": ["Le pain est bon."], "note": "„bon“ = gut (Geschmack); weiblich „bonne“." },
+            { "native": ["Ich trinke keinen Wein."], "target": ["Je ne bois pas de vin."], "note": "Die Verneinung umrahmt das Verb: „ne … pas“. Danach steht nur „de“: „pas de vin“." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a1-alltag",
+      "title": "A1 · Alltag",
+      "units": [
+        {
+          "id": "fr-a1-temps",
+          "title": "Zahlen & Zeit",
+          "description": "Uhrzeit, Preise und Tage",
+          "words": [
+            { "native": ["eins"], "target": ["un"], "note": "Weiblich: „une“, z. B. „une heure“." },
+            { "native": ["zwei"], "target": ["deux"], "note": "Das „x“ ist stumm." },
+            { "native": ["drei"], "target": ["trois"] },
+            { "native": ["zehn"], "target": ["dix"], "note": "Allein gesprochen „diss“, vor Konsonant ist das „x“ stumm." },
+            { "native": ["heute"], "target": ["aujourd'hui"] },
+            { "native": ["morgen"], "target": ["demain"] },
+            { "native": ["Stunde"], "target": ["heure"], "note": "Auch „Uhr“ bei der Uhrzeit. Das „h“ ist stumm." },
+            { "native": ["Tag"], "target": ["jour"], "note": "Steckt auch in „bonjour“ (wörtlich: guter Tag)." }
+          ],
+          "sentences": [
+            { "native": ["Wie spät ist es?"], "target": ["Quelle heure est-il ?", "Il est quelle heure ?"], "note": "Wörtlich „Welche Stunde ist es?“. „quelle“ ist weiblich wie „heure“." },
+            { "native": ["Es ist ein Uhr."], "target": ["Il est une heure."], "note": "„heure“ ist weiblich, deshalb „une heure“. Uhrzeiten beginnen immer mit „il est“." },
+            { "native": ["Es ist drei Uhr."], "target": ["Il est trois heures."], "note": "Ab zwei Uhr Plural „heures“. Gebunden: „trois‿heures“ mit stimmhaftem s." },
+            { "native": ["Heute habe ich Zeit."], "target": ["Aujourd'hui, j'ai le temps.", "Aujourd'hui j'ai le temps.", "J'ai le temps aujourd'hui."], "note": "„avoir le temps“ = Zeit haben – mit dem Artikel „le“." },
+            { "native": ["Bis morgen!"], "target": ["À demain !"], "note": "„à“ = bis/zu. „À demain“ ist ein fester Abschiedsgruß." },
+            { "native": ["Ein Kaffee kostet zwei Euro."], "target": ["Un café coûte deux euros."], "note": "„coûte“ kommt von „coûter“ (kosten). Gebunden: „deux‿euros“." },
+            { "native": ["Ich lerne jeden Tag."], "target": ["J'apprends tous les jours.", "J'étudie tous les jours."], "note": "„jeden Tag“ = „tous les jours“ (wörtlich „alle die Tage“)." },
+            { "native": ["Der Zug kommt in zehn Minuten."], "target": ["Le train arrive dans dix minutes."], "note": "„dans“ + Zeitangabe = in (in der Zukunft)." }
+          ]
+        },
+        {
+          "id": "fr-a1-famille",
+          "title": "Familie",
+          "description": "Familienmitglieder vorstellen",
+          "words": [
+            { "native": ["Mutter"], "target": ["mère"], "note": "Umgangssprachlich: „maman“." },
+            { "native": ["Vater"], "target": ["père"], "note": "Umgangssprachlich: „papa“." },
+            { "native": ["Bruder"], "target": ["frère"] },
+            { "native": ["Schwester"], "target": ["sœur", "soeur"], "note": "„œ“ ist eine Ligatur aus o und e; „soeur“ wird auch akzeptiert." },
+            { "native": ["Sohn"], "target": ["fils"], "note": "Gesprochen „fiss“ – das „l“ ist stumm." },
+            { "native": ["Großmutter", "Oma"], "target": ["grand-mère"], "note": "Großvater = „grand-père“." },
+            { "native": ["Familie"], "target": ["famille"], "note": "Das „ill“ spricht man wie „j“: „famij“." },
+            { "native": ["klein"], "target": ["petit"], "note": "Weiblich: „petite“ – dann hört man das „t“." }
+          ],
+          "sentences": [
+            { "native": ["Das ist meine Mutter."], "target": ["C'est ma mère.", "Voici ma mère."], "note": "„ma“ = meine (vor weiblichen Nomen), „mon“ = mein." },
+            { "native": ["Mein Vater heißt Marc."], "target": ["Mon père s'appelle Marc."], "note": "„il s'appelle“ = er heißt. Die Endung „-e“ ist stumm." },
+            { "native": ["Ich habe einen Bruder und eine Schwester."], "target": ["J'ai un frère et une sœur.", "J'ai un frère et une soeur."], "note": "„un“ vor männlichen, „une“ vor weiblichen Nomen. Das „t“ in „et“ ist stumm." },
+            { "native": ["Meine Großmutter wohnt in Lyon.", "Meine Oma wohnt in Lyon."], "target": ["Ma grand-mère habite à Lyon.", "Ma grand-mère vit à Lyon."], "note": "„grand-mère“ ist weiblich, obwohl „grand“ hier keine weibliche Endung hat." },
+            { "native": ["Wir sind eine große Familie."], "target": ["Nous sommes une grande famille.", "On est une grande famille."], "note": "„grand“ steht vor dem Nomen und wird weiblich: „une grande famille“." },
+            { "native": ["Unser Sohn ist klein."], "target": ["Notre fils est petit."], "note": "„notre“ = unser – gleiche Form für männlich und weiblich." },
+            { "native": ["Hast du Geschwister?"], "target": ["Tu as des frères et sœurs ?", "Tu as des frères et soeurs ?", "As-tu des frères et sœurs ?", "Est-ce que tu as des frères et sœurs ?"], "note": "Ein eigenes Wort für „Geschwister“ gibt es im Alltag nicht: man sagt „frères et sœurs“." }
+          ]
+        },
+        {
+          "id": "fr-a1-ville",
+          "title": "Stadt & Wege",
+          "description": "Nach dem Weg fragen und Wege beschreiben",
+          "words": [
+            { "native": ["Stadt"], "target": ["ville"], "note": "Ausnahme: gesprochen „wil“, ohne j-Laut." },
+            { "native": ["Straße"], "target": ["rue"] },
+            { "native": ["Bahnhof"], "target": ["gare"] },
+            { "native": ["links"], "target": ["gauche"], "note": "„à gauche“ = nach links." },
+            { "native": ["rechts"], "target": ["droite"], "note": "„à droite“ = nach rechts. Nicht verwechseln mit „tout droit“ (geradeaus)." },
+            { "native": ["geradeaus"], "target": ["tout droit"] },
+            { "native": ["nah", "in der Nähe"], "target": ["près"], "note": "„près d'ici“ = hier in der Nähe." },
+            { "native": ["wo"], "target": ["où"], "note": "Mit Akzent = wo; ohne Akzent „ou“ = oder." }
+          ],
+          "sentences": [
+            { "native": ["Wo ist der Bahnhof?"], "target": ["Où est la gare ?"], "note": "„gare“ ist weiblich: „la gare“." },
+            { "native": ["Der Bahnhof ist in der Nähe.", "Der Bahnhof ist nah."], "target": ["La gare est près d'ici.", "La gare est tout près.", "La gare n'est pas loin."], "note": "„près d'ici“ = hier in der Nähe; „ici“ = hier." },
+            { "native": ["Bieg links ab."], "target": ["Tourne à gauche."], "note": "„tourne“ ist die Befehlsform für „du“ – bei Verben auf -er ohne „-s“." },
+            { "native": ["Geh geradeaus."], "target": ["Va tout droit.", "Continue tout droit."], "note": "„va“ = geh (Befehlsform von „aller“)." },
+            { "native": ["Das Hotel ist rechts."], "target": ["L'hôtel est à droite."], "note": "Das „h“ ist stumm, deshalb „l'hôtel“ mit Apostroph." },
+            { "native": ["Ich suche eine Apotheke."], "target": ["Je cherche une pharmacie."], "note": "„chercher“ = suchen, direkt mit Objekt. „ch“ spricht man wie „sch“." },
+            { "native": ["Die Stadt ist sehr schön."], "target": ["La ville est très belle.", "La ville est très jolie."], "note": "„ville“ ist weiblich → „belle“ (männlich „beau“). „très“ = sehr." },
+            { "native": ["Ich wohne in dieser Straße."], "target": ["J'habite dans cette rue."], "note": "„rue“ ist weiblich: „cette rue“. Bei Straßen sagt man „dans“." }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 260" width="360" height="260">
+  <!-- Illustration „Wortweg“: geschwungener Weg mit Wegmarken, Ziel-Fahne und zwei Sprechblasen.
+       Eigenes Werk, selbst gezeichnet für Wortweg (2026), Lizenz CC0 1.0. Keine fremden Vorlagen oder Maskottchen. -->
+  <style>
+    .bg { fill: #dbe7ff; }
+    .hill { fill: #c9d9fb; }
+    .road { fill: none; stroke: #2459dc; stroke-width: 18; stroke-linecap: round; }
+    .dash { fill: none; stroke: #ffffff; stroke-width: 3; stroke-dasharray: 8 10; stroke-linecap: round; }
+    .mark { fill: #ffffff; stroke: #2459dc; stroke-width: 4; }
+    .done { fill: #0f766e; stroke: #ffffff; stroke-width: 3; }
+    .flag { fill: #ffc32b; }
+    .pole { stroke: #0d1b46; stroke-width: 4; stroke-linecap: round; }
+    .b1 { fill: #ffffff; stroke: #2459dc; stroke-width: 3; }
+    .b2 { fill: #ffc32b; }
+    .line1 { stroke: #2459dc; stroke-width: 4; stroke-linecap: round; }
+    .line2 { stroke: #5a2a00; stroke-width: 4; stroke-linecap: round; }
+    @media (prefers-color-scheme: dark) {
+      .bg { fill: #1c2c5c; }
+      .hill { fill: #24376e; }
+      .road { stroke: #4f8cff; }
+      .mark { stroke: #4f8cff; fill: #15224a; }
+      .pole { stroke: #eef3ff; }
+      .b1 { fill: #15224a; stroke: #4f8cff; }
+      .line1 { stroke: #bcd2ff; }
+    }
+  </style>
+  <rect class="bg" x="0" y="0" width="360" height="260" rx="28"/>
+  <path class="hill" d="M0 200 C70 160 130 175 190 195 S300 220 360 185 V260 H0 Z"/>
+  <path class="road" d="M30 232 C90 230 70 170 140 168 S230 190 236 132 S290 80 318 66"/>
+  <path class="dash" d="M30 232 C90 230 70 170 140 168 S230 190 236 132 S290 80 318 66"/>
+  <circle class="done" cx="62" cy="224" r="11"/>
+  <path d="M56.5 224 l4 4 l7 -8" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle class="done" cx="140" cy="168" r="11"/>
+  <path d="M134.5 168 l4 4 l7 -8" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle class="mark" cx="236" cy="132" r="11"/>
+  <line class="pole" x1="318" y1="66" x2="318" y2="22"/>
+  <path class="flag" d="M320 22 H346 L338 32 L346 42 H320 Z"/>
+  <circle class="mark" cx="318" cy="66" r="8"/>
+  <path class="b1" d="M48 40 h86 a14 14 0 0 1 14 14 v26 a14 14 0 0 1 -14 14 h-56 l-16 14 v-14 h-14 a14 14 0 0 1 -14 -14 v-26 a14 14 0 0 1 14 -14 z"/>
+  <line class="line1" x1="54" y1="60" x2="124" y2="60"/>
+  <line class="line1" x1="54" y1="76" x2="104" y2="76"/>
+  <path class="b2" d="M168 72 h70 a12 12 0 0 1 12 12 v20 a12 12 0 0 1 -12 12 h-10 v12 l-14 -12 h-46 a12 12 0 0 1 -12 -12 v-20 a12 12 0 0 1 12 -12 z"/>
+  <line class="line2" x1="172" y1="90" x2="232" y2="90"/>
+  <line class="line2" x1="172" y1="104" x2="210" y2="104"/>
+</svg>
