@@ -17,6 +17,7 @@ ich selbst beobachtet oder vorgeschlagen habe, gehört unter „Nur Vorschlag“
 | 20.10.2026 | Spiel-Optik mit eigenen Assets (damals: „wie Clash Royale“), Konfetti und Effekte | frühere Sitzung, laut Projektnotizen |
 | 20.10.2026 | Vorlesen bei jeder Aufgabe; Lernpfad von leicht nach schwer; Beispielsätze zu neuen Wörtern; Zwischenstand auf dem Handy | frühere Sitzung, laut Projektnotizen |
 | 20.10.2026 | Arbeitsweise: begründete Standardwerte statt Fragebögen; nur wirklich offene Entscheidungen vorlegen | frühere Sitzung (Fragebogen abgelehnt) |
+| 23.10.2026 | Aussprache mit **menschlichen Aufnahmen**, nicht mit KI- oder Computerstimmen | Nachricht: „menschliche aufzeichnungen … keine ki audio“ |
 
 Zu Schriften, Abständen, Bildern und Animationen hat der Nutzer über die Wahl von C hinaus nichts Eigenes gesagt.
 Gelungene Beispielseiten oder -komponenten hat er noch nicht benannt.
@@ -28,6 +29,7 @@ Gelungene Beispielseiten oder -komponenten hat er noch nicht benannt.
 | 22.10.2026 | Grundlose lila-blaue Farbverläufe, identische Dreier-Kartenlayouts, übermäßige Glaseffekte, beliebige Schatten, austauschbare SaaS-Texte | Arbeitsauftrag Designrichtungen |
 | 20.10.2026 | Inhalte, Namen, Logos, Grafiken oder Optik von Duolingo, Supercell oder anderen Apps/Spielen | Projektanweisungen (`CLAUDE.md`) |
 | 20.10.2026 | Paywall, Herzen/Energie, Strafen, Tracking | Projektanweisungen (`CLAUDE.md`) |
+| 23.10.2026 | KI-erzeugtes Audio für die Aussprache | Nachricht vom 23.10.2026 |
 
 Nicht gewählt, aber nicht begründet abgelehnt: Richtung A „Wegzeichen“ und B „Karteikasten“. Daraus keine Abneigung
 ableiten. Rückschritte, die sich auf Screenshots des Nutzers gezeigt hätten, gibt es noch keine.
@@ -36,7 +38,8 @@ ableiten. Rückschritte, die sich auf Screenshots des Nutzers gezeigt hätten, g
 
 - Alle Regeln in `DESIGN.md`.
 - Vom Nutzer ausdrücklich bestätigt: Richtung C, Konfetti und Effekte, Vorlesen bei jeder Aufgabe, keine fremde
-  App- oder Spiel-Optik, keine Paywall, keine Herzen, keine Strafen, kein Tracking.
+  App- oder Spiel-Optik, keine Paywall, keine Herzen, keine Strafen, kein Tracking, menschliche Aufnahmen statt
+  KI-Audio (heute nutzt die App noch die Systemstimmen des Geräts – umstellen, soweit freie Aufnahmen da sind).
 - Prozess: Er entscheidet über Richtungen selbst („Entscheide nicht eigenmächtig für mich“); Installationen von
   Werkzeugen nur nach Erklärung und Zustimmung; Veröffentlichen (Push, Pages, Releases) nur nach Rückfrage.
 
