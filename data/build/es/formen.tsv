@@ -141,3 +141,6 @@ abogados	abogado/noun
 # hay ist immer haber (Wiktionary führt es auch als Schreibfehler von ahí); es ist immer ser (nicht Plural von e).
 hay	haber/verb
 es	ser/verb
+# vale meist „okay“ (Spanien), fuera meist „draußen“; die Verbformen von valer bzw. ser/ir bleiben möglich.
+vale	vale/intj:3 | valer/verb:1
+fuera	fuera/adv:3 | ser/verb:1 | ir/verb:1

@@ -372,6 +372,8 @@ function makeResolver(analyze, lemmaCount) {
       return nx.length && nx.every((o) => o.cls === 'V') ? pro : art;
     }
     const heads = opts.map((o) => o.lemmas[0]);
+    // „fuera“ = draußen; nur nach si/que/Pronomen o. Ä. die Verbform von ser/ir („si fuera“, „que fuera“).
+    if (heads.includes('fuera') && heads.includes('ser') && !VERB_CTX.has(prev)) return opts.find((o) => o.lemmas[0] === 'fuera');
     if (heads.includes('ir') && heads.includes('ser')) return opts.find((o) => o.lemmas[0] === (MOTION_NEXT.has(next) ? 'ir' : 'ser'));
     const N = opts.filter((o) => o.cls === 'N' && o.w > 0);
     const V = opts.filter((o) => o.cls === 'V' && o.w > 0);
