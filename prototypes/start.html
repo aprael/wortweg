@@ -1,0 +1,606 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<title>Wortweg – Prototyp Startseite</title>
+<!--
+  Visueller Prototyp der Startseite im Designsystem „Spielbrett“ (DESIGN.md). Kein Teil der App: wird nicht vom
+  Server ausgeliefert und nicht in die App-Version kopiert. Inhalte stammen aus dem echten Kurs „Spanisch – Wortschatz“
+  (Abschnitt 9), der Lernstand ist ein Beispiel. Links auf andere Seiten führen in die veröffentlichte App.
+-->
+<style>
+/* ===== Schriften (lokal, SIL OFL 1.1) ===== */
+@font-face { font-family: "Lilita One"; src: url("../assets/fonts/LilitaOne-Regular.ttf") format("truetype"); font-display: swap; }
+@font-face {
+  font-family: "Atkinson Hyperlegible Next"; font-weight: 200 800; font-display: swap;
+  src: url("../assets/fonts/AtkinsonHyperlegibleNext-latin.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Atkinson Hyperlegible Next"; font-weight: 200 800; font-display: swap;
+  src: url("../assets/fonts/AtkinsonHyperlegibleNext-latin-ext.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* ===== Tokens (DESIGN.md §2–§10) ===== */
+:root {
+  /* fünf Kernfarben */
+  --board: #e9effc; --ink: #14204a; --field: #2457d6; --gold: #ffc21a; --event: #ff5d4f;
+  /* abgeleitet (§2.2) */
+  --surface: color-mix(in srgb, #fff 75%, var(--board));
+  --muted: color-mix(in srgb, var(--ink) 70%, var(--board));
+  --line: color-mix(in srgb, var(--ink) 18%, var(--board));
+  --line-strong: color-mix(in srgb, var(--ink) 45%, var(--board));
+  --table: color-mix(in srgb, var(--field) 35%, #000);
+  --table-muted: color-mix(in srgb, #fff 72%, var(--table));
+  --table-locked: color-mix(in srgb, #fff 12%, var(--table));
+  --field-bright: color-mix(in srgb, var(--field) 80%, #fff);
+  --on-field: #fff;
+  --on-accent: color-mix(in srgb, var(--gold) 20%, #000);
+  --field-text: var(--field);
+  --event-text: color-mix(in srgb, var(--event) 70%, #000);
+  --gold-soft: color-mix(in srgb, var(--gold) 20%, var(--surface));
+  --field-soft: color-mix(in srgb, var(--field) 14%, var(--surface));
+  --event-soft: color-mix(in srgb, var(--event) 16%, var(--surface));
+  --gold-edge: color-mix(in srgb, var(--gold) 70%, #000);
+  --field-edge: color-mix(in srgb, var(--field) 70%, #000);
+  --event-edge: color-mix(in srgb, var(--event) 70%, #000);
+  --flame: color-mix(in srgb, var(--event) 55%, var(--gold));
+  --focus: var(--ink);
+  --float: 0 8px 24px color-mix(in srgb, var(--table) 30%, transparent);
+
+  /* Schrift (§3) */
+  --font-display: "Lilita One", "Arial Rounded MT Bold", system-ui, sans-serif;
+  --font-text: "Atkinson Hyperlegible Next", system-ui, -apple-system, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+  --fs-1: 0.8125rem; --fs-2: 1rem; --fs-3: 1.25rem; --fs-4: 1.5rem; --fs-5: 2rem; --fs-6: clamp(2rem, 1.2rem + 3.5vw, 3rem);
+
+  /* Raster, Radius, Rahmen (§4–§6) */
+  --sp-half: 4px; --sp-1: 8px; --sp-2: 16px; --sp-3: 24px; --sp-4: 32px; --sp-6: 48px; --sp-8: 64px;
+  --radius: 12px; --radius-s: 8px; --radius-round: 50%;
+  --border-w: 2px; --border-strong-w: 3px; --edge-h: 4px;
+
+  /* Bewegung (§10) */
+  --dur-1: 120ms; --dur-2: 240ms; --dur-3: 480ms;
+  --ease-out: cubic-bezier(.2, .8, .2, 1); --ease-hop: cubic-bezier(.34, 1.56, .64, 1);
+
+  /* Layout (§9) */
+  --gutter: var(--sp-2); --content-max: 100%; --header-h: 56px; --tabbar-h: 64px;
+  --field-size: 48px; --field-gap: var(--sp-1); --board-gutter: var(--sp-2);
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --board: #0e1736; --ink: #eef2ff; --field: #3462e8; --event: #ff6b5e;
+    --surface: color-mix(in srgb, #fff 7%, var(--board));
+    --field-text: color-mix(in srgb, var(--field) 55%, #fff);
+    --event-text: var(--event);
+    --focus: var(--gold);
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --board: #0e1736; --ink: #eef2ff; --field: #3462e8; --event: #ff6b5e;
+  --surface: color-mix(in srgb, #fff 7%, var(--board));
+  --field-text: color-mix(in srgb, var(--field) 55%, #fff);
+  --event-text: var(--event);
+  --focus: var(--gold);
+  color-scheme: dark;
+}
+@media (max-width: 359px) { :root { --board-gutter: var(--sp-1); } }
+@media (min-width: 600px) { :root { --gutter: var(--sp-3); --content-max: 720px; --field-size: 56px; --field-gap: var(--sp-2); --board-gutter: var(--sp-3); } }
+@media (min-width: 1024px) { :root { --gutter: var(--sp-4); --content-max: 960px; } }
+
+/* ===== Grundlagen ===== */
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; font-synthesis: none; }
+body { margin: 0; background: var(--board); color: var(--ink); font: 400 var(--fs-2)/1.5 var(--font-text); }
+h1, h2 { font-family: var(--font-display); font-weight: 400; line-height: 1.1; letter-spacing: .01em; margin: 0; text-wrap: balance; }
+h1 { font-size: var(--fs-5); }
+h2 { font-size: var(--fs-4); }
+h3 { font: 700 var(--fs-3)/1.3 var(--font-text); margin: 0; }
+p { margin: 0; }
+a { color: var(--field-text); font-weight: 700; text-underline-offset: .2em; }
+:focus-visible { outline: var(--border-strong-w) solid var(--focus); outline-offset: 3px; }
+.sr-only { position: absolute !important; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+.icon { width: 24px; height: 24px; fill: currentColor; flex: none; }
+.skip-link { position: absolute; left: var(--sp-2); top: -64px; z-index: 30; background: var(--gold); color: var(--on-accent); padding: var(--sp-1) var(--sp-2); border-radius: var(--radius); }
+.skip-link:focus { top: var(--sp-1); }
+
+/* ===== Prototyp-Steuerung (nicht Teil des Designs) ===== */
+.proto-bar { display: flex; flex-wrap: wrap; align-items: center; gap: var(--sp-1) var(--sp-2); padding: var(--sp-1) var(--gutter); background: var(--surface); border-bottom: var(--border-w) dashed var(--line-strong); font-size: var(--fs-1); }
+.proto-bar summary { flex-basis: 100%; min-height: 32px; display: flex; align-items: center; font-weight: 700; cursor: pointer; }
+.proto-bar:not([open]) { padding-block: 0; }
+.proto-bar label { display: inline-flex; align-items: center; gap: var(--sp-half); font-weight: 700; }
+.proto-bar select { font: inherit; min-height: 40px; border-radius: var(--radius-s); border: var(--border-w) solid var(--line-strong); background: var(--surface); color: var(--ink); padding: 0 var(--sp-1); }
+
+/* ===== Knöpfe (§8.1) ===== */
+.btn {
+  display: inline-flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 0 var(--sp-1);
+  min-height: 48px; padding: var(--sp-1) var(--sp-3); border-radius: var(--radius);
+  border: var(--border-w) solid var(--line); background: var(--surface); color: var(--ink);
+  font: 400 var(--fs-2)/1.2 var(--font-display); letter-spacing: .01em; text-align: center; text-decoration: none; cursor: pointer;
+  box-shadow: 0 var(--edge-h) 0 var(--line);
+  transition: transform var(--dur-1) var(--ease-out), box-shadow var(--dur-1) var(--ease-out), background-color var(--dur-1) var(--ease-out);
+  touch-action: manipulation; -webkit-tap-highlight-color: transparent;
+}
+.btn:hover { background: color-mix(in srgb, var(--surface) 92%, #fff); color: var(--ink); }
+.btn:active:not([disabled]) { transform: translateY(var(--edge-h)); box-shadow: 0 0 0 transparent; }
+.btn-primary { background: var(--gold); border-color: var(--gold); color: var(--on-accent); box-shadow: 0 var(--edge-h) 0 var(--gold-edge); }
+.btn-primary:hover { background: color-mix(in srgb, var(--gold) 92%, #fff); color: var(--on-accent); }
+.btn-field { background: var(--field); border-color: var(--field); color: var(--on-field); box-shadow: 0 var(--edge-h) 0 var(--field-edge); }
+.btn-field:hover { background: color-mix(in srgb, var(--field) 92%, #fff); color: var(--on-field); }
+.btn-ghost { background: transparent; border-color: transparent; box-shadow: none; color: var(--muted); font: 700 var(--fs-2)/1.2 var(--font-text); }
+.btn-ghost:hover { background: transparent; color: var(--ink); }
+.btn[disabled] { background: var(--line); border-color: var(--line); color: var(--muted); box-shadow: none; cursor: not-allowed; }
+.btn-lg { min-height: 56px; font-size: var(--fs-3); }
+.btn-block { width: 100%; }
+.btn-sub { flex-basis: 100%; font: 700 var(--fs-1)/1.3 var(--font-text); letter-spacing: 0; }
+@media (pointer: fine) { .btn-small { min-height: 40px; padding-inline: var(--sp-2); } }
+.icon-btn { display: inline-grid; place-items: center; width: 48px; height: 48px; padding: 0; flex: none; }
+
+/* ===== Kopfleiste und Tab-Leiste (§8.8) ===== */
+.topbar { position: sticky; top: 0; z-index: 8; background: var(--table); }
+.topbar-inner { max-width: calc(var(--content-max) + 2 * var(--gutter)); margin: 0 auto; padding: 0 var(--gutter); min-height: var(--header-h); display: flex; align-items: center; justify-content: space-between; gap: var(--sp-2); }
+.brand { display: inline-flex; align-items: center; gap: var(--sp-1); color: var(--on-field); font: 400 var(--fs-4)/1 var(--font-display); text-decoration: none; }
+.brand:hover { color: var(--on-field); }
+.brand img { width: 32px; height: 32px; border-radius: var(--radius-s); }
+.topbar :focus-visible, .nav-main :focus-visible, .board :focus-visible { outline-color: var(--gold); }
+.nav-main { display: flex; }
+.nav-link { position: relative; display: inline-flex; align-items: center; gap: var(--sp-half); min-height: var(--header-h); padding: 0 var(--sp-2); color: var(--on-field); font: 700 var(--fs-2)/1.2 var(--font-text); text-decoration: none; }
+.nav-link .icon { display: none; }
+.nav-link:hover { color: var(--gold); }
+.nav-link[aria-current="page"] { color: var(--gold); }
+.nav-link[aria-current="page"]::after { content: ""; position: absolute; left: var(--sp-2); right: var(--sp-2); bottom: 0; height: var(--edge-h); background: var(--gold); }
+.badge { display: inline-grid; place-items: center; min-width: 22px; height: 22px; padding: 0 var(--sp-half); border-radius: 11px; background: var(--event); color: var(--on-accent); font: 700 var(--fs-1)/1 var(--font-text); }
+@media (max-width: 599px) {
+  .nav-main {
+    position: fixed; left: 0; right: 0; bottom: 0; z-index: 9; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr));
+    padding: 0 env(safe-area-inset-right, 0px) env(safe-area-inset-bottom, 0px) env(safe-area-inset-left, 0px); background: var(--table);
+  }
+  .nav-link { flex-direction: column; justify-content: center; gap: var(--sp-half); min-height: var(--tabbar-h); padding: 0 var(--sp-half); font-size: var(--fs-1); }
+  .nav-link .icon { display: block; }
+  .nav-link[aria-current="page"]::after { top: 0; bottom: auto; left: var(--sp-1); right: var(--sp-1); }
+  .nav-link .badge { position: absolute; top: var(--sp-1); left: calc(50% + 6px); }
+  body { padding-bottom: calc(var(--tabbar-h) + env(safe-area-inset-bottom, 0px)); }
+}
+
+/* ===== Seite ===== */
+.page { max-width: calc(var(--content-max) + 2 * var(--gutter)); margin: 0 auto; padding: var(--sp-3) var(--gutter) var(--sp-6); }
+.home-main { display: grid; gap: var(--sp-4); align-content: start; }
+.home-hero { display: grid; gap: var(--sp-1); }
+.home-hero .btn { margin-top: var(--sp-2); }
+.home-values { display: grid; gap: var(--sp-3); }
+.home-hero h1 { font-size: var(--fs-6); }
+.home-sub { color: var(--muted); font-weight: 700; }
+.home-grid { display: grid; gap: var(--sp-4); }
+.home-side { display: grid; gap: var(--sp-4); align-content: start; }
+@media (min-width: 1024px) { .home-grid { grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: var(--sp-4); } }
+
+.card { background: var(--surface); border-radius: var(--radius); padding: var(--sp-2); }
+@media (min-width: 600px) { .card { padding: var(--sp-3); } }
+
+/* Abschnitts-Kopf über dem Brett */
+.board-card { display: grid; gap: var(--sp-2); }
+.stage-head { display: grid; gap: var(--sp-1); }
+.stage-head h2 { font-size: var(--fs-4); }
+.stage-meta { display: flex; justify-content: space-between; gap: var(--sp-2); font-weight: 700; }
+.stage-meta span:last-child { color: var(--muted); font-variant-numeric: tabular-nums; }
+.meter { height: 16px; border-radius: var(--radius-s); background: var(--line); overflow: hidden; }
+.meter > span { display: block; height: 100%; background: var(--gold); border-radius: inherit; }
+
+/* ===== Spielbrett (§8.5) ===== */
+.board { background: var(--table); color: var(--on-field); border-radius: var(--radius); padding-block: var(--sp-2); overflow: hidden; }
+.board-unit { position: relative; padding: var(--sp-1) var(--board-gutter) var(--sp-2); }
+.board-unit-head { display: grid; margin-bottom: var(--sp-1); }
+.board-unit-head h3 { font-size: var(--fs-2); }
+.board-words { font-size: var(--fs-1); color: var(--table-muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.board-row { position: relative; list-style: none; margin: 0; padding: 0 0 var(--edge-h); display: flex; gap: var(--field-gap); }
+.board-unit.is-rev .board-row { flex-direction: row-reverse; }
+.board-row li { position: relative; z-index: 1; }
+
+/* Weg: waagerecht durch die Reihe, senkrecht im Rand zwischen den Reihen; gold = schon gegangen */
+.board-row::before, .board-row::after { content: ""; position: absolute; z-index: 0; top: calc(var(--field-size) / 2 - 4px); height: 8px; background: var(--table-locked); }
+.board-row::before { left: calc(var(--board-gutter) / -2 - 4px); right: calc(var(--board-gutter) / -2 - 4px); }
+.board-row::after { background: var(--gold); left: calc(var(--board-gutter) / -2 - 4px); width: calc(var(--board-gutter) / 2 + 4px + var(--reach, -1) * (var(--field-size) + var(--field-gap)) + var(--field-size) / 2); }
+.board-unit:not(.is-reached) .board-row::after { display: none; }
+.board-unit.is-complete .board-row::after { width: auto; right: calc(var(--board-gutter) / -2 - 4px); }
+.board-unit.is-rev .board-row::after { left: auto; right: calc(var(--board-gutter) / -2 - 4px); }
+.board-unit.is-rev.is-complete .board-row::after { left: calc(var(--board-gutter) / -2 - 4px); }
+.board-unit.is-first .board-row::before, .board-unit.is-first .board-row::after { left: calc(var(--field-size) / 2); }
+.board-unit.is-first:not(.is-complete) .board-row::after { width: calc(var(--reach, 0) * (var(--field-size) + var(--field-gap))); }
+.board-unit.is-last .board-row::before { right: auto; width: calc(var(--board-gutter) / 2 + 4px + var(--field-size)); }
+.board-unit.is-last.is-rev .board-row::before { left: auto; right: calc(var(--board-gutter) / -2 - 4px); width: calc(var(--board-gutter) / 2 + 4px + var(--field-size)); }
+.board-unit::before, .board-unit::after { content: ""; position: absolute; width: 8px; left: calc(var(--board-gutter) / 2 - 4px); background: var(--table-locked); }
+.board-unit::before { top: 0; height: calc(100% - var(--sp-2) - var(--edge-h) - var(--field-size) / 2 + 4px); }
+.board-unit::after { left: auto; right: calc(var(--board-gutter) / 2 - 4px); top: calc(100% - var(--sp-2) - var(--edge-h) - var(--field-size) / 2 - 4px); bottom: 0; }
+.board-unit.is-rev::before { left: auto; right: calc(var(--board-gutter) / 2 - 4px); }
+.board-unit.is-rev::after { right: auto; left: calc(var(--board-gutter) / 2 - 4px); }
+.board-unit.is-reached::before, .board-unit.is-complete::after { background: var(--gold); }
+.board-unit.is-first::before, .board-unit.is-last::after { display: none; }
+.board-unit-head { position: relative; z-index: 1; }
+
+.board-field {
+  position: relative; display: grid; place-items: center; width: var(--field-size); height: var(--field-size);
+  border-radius: var(--radius); border: 0; padding: 0; font: 400 var(--fs-4)/1 var(--font-display); text-decoration: none; cursor: pointer;
+  background: var(--field-bright); color: var(--on-field); box-shadow: 0 var(--edge-h) 0 var(--field-edge);
+  transition: transform var(--dur-1) var(--ease-out), box-shadow var(--dur-1) var(--ease-out);
+  -webkit-tap-highlight-color: transparent; touch-action: manipulation;
+}
+.board-field .icon { width: 28px; height: 28px; }
+a.board-field:active, button.board-field:active { transform: translateY(var(--edge-h)); box-shadow: 0 0 0 transparent; }
+.board-field.is-current { background: var(--gold); color: var(--on-accent); box-shadow: 0 var(--edge-h) 0 var(--gold-edge); z-index: 2; }
+.board-field.is-current .figure { width: 34px; height: 34px; }
+.board-field.is-rule { background: var(--event); color: var(--on-accent); box-shadow: 0 var(--edge-h) 0 var(--event-edge); }
+.board-field.is-locked { background: var(--table-locked); color: var(--table-muted); box-shadow: none; cursor: default; }
+.board-field.is-checkpoint { width: calc(2 * var(--field-size) + var(--field-gap)); }
+.board-hint { display: flex; flex-wrap: wrap; gap: var(--sp-half) var(--sp-2); padding: var(--sp-1) var(--board-gutter) 0; font-size: var(--fs-1); color: var(--table-muted); }
+.board-hint a { color: var(--on-field); }
+
+
+/* ===== Spielsteine (§8.6) ===== */
+.tokens { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--sp-1); }
+.token { display: grid; justify-items: center; gap: var(--sp-half); text-align: center; font: 700 var(--fs-1)/1.3 var(--font-text); }
+.stone { position: relative; display: grid; place-items: center; align-content: center; width: 64px; height: 64px; border-radius: var(--radius-round); background: var(--surface); border: var(--border-strong-w) solid var(--table); font: 400 var(--fs-4)/1 var(--font-display); color: var(--ink); }
+.stone .icon { width: 20px; height: 20px; margin-bottom: 2px; }
+.stone-flame .icon { color: var(--flame); }
+.stone-star .icon { color: var(--gold-edge); }
+.stone-book .icon { color: var(--field-text); }
+.stone-ring { background: conic-gradient(var(--gold) calc(var(--p, 0) * 1%), var(--line) 0); }
+.stone-ring::before { content: ""; position: absolute; inset: 6px; border-radius: var(--radius-round); background: var(--surface); }
+.stone-ring > * { position: relative; }
+.token small { font-size: var(--fs-1); }
+
+/* ===== „Als Nächstes“ (§8.4) ===== */
+.next-card { display: grid; gap: var(--sp-2); }
+.next-card h2 { font-size: var(--fs-4); }
+.next-meta { color: var(--muted); font-weight: 700; margin-top: calc(var(--sp-1) * -1); }
+.word-chips { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--sp-1); }
+.word-chip { display: flex; align-items: center; justify-content: space-between; gap: var(--sp-1); padding: var(--sp-1) var(--sp-1) var(--sp-1) var(--sp-2); border-radius: var(--radius); background: var(--board); }
+.word-chip-text { display: grid; min-width: 0; }
+.word-chip-target { font: 700 var(--fs-3)/1.3 var(--font-text); }
+.word-chip-native { font-size: var(--fs-1); color: var(--muted); }
+.say-row { display: flex; gap: var(--sp-1); }
+
+/* ===== Abschnitte ===== */
+.sections-card summary { display: flex; align-items: center; justify-content: space-between; gap: var(--sp-2); min-height: 48px; cursor: pointer; list-style: none; font: 400 var(--fs-4)/1.1 var(--font-display); }
+.sections-card summary::-webkit-details-marker { display: none; }
+.sections-card summary .icon { transition: transform var(--dur-2) var(--ease-out); }
+.sections-card[open] summary .icon { transform: rotate(180deg); }
+.section-list { list-style: none; margin: var(--sp-2) 0 0; padding: 0; display: grid; gap: var(--sp-1); }
+.section-row a { display: grid; grid-template-columns: 32px minmax(0, 1fr) auto; align-items: center; gap: var(--sp-2); min-height: 56px; padding: var(--sp-1) var(--sp-2) var(--sp-1) var(--sp-1); border-radius: var(--radius); color: var(--ink); font-weight: 400; text-decoration: none; }
+.section-row a:hover { background: var(--board); }
+.section-num { display: grid; place-items: center; width: 32px; height: 32px; border-radius: var(--radius); background: var(--board); font: 400 var(--fs-2)/1 var(--font-display); }
+.section-num .icon { width: 20px; height: 20px; }
+.section-row.is-passed .section-num { background: var(--field-bright); color: var(--on-field); }
+.section-row.is-current a { background: var(--field-soft); }
+.section-row.is-current .section-num { background: var(--gold); color: var(--on-accent); }
+.section-main { display: grid; gap: var(--sp-half); min-width: 0; }
+.section-title { font-weight: 700; }
+.section-main .meter { height: 8px; }
+.section-count { font: 400 var(--fs-2)/1 var(--font-display); color: var(--muted); font-variant-numeric: tabular-nums; }
+
+/* ===== Ereigniskarte als Dialog (§8.3, §8.4) ===== */
+.event-dialog { width: min(480px, calc(100vw - 2 * var(--gutter))); max-height: calc(100dvh - 2 * var(--gutter)); padding: 0; border: 0; border-radius: var(--radius); background: var(--surface); color: var(--ink); box-shadow: var(--float); }
+.event-dialog::backdrop { background: color-mix(in srgb, var(--table) 60%, transparent); }
+.event-dialog[open] { animation: dialog-in var(--dur-2) var(--ease-out); }
+.event-head { display: flex; align-items: center; gap: var(--sp-2); padding: var(--sp-2) var(--sp-3); background: var(--event-soft); }
+.event-badge { display: grid; place-items: center; width: 48px; height: 48px; flex: none; border-radius: var(--radius); background: var(--event); color: var(--on-accent); }
+.event-head h2 { font-size: var(--fs-4); }
+.event-kind { font-size: var(--fs-1); font-weight: 700; color: var(--event-text); }
+.event-body { padding: var(--sp-3); display: grid; gap: var(--sp-2); max-width: 65ch; }
+.event-body ul { margin: 0; padding-left: var(--sp-3); display: grid; gap: var(--sp-1); }
+.event-foot { padding: 0 var(--sp-3) var(--sp-3); }
+
+.footer { max-width: calc(var(--content-max) + 2 * var(--gutter)); margin: 0 auto; padding: 0 var(--gutter) var(--sp-6); display: flex; flex-wrap: wrap; gap: var(--sp-1) var(--sp-2); font-size: var(--fs-1); color: var(--muted); }
+
+/* ===== Bewegung ===== */
+@keyframes dialog-in { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; } }
+.reduce-motion *, .reduce-motion *::before, .reduce-motion *::after { animation: none !important; transition: none !important; }
+</style>
+</head>
+<body>
+<details class="proto-bar">
+  <summary>Prototyp Startseite · Lernstand ist ein Beispiel · Steuerung</summary>
+  <button type="button" class="btn btn-small" id="proto-advance">Lektion als geschafft markieren</button>
+  <button type="button" class="btn btn-small btn-ghost" id="proto-reset">Zurücksetzen</button>
+  <label>Farbmodus <select id="proto-theme"><option value="">System</option><option value="light">Hell</option><option value="dark">Dunkel</option></select></label>
+  <label><input type="checkbox" id="proto-motion"> Animationen reduzieren</label>
+</details>
+
+<a class="skip-link" href="#main">Zum Inhalt springen</a>
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="https://aprael.github.io/wortweg/#/"><img src="../assets/logo.svg" alt="" width="32" height="32">Wortweg</a>
+    <nav class="nav-main" aria-label="Hauptnavigation" id="nav"></nav>
+  </div>
+</header>
+
+<main id="main" class="page" tabindex="-1">
+  <div class="home-grid">
+    <div class="home-main">
+      <section class="home-hero" aria-labelledby="home-h">
+        <h1 id="home-h">Hallo Du!</h1>
+        <p class="home-sub" id="home-sub"></p>
+        <a class="btn btn-primary btn-lg btn-block" id="cta" href="#">Weiterlernen<span class="btn-sub" id="cta-sub"></span></a>
+      </section>
+      <section class="board-card" aria-labelledby="stage-h">
+        <div class="stage-head">
+          <h2 id="stage-h"></h2>
+          <p class="stage-meta"><span id="stage-progress"></span><span id="stage-course"></span></p>
+          <div class="meter" role="progressbar" aria-labelledby="stage-h" id="stage-meter"><span></span></div>
+        </div>
+        <div class="board" id="board"></div>
+      </section>
+    </div>
+
+    <div class="home-side">
+      <section class="home-values" aria-labelledby="tokens-h">
+        <h2 id="tokens-h" class="sr-only">Deine Werte</h2>
+        <ul class="tokens" id="tokens"></ul>
+        <a class="btn btn-field btn-block" href="https://aprael.github.io/wortweg/#/review" id="review-btn"></a>
+      </section>
+      <section class="card next-card" aria-labelledby="next-h">
+        <h2 id="next-h">Als Nächstes</h2>
+        <p class="next-meta" id="next-meta"></p>
+        <ul class="word-chips" id="chips" aria-label="Wörter dieser Lektion"></ul>
+        <button type="button" class="btn" id="next-rule" aria-haspopup="dialog"></button>
+      </section>
+    </div>
+  </div>
+
+  <details class="card sections-card" style="margin-top: var(--sp-4)">
+    <summary>Alle Abschnitte<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.4 8.6 12 14.2l5.6-5.6L19 10l-7 7-7-7z"/></svg></summary>
+    <ol class="section-list" id="sections"></ol>
+  </details>
+</main>
+
+<footer class="footer"><span>Wortweg · freie Lern-App</span><a href="https://aprael.github.io/wortweg/#/about">Über, Datenschutz &amp; Lizenzen</a></footer>
+
+<dialog class="event-dialog" id="rule-dialog" aria-labelledby="rule-title">
+  <div class="event-head"><span class="event-badge" id="rule-icon"></span><div><p class="event-kind">Regel</p><h2 id="rule-title"></h2></div></div>
+  <div class="event-body" id="rule-body"></div>
+  <form method="dialog" class="event-foot"><button class="btn btn-primary btn-block" value="ok">Verstanden</button></form>
+</dialog>
+
+<script type="module">
+// Echte Inhalte aus data/courses/de-es-wortschatz.json (Abschnitt 9); der Lernstand ist ein Beispiel.
+const LEVELS = [["Erste Schritte", 22], ["Kennenlernen", 28], ["Alltag", 32], ["Schule und Arbeit", 24], ["Unterwegs", 24], ["Freizeit und Gesundheit", 27], ["Natur und Gefühle", 20], ["Regeln: Präpositionen und Bindewörter", 9], ["Regeln: Vergangenheit", 14], ["Regeln: Zukunft und Möglichkeitsform", 9], ["Wortschatz erweitern 1", 100], ["Wortschatz erweitern 2", 102], ["Wortschatz erweitern 3", 103], ["Wortschatz erweitern 4", 100], ["Wortschatz erweitern 5", 101], ["Wortschatz erweitern 6", 34]];
+const UNITS = [{"id": "es-w-049", "title": "Perfekt: he hecho", "desc": "he, has, ha, hemos, han, hecho, dicho, visto, puesto, escrito, vuelto, abierto, hablado, comido, ido, estado", "intro": "Das Perfekt (pretérito perfecto) bildet man mit haber + Partizip: he comido = ich habe gegessen.\n• haber: he, has, ha, hemos, habéis, han\n• Partizip regelmäßig: -ar → -ado (hablado), -er/-ir → -ido (comido, vivido)\n• Unregelmäßig: hecho (hacer), dicho (decir), visto (ver), puesto (poner), escrito (escribir), vuelto (volver), abierto (abrir), roto (romper)\n• Man benutzt es für Vergangenes, das noch mit heute zu tun hat: Hoy he trabajado mucho.", "words": [["he", "ich habe (+ Partizip)"], ["has", "du hast (+ Partizip)"], ["ha", "er/sie hat (+ Partizip)"], ["hemos", "wir haben (+ Partizip)"], ["han", "sie haben (+ Partizip)"], ["hecho", "gemacht"], ["dicho", "gesagt"], ["visto", "gesehen"], ["puesto", "gestellt, gelegt"], ["escrito", "geschrieben"], ["vuelto", "zurückgekommen"], ["abierto", "geöffnet"], ["hablado", "gesprochen"], ["comido", "gegessen"], ["ido", "gegangen"], ["estado", "gewesen"]]}, {"id": "es-w-050", "title": "Indefinido: regelmäßige Verben", "desc": "hablé, habló, comí, comió, viví, vivió, llegué, llegó, compré, trabajé, salí, conocí", "intro": "Das Indefinido erzählt abgeschlossene Ereignisse: Ayer comí paella. = Gestern aß ich Paella.\n• -ar: hablé, hablaste, habló, hablamos, hablasteis, hablaron\n• -er/-ir: comí, comiste, comió, comimos, comisteis, comieron\n• Achtung Rechtschreibung: llegar → llegué, buscar → busqué, empezar → empecé\n• Typische Signalwörter: ayer, anoche, el año pasado, una vez.", "words": [["hablé", "ich sprach"], ["habló", "er/sie sprach"], ["comí", "ich aß"], ["comió", "er/sie aß"], ["viví", "ich lebte"], ["vivió", "er/sie lebte"], ["llegué", "ich kam an"], ["llegó", "er/sie kam an"], ["compré", "ich kaufte"], ["trabajé", "ich arbeitete"], ["salí", "ich ging hinaus"], ["conocí", "ich lernte kennen"]]}, {"id": "es-w-051", "title": "Indefinido: unregelmäßige Verben", "desc": "fui, fue, estuve, tuve, hice, hizo, dije, dijo, pude, quise, vine, vi, vio, di, dio, supe", "intro": "Die häufigsten Verben sind im Indefinido unregelmäßig – und haben keine Akzente.\n• ser und ir sind gleich: fui, fuiste, fue, fuimos, fueron (fui a casa = ich ging nach Hause; fue fácil = es war leicht)\n• Stamm ändert sich: tener → tuv- (tuve), estar → estuv- (estuve), hacer → hic- (hice, hizo), decir → dij- (dije), poder → pud- (pude), querer → quis- (quise), venir → vin- (vine), poner → pus- (puse), saber → sup- (supe)\n• ver und dar: vi, vio · di, dio.", "words": [["fui", "ich war / ich ging"], ["fue", "er/sie war / ging"], ["estuve", "ich war (Ort, Zustand)"], ["tuve", "ich hatte"], ["hice", "ich machte"], ["hizo", "er/sie machte"], ["dije", "ich sagte"], ["dijo", "er/sie sagte"], ["pude", "ich konnte"], ["quise", "ich wollte"], ["vine", "ich kam"], ["vi", "ich sah"], ["vio", "er/sie sah"], ["di", "ich gab"], ["dio", "er/sie gab"], ["supe", "ich erfuhr"]]}, {"id": "es-w-052", "title": "Imperfecto: so war es früher", "desc": "era, estaba, tenía, había, iba, hacía, quería, podía, sabía, vivía, trabajaba, hablaba", "intro": "Das Imperfecto beschreibt, wie etwas war oder was man immer wieder tat: De niño vivía en Madrid.\n• -ar: hablaba, hablabas, hablaba … · -er/-ir: comía, comías, comía …\n• Nur drei Ausnahmen: ser → era, ir → iba, ver → veía\n• Indefinido = was geschah (eine Handlung), Imperfecto = wie es war (Hintergrund, Gewohnheit): Estaba en casa cuando sonó el teléfono.", "words": [["era", "ich war / er war (früher)"], ["estaba", "ich war (gerade)"], ["tenía", "ich hatte (früher)"], ["había", "es gab"], ["iba", "ich ging (gewöhnlich)"], ["hacía", "ich machte (gewöhnlich)"], ["quería", "ich wollte"], ["podía", "ich konnte (damals)"], ["sabía", "ich wusste"], ["vivía", "ich wohnte"], ["trabajaba", "ich arbeitete (damals)"], ["hablaba", "ich sprach (damals)"]]}];
+const LIVE = 'https://aprael.github.io/wortweg/';
+const LEVEL_INDEX = 8; // Abschnitt 9
+const DONE_BEFORE = LEVELS.slice(0, LEVEL_INDEX).reduce((a, l) => a + l[1], 0);
+const START = { done: 5, xpToday: 14, goal: 20, xpTotal: 3240, streak: 6, words: 712, due: 23 };
+let st = { ...START };
+
+const ICONS = {
+  pawn: '<path d="M12 2.6a3.7 3.7 0 1 1 0 7.4 3.7 3.7 0 0 1 0-7.4zM8.4 11h7.2c0 1.1-.5 2.1-1.4 2.7l1.5 5.6H8.3l1.5-5.6A3.3 3.3 0 0 1 8.4 11zM6.5 20h11v2h-11z"/>',
+  crown: '<path d="M3 8.5 7.5 12 12 5l4.5 7L21 8.5 19.3 18H4.7zM4.7 19.5h14.6V21H4.7z"/>',
+  chest: '<path d="M4 9.5C4 6.5 6.5 4 9.5 4h5C17.5 4 20 6.5 20 9.5V10H4zM3.5 11.5h17V19a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 19zm7 1.5v3.5h3V13z"/>',
+  lock: '<path d="M7 10V8a5 5 0 0 1 10 0v2h.5A1.5 1.5 0 0 1 19 11.5v8a1.5 1.5 0 0 1-1.5 1.5h-11A1.5 1.5 0 0 1 5 19.5v-8A1.5 1.5 0 0 1 6.5 10zm2.2 0h5.6V8a2.8 2.8 0 0 0-5.6 0z"/>',
+  bulb: '<path d="M12 2.5a6.5 6.5 0 0 0-3.8 11.8c.5.4.8.9.8 1.5V17h6v-1.2c0-.6.3-1.1.8-1.5A6.5 6.5 0 0 0 12 2.5zM9 18.5h6V20a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 20z"/>',
+  flame: '<path d="M12.6 2.5c.6 3-1 4.6-2.5 6.1-1.3 1.3-2.6 2.6-2.6 4.9 0 .8.2 1.5.5 2.1-1.7-.8-2.9-2.4-3-4.4-1.2 1.6-1.7 3.2-1.7 4.6 0 3.9 3.8 6.7 8.7 6.7s8.5-2.9 8.5-7.3c0-5.5-4.5-8.4-7.9-12.7zm-.3 18.4c-2 0-3.4-1.3-3.4-3 0-1.9 1.6-2.9 2.6-4.4.6 1.8 3.9 2.6 3.9 5.1 0 1.3-1.3 2.3-3.1 2.3z"/>',
+  star: '<path d="m12 2.8 2.8 5.9 6.4.8-4.7 4.4 1.2 6.4L12 17.2l-5.7 3.1 1.2-6.4-4.7-4.4 6.4-.8z"/>',
+  book: '<path d="M4 4.5A1.5 1.5 0 0 1 5.5 3H11v16H5.5A1.5 1.5 0 0 0 4 20.5zM13 3h5.5A1.5 1.5 0 0 1 20 4.5v16a1.5 1.5 0 0 0-1.5-1.5H13zM5.5 20H11v1H5.5z"/>',
+  speaker: '<path d="M3.5 9.2h3.6L12 5v14l-4.9-4.2H3.5zM15.3 8.6a4.6 4.6 0 0 1 0 6.8l-1.3-1.4a2.7 2.7 0 0 0 0-4zm2.6-2.8a8.4 8.4 0 0 1 0 12.4l-1.3-1.4a6.5 6.5 0 0 0 0-9.6z"/>',
+  slow: '<path d="M4 6h3v12H4zM10 5.5v13l9-6.5z"/>',
+  home: '<path d="M12 3.2 2.5 11h2.8v9.3h5.2v-6h3v6h5.2V11h2.8z"/>',
+  flag: '<path d="M5 3h2v18H5zM8.5 4h10.5l-2.6 4.5L19 13H8.5z"/>',
+  repeat: '<path d="M17.7 6.3A8 8 0 0 0 4.1 11h2.1a6 6 0 0 1 10-3.3L13.5 10.5H20V4zM6.3 17.7A8 8 0 0 0 19.9 13h-2.1a6 6 0 0 1-10 3.3l2.7-2.8H4V20z"/>',
+  chart: '<path d="M4 19h16v2H4zM5 17V10h3v7zm5.5 0V4h3v13zm5.5 0v-5h3v5z"/>',
+  sliders: '<path d="M4 6.5h9.3a2.7 2.7 0 0 1 5.2 0H20v2h-1.5a2.7 2.7 0 0 1-5.2 0H4zm0 9h1.5a2.7 2.7 0 0 1 5.2 0H20v2h-9.3a2.7 2.7 0 0 1-5.2 0H4z"/>',
+};
+const icon = (n, cls = '') => `<svg class="icon${cls ? ' ' + cls : ''}" viewBox="0 0 24 24" aria-hidden="true" focusable="false">${ICONS[n]}</svg>`;
+const esc = (v) => String(v ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]);
+const $ = (id) => document.getElementById(id);
+const nf = new Intl.NumberFormat('de-DE');
+
+// Lektionen des Abschnitts in Reihenfolge
+const LESSONS = UNITS.flatMap((u, ui) => Array.from({ length: Math.ceil(u.words.length / 4) }, (_, i) => ({ ui, i, id: `${u.id}:${i}` })));
+const lessonHref = (l) => `${LIVE}#/lesson/${encodeURIComponent(l.id)}`;
+
+function playerLevel(xp) {
+  let level = 1; let floor = 0; let need = 60;
+  while (xp >= floor + need) { floor += need; level += 1; need = 40 + 20 * level; }
+  return { level, into: xp - floor, need };
+}
+
+function introHtml(text) {
+  const out = []; let list = null;
+  for (const raw of String(text ?? '').split('\n')) {
+    const line = raw.trim(); const b = /^[•\-–]\s*/.exec(line);
+    if (b && line.length > b[0].length) { (list ??= []).push(`<li>${esc(line.slice(b[0].length))}</li>`); continue; }
+    if (list) { out.push(`<ul>${list.join('')}</ul>`); list = null; }
+    if (line) out.push(`<p>${esc(line)}</p>`);
+  }
+  if (list) out.push(`<ul>${list.join('')}</ul>`);
+  return out.join('');
+}
+
+// ---------- Brett ----------
+function fieldHtml(l, idx) {
+  const u = UNITS[l.ui];
+  const done = idx < st.done; const current = idx === st.done;
+  const label = `${u.title}, Lektion ${l.i + 1}: ${done ? 'geschafft' : current ? 'als Nächstes' : 'gesperrt'}`;
+  if (done) return `<li><a class="board-field is-done" href="${lessonHref(l)}" data-lesson="${l.id}" aria-label="${esc(label)}">${icon('crown')}</a></li>`;
+  if (current) return `<li><a class="board-field is-current" href="${lessonHref(l)}" data-lesson="${l.id}" aria-label="${esc(label)}">${icon('pawn', 'figure')}</a></li>`;
+  return `<li><span class="board-field is-locked" role="img" data-lesson="${l.id}" aria-label="${esc(label)}">${l.i + 1}</span></li>`;
+}
+
+function unitHtml(ui, { first, last }) {
+  const u = UNITS[ui];
+  const lessons = LESSONS.map((l, idx) => ({ l, idx })).filter((x) => x.l.ui === ui);
+  const reachedIdx = lessons.filter((x) => x.idx <= st.done).map((x) => x.idx);
+  const reached = reachedIdx.length > 0;
+  const complete = lessons.every((x) => x.idx < st.done);
+  const fields = [];
+  if (u.intro) fields.push(`<li><button type="button" class="board-field is-rule" data-rule="${ui}" aria-haspopup="dialog" aria-label="Regel: ${esc(u.title)}">${icon('bulb')}</button></li>`);
+  for (const x of lessons) fields.push(fieldHtml(x.l, x.idx));
+  const reach = reached ? (u.intro ? 1 : 0) + (Math.max(...reachedIdx) - lessons[0].idx) : -1;
+  const cls = ['board-unit', ui % 2 ? 'is-rev' : '', reached ? 'is-reached' : '', complete ? 'is-complete' : '', first ? 'is-first' : '', last ? 'is-last' : ''].filter(Boolean).join(' ');
+  return `<section class="${cls}" aria-labelledby="bu-${u.id}">
+    <div class="board-unit-head"><h3 id="bu-${u.id}">${esc(u.title)}</h3><p class="board-words" lang="es">${esc(u.desc)}</p></div>
+    <ol class="board-row" style="--reach:${reach}">${fields.join('')}</ol>
+  </section>`;
+}
+
+function checkpointHtml(rev) {
+  const all = st.done >= LESSONS.length;
+  const level = LEVELS[LEVEL_INDEX][0];
+  const field = all
+    ? `<li><a class="board-field is-checkpoint is-current" href="${LIVE}#/checkpoint/es-s09" aria-label="Checkpoint ${esc(level)}: bereit">${icon('pawn', 'figure')}${icon('chest')}</a></li>`
+    : `<li><span class="board-field is-checkpoint is-locked" role="img" aria-label="Checkpoint ${esc(level)}: gesperrt, erst alle Lektionen schaffen">${icon('lock')}</span></li>`;
+  return `<section class="board-unit is-last${rev ? ' is-rev' : ''}${all ? ' is-reached' : ''}" aria-labelledby="bu-cp">
+    <div class="board-unit-head"><h3 id="bu-cp">Checkpoint</h3><p class="board-words">Truhe am Ende des Abschnitts</p></div>
+    <ol class="board-row" style="--reach:0">${field}</ol>
+  </section>`;
+}
+
+function renderBoard() {
+  const cur = LESSONS[st.done];
+  const cu = cur ? cur.ui : UNITS.length - 1;
+  // Ausschnitt um die Figur: vorige, aktuelle und nächste Einheit (§7)
+  const from = Math.max(0, cu - 1);
+  const to = Math.min(UNITS.length - 1, cu + 1);
+  const parts = [];
+  for (let ui = from; ui <= to; ui++) parts.push(unitHtml(ui, { first: ui === 0, last: false }));
+  if (to === UNITS.length - 1) parts.push(checkpointHtml(UNITS.length % 2 === 1));
+  $('board').innerHTML = `${parts.join('')}<p class="board-hint"><a href="${LIVE}#/learn">Ganzes Brett ansehen</a><a href="${LIVE}#/courses">Kurs wechseln</a></p>`;
+}
+
+// ---------- übrige Bereiche ----------
+function renderAll(prevCurrent) {
+  const total = LESSONS.length;
+  const done = Math.min(st.done, total);
+  const lvl = playerLevel(st.xpTotal);
+  const cur = LESSONS[st.done];
+  $('home-sub').textContent = `Spanisch – Wortschatz · Abschnitt ${LEVEL_INDEX + 1} von ${LEVELS.length}`;
+  $('stage-h').textContent = LEVELS[LEVEL_INDEX][0];
+  $('stage-progress').textContent = `${done} von ${total} Lektionen`;
+  $('stage-course').textContent = `Kurs: ${nf.format(DONE_BEFORE + done)} von ${nf.format(LEVELS.reduce((a, l) => a + l[1], 0))}`;
+  const m = $('stage-meter');
+  m.setAttribute('aria-valuemin', '0'); m.setAttribute('aria-valuemax', String(total)); m.setAttribute('aria-valuenow', String(done));
+  m.setAttribute('aria-valuetext', `${done} von ${total} Lektionen`);
+  m.firstElementChild.style.width = `${Math.round((done / total) * 100)}%`;
+
+  const cta = $('cta');
+  if (cur) {
+    cta.href = lessonHref(cur);
+    cta.firstChild.textContent = 'Weiterlernen';
+    $('cta-sub').textContent = `${UNITS[cur.ui].title} · Lektion ${cur.i + 1}`;
+  } else {
+    cta.href = `${LIVE}#/checkpoint/es-s09`;
+    cta.firstChild.textContent = 'Checkpoint machen';
+    $('cta-sub').textContent = LEVELS[LEVEL_INDEX][0];
+  }
+  $('review-btn').innerHTML = `${icon('repeat')}${st.due} Wiederholungen fällig`;
+
+  const pct = Math.min(100, Math.round((st.xpToday / st.goal) * 100));
+  $('tokens').innerHTML = [
+    `<li class="token"><span class="stone stone-flame">${icon('flame')}${st.streak}</span>Tage Serie</li>`,
+    `<li class="token"><span class="stone stone-ring" style="--p:${pct}"><span>${st.xpToday}</span></span>von ${st.goal} XP heute</li>`,
+    `<li class="token"><span class="stone stone-star">${icon('star')}${lvl.level}</span>Stufe <small>(noch ${lvl.need - lvl.into} XP)</small></li>`,
+    `<li class="token"><span class="stone stone-book">${icon('book')}<span>${nf.format(st.words)}</span></span>Wörter</li>`,
+  ].join('');
+  // vierstellige Zahlen im Stein etwas kleiner, sonst laufen sie über
+  $('tokens').querySelectorAll('.stone-book span').forEach((s) => { if (s.textContent.length > 3) s.style.fontSize = 'var(--fs-3)'; });
+
+  if (cur) {
+    const u = UNITS[cur.ui];
+    $('next-meta').textContent = `${u.title} · Lektion ${cur.i + 1}`;
+    $('chips').innerHTML = u.words.slice(cur.i * 4, cur.i * 4 + 4).map(([t, n]) => `<li class="word-chip">
+      <span class="word-chip-text"><span class="word-chip-target" lang="es">${esc(t)}</span><span class="word-chip-native">${esc(n)}</span></span>
+      <span class="say-row"><button type="button" class="btn btn-field icon-btn say" data-say="${esc(t)}" aria-label="„${esc(t)}“ vorlesen">${icon('speaker')}</button></span>
+    </li>`).join('');
+    const rb = $('next-rule');
+    rb.hidden = !u.intro;
+    rb.dataset.rule = String(cur.ui);
+    rb.innerHTML = `${icon('bulb')}Regel ansehen`;
+  } else {
+    $('next-meta').textContent = 'Alle Lektionen geschafft – jetzt wartet der Checkpoint.';
+    $('chips').innerHTML = '';
+    $('next-rule').hidden = true;
+  }
+  if (!('speechSynthesis' in window)) document.querySelectorAll('.say').forEach((b) => b.remove());
+
+  $('sections').innerHTML = LEVELS.map(([title, n], li) => {
+    const passed = li < LEVEL_INDEX; const current = li === LEVEL_INDEX;
+    const d = passed ? n : current ? done : 0;
+    return `<li class="section-row${passed ? ' is-passed' : ''}${current ? ' is-current' : ''}"><a href="${LIVE}#/learn"${current ? ' aria-current="step"' : ''}>
+      <span class="section-num" aria-hidden="true">${passed ? icon('crown') : li + 1}</span>
+      <span class="section-main"><span class="section-title">${esc(title)}</span><span class="meter" aria-hidden="true"><span style="width:${Math.round((d / n) * 100)}%"></span></span></span>
+      <span class="section-count">${d}/${n}<span class="sr-only"> Lektionen</span></span></a></li>`;
+  }).join('');
+
+  renderBoard();
+  if (prevCurrent) hop(prevCurrent);
+}
+
+// ---------- Signatur: die Figur hüpft ins nächste Feld (Web Animations API) ----------
+const motionOk = () => !matchMedia('(prefers-reduced-motion: reduce)').matches && !document.documentElement.classList.contains('reduce-motion');
+function hop(prevId) {
+  const fig = $('board').querySelector('.is-current .figure');
+  const from = $('board').querySelector(`[data-lesson="${CSS.escape(prevId)}"]`);
+  if (!fig || !from || !motionOk()) return;
+  const play = () => {
+    const a = from.getBoundingClientRect(); const b = fig.getBoundingClientRect();
+    const dx = a.left + a.width / 2 - (b.left + b.width / 2); const dy = a.top + a.height / 2 - (b.top + b.height / 2);
+    fig.animate([
+      { transform: `translate(${dx}px, ${dy}px)` },
+      { transform: `translate(${dx / 2}px, ${dy / 2 - 28}px) scale(1.1)`, offset: 0.5 },
+      { transform: 'none' },
+    ], { duration: 480, easing: 'cubic-bezier(.34, 1.56, .64, 1)' });
+  };
+  // Erst hüpfen, wenn das Brett zu sehen ist – sonst verpasst man die Bewegung.
+  const io = new IntersectionObserver((entries) => {
+    if (entries.some((e) => e.isIntersecting)) { io.disconnect(); play(); }
+  }, { threshold: 0.5 });
+  io.observe(fig.closest('.board-unit'));
+}
+
+// ---------- Nav ----------
+$('nav').innerHTML = [
+  ['#/', 'home', 'Start', true], ['#/learn', 'flag', 'Lernpfad'], ['#/review', 'repeat', 'Wiederholen'], ['#/stats', 'chart', 'Statistik'], ['#/settings', 'sliders', 'Optionen'],
+].map(([h, ic, label, cur]) => `<a class="nav-link" href="${LIVE}${h}"${cur ? ' aria-current="page"' : ''}>${icon(ic)}<span>${label}</span>${h === '#/review' ? `<span class="badge"><span class="sr-only">, </span>${st.due}<span class="sr-only"> fällig</span></span>` : ''}</a>`).join('');
+
+// ---------- Interaktionen ----------
+function speak(text, rate = 1) {
+  speechSynthesis.cancel();
+  const u = new SpeechSynthesisUtterance(text);
+  u.lang = 'es-ES'; u.rate = rate;
+  const v = speechSynthesis.getVoices().find((x) => x.lang?.toLowerCase().startsWith('es'));
+  if (v) u.voice = v;
+  speechSynthesis.speak(u);
+}
+document.addEventListener('click', (e) => {
+  const say = e.target.closest('.say');
+  if (say) { speak(say.dataset.say); return; }
+  const rule = e.target.closest('[data-rule]');
+  if (rule) {
+    const u = UNITS[Number(rule.dataset.rule)];
+    $('rule-title').textContent = u.title;
+    $('rule-icon').innerHTML = icon('bulb');
+    $('rule-body').innerHTML = introHtml(u.intro);
+    $('rule-dialog').showModal();
+  }
+});
+$('proto-advance').addEventListener('click', () => {
+  if (st.done >= LESSONS.length) return;
+  const prev = LESSONS[st.done].id;
+  st = { ...st, done: st.done + 1, xpToday: st.xpToday + 12, xpTotal: st.xpTotal + 12, words: st.words + 4 };
+  $('proto-advance').disabled = st.done >= LESSONS.length;
+  renderAll(prev);
+});
+$('proto-reset').addEventListener('click', () => { st = { ...START }; $('proto-advance').disabled = false; renderAll(); });
+$('proto-theme').addEventListener('change', (e) => {
+  if (e.target.value) document.documentElement.dataset.theme = e.target.value;
+  else delete document.documentElement.dataset.theme;
+});
+$('proto-motion').addEventListener('change', (e) => document.documentElement.classList.toggle('reduce-motion', e.target.checked));
+
+renderAll();
+</script>
+</body>
+</html>
