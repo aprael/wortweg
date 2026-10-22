@@ -1,0 +1,898 @@
+# Eigene Beispielsätze (Wortweg) für Wörter, zu denen Tatoeba keinen passenden geprüften Satz hat.
+# Spalten: Wort · Chinesisch · Deutsch · Pinyin mit Tonziffern (nur bei mehrdeutiger Lesung).
+# Geschrieben am 22.10.2026 von Claude, von einer zweiten Claude-Instanz gegengelesen, automatisch geprüft (Kursbau);
+# nicht muttersprachlich geprüft. Nur Wörter bis zum Ende der nächsten Einheit (anfangs die ersten 120 Wörter).
+就	你想去，我就跟你去。	Wenn du hingehen willst, komme ich mit.
+对不起	对不起，我不认识他。	Tut mir leid, ich kenne ihn nicht.
+没什么	没什么，是我妈妈的电话。	Nichts Besonderes, nur ein Anruf von meiner Mama.
+再见	奶奶，再见！我们再来看你！	Tschüss, Oma! Wir kommen dich wieder besuchen!
+请问	请问，这是你的电话吗？	Entschuldigung, ist das Ihr Telefon?
+没事儿	没事儿，我再打电话。	Kein Problem, ich rufe einfach noch mal an.
+不客气	不客气，我们是朋友！	Keine Ursache, wir sind doch Freunde!
+请进	请进，我给你介绍我的家人。	Komm rein, ich stelle dir meine Familie vor.
+请坐	请坐，我去叫我妈。	Setz dich bitte, ich hole meine Mama.
+四	我们四个都是好朋友。	Wir vier sind alle gute Freunde.
+五	我姐姐的女儿五岁。	Die Tochter meiner älteren Schwester ist fünf.
+二	我是第二个到的。	Ich bin als Zweiter angekommen.
+半	你要一个还是半个？	Möchtest du ein ganzes oder ein halbes?
+六	他们有六个孩子。	Sie haben sechs Kinder.
+十	十个太多，五个就好。	Zehn sind zu viele, fünf reichen.
+八	我爷爷八十八岁。	Mein Opa ist achtundachtzig.
+七	那个孩子七岁还是八岁？	Ist das Kind sieben oder acht?
+九	我奶奶九十多岁。	Meine Oma ist über neunzig.
+百	他有一百多个朋友。	Er hat über hundert Freunde.
+零	是零还是六？	Ist das eine Null oder eine Sechs?
+女	打电话的是个女的。	Angerufen hat eine Frau.
+先生	先生，你要去哪里？	Wohin möchten Sie, mein Herr?
+小姐	小姐，这是你的吗？	Junge Frau, gehört das Ihnen?
+女生	那个女生是你妹妹吗？	Ist das Mädchen da deine jüngere Schwester?
+老人	那个老人是你爷爷吗？	Ist der alte Mann da dein Opa?
+男生	这些男生都想认识你。	Diese Jungs wollen dich alle kennenlernen.
+奶奶	奶奶问你好！	Oma lässt dich grüßen!
+爷爷	你爷爷是做什么的？	Was macht dein Opa beruflich?
+是不是	你是不是不想去？	Du willst nicht hingehen, oder?
+电话	妈妈，你的电话！	Mama, Telefon für dich!
+听到	对不起，我没听到你说什么。	Tut mir leid, ich habe nicht gehört, was du gesagt hast.
+还	这个还你，谢谢！	Das gebe ich dir zurück, danke!	zhe4 ge4 huan2 ni3 xie4 xie5
+太	这个太大，有小的吗？	Das ist zu groß, gibt es das auch kleiner?
+国外	他的家人都在国外。	Seine ganze Familie lebt im Ausland.
+小朋友	小朋友，你几岁？	Na, Kleiner, wie alt bist du?
+女孩儿	那个女孩儿叫什么名字？	Wie heißt das Mädchen da?
+小孩儿	小孩儿都喜欢她。	Kleine Kinder mögen sie alle.
+网友	我在国外有很多网友。	Ich habe viele Internetfreunde im Ausland.
+男孩儿	他们家有两个男孩儿。	Sie haben zwei Jungen.
+先	你们先吃，我不饿。	Esst ihr schon mal, ich habe keinen Hunger.
+分	现在八点五分。	Es ist jetzt fünf Minuten nach acht.
+奶	我的孩子不喝奶。	Mein Kind trinkt keine Milch.
+饭店	我们去饭店吃晚饭。	Wir gehen zum Abendessen ins Restaurant.
+洗	我去洗水果。	Ich gehe das Obst waschen.
+地上	地上有水！	Da ist Wasser auf dem Boden!
+干净	你的房间真干净！	Dein Zimmer ist ja richtig sauber!
+去年	我们是去年认识的。	Wir haben uns letztes Jahr kennengelernt.
+上午	明天上午我不在家。	Morgen Vormittag bin ich nicht zu Hause.
+一会儿	我想睡一会儿。	Ich möchte eine Weile schlafen.
+下次	下次我请你吃饭！	Nächstes Mal lade ich dich zum Essen ein!
+桌子	这个桌子太大，房间太小。	Der Tisch ist zu groß für das Zimmer.
+楼下	我们楼下有个饭店。	Bei uns unten im Haus gibt es ein Restaurant.
+楼上	我奶奶住在楼上。	Meine Oma wohnt oben.
+电视机	我们家没有电视机。	Wir haben keinen Fernseher.
+包子	我早饭想吃包子。	Zum Frühstück möchte ich Baozi essen.
+面条儿	你想吃米饭还是面条儿？	Möchtest du Reis oder Nudeln?
+上次	上次的事，谢谢你！	Danke noch mal für letztes Mal!
+白天	白天我在学校，晚上在家。	Tagsüber bin ich in der Schule, abends zu Hause.
+日期	请在这里写日期。	Bitte schreib hier das Datum hin.
+半天	我看半天也看不明白。	Ich schaue es mir ewig an und verstehe es trotzdem nicht.
+半年	我姐姐要去国外半年。	Meine ältere Schwester geht für ein halbes Jahr ins Ausland.
+考试	明天有考试，我要早睡。	Morgen habe ich eine Prüfung, ich muss früh schlafen.
+考	明天考什么？	Was kommt morgen in der Prüfung dran?
+知识	我爷爷很有知识。	Mein Opa weiß sehr viel.
+学院	你是哪个学院的？	An welcher Fakultät bist du?
+页	请看第十页。	Bitte schaut auf Seite zehn.
+小学	我们是小学同学。	Wir waren in der Grundschule in derselben Klasse.
+放学	你几点放学？	Wann hast du Schulschluss?
+书包	这个书包是谁的？	Wem gehört diese Schultasche?
+小学生	我妹妹是小学生。	Meine kleine Schwester geht in die Grundschule.
+中学生	你是中学生还是大学生？	Bist du Mittelschüler oder Student?
+本子	你有本子吗？给我一个。	Hast du ein Heft? Gib mir eins.
+课本	我的课本在学校。	Mein Lehrbuch ist in der Schule.
+教学楼	这是我们学校的教学楼。	Das ist das Unterrichtsgebäude unserer Schule.
+课文	请读第二课的课文。	Lies bitte den Text von Lektion zwei.
+听写	今天有听写吗？	Haben wir heute ein Diktat?
+地方	你住在什么地方？	Wo wohnst du?
+站	我到站就给你打电话。	Sobald ich an der Haltestelle bin, rufe ich dich an.
+路	你认识路吗？	Kennst du den Weg?
+远	你家远不远？	Wohnst du weit weg?
+飞	明天我飞回家。	Morgen fliege ich nach Hause.
+票	票在我这儿。	Die Tickets habe ich.
+飞机	飞机几点到？	Wann landet das Flugzeug?
+进去	你进去，我马上就来。	Geh schon rein, ich komme gleich.
+汽车	路上汽车太多。	Auf der Straße sind zu viele Autos.
+地点	考试的时间和地点都在这儿。	Zeit und Ort der Prüfung stehen hier.
+门口	我在学校门口。	Ich bin am Schuleingang.
+地图	我手机上有地图。	Ich habe eine Karte auf dem Handy.
+商场	我妈妈想去商场。	Meine Mama will ins Einkaufszentrum.
+车站	我在车站，你在哪里？	Ich bin am Bahnhof, wo bist du?
+上车	快上车！	Schnell, steig ein!
+马路	过马路的时候要看车。	Beim Überqueren der Straße muss man auf die Autos achten.
+机票	机票在手机上。	Das Flugticket ist auf dem Handy.
+下车	我们下一站下车。	Wir steigen an der nächsten Haltestelle aus.
+路口	我在路口，你快来！	Ich bin an der Kreuzung, komm schnell!
+车票	车票在你那里吗？	Hast du die Fahrkarten?
+打车	太远，我们打车去。	Das ist zu weit, wir nehmen ein Taxi.
+中	我要中号的。	Ich hätte gern die mittlere Größe.
+前	我是三天前回来的。	Ich bin vor drei Tagen zurückgekommen.
+外	你的朋友在门外。	Dein Freund steht draußen vor der Tür.
+西	你从西门进来。	Komm durch das Westtor rein.
+左	到路口是左还是右？	An der Kreuzung links oder rechts?
+右	不是左，是右！	Nicht links, rechts!
+东	学校东门有个书店。	Am Osttor der Schule gibt es eine Buchhandlung.
+南	从南到北，坐火车要两天。	Von Süden nach Norden braucht man mit dem Zug zwei Tage.
+北	你在北门还是南门？	Bist du am Nordtor oder am Südtor?
+那边	我们去那边看看。	Lass uns mal dort drüben schauen.
+右边	洗手间在右边。	Die Toilette ist rechts.
+中间	坐中间的是我妈妈。	Die in der Mitte ist meine Mama.
+左边	我坐左边，你坐右边。	Ich sitze links, du rechts.
+里边	我在里边，你进来！	Ich bin drinnen, komm rein!
+外边	孩子在外边玩儿。	Die Kinder spielen draußen.
+后边	后边还有很多人。	Hinter uns stehen noch viele Leute.
+西边	你家在东边还是西边？	Wohnst du im Osten oder im Westen?
+上边	上边是我的房间。	Oben ist mein Zimmer.
+东边	东边那个楼是图书馆。	Das Gebäude auf der Ostseite ist die Bibliothek.
+南边	商场在学校南边。	Das Einkaufszentrum liegt südlich der Schule.
+北边	机场在北边，很远。	Der Flughafen liegt im Norden, ziemlich weit weg.
+下边	你看下边！	Schau mal nach unten!
+前边	车站就在前边。	Der Bahnhof ist gleich da vorne.
+球	球在床下边。	Der Ball liegt unter dem Bett.
+门票	门票贵吗？	Ist der Eintritt teuer?
+打球	我们下午去打球。	Wir gehen heute Nachmittag Ball spielen.
+好玩儿	这个地方真好玩儿！	Hier macht es echt Spaß!
+块	你要几块面包？	Wie viele Stück Brot möchtest du?
+元	门票五十元。	Der Eintritt kostet fünfzig Yuan.
+毛	这个三块五毛。	Das kostet drei Yuan und fünf Mao.
+工人	我爸爸是个工人。	Mein Vater ist Arbeiter.
+开会	我下午要开会。	Ich habe heute Nachmittag eine Besprechung.
+请假	明天我想请假。	Ich möchte mir morgen freinehmen.
+白	那个穿白衣服的是我姐姐。	Die in Weiß ist meine ältere Schwester.
+好看	这个包真好看！	Diese Tasche ist echt hübsch!
+地	这块地是我爷爷的。	Dieses Stück Land gehört meinem Opa.	zhe4 kuai4 di4 shi4 wo3 ye2 ye5 de5
+干	衣服干了吗？	Ist die Wäsche schon trocken?	yi1 fu5 gan1 le5 ma5
+树	我们在树下边休息。	Wir ruhen uns unter dem Baum aus.
+地	孩子高兴地笑了。	Das Kind lachte fröhlich.	hai2 zi5 gao1 xing4 de5 xiao4 le5
+出来	快出来，我在门口！	Komm schnell raus, ich stehe vor der Tür!
+放	你的书我放在桌子上了。	Dein Buch habe ich auf den Tisch gelegt.
+电	我的手机快没电了。	Mein Handy-Akku ist fast leer.
+记	我来记，你说。	Ich schreibe mit, du sprichst.
+有的	有的同学来了，有的没来。	Manche Mitschüler sind gekommen, manche nicht.
+动作	这个动作太难了！	Diese Bewegung ist zu schwer!
+记住	请记住我的电话。	Merk dir bitte meine Nummer.
+网上	这是我在网上买的。	Das habe ich online gekauft.
+有用	这本书对我很有用。	Dieses Buch ist für mich sehr nützlich.
+不大	我不大喜欢吃肉。	Ich esse nicht so gern Fleisch.
+一半	这个面包我们一人一半。	Das Brot teilen wir uns halbe-halbe.
+一块儿	我们一块儿去吧！	Lass uns zusammen hingehen!
+一下儿	等一下儿，我马上来！	Einen Moment, ich komme sofort!
+大人	这是大人的事。	Das ist Sache der Erwachsenen.
+主人	主人做了很多菜。	Der Gastgeber hat viele Gerichte gekocht.
+小时候	我小时候很喜欢唱歌。	Als Kind habe ich sehr gern gesungen.
+青年	现在的青年都很忙。	Junge Leute haben heute viel zu tun.
+坏人	他不是坏人，是我朋友。	Er ist kein schlechter Mensch, er ist mein Freund.
+中年	开车的是个中年男人。	Der Fahrer war ein Mann mittleren Alters.
+晚安	晚安，我去睡觉了。	Gute Nacht, ich gehe schlafen.
+太太	我太太是医生。	Meine Frau ist Ärztin.
+全家	星期天我们全家一起吃饭。	Sonntags isst die ganze Familie zusammen.
+一路顺风	一路顺风！到了给我打电话。	Gute Fahrt! Ruf mich an, wenn du angekommen bist.
+一路平安	爷爷奶奶，一路平安！	Opa, Oma, kommt gut an!
+夜	我一夜没睡。	Ich habe die ganze Nacht nicht geschlafen.
+后来	后来他去国外了。	Später ist er ins Ausland gegangen.
+一生	她一生都在学校工作。	Sie hat ihr ganzes Leben an der Schule gearbeitet.
+早就	我早就到了，你在哪儿？	Ich bin schon längst da, wo bist du?
+不久	我们刚认识不久。	Wir kennen uns erst seit Kurzem.
+平时	我平时七点起床。	Normalerweise stehe ich um sieben auf.
+早晨	早晨我喜欢喝一杯茶。	Am frühen Morgen trinke ich gern eine Tasse Tee.
+周年	明天是我们认识十周年。	Morgen kennen wir uns seit genau zehn Jahren.
+节日	春节是最重要的节日。	Das Frühlingsfest ist das wichtigste Fest.
+今后	今后我要认真学习。	Von nun an will ich fleißig lernen.
+忽然	忽然下雨了。	Plötzlich fing es an zu regnen.
+老是	他老是忘记我的生日。	Er vergisst ständig meinen Geburtstag.
+夜里	这里夜里很冷。	Hier ist es nachts sehr kalt.
+过年	过年你回家吗？	Fährst du über Neujahr nach Hause?
+全年	这里全年都很热。	Hier ist es das ganze Jahr über heiß.
+那会儿	那会儿我才五岁。	Damals war ich erst fünf.
+前年	前年我在国外工作。	Vorletztes Jahr habe ich im Ausland gearbeitet.
+春节	春节快到了！	Bald ist Frühlingsfest!
+不一会儿	不一会儿他就来了。	Kurz darauf kam er.
+味道	这个菜味道很好。	Dieses Gericht schmeckt sehr gut.
+瓶子	瓶子里还有水吗？	Ist noch Wasser in der Flasche?
+菜单	我能看看菜单吗？	Kann ich mal die Speisekarte sehen?
+快餐	我不喜欢吃快餐。	Ich esse nicht gern Fastfood.
+干杯	来，大家一起干杯！	Kommt, lasst uns alle zusammen anstoßen!
+方便面	别老是吃方便面！	Iss nicht ständig Instantnudeln!
+饭馆	这家饭馆的饺子很好吃。	Die Jiaozi in diesem Lokal sind sehr lecker.
+西餐	你喜欢中餐还是西餐？	Magst du lieber chinesisches oder westliches Essen?
+墙	墙上的灯坏了。	Die Lampe an der Wand ist kaputt.
+大门	学校大门几点关？	Wann wird das Schultor geschlossen?
+计算机	我哥哥在大学学计算机。	Mein älterer Bruder studiert Informatik.
+出租	这个房子出租吗？	Ist dieses Haus zu vermieten?
+院子	我们家的院子很大。	Unser Hof ist sehr groß.
+住房	这里的住房很贵。	Wohnungen sind hier sehr teuer.
+关机	上课请关机。	Bitte schaltet im Unterricht eure Handys aus.
+洗衣机	我们家的洗衣机坏了。	Unsere Waschmaschine ist kaputt.
+开机	电脑开机很慢。	Der Computer fährt sehr langsam hoch.
+级	我今年考三级。	Dieses Jahr mache ich die Prüfung für Stufe drei.
+科	你哪科最好？	In welchem Fach bist du am besten?
+背	明天要背课文。	Morgen müssen wir den Text auswendig können.	ming2 tian1 yao4 bei4 ke4 wen2
+高中	我弟弟今年上高中。	Mein jüngerer Bruder kommt dieses Jahr in die Oberschule.
+练	这个字你要多练。	Dieses Zeichen musst du mehr üben.
+重复	请再重复一下儿。	Bitte wiederhol das noch einmal.
+题	这个题我不会。	Diese Aufgabe kann ich nicht.
+懂得	他不懂得怎么跟人说话。	Er weiß nicht, wie man mit Leuten redet.
+练习	今天的练习太多了。	Heute haben wir zu viele Übungen.
+校长	我们的校长很年轻。	Unser Schulleiter ist sehr jung.
+笔记本	我的笔记本在书包里。	Mein Notizbuch ist in der Schultasche.
+校园	春天的校园很好看。	Im Frühling ist der Campus sehr schön.
+教学	我妈妈在大学做教学工作。	Meine Mutter unterrichtet an einer Universität.
+报名	你报名了吗？	Hast du dich schon angemeldet?
+教室	我们的教室在三楼。	Unser Klassenzimmer ist im dritten Stock.
+学期	这个学期课很多。	Dieses Semester haben wir viele Kurse.
+难题	这个难题谁会做？	Wer kann diese schwierige Aufgabe lösen?
+分数	考试分数出来了。	Die Prüfungsergebnisse sind da.
+复习	我在复习，明天考试。	Ich lerne gerade, morgen ist die Prüfung.
+课堂	课堂上别玩儿手机。	Spiel im Unterricht nicht mit dem Handy.
+年级	你上几年级？	In welche Klasse gehst du?
+班长	他是我们的班长。	Er ist unser Klassensprecher.
+词语	这些词语我都不懂。	Diese Ausdrücke verstehe ich alle nicht.
+句子	请用这个词写一个句子。	Bilde bitte einen Satz mit diesem Wort.
+作文	我的作文写好了。	Mein Aufsatz ist fertig.
+黑板	老师在黑板上写字。	Die Lehrerin schreibt an die Tafel.
+中级	我在上中级班。	Ich bin im Mittelstufenkurs.
+留学生	我们学校有很多留学生。	An unserer Schule gibt es viele Auslandsstudierende.
+听讲	上课要认真听讲。	Im Unterricht muss man gut zuhören.
+考生	考生们都在教室里等着。	Die Prüflinge warten alle im Klassenzimmer.
+读音	我不知道这个字的读音。	Ich weiß nicht, wie man dieses Zeichen ausspricht.
+卡	这里能用卡吗？	Kann man hier mit Karte zahlen?
+司机	司机说路上车很多。	Der Fahrer sagt, es ist viel Verkehr.
+经理	经理今天不在办公室。	Der Manager ist heute nicht im Büro.
+收入	她的收入比我高。	Ihr Einkommen ist höher als meins.
+同事	我和同事一起吃午饭。	Ich esse mit meinen Kollegen zu Mittag.
+信用卡	我很少用信用卡。	Ich zahle selten mit Kreditkarte.
+打工	放假的时候我去打工。	In den Ferien gehe ich jobben.
+商人	他是商人，经常去国外。	Er ist Geschäftsmann und oft im Ausland.
+实习	她在银行实习。	Sie macht ein Praktikum bei einer Bank.
+院长	医院的院长是我妈妈的同学。	Der Klinikdirektor ist ein ehemaliger Mitschüler meiner Mutter.
+画家	这个画家很有名。	Dieser Maler ist sehr berühmt.
+打印	作业我已经打印好了。	Die Hausaufgaben habe ich schon ausgedruckt.
+组长	我们组长今天没来。	Unser Gruppenleiter ist heute nicht gekommen.
+干活儿	爷爷在院子里干活儿。	Opa arbeitet im Hof.
+银行卡	我的银行卡找不到了。	Ich finde meine Bankkarte nicht mehr.
+近	学校很近，走路去吧。	Die Schule ist nah, lass uns zu Fuß gehen.
+方向	我们走错方向了。	Wir sind in die falsche Richtung gegangen.
+全国	他在全国都很有名。	Er ist im ganzen Land bekannt.
+交通	这里交通很好，去哪儿都快。	Die Verkehrsanbindung hier ist gut, man kommt überall schnell hin.
+骑	我骑自行车去学校。	Ich fahre mit dem Fahrrad zur Schule.
+道路	这里的道路很干净。	Die Straßen hier sind sehr sauber.
+公路	公路上车很多。	Auf der Landstraße sind viele Autos.
+广场	我们在广场见面吧。	Treffen wir uns auf dem Platz.
+车辆	车辆不能进来。	Fahrzeuge dürfen hier nicht hereinfahren.
+地铁	我们坐地铁去吧。	Lass uns mit der U-Bahn fahren.
+南方	南方的冬天不冷。	Im Süden ist der Winter nicht kalt.
+排队	买票要排队。	Für Tickets muss man Schlange stehen.
+西方	我们家也过西方的节日。	Unsere Familie feiert auch westliche Feste.
+超市	我去超市买水果。	Ich gehe in den Supermarkt und kaufe Obst.
+北方	我是北方人，喜欢吃饺子。	Ich komme aus dem Norden und esse gern Jiaozi.
+东方	很多东方国家都过春节。	Viele Länder in Ostasien feiern das Frühlingsfest.
+停车场	停车场在哪里？	Wo ist der Parkplatz?
+旅客	旅客们，请上车。	Liebe Fahrgäste, bitte einsteigen!
+路边	路边有很多小店。	Am Straßenrand gibt es viele kleine Läden.
+入口	入口在那边。	Der Eingang ist da drüben.
+走开	你走开，我自己来。	Geh weg, ich mache das selbst.
+外地	他是外地人，不认识路。	Er ist nicht von hier und kennt den Weg nicht.
+送到	外卖什么时候送到？	Wann wird das Essen geliefert?
+回国	她明年就要回国了。	Sie kehrt nächstes Jahr in ihre Heimat zurück.
+行人	路口有很多行人。	An der Kreuzung sind viele Fußgänger.
+地铁站	地铁站就在前边。	Die U-Bahn-Station ist gleich da vorne.
+公共汽车	我坐公共汽车去上班。	Ich fahre mit dem Bus zur Arbeit.
+两	我要三两饺子。	Ich nehme drei Liang Jiaozi.
+万	这个电脑要一万块钱。	Dieser Computer kostet zehntausend Yuan.
+千	这个包要两千块，太贵了！	Diese Tasche kostet zweitausend Yuan, viel zu teuer!
+亿	这个国家有一亿多人口。	Dieses Land hat über hundert Millionen Einwohner.
+等于	一公斤等于两斤。	Ein Kilo entspricht zwei Jin.
+公斤	这些水果一共三公斤。	Das Obst wiegt insgesamt drei Kilo.
+千克	妹妹出生的时候有三千克。	Meine kleine Schwester wog bei der Geburt drei Kilogramm.
+队	我们队的人都很高。	In unserer Mannschaft sind alle groß.
+球队	我哥哥在学校的球队打球。	Mein Bruder spielt in der Schulmannschaft.
+影片	图书馆里也有很多影片。	In der Bibliothek gibt es auch viele Filme.
+篮球	我们下午去打篮球吧。	Lass uns heute Nachmittag Basketball spielen.
+图片	我在网上找了一些图片。	Ich habe im Internet ein paar Bilder herausgesucht.
+晚会	新年晚会你去吗？	Gehst du zur Neujahrsfeier?
+参观	明天我们去参观大学。	Morgen besichtigen wir die Universität.
+球场	下课以后我们去球场打球。	Nach dem Unterricht spielen wir auf dem Sportplatz Ball.
+假期	假期你想去哪儿？	Wohin willst du in den Ferien?
+体育馆	体育馆在学校后边。	Die Sporthalle ist hinter der Schule.
+照相	这里不能照相。	Hier darf man nicht fotografieren.
+体育场	我们坐地铁去体育场。	Wir fahren mit der U-Bahn zum Stadion.
+爬山	周末我们去爬山吧。	Lass uns am Wochenende in die Berge wandern gehen.
+眼	看了一天电脑，眼很累。	Nach einem ganzen Tag am Computer sind meine Augen müde.
+嘴	嘴里有东西，别说话。	Sprich nicht mit vollem Mund.
+腿	爬山以后，我的腿很疼。	Nach dem Wandern tun mir die Beine weh.
+闻	你闻闻，这是什么味道？	Riech mal, was ist das für ein Geruch?
+大衣	外边很冷，穿大衣吧。	Draußen ist es kalt, zieh einen Mantel an.
+举手	知道的同学请举手。	Wer es weiß, hebt bitte die Hand.
+药店	前边有一个药店。	Da vorne ist eine Apotheke.
+难看	这个颜色太难看了。	Diese Farbe ist wirklich hässlich.
+球鞋	我的球鞋脏了。	Meine Turnschuhe sind schmutzig.
+中医	爷爷生病只看中医。	Wenn Opa krank ist, lässt er sich nur mit chinesischer Medizin behandeln.
+药片	这个药片一天吃两次。	Diese Tablette nimmt man zweimal am Tag.
+西医	西医好还是中医好？	Was ist besser, westliche oder chinesische Medizin?
+度	今天三十度，太热了！	Heute sind es dreißig Grad, viel zu heiß!
+海	我想去看海。	Ich möchte ans Meer fahren.
+养	你家养狗吗？	Habt ihr zu Hause einen Hund?
+蓝	今天的天很蓝。	Der Himmel ist heute sehr blau.
+太阳	太阳出来了，我们出去玩儿吧！	Die Sonne ist da, lass uns draußen spielen!
+河	河里有很多鱼。	Im Fluss gibt es viele Fische.
+绿色	我最喜欢的颜色是绿色。	Meine Lieblingsfarbe ist Grün.
+草	院子里的草太高了。	Das Gras im Hof ist zu hoch.
+云	今天天上一点儿云也没有。	Heute ist keine einzige Wolke am Himmel.
+温度	房间里温度太高了。	Die Temperatur im Zimmer ist zu hoch.
+阴	天阴了，要下雨了。	Der Himmel zieht sich zu, gleich regnet es.
+月亮	今天的月亮又大又亮。	Heute ist der Mond groß und hell.
+星星	这儿晚上能看见很多星星。	Hier sieht man nachts viele Sterne.
+气温	明天气温有三十多度。	Morgen hat es über dreißig Grad.
+大自然	我爱大自然，常去爬山。	Ich liebe die Natur und gehe oft in die Berge.
+零下	今天零下五度，多穿一点儿衣服。	Heute sind es minus fünf Grad, zieh dich warm an.
+晴天	明天是晴天，我们去公园吧。	Morgen wird es sonnig, lass uns in den Park gehen.
+凉快	下了雨，天气凉快多了。	Nach dem Regen ist es angenehm kühl geworden.
+感到	看到你，我感到很开心。	Ich freue mich sehr, dich zu sehen.
+爱情	这个电影讲的是爱情。	In diesem Film geht es um Liebe.
+关心	谢谢你关心我。	Danke, dass du dich um mich kümmerst.
+心中	你在我心中是最好的老师。	Für mich bist du der beste Lehrer.
+重视	爸爸妈妈很重视我的学习。	Meine Eltern legen viel Wert auf mein Lernen.
+求	我求你了，帮帮我吧！	Ich bitte dich, hilf mir!
+提出	同学们提出了很多问题。	Die Mitschüler haben viele Fragen gestellt.
+信号	这里手机没有信号。	Hier hat das Handy keinen Empfang.
+说明	你能说明一下你的意思吗？	Kannst du erklären, was du meinst?
+对话	我们来练习这个对话。	Lass uns diesen Dialog üben.
+名称	这个地方的名称我记不住。	Ich kann mir den Namen dieses Ortes nicht merken.
+日报	爸爸早上喜欢看日报。	Papa liest morgens gern die Tageszeitung.
+晚报	你看今天的晚报了吗？	Hast du die heutige Abendzeitung gelesen?
+叫作	这个在中文里叫作什么？	Wie nennt man das auf Chinesisch?
+能够	他能够自己做饭了。	Er kann jetzt selbst kochen.
+道	这道题太难了。	Diese Aufgabe ist zu schwer.
+组	你在哪一组？	In welcher Gruppe bist du?
+段	这段时间我很忙。	In letzter Zeit bin ich sehr beschäftigt.
+节	今天我有四节课。	Heute habe ich vier Unterrichtsstunden.
+篇	这篇作文写得很好。	Dieser Aufsatz ist sehr gut geschrieben.
+或者	你今天或者明天来都行。	Du kannst heute oder morgen kommen.	ni3 jin1 tian1 huo4 zhe3 ming2 tian1 lai2 dou1 xing2
+可是	我想去，可是没有时间。	Ich würde gern hingehen, aber ich habe keine Zeit.
+向	你向那边走，就能看到车站。	Geh da entlang, dann siehst du die Haltestelle.
+身边	我手机不在身边。	Ich habe mein Handy gerade nicht bei mir.
+以外	工作以外的时间，我喜欢看书。	Außerhalb der Arbeit lese ich gern.
+东北	东北冬天常常下雪。	Im Nordosten schneit es im Winter oft.
+西南	我想去西南旅游。	Ich möchte in den Südwesten reisen.
+西北	西北人爱吃面条儿。	Im Nordwesten essen die Leute gern Nudeln.
+里头	里头有人吗？	Ist da drinnen jemand?
+东南	机场在东南方向。	Der Flughafen liegt im Südosten.
+得	你觉得这次考试能得几分？	Was meinst du, wie viele Punkte bekommst du in dieser Prüfung?
+进行	考试正在进行，请不要说话。	Die Prüfung läuft gerade, bitte nicht sprechen.
+头	你的鞋在床下头。	Deine Schuhe sind unter dem Bett.	ni3 de5 xie2 zai4 chuang2 xia4 tou5
+分	这个面包我们分着吃吧。	Lass uns das Brot teilen.
+拉	妈妈拉着孩子的手过马路。	Die Mutter nimmt das Kind an der Hand und geht über die Straße.
+部分	这部分我没听懂。	Diesen Teil habe ich nicht verstanden.
+真正	他是我真正的朋友。	Er ist ein echter Freund.
+活动	周末学校有很多活动。	Am Wochenende gibt es in der Schule viele Aktivitäten.
+带来	谢谢你带来的礼物。	Danke für das Geschenk, das du mitgebracht hast.
+算	你算一下一共多少钱。	Rechne mal aus, was das insgesamt kostet.
+交	作业明天要交。	Die Hausaufgaben müssen morgen abgegeben werden.
+想到	我想到了一个好办法！	Mir ist eine gute Idee gekommen!
+挺	今天外边挺冷的。	Heute ist es draußen ziemlich kalt.
+克	我要三百克肉。	Ich hätte gern dreihundert Gramm Fleisch.
+装	东西都装好了吗？	Ist alles eingepackt?
+新闻	电视上正在放新闻。	Im Fernsehen laufen gerade die Nachrichten.
+变成	雨变成了雪。	Der Regen ist zu Schnee geworden.
+受到	她受到了大家的欢迎。	Sie wurde von allen willkommen geheißen.
+经过	公共汽车经过我家门口。	Der Bus fährt direkt an unserer Haustür vorbei.
+重新	写错了，重新写吧。	Das ist falsch, schreib es noch einmal neu.
+低	这个桌子太低了。	Dieser Tisch ist zu niedrig.
+作用	这个药有什么作用？	Welche Wirkung hat dieses Medikament?
+主要	我来这儿主要是学汉语。	Ich bin hauptsächlich hier, um Chinesisch zu lernen.
+比如	我喜欢运动，比如打球。	Ich mache gern Sport, zum Beispiel Ballspiele.
+假	这个包是假的。	Diese Tasche ist eine Fälschung.
+省	她来自南方的一个省。	Sie kommt aus einer Provinz im Süden.
+称	大家都称他老师。	Alle nennen ihn Lehrer.
+省	坐地铁能省很多时间。	Mit der U-Bahn kann man viel Zeit sparen.
+广告	电视上的广告太多了。	Im Fernsehen gibt es zu viel Werbung.
+实现	我们一定能实现这个计划。	Wir werden diesen Plan bestimmt verwirklichen.
+排	我们坐在第一排。	Wir sitzen in der ersten Reihe.
+教育	家长都很重视孩子的教育。	Eltern legen großen Wert auf die Bildung ihrer Kinder.
+心里	有什么话，别放在心里。	Wenn du etwas auf dem Herzen hast, behalte es nicht für dich.
+推	这个门要推，不要拉。	Diese Tür muss man drücken, nicht ziehen.
+流	河水向东流。	Der Fluss fließt nach Osten.
+重点	这是考试的重点。	Das ist der Schwerpunkt der Prüfung.
+举行	晚会在体育馆举行。	Die Abendveranstaltung findet in der Sporthalle statt.
+明星	我妹妹想当明星。	Meine kleine Schwester will ein Star werden.
+顺利	考试顺利吗？	Lief die Prüfung gut?
+水平	他的汉语水平很高。	Sein Chinesisch ist auf hohem Niveau.
+交给	这件事交给我吧。	Überlass das mir.
+占	我帮你占个座位。	Ich halte dir einen Platz frei.
+取得	他取得了很好的成绩。	Er hat sehr gute Noten erzielt.
+小组	下午我们小组要开会。	Heute Nachmittag hat unsere Arbeitsgruppe eine Besprechung.
+平	这条路很平，很好走。	Diese Straße ist eben, man läuft gut darauf.
+提高	我想提高我的汉语水平。	Ich möchte mein Chinesisch verbessern.
+大量	网上有大量的信息。	Im Internet gibt es eine riesige Menge an Informationen.
+大部分	大部分同学都去了。	Die meisten Mitschüler sind hingegangen.
+吹	冬天的风吹在脸上很疼。	Im Winter tut der Wind im Gesicht weh.
+角度	换个角度想一想。	Denk mal aus einem anderen Blickwinkel darüber nach.
+实际	他个子很高，实际才十六岁。	Er ist sehr groß, aber tatsächlich erst sechzehn.
+以下	六岁以下的孩子不用买票。	Kinder unter sechs Jahren brauchen kein Ticket.
+大多数	大多数学生都住在学校里。	Die meisten Studenten wohnen auf dem Campus.
+随时	有问题随时问我。	Wenn du Fragen hast, frag mich jederzeit.
+高级	这个酒店很高级。	Dieses Hotel ist sehr edel.
+信心	我对这次考试很有信心。	Bei dieser Prüfung bin ich sehr zuversichtlich.
+正好	你来得正好！	Du kommst genau richtig!
+院	孩子们在院里玩儿。	Die Kinder spielen im Hof.
+理想	我的理想是当医生。	Mein Traum ist es, Arzt zu werden.
+提到	他刚才提到了你。	Er hat dich vorhin erwähnt.
+组成	我们组成了一个篮球队。	Wir haben eine Basketballmannschaft gebildet.
+比如说	很多事情都能在网上做，比如说买票。	Vieles kann man online erledigen, zum Beispiel Tickets kaufen.
+准确	你的回答很准确。	Deine Antwort ist sehr präzise.
+全体	全体同学请站起来。	Alle Schüler, bitte aufstehen!
+熟	肉熟了，可以吃了。	Das Fleisch ist gar, wir können essen.
+平安	我们平安到家了。	Wir sind wohlbehalten zu Hause angekommen.
+人数	今天来的人数比昨天多。	Heute sind mehr Leute gekommen als gestern.
+分开	白衣服和黑衣服要分开洗。	Weiße und schwarze Kleidung muss man getrennt waschen.
+例如	有些汉字很难，例如这个。	Manche Schriftzeichen sind schwer, zum Beispiel dieses.
+大大	地铁大大方便了我们的生活。	Die U-Bahn hat unser Leben enorm erleichtert.
+大小	这件衣服大小正好。	Dieses Kleidungsstück hat genau die richtige Größe.
+不一定	贵的东西不一定好。	Teure Sachen sind nicht unbedingt gut.
+特点	这个地方的特点是什么？	Was ist das Besondere an diesem Ort?
+多数	班里多数同学会说英语。	Die meisten in der Klasse können Englisch.
+少数	班里少数同学没有手机。	Nur wenige in der Klasse haben kein Handy.
+走过	他从我身边走过。	Er ging an mir vorbei.
+得出	最后我们得出了一个结果。	Am Ende sind wir zu einem Ergebnis gekommen.
+这时候	这时候，电话响了。	In diesem Moment klingelte das Telefon.
+找出	请找出句子里的错字。	Finde bitte die falschen Zeichen im Satz.
+常用	这些都是常用的汉字。	Das sind alles häufig benutzte Schriftzeichen.
+站住	站住，别过马路！	Bleib stehen, geh nicht über die Straße!
+碰见	我在超市碰见了老师。	Ich habe im Supermarkt meinen Lehrer getroffen.
+拿出	请拿出你们的课本。	Holt bitte eure Lehrbücher heraus.
+难听	这个声音真难听。	Dieses Geräusch klingt furchtbar.
+坏处	睡太晚对身体有坏处。	Zu spät schlafen zu gehen schadet dem Körper.
+相同	这两个字读音相同。	Diese zwei Zeichen werden gleich ausgesprochen.
+青少年	这本书是给青少年看的。	Dieses Buch ist für Jugendliche.
+爱人	我爱人在银行工作。	Meine Frau arbeitet bei einer Bank.
+老年	这个公园里有很多老年人。	In diesem Park sind viele Senioren.
+午睡	吃完午饭，我想午睡一会儿。	Nach dem Mittagessen möchte ich einen kurzen Mittagsschlaf machen.
+中小学	中小学明天放假。	Die Grund- und Mittelschulen haben morgen frei.
+不过	这个菜很好吃，不过有点儿贵。	Das Gericht ist lecker, aber etwas teuer.
+生词	这篇课文生词太多了。	In diesem Lektionstext sind zu viele neue Vokabeln.
+画儿	这是我女儿画的画儿。	Das Bild hat meine Tochter gemalt.
+快点儿	快点儿，车要开了！	Beeil dich, der Bus fährt gleich ab!
+笑话儿	他给我们讲了一个笑话儿。	Er hat uns einen Witz erzählt.
+有空儿	你明天有空儿吗？	Hast du morgen Zeit?
+姑娘	那个姑娘是谁？	Wer ist das Mädchen da?
+男子	他是男子篮球队的队长。	Er ist Kapitän der Herren-Basketballmannschaft.
+人才	这个学校出了很多人才。	Diese Schule hat viele Talente hervorgebracht.
+中华民族	春节是中华民族最重要的节日。	Das Frühlingsfest ist das wichtigste Fest der chinesischen Nation.
+民间	这个民间故事我从小就听过。	Dieses Volksmärchen kenne ich schon seit meiner Kindheit.
+子女	他们的子女都在外地工作。	Ihre Kinder arbeiten alle in einer anderen Stadt.
+老太太	楼下住着一位老太太。	Unten im Haus wohnt eine alte Dame.
+做客	周末我们去奶奶家做客。	Am Wochenende sind wir bei Oma zu Gast.
+老头儿	公园里有个老头儿在唱歌。	Im Park singt ein alter Mann.
+家属	病人的家属在外边等着。	Die Angehörigen des Patienten warten draußen.
+首先	首先，谢谢大家今天能来。	Zuerst einmal danke, dass ihr heute alle gekommen seid.
+当初	当初我也觉得汉语很难。	Am Anfang fand ich Chinesisch auch schwer.
+始终	开会的时候，他始终没说话。	In der ganzen Besprechung hat er kein Wort gesagt.
+往往	周末商场里往往人很多。	Am Wochenende ist es im Einkaufszentrum oft sehr voll.
+反复	这个词我反复读了很多遍。	Dieses Wort habe ich immer wieder gelesen.
+光明	只要努力，你的将来一定是光明的。	Wenn du dich anstrengst, hast du bestimmt eine strahlende Zukunft.
+从前	从前这里是一条小河。	Früher war hier ein kleiner Fluss.
+古代	古代的人怎么过春节？	Wie haben die Menschen in alter Zeit das Frühlingsfest gefeiert?
+前后	春节前后，火车票很难买。	Rund um das Frühlingsfest bekommt man kaum Zugtickets.
+近期	我近期没有出国的打算。	Ich habe in nächster Zeit nicht vor, ins Ausland zu gehen.
+工夫	我现在没工夫，你明天再来吧。	Ich habe jetzt keine Zeit, komm doch morgen wieder.
+年底	姐姐年底结婚。	Meine Schwester heiratet Ende des Jahres.
+年初	他是年初来公司的。	Er ist Anfang des Jahres in die Firma gekommen.
+空儿	这几天太忙，一点儿空儿也没有。	In diesen Tagen bin ich so beschäftigt, dass ich überhaupt keine freie Zeit habe.
+后年	哥哥后年去国外读书。	Mein Bruder geht übernächstes Jahr zum Studium ins Ausland.
+连忙	看到老师来了，他连忙站了起来。	Als er den Lehrer kommen sah, stand er sofort auf.
+米	家里没有米了，我去超市买。	Wir haben keinen Reis mehr, ich kaufe welchen im Supermarkt.
+美食	这条街上有很多美食。	In dieser Straße gibt es viel gutes Essen.
+可乐	我不喝可乐，给我一杯水吧。	Ich trinke keine Cola, gib mir bitte ein Glas Wasser.
+白菜	冬天北方人常吃白菜。	Im Winter essen die Menschen im Norden oft Chinakohl.
+整理	周末我要整理一下房间。	Am Wochenende will ich mein Zimmer aufräumen.
+卫生	这家饭馆不太卫生。	Dieses Restaurant ist nicht besonders sauber.
+家具	新房子里一件家具也没有。	In der neuen Wohnung steht noch kein einziges Möbelstück.
+搬家	我们下周搬家，你能来帮忙吗？	Wir ziehen nächste Woche um, kannst du uns helfen?
+被子	妈妈帮我洗了被子。	Mama hat meine Bettdecke gewaschen.
+房租	这里的房租太贵了。	Die Miete hier ist zu teuer.
+房东	房东想明年加房租。	Der Vermieter will nächstes Jahr die Miete erhöhen.
+衣架	衣服洗好了，给我几个衣架。	Die Wäsche ist fertig, gib mir ein paar Kleiderbügel.
+报	爷爷早上喜欢看报。	Opa liest morgens gern Zeitung.
+课程	这学期的课程很多。	In diesem Semester gibt es viele Kurse.
+考验	这份工作对他是一个考验。	Diese Arbeit ist für ihn eine Bewährungsprobe.
+文字	这本书文字不多，图片很多。	Dieses Buch hat wenig Text und viele Bilder.
+发言	开会的时候，他第一个发言。	In der Besprechung hat er als Erster das Wort ergriffen.
+学费	他一边读书，一边打工交学费。	Er studiert und jobbt nebenbei, um die Studiengebühren zu bezahlen.
+初中	我妹妹今年上初中了。	Meine kleine Schwester ist dieses Jahr auf die Mittelschule gekommen.
+单元	我们今天学第三单元。	Heute lernen wir die dritte Lektion.
+初级	我在上初级汉语课。	Ich besuche gerade einen Chinesischkurs für Anfänger.
+听力	我的听力不太好，请说慢一点儿。	Mein Hörverstehen ist nicht so gut, bitte sprich etwas langsamer.
+经营	他家经营一家小饭馆。	Seine Familie betreibt ein kleines Restaurant.
+存	超市门口可以存包。	Am Eingang des Supermarkts kann man seine Tasche aufbewahren lassen.
+厂	他在汽车厂上班。	Er arbeitet in einer Autofabrik.
+费用	这次旅游的费用是多少？	Wie hoch sind die Kosten für diese Reise?
+农民	我爷爷以前是农民。	Mein Opa war früher Bauer.
+商品	这家超市的商品很便宜。	Die Waren in diesem Supermarkt sind sehr günstig.
+价钱	如果价钱合适，我就买。	Wenn der Preis stimmt, kaufe ich es.
+开业	楼下的饭馆明天开业。	Das Restaurant unten im Haus eröffnet morgen.
+就业	现在大学生就业很难。	Heutzutage ist es für Studenten schwer, Arbeit zu finden.
+公务员	我哥哥想当公务员。	Mein Bruder möchte Beamter werden.
+创业	很多年轻人想自己创业。	Viele junge Leute wollen ihr eigenes Unternehmen gründen.
+交警	路口站着一个交警。	An der Kreuzung steht ein Verkehrspolizist.
+交费	在网上就可以交费，很方便。	Man kann die Gebühren online bezahlen, das ist sehr praktisch.
+现场	记者马上赶到了现场。	Der Reporter war sofort vor Ort.
+飞行	飞行中请不要使用手机。	Während des Fluges bitte das Handy nicht benutzen.
+赶到	我们八点前能赶到机场吗？	Schaffen wir es vor acht Uhr zum Flughafen?
+房屋	这里的房屋都很老。	Die Häuser hier sind alle sehr alt.
+场所	图书馆是学习的好场所。	Die Bibliothek ist ein guter Ort zum Lernen.
+意义	这次旅行对我很有意义。	Diese Reise bedeutet mir sehr viel.
+宣布	老师宣布明天放假。	Der Lehrer hat verkündet, dass morgen schulfrei ist.
+声明	公司发了一份声明。	Die Firma hat eine Erklärung veröffentlicht.
+发送	短信已经发送了。	Die Nachricht ist schon verschickt.
+传来	楼上传来了唱歌的声音。	Von oben hört man jemanden singen.
+邮票	这些邮票是爷爷送给我的。	Diese Briefmarken hat mir Opa geschenkt.
+收听	开车的时候，我常收听新闻。	Beim Autofahren höre ich oft Nachrichten im Radio.
+训练	球队下午有训练。	Die Mannschaft hat am Nachmittag Training.
+导演	这个电影的导演很有名。	Der Regisseur dieses Films ist sehr bekannt.
+形象	这件事对公司的形象不好。	Diese Sache schadet dem Image der Firma.
+演唱	我们请她来晚会演唱。	Wir haben sie eingeladen, auf der Feier zu singen.
+电视台	他在电视台当记者。	Er ist Reporter bei einem Fernsehsender.
+球迷	我爸爸是个老球迷。	Mein Vater ist ein alter Fußballfan.
+电台	这个电台的音乐很好听。	Die Musik auf diesem Radiosender ist sehr schön.
+歌迷	很多歌迷在门口等她。	Viele Fans warten am Eingang auf sie.
+收看	欢迎收看今天的新闻。	Willkommen zu den heutigen Nachrichten.
+话剧	周末我们去看话剧吧！	Lass uns am Wochenende ein Theaterstück anschauen!
+指	他指了指地图上的一个地方。	Er zeigte auf eine Stelle auf der Karte.
+毛	我家小狗的毛是白色的。	Das Fell unseres kleinen Hundes ist weiß.
+背	孩子走不动了，爸爸就背他回家。	Das Kind konnte nicht mehr laufen, also trug der Vater es auf dem Rücken nach Hause.	hai2 zi5 zou3 bu4 dong4 le5 ba4 ba5 jiu4 bei1 ta1 hui2 jia1
+眼前	眼前最重要的是找工作。	Im Moment ist das Wichtigste, eine Arbeit zu finden.
+头脑	他很有头脑，生意做得很好。	Er hat einen klugen Kopf, sein Geschäft läuft sehr gut.
+上衣	这件上衣有点儿小。	Dieses Oberteil ist ein bisschen klein.
+短裤	夏天孩子们都穿短裤。	Im Sommer tragen die Kinder alle kurze Hosen.
+衬衣	这件白衬衣是新买的。	Dieses weiße Hemd habe ich neu gekauft.
+皮包	这个皮包是我的生日礼物。	Diese Handtasche ist mein Geburtstagsgeschenk.
+自然	这里的自然环境非常好。	Die Natur hier ist wirklich schön.
+环境	这儿的学习环境很好。	Die Lernumgebung hier ist sehr gut.
+龙	这个故事讲的是一条龙。	Diese Geschichte handelt von einem Drachen.
+土	花园里的土太干了。	Die Erde im Garten ist zu trocken.	hua1 yuan2 li3 de5 tu3 tai4 gan1 le5
+羊	山上有很多白色的羊。	Auf dem Berg sind viele weiße Schafe.
+石头	河边有很多小石头。	Am Fluss liegen viele kleine Steine.
+种子	爷爷买了一些花的种子。	Opa hat ein paar Blumensamen gekauft.
+木头	这些椅子都是木头做的。	Diese Stühle sind alle aus Holz.
+感情	他们的感情一直很好。	Die beiden hängen schon immer sehr aneinander.
+满足	有家人在身边，我就很满足了。	Wenn meine Familie bei mir ist, bin ich schon zufrieden.
+简直	今天简直太热了！	Heute ist es einfach viel zu heiß!
+强烈	我想家的感觉越来越强烈。	Mein Heimweh wird immer stärker.
+顿	周末我请你吃一顿饭吧。	Am Wochenende lade ich dich zum Essen ein.
+束	我给妈妈买了一束花。	Ich habe Mama einen Blumenstrauß gekauft.
+另外	我要一杯咖啡，另外再来一个面包。	Ich hätte gern einen Kaffee und außerdem noch ein Brötchen.
+由于	由于下大雨，我们没去爬山。	Wegen des starken Regens sind wir nicht wandern gegangen.
+不论	不论多忙，他晚上都给妈妈打电话。	Egal wie beschäftigt er ist, abends ruft er immer seine Mutter an.
+其次	学外语，首先要多听，其次要多说。	Beim Sprachenlernen muss man erstens viel hören und zweitens viel sprechen.
+另一方面	这份工作钱多，但另一方面也很累。	Dieser Job bringt viel Geld, andererseits ist er sehr anstrengend.
+一方面	我一方面想出去走走，另一方面又想在家休息。	Einerseits will ich rausgehen, andererseits will ich mich zu Hause ausruhen.
+更加	听了他的话，我更加生气了。	Als ich hörte, was er sagte, wurde ich noch wütender.
+相比	和去年相比，今年的冬天更冷。	Im Vergleich zum letzten Jahr ist dieser Winter kälter.
+自从	自从搬家以后，我很少见到他。	Seit dem Umzug sehe ich ihn nur noch selten.
+行	你是做哪行的？	In welcher Branche arbeitest du?	ni3 shi4 zuo4 na3 hang2 de5
+其实	其实我早就知道了。	Eigentlich wusste ich es schon längst.
+强	这个队很强，我们可能会输。	Diese Mannschaft ist sehr stark, wir verlieren vielleicht.
+存在	这个问题一直存在。	Dieses Problem besteht schon lange.
+人员	请问工作人员在哪儿？	Entschuldigung, wo finde ich das Personal?
+伤	没事儿，只是一点儿小伤。	Keine Sorge, es ist nur eine kleine Verletzung.
+精神	午睡以后，我精神多了。	Nach dem Mittagsschlaf bin ich viel munterer.	wu3 shui4 yi3 hou4 wo3 jing1 shen5 duo1 le5
+技术	他的开车技术很好。	Seine Fahrtechnik ist sehr gut.
+设计	这件衣服是她自己设计的。	Dieses Kleid hat sie selbst entworfen.
+约	我约了朋友明天去看电影。	Ich habe mich mit einem Freund verabredet, morgen ins Kino zu gehen.
+金	这块手表是金的。	Diese Uhr ist aus Gold.
+造成	大雨造成了交通问题。	Der starke Regen hat Verkehrsprobleme verursacht.
+面对	面对这么多人，她有点儿紧张。	Vor so vielen Leuten war sie ein bisschen nervös.
+过程	学外语需要一个过程，别急。	Eine Fremdsprache zu lernen ist ein Prozess, nur keine Eile.
+各	我们各付各的吧。	Lass uns getrennt bezahlen, jeder für sich.
+显示	手机上显示没有信号。	Das Handy zeigt an, dass es kein Netz gibt.
+人类	水对人类非常重要。	Wasser ist für die Menschheit sehr wichtig.
+经历	这次旅行是一次很好的经历。	Diese Reise war ein tolles Erlebnis.
+仍	已经十点了，他仍在工作。	Es ist schon zehn Uhr, und er arbeitet immer noch.
+基本	这些都是最基本的汉字。	Das sind ganz grundlegende Schriftzeichen.
+类	这类问题很常见。	Probleme dieser Art kommen häufig vor.
+反应	听到这个消息，他没有什么反应。	Als er die Nachricht hörte, reagierte er kaum.
+地区	这个地区冬天很冷。	In dieser Region ist es im Winter sehr kalt.
+规定	学校规定学生不能带手机。	Laut Schulregel dürfen Schüler keine Handys mitbringen.
+产生	这样做会产生很多问题。	Wenn man das so macht, entstehen viele Probleme.
+对方	你要多想想对方的感受。	Du solltest mehr an die Gefühle des anderen denken.
+状态	他今天状态不太好。	Er ist heute nicht in guter Verfassung.
+建立	我们在网上建立了一个学习小组。	Wir haben online eine Lerngruppe gegründet.
+排	这些桌子应该怎么排？	Wie sollen wir diese Tische anordnen?
+管理	这个公司管理得很好。	Diese Firma wird sehr gut geführt.
+不断	他的汉语水平不断提高。	Sein Chinesisch wird ständig besser.
+媒体	媒体对这件事很关注。	Die Medien verfolgen diese Sache aufmerksam.
+破	我的新裤子破了。	Meine neue Hose ist kaputt.
+精彩	昨天的比赛太精彩了！	Das Spiel gestern war super spannend!
+范围	这次考试的范围很大。	Der Prüfungsstoff ist diesmal sehr umfangreich.
+事业	她很重视自己的事业。	Ihre Karriere ist ihr sehr wichtig.
+速度	他说话的速度太快了，我听不懂。	Er spricht viel zu schnell, ich verstehe ihn nicht.
+文件	请把这个文件发给我。	Bitte schick mir diese Datei.
+显然	他显然不想跟我们一起去。	Er will offensichtlich nicht mit uns mitkommen.
+伟大	妈妈的爱是最伟大的。	Die Liebe einer Mutter ist das Größte.
+增加	今年报名的人增加了很多。	Die Zahl der Anmeldungen hat dieses Jahr stark zugenommen.
+成员	我们小组有六个成员。	Unsere Gruppe hat sechs Mitglieder.
+程度	你汉语学到什么程度了？	Wie weit bist du inzwischen mit deinem Chinesisch?
+代	我们这代人很幸运。	Unsere Generation hat großes Glück.
+年代	这是八十年代的歌。	Das ist ein Lied aus den Achtzigerjahren.
+创造	幸福是自己创造的。	Glück muss man selbst schaffen.
+调	她明年要调到别的学校。	Sie wird nächstes Jahr an eine andere Schule versetzt.	ta1 ming2 nian2 yao4 diao4 dao4 bie2 de5 xue2 xiao4
+各种	超市里有各种水果。	Im Supermarkt gibt es alle möglichen Obstsorten.
+思想	这本书的思想很深。	Die Gedanken in diesem Buch sind sehr tiefgründig.
+破坏	我们不能破坏自然环境。	Wir dürfen die Natur nicht zerstören.
+事实上	大家都以为他是老师，事实上他是学生。	Alle dachten, er sei Lehrer, aber tatsächlich ist er Student.
+超级	这部电影超级好看！	Dieser Film ist super gut!
+设备	学校买了一些新设备。	Die Schule hat ein paar neue Geräte angeschafft.
+保	他只想保住自己的工作。	Er will nur seinen Arbeitsplatz behalten.
+团	这次我们跟团去旅游。	Diesmal machen wir eine Gruppenreise.
+压	你压到我的手了！	Du drückst auf meine Hand!
+队员	每个队员都很努力。	Jedes Teammitglied gibt sich viel Mühe.
+断	电话打到一半，突然断了。	Mitten im Telefonat ist plötzlich die Verbindung abgebrochen.
+观察	他喜欢观察小动物。	Er beobachtet gern kleine Tiere.
+千万	你千万别忘了带护照！	Vergiss auf keinen Fall deinen Reisepass!
+表明	他用行动表明了自己的态度。	Mit seinem Handeln hat er seine Haltung deutlich gemacht.
+相关	我在找跟汉语相关的工作。	Ich suche eine Arbeit, die mit Chinesisch zu tun hat.
+制作	这个节目是他们自己制作的。	Diese Sendung haben sie selbst produziert.
+资金	我们创业的资金不够。	Uns fehlt das Kapital für die Firmengründung.
+初	这是我初到中国时拍的照片。	Das Foto habe ich gemacht, als ich gerade in China angekommen war.
+取消	因为下雨，比赛取消了。	Wegen des Regens wurde das Spiel abgesagt.
+对象	这个课程的对象是小学生。	Dieser Kurs richtet sich an Grundschüler.
+任	他任校长已经三年了。	Er ist schon seit drei Jahren als Schulleiter im Amt.
+成熟	这些苹果已经成熟了。	Diese Äpfel sind schon reif.
+内心	他笑着说没事，可是内心很难过。	Er sagte lächelnd, es sei nichts, aber innerlich war er sehr traurig.
+发出	手机发出了奇怪的声音。	Das Handy hat ein seltsames Geräusch gemacht.
+进一步	上完大学以后，他想去国外进一步学习。	Nach dem Studium möchte er im Ausland weiterlernen.
+防	天冷了，多穿一点儿，防感冒。	Es ist kalt geworden, zieh dich warm an, damit du dich nicht erkältest.
+舞台	演员们都站在舞台上。	Die Schauspieler stehen alle auf der Bühne.
+任	任他怎么说，我都不去。	Egal, was er sagt, ich gehe nicht hin.
+调整	天气不好，我们要调整计划。	Das Wetter ist schlecht, wir müssen unseren Plan anpassen.
+阳光	今天阳光很好，我们去公园吧。	Heute scheint die Sonne so schön, lass uns in den Park gehen.
+领	老师领着孩子们过马路。	Die Lehrerin führt die Kinder über die Straße.
+科技	现在科技发展得很快。	Wissenschaft und Technik entwickeln sich heute sehr schnell.
+烟	房间里怎么有烟？	Warum ist Rauch im Zimmer?
+赶	快点儿，我们要赶火车！	Beeil dich, wir müssen den Zug erwischen!
+评价	大家对这个饭馆的评价很好。	Das Restaurant wird von allen sehr gut bewertet.
+上去	你先上去，我马上来。	Geh du schon mal hoch, ich komme gleich.
+仅仅	这仅仅是开始。	Das ist lediglich der Anfang.
+主任	主任让我去他办公室。	Der Abteilungsleiter möchte, dass ich in sein Büro komme.
+基础	他的汉语基础很好。	Er hat eine gute Grundlage in Chinesisch.
+功能	这个手机有很多新功能。	Dieses Handy hat viele neue Funktionen.
+生产	这个工厂生产自行车。	Diese Fabrik stellt Fahrräder her.
+试验	我们先做一个小试验。	Wir machen zuerst einen kleinen Versuch.
+成长	孩子的成长需要父母的关心。	Kinder brauchen beim Aufwachsen die Fürsorge ihrer Eltern.
+食品	超市的食品越来越贵了。	Die Lebensmittel im Supermarkt werden immer teurer.
+大约	从这儿到机场大约要一个小时。	Von hier zum Flughafen braucht man etwa eine Stunde.
+联合	这个节目是两个电视台联合制作的。	Diese Sendung wurde von zwei Fernsehsendern gemeinsam produziert.
+铁	我家的大门是铁做的。	Unser Hoftor ist aus Eisen.
+录	我用手机录了这个节目。	Ich habe die Sendung mit dem Handy aufgenommen.
+提前	会议提前到明天上午了。	Die Besprechung wurde auf morgen Vormittag vorverlegt.
+并且	他会说汉语，并且说得很流利。	Er spricht Chinesisch, und zwar sehr fließend.
+商业	这里是城市的商业中心。	Hier ist das Geschäftszentrum der Stadt.
+积极	他上课的时候很积极。	Er macht im Unterricht sehr aktiv mit.
+争取	这次考试我要争取考第一。	Bei dieser Prüfung will ich versuchen, Erster zu werden.
+命运	我相信命运是可以改变的。	Ich glaube, dass man sein Schicksal ändern kann.
+专门	这是我专门给你做的菜。	Dieses Gericht habe ich extra für dich gekocht.
+工具	你家有修自行车的工具吗？	Hast du zu Hause Werkzeug, um das Fahrrad zu reparieren?
+快速	他快速看了一遍文件。	Er hat das Dokument schnell einmal durchgesehen.
+连续	已经连续下了三天雨了。	Es regnet schon drei Tage am Stück.
+决赛	我们队进入了决赛！	Unsere Mannschaft ist ins Finale eingezogen!
+形成	他从小形成了早起的习惯。	Er hat sich schon als Kind angewöhnt, früh aufzustehen.
+配合	这次比赛，队员们配合得很好。	Bei diesem Spiel haben die Spieler gut zusammengespielt.
+显得	你穿这件衣服显得很年轻。	In diesem Kleid wirkst du sehr jung.
+公共	这是公共图书馆，谁都可以进去。	Das ist eine öffentliche Bibliothek, jeder darf hinein.
+自动	这个门会自动关上。	Diese Tür schließt sich automatisch.
+明确	老师的要求很明确。	Die Vorgaben des Lehrers sind eindeutig.
+结合	他把爱好和工作结合起来了。	Er hat sein Hobby mit seiner Arbeit verbunden.
+当中	我们当中谁会说英语？	Wer von uns spricht Englisch?
+生存	没有水，人不能生存。	Ohne Wasser kann der Mensch nicht überleben.
+对待	他对待客人非常热情。	Er behandelt Gäste sehr herzlich.
+实力	这支球队很有实力。	Diese Mannschaft ist wirklich stark.
+主动	他每天主动帮妈妈做饭。	Er hilft seiner Mutter jeden Tag von sich aus beim Kochen.
+服装	她在一家服装店工作。	Sie arbeitet in einem Bekleidungsgeschäft.
+判断	很难判断谁对谁错。	Es ist schwer zu beurteilen, wer recht hat.
+前往	吃完午饭，我们前往下一个城市。	Nach dem Mittagessen fahren wir weiter in die nächste Stadt.
+相互	朋友应该相互帮助。	Freunde sollten einander helfen.
+成立	这家公司是去年成立的。	Diese Firma wurde letztes Jahr gegründet.
+现代	我喜欢现代音乐。	Ich mag moderne Musik.
+全面	医生给他做了全面检查。	Der Arzt hat ihn umfassend untersucht.
+体验	我想体验一下农村生活。	Ich möchte mal das Leben auf dem Land erleben.
+话题	我们换个话题吧。	Lass uns das Thema wechseln.
+银	这个杯子是银的。	Dieser Becher ist aus Silber.
+前进	我们继续前进吧。	Lass uns weitergehen.
+公布	考试成绩明天公布。	Die Prüfungsergebnisse werden morgen bekannt gegeben.
+指出	老师指出了我的错误。	Der Lehrer hat mich auf meinen Fehler hingewiesen.
+丰富	这里的早饭很丰富。	Das Frühstück hier ist sehr reichhaltig.
+动力	孩子是我工作的动力。	Meine Kinder sind mein Antrieb zum Arbeiten.
+领先	现在我们队领先两分。	Unsere Mannschaft führt gerade mit zwei Punkten.
+路线	我们换一条路线吧。	Lass uns eine andere Route nehmen.
+较	今天路上的车较少。	Heute sind relativ wenige Autos auf der Straße.
+纪念	为了纪念这一天，我们拍了张照片。	Zur Erinnerung an diesen Tag haben wir ein Foto gemacht.
+福	门上写着一个福字。	Auf der Tür steht das Schriftzeichen für Glück.
+补	这里少了一个字，我来补上。	Hier fehlt ein Zeichen, ich ergänze es.
+分别	老师分别问了我们几个问题。	Der Lehrer hat jedem von uns einzeln ein paar Fragen gestellt.
+完整	这本书不完整，少了几页。	Dieses Buch ist nicht vollständig, es fehlen ein paar Seiten.
+愿望	你的新年愿望是什么？	Was ist dein Wunsch für das neue Jahr?
+长期	他长期住在国外。	Er lebt dauerhaft im Ausland.
+数量	今年游客的数量比去年多了很多。	Die Zahl der Touristen ist dieses Jahr viel höher als letztes Jahr.
+保留	我还保留着她的信。	Ihre Briefe habe ich bis heute behalten.	wo3 hai2 bao3 liu2 zhe5 ta1 de5 xin4
+深入	这个问题我们明天再深入讨论。	Über diese Frage reden wir morgen gründlicher.
+石油	这个国家有很多石油。	Dieses Land hat viel Erdöl.
+称为	人们把这条街称为美食街。	Die Leute bezeichnen diese Straße als Schlemmermeile.
+计算	一共多少钱，你帮我计算一下。	Rechne mir bitte aus, wie viel das insgesamt kostet.
+开发	他们在开发一个新游戏。	Sie entwickeln gerade ein neues Spiel.
+争	你们别争了，一人一半。	Streitet euch nicht, jeder bekommt die Hälfte.
+富	他们家很富，有好几套房子。	Ihre Familie ist reich, sie hat mehrere Wohnungen.
+加强	你得加强练习。	Du musst mehr üben.
+开放	图书馆周末也开放。	Die Bibliothek ist auch am Wochenende geöffnet.
+各地	他去过全国各地。	Er war schon überall im Land.
+团结	只要大家团结，就没有问题。	Solange alle zusammenhalten, gibt es kein Problem.
+展开	你把地图展开看看。	Falte die Karte mal auseinander und sieh nach.
+把握	这次考试我很有把握。	Bei dieser Prüfung bin ich mir ziemlich sicher.
+成就	他在工作上取得了很大成就。	Er hat in seinem Beruf viel erreicht.
+发动	车怎么发动不了？	Warum springt das Auto nicht an?
+果然	他果然又来晚了。	Wie erwartet kam er wieder zu spät.
+需求	这种手机的需求很大。	Die Nachfrage nach diesem Handy ist groß.
+只好	下雨了，我们只好在家看电视。	Es regnet, also bleibt uns nur, zu Hause fernzusehen.
+国内	今年夏天我们在国内旅行。	Diesen Sommer reisen wir im Inland.
+传说	这个地方有很多传说。	Über diesen Ort gibt es viele Legenden.
+后果	你想过后果吗？	Hast du an die Folgen gedacht?
+打破	弟弟打破了一个碗。	Mein kleiner Bruder hat eine Schüssel zerbrochen.
+上来	你上来吧，我在楼上等你。	Komm doch hoch, ich warte oben auf dich.
+主持	今天的晚会由她主持。	Sie moderiert den heutigen Abend.
+先进	这家医院的设备很先进。	Die Geräte in diesem Krankenhaus sind sehr fortschrittlich.
+文明	我觉得古代文明很有意思。	Ich finde antike Zivilisationen sehr spannend.
+西部	西部的山很多，人很少。	Im Westen gibt es viele Berge und wenige Menschen.
+防止	把门关好，防止猫跑出去。	Mach die Tür richtig zu, damit die Katze nicht rausläuft.
+采用	公司采用了我的建议。	Die Firma hat meinen Vorschlag übernommen.
+制度	每个学校都有自己的制度。	Jede Schule hat ihre eigenen Regeln.
+改造	这个老房子改造得很漂亮。	Dieses alte Haus wurde wunderschön umgebaut.
+制定	我们先制定一个学习计划吧。	Lass uns zuerst einen Lernplan aufstellen.
+直播	今天晚上的比赛有直播吗？	Wird das Spiel heute Abend live übertragen?
+各自	吃完饭，大家各自回家了。	Nach dem Essen ging jeder für sich nach Hause.
+创作	这些歌都是他自己创作的。	Diese Lieder hat er alle selbst geschrieben.
+自身	他应该先看看自身的问题。	Er sollte erst mal auf seine eigenen Probleme schauen.
+增长	这个城市的人口增长很快。	Die Bevölkerung dieser Stadt wächst schnell.
+部长	部长明天来我们学校。	Der Minister kommt morgen an unsere Schule.
+否认	他否认自己说过这句话。	Er bestreitet, das gesagt zu haben.
+高速	这个城市在高速发展。	Diese Stadt entwickelt sich rasant.
+观看	很多人在广场上观看表演。	Viele Leute schauen sich auf dem Platz die Vorstellung an.
+推进	这件事推进得很慢。	Die Sache kommt nur langsam voran.
+安装	明天有人来家里安装空调。	Morgen kommt jemand und baut bei uns die Klimaanlage ein.
+功夫	他从小就学功夫。	Er lernt seit seiner Kindheit Kung-Fu.
+团体	团体票比较便宜。	Gruppentickets sind günstiger.
+得分	他这场比赛得分最多。	Er hat in diesem Spiel die meisten Punkte erzielt.
+纪录	她打破了学校的纪录。	Sie hat den Schulrekord gebrochen.
+基本上	作业基本上都写好了。	Die Hausaufgaben sind im Grunde fertig.
+属	我属狗，你呢？	Ich bin im Jahr des Hundes geboren, und du?
+运输	这些水果是用飞机运输的。	Dieses Obst wird mit dem Flugzeug transportiert.
+传播	这个消息传播得很快。	Diese Nachricht hat sich schnell verbreitet.
+预计	飞机预计晚上八点到达。	Das Flugzeug landet voraussichtlich um acht Uhr abends.
+落后	他跑得太慢，落后了很多。	Er lief zu langsam und fiel weit zurück.
+强调	老师强调考试时不能说话。	Der Lehrer hat betont, dass man in der Prüfung nicht reden darf.
+加快	快下雨了，我们加快速度吧。	Gleich regnet es, lass uns schneller gehen.
+分配	老师给每个人分配了任务。	Der Lehrer hat jedem eine Aufgabe zugeteilt.
+乐队	他和朋友成立了一个乐队。	Er hat mit Freunden eine Band gegründet.
+保存	别忘了保存文件。	Vergiss nicht, die Datei zu speichern.
+播放	电视上正在播放新闻。	Im Fernsehen laufen gerade die Nachrichten.
+突出	她的成绩很突出。	Ihre Noten sind hervorragend.
+会员	成为会员要多少钱？	Was kostet es, Mitglied zu werden?
+热烈	大家热烈欢迎新同学。	Alle begrüßen die neuen Mitschüler begeistert.
+联合国	她在联合国工作。	Sie arbeitet bei den Vereinten Nationen.
+带领	他带领球队拿了第一名。	Er hat die Mannschaft zum ersten Platz geführt.
+决心	我决心以后每天跑步。	Ich habe mir fest vorgenommen, ab jetzt jeden Tag zu joggen.
+补充	我再补充一点。	Ich möchte noch etwas ergänzen.
+有利	这种天气对我们很有利。	Dieses Wetter ist günstig für uns.
+体现	这些小事体现了他对家人的关心。	Diese Kleinigkeiten zeigen, wie sehr er sich um seine Familie kümmert.
+生长	这种花在南方生长得很好。	Diese Blumen wachsen im Süden sehr gut.
+整体	整体来说，这次旅行很不错。	Insgesamt war die Reise ziemlich gut.
+收费	这个停车场收费吗？	Ist dieser Parkplatz gebührenpflichtig?
+迎接	我们去机场迎接客人。	Wir holen die Gäste am Flughafen ab.
+改进	这个计划还有很多地方需要改进。	An diesem Plan muss noch vieles verbessert werden.
+难度	这次考试的难度不大。	Diese Prüfung ist nicht besonders schwer.
+铁路	这条铁路明年就能修好。	Diese Bahnstrecke wird nächstes Jahr fertig.
+通信	我们已经通信好几年了。	Wir schreiben uns schon seit einigen Jahren.
+缺少	他还缺少工作经验。	Ihm fehlt noch Berufserfahrung.	ta1 hai2 que1 shao3 gong1 zuo4 jing1 yan4
+环保	骑自行车上班又健康又环保。	Mit dem Fahrrad zur Arbeit zu fahren ist gesund und umweltfreundlich.
+播出	这个节目每天晚上八点播出。	Diese Sendung läuft jeden Abend um acht Uhr.
+读者	这本杂志的读者很多是年轻人。	Viele Leser dieser Zeitschrift sind junge Leute.
+消费	年轻人在网上消费越来越多。	Junge Leute geben im Internet immer mehr Geld aus.
+实行	这个新规定从明年开始实行。	Diese neue Regel gilt ab nächstem Jahr.
+观念	爷爷的观念比较老。	Opas Ansichten sind ziemlich altmodisch.
+早已	我早已习惯了这里的生活。	Ich habe mich längst an das Leben hier gewöhnt.
+初步	我们有了一个初步的计划。	Wir haben einen vorläufigen Plan.
+比例	我们班女生的比例比较高。	In unserer Klasse ist der Anteil der Mädchen relativ hoch.
+输入	请在这里输入你的名字。	Bitte gib hier deinen Namen ein.
+创新	这家公司很重视创新。	Diese Firma legt großen Wert auf Innovation.
+总结	最后请你总结一下。	Fass zum Schluss bitte kurz zusammen.
+南部	我们打算去南部旅行。	Wir haben vor, in den Süden zu reisen.
+营养	早饭要吃得有营养。	Das Frühstück sollte nahrhaft sein.
+排名	他在班里的排名是第三。	In seiner Klasse steht er auf Platz drei.
+互联网	现在没有互联网很不方便。	Heute ist es ohne Internet sehr umständlich.
+毛病	我的电脑有点毛病。	Mein Computer hat eine Macke.
+场合	在这种场合要穿正式一点。	Zu so einem Anlass sollte man sich etwas förmlicher kleiden.
+合格	他是一个合格的老师。	Er ist ein qualifizierter Lehrer.
+东部	他家在这个国家的东部。	Er wohnt im Osten des Landes.
+认可	他的努力得到了大家的认可。	Seine Mühe wurde von allen anerkannt.
+坚决	他坚决不同意。	Er ist entschieden dagegen.
+日常	手机已经成了日常生活的一部分。	Das Handy ist ein Teil des Alltags geworden.
+设立	公司在南部设立了一个新的办公室。	Die Firma hat im Süden ein neues Büro eingerichtet.
+预防	经常洗手可以预防感冒。	Häufiges Händewaschen beugt Erkältungen vor.
+必然	不复习，考不好是必然的。	Wer nicht wiederholt, schreibt zwangsläufig eine schlechte Note.
+危害	吃太多糖会危害健康。	Zu viel Zucker schadet der Gesundheit.
+外交	她将来想做外交工作。	Sie möchte später im diplomatischen Dienst arbeiten.
+本事	他真有本事，什么都能修。	Er ist richtig geschickt, er kann alles reparieren.
+高速公路	我们走高速公路吧，快一点。	Lass uns die Autobahn nehmen, das geht schneller.
+录音	上课的时候我可以录音吗？	Darf ich den Unterricht aufnehmen?
+推动	旅游推动了小城的发展。	Der Tourismus hat die Entwicklung der Kleinstadt vorangetrieben.
+北部	北部冬天很冷，常常下雪。	Im Norden ist es im Winter kalt und es schneit oft.
+适用	这个办法对孩子不适用。	Diese Methode eignet sich nicht für Kinder.
+客观	你说得不太客观。	Was du sagst, ist nicht ganz objektiv.
+应用	这个应用很有用。	Diese App ist sehr nützlich.
+金牌	他终于拿到了金牌。	Endlich hat er die Goldmedaille gewonnen.
+完善	我们会继续完善这个应用。	Wir werden diese App weiter verbessern.
+志愿者	他周末在医院当志愿者。	Am Wochenende hilft er ehrenamtlich im Krankenhaus.
+发达	这里的交通很发达。	Das Verkehrsnetz hier ist gut ausgebaut.
+人工	这个湖是人工的。	Dieser See ist künstlich angelegt.
+普遍	现在用手机买东西很普遍。	Mit dem Handy einzukaufen ist heute weit verbreitet.
+形状	这个杯子的形状很特别。	Dieser Becher hat eine besondere Form.
+短期	我只是来这里短期工作。	Ich arbeite nur für kurze Zeit hier.
+全场	他一唱完，全场都站了起来。	Kaum hatte er fertig gesungen, stand der ganze Saal auf.
+证件	别忘了带证件。	Vergiss deine Ausweispapiere nicht.
+共有	我们班共有三十个学生。	Unsere Klasse hat insgesamt dreißig Schüler.
+开展	学校每年开展读书活动。	Die Schule veranstaltet jedes Jahr eine Leseaktion.
+推广	他们正在推广一种新的学习方法。	Sie verbreiten gerade eine neue Lernmethode.
+农业	这里很多人从事农业。	Viele Leute hier arbeiten in der Landwirtschaft.
+面积	这套房子面积多大？	Wie groß ist diese Wohnung?
+加工	这些水果会被加工成果汁。	Dieses Obst wird zu Saft verarbeitet.
+中部	中部地区今天有大雨。	In der Mitte des Landes regnet es heute stark.
+歌声	她的歌声真好听。	Ihr Gesang ist wirklich schön.
+否定	他否定了我的想法。	Er hat meine Idee abgelehnt.
+主张	我主张周末去爬山。	Ich bin dafür, am Wochenende wandern zu gehen.
+性别	请写上你的姓名和性别。	Bitte trag deinen Namen und dein Geschlecht ein.
+规范	你的字写得很规范。	Du schreibst die Zeichen sehr korrekt.
+自主	这家公司让员工自主安排时间。	In dieser Firma teilen sich die Mitarbeiter ihre Zeit selbst ein.
+解开	房间里太热了，他解开了大衣。	Im Zimmer war es zu warm, also knöpfte er seinen Mantel auf.
+将近	我等了将近一个小时。	Ich habe fast eine Stunde gewartet.
+办理	我去银行办理一张卡。	Ich gehe zur Bank und beantrage eine Karte.
+定期	车要定期检查。	Ein Auto muss regelmäßig überprüft werden.
+动人	这个故事真动人。	Diese Geschichte ist wirklich bewegend.
+生动	他上课讲得很生动。	Er unterrichtet sehr lebendig.
+彩色	我买了一些彩色的纸。	Ich habe etwas buntes Papier gekauft.
+海关	我在海关等了半个小时。	Ich habe am Zoll eine halbe Stunde gewartet.
+自觉	大家都很自觉地排队。	Alle stellen sich ganz von selbst in die Schlange.	da4 jia1 dou1 hen3 zi4 jue2 de5 pai2 dui4
+变为	他的理想终于变为了现实。	Sein Traum ist endlich Wirklichkeit geworden.
+标题	这篇文章的标题很有意思。	Die Überschrift dieses Artikels ist interessant.
+志愿	我的志愿是当一名医生。	Mein Lebensziel ist es, Arzt zu werden.
+职工	这家工厂有两千多名职工。	Diese Fabrik hat über zweitausend Beschäftigte.
+表格	这张表格怎么写？	Wie füllt man dieses Formular aus?
+美术	我女儿很喜欢上美术课。	Meine Tochter hat sehr gern Kunstunterricht.
+故乡	他常常想起自己的故乡。	Er denkt oft an seine Heimat.
+认得	你还认得我吗？	Erkennst du mich noch?	ni3 hai2 ren4 de5 wo3 ma5
+武术	他每天早上练武术。	Er übt jeden Morgen Kampfkunst.
+推开	他推开门走了进来。	Er stieß die Tür auf und kam herein.
+广大	这个节目受到广大观众的欢迎。	Diese Sendung ist bei vielen Zuschauern beliebt.
+结实	这把椅子很结实。	Dieser Stuhl ist sehr stabil.
+专题	这期杂志有一个旅行专题。	Diese Ausgabe der Zeitschrift hat einen Reiseschwerpunkt.
+本领	他跟爷爷学了不少本领。	Er hat bei seinem Opa viele Fertigkeiten gelernt.
+大使馆	我明天要去大使馆办手续。	Ich muss morgen zur Botschaft, um Formalitäten zu erledigen.
+带动	他的热情带动了大家。	Seine Begeisterung hat alle mitgerissen.
+代表团	下午有一个代表团来参观。	Am Nachmittag kommt eine Delegation zu Besuch.
+国庆	国庆放假你去哪儿？	Wohin fährst du über den Nationalfeiertag?
+所长	所长今天不在办公室。	Der Institutsleiter ist heute nicht im Büro.
+票价	地铁的票价很便宜。	Die U-Bahn-Tickets sind sehr günstig.
+有的是	别急，我们有的是时间。	Keine Eile, wir haben jede Menge Zeit.
+复印	你能帮我复印一下这张纸吗？	Kannst du mir dieses Blatt kopieren?
+普及	手机在农村也普及了。	Auch auf dem Land sind Handys inzwischen verbreitet.
+银牌	她第一次比赛就拿了银牌。	Bei ihrem ersten Wettkampf hat sie gleich Silber geholt.
+人民币	你带人民币了吗？	Hast du Renminbi dabei?
+外文	这本书是外文的，我看不懂。	Dieses Buch ist in einer Fremdsprache, ich verstehe es nicht.
+情感	他不太会表达自己的情感。	Er kann seine Gefühle nicht gut ausdrücken.
+欢乐	孩子们给家里带来了很多欢乐。	Die Kinder bringen viel Freude ins Haus.
+爱心	她是一个很有爱心的人。	Sie ist ein sehr warmherziger Mensch.
+报到	新同学明天去学校报到。	Die neuen Mitschüler melden sich morgen in der Schule.
+沙子	我的鞋里都是沙子。	Meine Schuhe sind voller Sand.
+老百姓	这家饭馆很便宜，老百姓都吃得起。	Dieses Restaurant ist günstig, das können sich auch normale Leute leisten.
+影视	她大学学的是影视专业。	Sie hat Film und Fernsehen studiert.
+连续剧	妈妈每天晚上看连续剧。	Mama schaut jeden Abend eine Serie.
+图画	这本书里有很多图画。	In diesem Buch gibt es viele Bilder.
+教材	新学期的教材你买了吗？	Hast du die Lehrbücher für das neue Semester schon gekauft?
+试题	今年的试题比去年难。	Die Prüfungsaufgaben sind dieses Jahr schwerer als letztes Jahr.
+划船	周末我们去湖上划船吧。	Lass uns am Wochenende auf dem See rudern.
+凉水	天太热了，我想喝杯凉水。	Es ist so heiß, ich möchte ein Glas kaltes Wasser.
+跳高	他跳高跳得很好。	Er ist sehr gut im Hochsprung.
+预习	我今天晚上要预习明天的课。	Heute Abend muss ich den Stoff für morgen vorbereiten.
+跳远	我弟弟参加了跳远比赛。	Mein kleiner Bruder hat beim Weitsprung mitgemacht.
+京剧	爷爷很喜欢听京剧。	Opa hört sehr gern Peking-Oper.
