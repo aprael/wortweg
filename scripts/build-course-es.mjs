@@ -43,10 +43,10 @@ async function* commandLines(cmd, args) {
 }
 
 /** Kuratierte Textdatei: Zeilen ohne Kommentare (# …) und Leerzeilen; TSV-Spalten getrennt. */
-async function curated(name) {
+async function curated(name, path = CUR + name) {
   let text;
   try {
-    text = await readFile(CUR + name, 'utf8');
+    text = await readFile(path, 'utf8');
   } catch {
     return [];
   }
@@ -635,6 +635,8 @@ function sentenceNote(s, wordOf, unitStart, hints) {
 const args = process.argv.slice(2);
 const listPath = args.includes('--liste') ? args[args.indexOf('--liste') + 1] : null;
 const unreviewedPath = args.includes('--ungeprueft') ? args[args.indexOf('--ungeprueft') + 1] : null;
+const reportPath = args.includes('--bericht') ? args[args.indexOf('--bericht') + 1] : null;
+const ownExamplePath = args.includes('--beispiele') ? args[args.indexOf('--beispiele') + 1] : CUR + 'eigene-beispiele.tsv';
 
 const freq = await readFrequency();
 const kaikki = await readKaikkiEn(new Set(freq.keys()));
@@ -1011,12 +1013,53 @@ function bestExample(list, ui) {
   else if (fallback && !exampleCandidates.has(fallback.id)) exampleCandidates.set(fallback.id, fallback);
   return best;
 }
+// Eigene Beispielsätze (eigene-beispiele.tsv: Lemma bzw. Regelwort, Spanisch, Deutsch): gehen Tatoeba vor.
+// Geprüft wird streng: Satzzeichen, alle Wörter im Kurs, das Wort kommt vor, Wortschatz und Zeitform sind bis zum
+// Ende der nächsten Einheit bekannt (am Anfang die ersten 120 Wörter). Fehler brechen den Bau ab.
+const ownOf = new Map();
+{
+  const fatal = [];
+  const keyOf = new Map();
+  units.forEach((unit, ui) => {
+    for (const c of unit.words ?? []) keyOf.set(c.L.lemma, { ref: c, ui });
+    for (const it of unit.items ?? []) if (!keyOf.has(it.ziel[0])) keyOf.set(it.ziel[0], { ref: it, ui, item: true });
+  });
+  for (const [i, row] of (await curated('eigene-beispiele.tsv', ownExamplePath)).entries()) {
+    const [key, es, de] = row;
+    const where = `eigenes Beispiel ${i + 1} (${key ?? '?'})`;
+    const hit = keyOf.get(key);
+    if (!hit || !es || !de) { fatal.push(`${where}: unbekanntes Wort oder Spalte fehlt`); continue; }
+    if (!goodSpanish(es) || !goodGerman(de)) { fatal.push(`${where}: Satzzeichen oder Zeichen – „${es}“ / „${de}“`); continue; }
+    const toks = sentenceTokens(es, analyze, resolve, names);
+    if (!toks) { fatal.push(`${where}: „${es}“ – unbekannte Form: ${esTokens(es).filter((t) => !names.has(t) && !analyze(t.toLowerCase()).length).join(' ')}`); continue; }
+    const lemmas = [...new Set(toks.flatMap((t) => t.lemmas))];
+    const outside = lemmas.filter((l) => !wordOf.has(l));
+    if (outside.length) { fatal.push(`${where}: „${es}“ – nicht im Kurs: ${outside.join(' ')}`); continue; }
+    const tense = Math.max(0, ...toks.map((t, j) => (t.pos === 'verb' && t.form !== t.lemmas[0] ? tenseOf(t.form, t.lemmas[0], j === 0) : 0)));
+    const own = { id: 900000000 + i, own: true, text: es, native: [de], toks, lemmas, tense, seq: ` ${toks.map((t) => t.form).join(' ')} ` };
+    if (hit.item ? !itemMatch(own, hit.ref) : !lemmas.includes(key)) { fatal.push(`${where}: „${es}“ enthält das Wort nicht (erkannt: ${lemmas.join(' ')})`); continue; }
+    own.newest = Math.max(gateAt[tense], ...lemmas.map((l) => wordOf.get(l).idx));
+    const limit = Math.max(unitStart[hit.ui] + units[hit.ui].size + 16, 120);
+    if (!(own.newest < limit)) {
+      const late = lemmas.filter((l) => wordOf.get(l).idx >= limit);
+      fatal.push(`${where}: „${es}“ – erst später gelernt: ${late.join(' ') || `Zeitform ${TENSES[tense]}`}`);
+      continue;
+    }
+    if (ownOf.has(hit.ref)) { fatal.push(`${where}: für dieses Wort gibt es schon ein eigenes Beispiel`); continue; }
+    ownOf.set(hit.ref, own);
+  }
+  if (fatal.length) {
+    console.error(`Abbruch (${fatal.length} Fehler):\n  ${fatal.slice(0, 200).join('\n  ')}`);
+    process.exit(1);
+  }
+}
 const exampleOf = new Map();
 units.forEach((unit, ui) => {
-  for (const c of unit.words ?? []) exampleOf.set(c, bestExample(sentencesOf.get(c.L.lemma) ?? [], ui));
-  for (const it of unit.items ?? []) exampleOf.set(it, bestExample(sentences.filter((s) => s.newest != null && itemMatch(s, it)), ui));
+  for (const c of unit.words ?? []) exampleOf.set(c, ownOf.get(c) ?? bestExample(sentencesOf.get(c.L.lemma) ?? [], ui));
+  for (const it of unit.items ?? []) exampleOf.set(it, ownOf.get(it) ?? bestExample(sentences.filter((s) => s.newest != null && itemMatch(s, it)), ui));
 });
 const toExample = (s) => {
+  if (s.own) return { target: s.text, native: s.native[0], source: { name: 'Wortweg' } };
   const source = { name: 'Tatoeba', id: String(s.id), url: `https://tatoeba.org/de/sentences/show/${s.id}` };
   if (s.user) source.author = s.user;
   return { target: s.text, native: s.native[0], source };
@@ -1116,7 +1159,26 @@ if (!check.ok) {
 }
 const text = serialize(courseJson);
 JSON.parse(text);
-await writeFile(OUT, text);
+if (!args.includes('--nur-pruefen')) await writeFile(OUT, text);
+
+// Bericht für eigene Sätze: Wörter ohne Beispiel bzw. mit unbekannten Wörtern im Beispiel, Wortschatz in Lernreihenfolge.
+if (reportPath) {
+  const rows = [];
+  units.forEach((unit, ui) => {
+    const end = unitStart[ui] + unit.size;
+    const limit = Math.max(end + 16, 120);
+    for (const ref of [...(unit.words ?? []), ...(unit.items ?? [])]) {
+      const ex = exampleOf.get(ref);
+      const word = unit.words ? { lemma: ref.L.lemma, ziel: ref.target, deutsch: ref.native } : { lemma: ref.ziel[0], ziel: ref.ziel, deutsch: ref.deutsch, regelwort: true };
+      const late = ex && !ex.own ? ex.lemmas.filter((l) => wordOf.get(l)?.idx >= end) : [];
+      rows.push({ ...word, einheit: `es-w-${String(ui + 1).padStart(3, '0')}`, einheitTitel: unit.title, position: unitStart[ui] + (unit.words ?? unit.items).indexOf(ref),
+        erlaubtBisPosition: limit - 1, zeitformenBekannt: TENSES.filter((_, t) => gateAt[t] < limit),
+        beispiel: ex ? { es: ex.text, de: ex.native[0], eigen: !!ex.own, unbekannteWoerter: late } : null });
+    }
+  });
+  const vocab = [...wordOf.entries()].sort((a, b) => a[1].idx - b[1].idx).map(([lemma, v]) => ({ position: v.idx, lemma, deutsch: v.gloss }));
+  await writeFile(reportPath, JSON.stringify({ woerter: rows, vocab }, null, 1));
+}
 
 // Liste zum Durchsehen: alle Lemmata bis Rang 8000 mit Status, Kandidaten und englischer Glosse.
 if (listPath) {

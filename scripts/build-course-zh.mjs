@@ -30,11 +30,12 @@ function bz2Lines(p) {
   return r.stdout.split('\n');
 }
 /** Kuratierte TSV-Datei: Kommentare (#) und Leerzeilen überspringen. */
-function tsv(name) {
-  const p = CUR + name;
-  if (!existsSync(p)) return [];
-  return readText(p).split('\n').filter((l) => l.trim() && !l.startsWith('#')).map((l) => l.split('\t').map((x) => x.trim()));
+function tsv(name, path = CUR + name) {
+  if (!existsSync(path)) return [];
+  return readText(path).split('\n').filter((l) => l.trim() && !l.startsWith('#')).map((l) => l.split('\t').map((x) => x.trim()));
 }
+/** Wert nach einem Schalter („--bericht datei“), sonst null. */
+const argValue = (flag) => { const i = process.argv.indexOf(flag); return i > 0 && process.argv[i + 1] ? process.argv[i + 1] : null; };
 const HAN = /\p{Script=Han}/u;
 const isHan = (s) => /^[\p{Script=Han}〇]+$/u.test(s);
 const cmp = (a, b) => (a < b ? -1 : a > b ? 1 : 0);
@@ -355,6 +356,17 @@ function segmentSentence(zh) {
   return { tokens };
 }
 
+/** Teile eines Satzes, die nicht im Kurswortschatz stehen (für Fehlermeldungen zu eigenen Sätzen). */
+function segmentUnknown(zh) {
+  const out = [];
+  for (const run of zh.split(/[^\p{Script=Han}]+/u).filter(Boolean)) {
+    const seg = segmentRun([...run]);
+    if (!seg) out.push(run);
+    else for (const t of seg) if (lex.get(t)?.unknown) out.push(t);
+  }
+  return out;
+}
+
 // Kontextregeln für häufige Mehrfachlesungen; sie gehen vor, weil die automatische Tatoeba-Umschrift
 // gerade hier oft danebenliegt (十三只猫 „zhi3“, 过得真快 „de2“). null = keine Regel, Umschrift entscheidet.
 const NUM_OR_DEM = /^[一二三四五六七八九十两几百千万这那哪每半有]+$/u;
@@ -496,6 +508,28 @@ const tatoebaCount = sentences.length;
 for (const [id, zh, de, latn] of tsv('eigene-saetze.tsv')) {
   addCandidate({ id, zh, latn, own: true, de: de.split(/\s*\|\s*/).map((text) => ({ id: 0, text })) });
 }
+// Eigene Beispielsätze (eigene-beispiele.tsv: Wort, Satz, Deutsch[, Pinyin mit Tonziffern]). Nur als Beispiel des
+// genannten Worts, nie in Übungen, und vor Tatoeba. Geprüft wird nach dem Lehrplan (Wort im Satz, Wortschatz bekannt).
+// Zum Testen einer anderen Datei: --beispiele datei (mit --nur-pruefen wird nichts geschrieben).
+const ownExamples = [];
+for (const [i, row] of tsv('eigene-beispiele.tsv', argValue('--beispiele') ?? CUR + 'eigene-beispiele.tsv').entries()) {
+  const [wort, zh, de, latn] = row;
+  const where = `eigenes Beispiel ${i + 1} (${wort ?? '?'})`;
+  if (!wort || !zh || !de) { fatal.push(`${where}: braucht Wort, Satz und Deutsch (Tabulator getrennt)`); continue; }
+  if (!/[。？！]$/u.test(zh) || !/^[„"]?[A-ZÄÖÜ0-9]/u.test(de) || !/[.?!"“]$/u.test(de)) { fatal.push(`${where}: Satzzeichen – „${zh}“ / „${de}“`); continue; }
+  const seg = segmentSentence(zh);
+  if (seg.fail) {
+    const what = seg.fail === 'unbekannt' ? 'Wörter außerhalb des Kurses' : 'nicht zerlegbar (Zeichen außerhalb des Kurses)';
+    fatal.push(`${where}: „${zh}“ – ${what}: ${segmentUnknown(zh).join(' ') || zh}`);
+    continue;
+  }
+  const before = sentences.length;
+  addCandidate({ id: 900000000 + i, zh, latn, own: true, de: de.split(/\s*\|\s*/).map((text) => ({ id: 0, text })) });
+  if (sentences.length === before) { fatal.push(`${where}: „${zh}“ abgelehnt (zu lang, Lesung unklar, Inhalt oder Satz schon vorhanden)`); continue; }
+  const sObj = sentences.at(-1);
+  sObj.exampleOnly = true;
+  ownExamples.push({ s: sObj, si: sentences.length - 1, wort, where });
+}
 console.log(`Tatoeba: ${stat.links} cmn-Sätze mit deutscher Übersetzung → ${tatoebaCount} Kandidaten (${JSON.stringify(stat)})`);
 if (args.has('--warnungen')) console.log(warn.join('\n'));
 
@@ -617,7 +651,7 @@ sentences.forEach((s) => {
   if (whitelist.has(s.id)) s.q += 4;
 });
 const byUnit = units.map(() => []);
-sentences.forEach((s, si) => { if (Number.isFinite(s.newest)) byUnit[unitOfPos(s.newest)].push(si); });
+sentences.forEach((s, si) => { if (Number.isFinite(s.newest) && !s.exampleOnly) byUnit[unitOfPos(s.newest)].push(si); });
 const reserve = [];
 let deficit = 0;
 units.forEach((unit, ui) => {
@@ -660,6 +694,7 @@ units.forEach((unit, ui) => {
       got++;
     }
     deficit += quota - got;
+    if (quota > got) (unit.deficits ??= []).push({ lesson: k + 1, missing: quota - got });
   }
   unit.sentences = chosen;
   for (const si of cands.filter((x) => !sentences[x].taken).sort((a, b) => sentences[a].newest - sentences[b].newest || sentences[a].q - sentences[b].q || sentences[b].id - sentences[a].id)) reserve.push(si);
@@ -671,7 +706,7 @@ units.forEach((unit, ui) => {
 
 const sentencesOfWord = new Map();
 sentences.forEach((s, si) => {
-  if (!Number.isFinite(s.newest)) return;
+  if (!Number.isFinite(s.newest) || s.exampleOnly) return;
   for (const t of s.toks) for (const w of t.words) {
     if (!sentencesOfWord.has(w)) sentencesOfWord.set(w, []);
     if (sentencesOfWord.get(w).at(-1) !== si) sentencesOfWord.get(w).push(si);
@@ -680,9 +715,33 @@ sentences.forEach((s, si) => {
 const exampleUsed = new Set();
 const exampleCandidates = new Map();
 const exampleOf = new Map();
+// Eigene Beispiele: Wort muss im Satz vorkommen; erlaubt sind Wörter bis zum Ende der nächsten Einheit (am Anfang
+// die ersten 120 Wörter), damit die ersten Wörter überhaupt Sätze bekommen können.
+const ownOf = new Map();
+for (const ex of ownExamples) {
+  const inSentence = new Set(ex.s.toks.flatMap((t) => t.words));
+  const cand = words.filter((w) => w.forms.includes(ex.wort) && inSentence.has(w.idx));
+  if (!cand.length) { fatal.push(`${ex.where}: „${ex.s.zh}“ enthält das Wort nicht (oder es wird anders zerlegt: ${ex.s.tokens.join(' ')})`); continue; }
+  const w = cand[0];
+  const ui = unitOfPos(learnOrder[w.idx]);
+  const end = unitStart[ui] + units[ui].words.length;
+  const limit = Math.max(end + 16, 120);
+  if (!(ex.s.newest < limit)) {
+    const late = [...new Set(ex.s.toks.filter((t) => t.words.length && Math.min(...t.words.map((x) => learnOrder[x])) >= limit).map((t) => t.form))];
+    fatal.push(`${ex.where}: „${ex.s.zh}“ – erst später gelernt: ${late.join(' ')}`);
+    continue;
+  }
+  if (ownOf.has(w.idx)) { fatal.push(`${ex.where}: für dieses Wort gibt es schon ein eigenes Beispiel`); continue; }
+  ownOf.set(w.idx, ex.si);
+}
+if (fatal.length) {
+  console.error(`Abbruch (${fatal.length} Fehler):\n  ${fatal.slice(0, 200).join('\n  ')}`);
+  process.exit(1);
+}
 units.forEach((unit, ui) => {
   const end = unitStart[ui] + unit.words.length;
   for (const w of unit.words) {
+    if (ownOf.has(w.idx)) { exampleOf.set(w.idx, ownOf.get(w.idx)); continue; }
     let best = -1;
     let bestScore = -Infinity;
     let fallback = -1;
@@ -789,7 +848,7 @@ let exampleCount = 0;
 const inSentences = new Set();
 const toExample = (s) => ({
   target: s.zh, native: s.de[0].text, reading: s.reading,
-  source: { name: 'Tatoeba', id: String(s.id), url: `https://tatoeba.org/de/sentences/show/${s.id}` },
+  source: s.own ? { name: 'Wortweg' } : { name: 'Tatoeba', id: String(s.id), url: `https://tatoeba.org/de/sentences/show/${s.id}` },
 });
 units.forEach((unit, ui) => {
   const sents = unit.sentences.map((si) => {
@@ -853,7 +912,23 @@ if (!check.ok) {
 for (const w of check.warnings) console.warn(`Warnung: ${w}`);
 const text = serialize(courseJson);
 JSON.parse(text);
-writeFileSync(OUT, text);
+if (!process.argv.includes('--nur-pruefen')) writeFileSync(OUT, text);
+
+// Bericht für die Arbeit an eigenen Sätzen: Wörter ohne Beispiel, Lektionen mit Fehlbestand, Wortschatz in Lernreihenfolge.
+const reportPath = argValue('--bericht');
+if (reportPath) {
+  const unitOf = (w) => unitOfPos(learnOrder[w.idx]);
+  const missing = words.filter((w) => Number.isFinite(learnOrder[w.idx]) && !exampleOf.has(w.idx)).map((w) => {
+    const ui = unitOf(w);
+    return { wort: w.forms[0], formen: w.forms, pinyin: w.readings[0], deutsch: w.native, hsk: w.level, position: learnOrder[w.idx],
+      einheit: `zh-u-${String(ui + 1).padStart(3, '0')}`, einheitTitel: units[ui].title, erlaubtBisPosition: Math.max(unitStart[ui] + units[ui].words.length + 16, 120) - 1 };
+  }).sort((a, b) => a.position - b.position);
+  const vocab = words.filter((w) => Number.isFinite(learnOrder[w.idx])).sort((a, b) => learnOrder[a.idx] - learnOrder[b.idx])
+    .map((w) => ({ position: learnOrder[w.idx], formen: w.forms, pinyin: w.readings[0], deutsch: w.native[0] }));
+  const deficits = units.flatMap((u, ui) => (u.deficits ?? []).map((d) => ({ einheit: `zh-u-${String(ui + 1).padStart(3, '0')}`, titel: u.title, ...d,
+    woerter: u.words.map((w) => w.forms[0]), erlaubtBisPosition: unitStart[ui] + u.words.length - 1 })));
+  writeFileSync(reportPath, JSON.stringify({ missing, deficits, vocab }, null, 1));
+}
 
 const perLevel = [1, 2, 3].map((L) => words.filter((w) => w.level === L).length);
 console.log(`Fertig in ${((performance.now() - started) / 1000).toFixed(1)} s: Wörter ${words.length} (HSK 1/2/3: ${perLevel.join('/')}; ${merged.length} doppelte Listeneinträge zusammengeführt), `
