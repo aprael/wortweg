@@ -291,4 +291,4 @@ sentence { native[], target[], note, reading?: string, tokens?: string[], source
 - **Anzeige:** Stufe aus Gesamt-XP (`playerLevel`, rein kosmetisch), Kronen 0–3 je Runde (`crownsFor`), Tagestruhe = Tagesziel.
   Große Kurse: im Lernpfad ist nur der Abschnitt mit dem nächsten Schritt aufgeklappt.
 - **Paare:** ein gemeinsames Raster für beide Spalten (CSS `subgrid`), alle Zeilen gleich hoch.
-- **Schrift:** Lilita One (SIL OFL 1.1) liegt unter `assets/fonts/`; `font-src` fällt unter `default-src 'self'`.
+- **Schriften:** Lilita One und Atkinson Hyperlegible Next (beide SIL OFL 1.1, WOFF2/TTF) liegen unter `assets/fonts/`; `font-src` fällt unter `default-src 'self'`. Design-Regeln: `DESIGN.md`.

@@ -7,7 +7,7 @@ import { buildLesson, buildCheckpoint, buildReviewExercise, fallbackExercise, le
 import { gradeExercise, gradeMatchAttempt } from './grading.js';
 import {
   dueReviewItems, displayStreak, xpToday, dailyGoalReached, isLessonCompleted, isLessonUnlocked, isCheckpointUnlocked,
-  isCheckpointPassed, nextStep, courseProgress, unitProgress, dayKey, DAILY_GOALS, CHECKPOINT_PASS,
+  isCheckpointPassed, nextStep, courseProgress, dayKey, DAILY_GOALS, CHECKPOINT_PASS,
 } from './progress.js';
 import { createSession, currentItem, isFinished, recordAnswer, advance, sessionProgress } from './session.js';
 import * as api from './api.js';
@@ -231,12 +231,12 @@ const app = {
   legacyDismissed: false,
   busy: false,
   openLevels: new Map(), // courseId → Set der aufgeklappten Abschnitte im Lernpfad
-  openRules: new Set(), // aufgeklappte Regeltexte (unit.id) im Lernpfad
 };
 const cache = new Map(); // key → { status: 'loading'|'ok'|'error', data, error, promise }
 let run = null; // laufende Lektion, Checkpoint oder Wiederholung
 let flash = null; // { kind, text, hash }
 let pendingFocus = null;
+let lastFigure = null; // { courseId, lessonId } – wo die Figur auf dem Brett zuletzt stand (Hüpf-Animation)
 let lastHash = null;
 let recognizer = null;
 let wrongTimer = null;
@@ -270,10 +270,11 @@ const ICONS = {
   star: '<path d="m12 2.8 2.8 5.9 6.4.8-4.7 4.4 1.2 6.4L12 17.2l-5.7 3.1 1.2-6.4-4.7-4.4 6.4-.8z"/>',
   book: '<path d="M4 4.5A1.5 1.5 0 0 1 5.5 3H11v16H5.5A1.5 1.5 0 0 0 4 20.5zM13 3h5.5A1.5 1.5 0 0 1 20 4.5v16a1.5 1.5 0 0 0-1.5-1.5H13zM5.5 20H11v1H5.5z"/>',
   bulb: '<path d="M12 2.5a6.5 6.5 0 0 0-3.8 11.8c.5.4.8.9.8 1.5V17h6v-1.2c0-.6.3-1.1.8-1.5A6.5 6.5 0 0 0 12 2.5zM9 18.5h6V20a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 20z"/>',
-  sword: '<path d="M14.5 3H21v6.5L10.8 19.7l1.6 1.6-1.4 1.4-2.3-2.3-2.6 2.6H3.9v-2.2l2.6-2.6-2.3-2.3 1.4-1.4 1.6 1.6zm-6.1 13.2 1.4 1.4L19 8.4V5h-3.4z"/>',
+  pawn: '<path d="M12 2.6a3.7 3.7 0 1 1 0 7.4 3.7 3.7 0 0 1 0-7.4zM8.4 11h7.2c0 1.1-.5 2.1-1.4 2.7l1.5 5.6H8.3l1.5-5.6A3.3 3.3 0 0 1 8.4 11zM6.5 20h11v2h-11z"/>',
+  chevron: '<path d="M6.4 8.6 12 14.2l5.6-5.6L19 10l-7 7-7-7z"/>',
   ear: '<path d="M12 2.5A6.5 6.5 0 0 0 5.5 9h2a4.5 4.5 0 0 1 9 0c0 2-1.2 3-2.3 4-1 .9-1.9 1.8-2.2 3.2-.3 1.4-1.1 2.3-2.5 2.3a2 2 0 0 1-2-2h-2a4 4 0 0 0 4 4c2.4 0 3.9-1.6 4.4-3.8.2-.8.7-1.3 1.6-2.1 1.3-1.2 3-2.6 3-5.6A6.5 6.5 0 0 0 12 2.5z"/>',
 };
-const icon = (name) => `<svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">${ICONS[name] ?? ''}</svg>`;
+const icon = (name, cls = '') => `<svg class="icon${cls ? ` ${cls}` : ''}" viewBox="0 0 24 24" aria-hidden="true" focusable="false">${ICONS[name] ?? ''}</svg>`;
 
 // =====================================================================================================
 // Daten laden (mit Lade- und Fehlerzustand)
@@ -433,6 +434,7 @@ function afterRender(prevFocus) {
     const r = target.getBoundingClientRect();
     if (r.bottom > window.innerHeight || r.top < 0) target.scrollIntoView({ block: 'nearest' });
   }
+  animateFigureHop();
 }
 
 const PUBLIC_ROUTES = new Set(['welcome', 'login', 'register', 'about']);
@@ -540,13 +542,13 @@ function layout(content, active) {
   const due = st?.activeCourseId ? dueReviewItems(st, st.activeCourseId, Date.now(), 99).length : 0;
   // Symbol + Text: am Handy als Tab-Leiste unten (styles.css), sonst als Zeile oben.
   const link = (hash, key, ico, label, extra = '') =>
-    `<a href="${hash}" class="nav-link${active === key ? ' is-active' : ''}"${active === key ? ' aria-current="page"' : ''}>${icon(ico)}<span class="nav-label">${label}</span>${extra}</a>`;
+    `<a href="${hash}" class="nav-link nav-link-${key}${active === key ? ' is-active' : ''}"${active === key ? ' aria-current="page"' : ''}>${icon(ico)}<span class="nav-label">${label}</span>${extra}</a>`;
   const nav = `<nav aria-label="Hauptnavigation" class="nav nav-main">
       ${link('#/', 'home', 'home', 'Start')}
       ${link('#/learn', 'learn', 'flag', 'Lernpfad')}
-      ${link('#/review', 'review', 'repeat', 'Wieder&shy;holen', due ? ` <span class="badge"><span class="sr-only">, </span>${due}<span class="sr-only"> fällig</span></span>` : '')}
+      ${link('#/review', 'review', 'repeat', '<span class="label-long">Wiederholen</span><span class="label-short">Üben</span>', due ? ` <span class="badge"><span class="sr-only">, </span>${due}<span class="sr-only"> fällig</span></span>` : '')}
       ${link('#/stats', 'stats', 'chart', 'Statistik')}
-      ${link('#/settings', 'settings', 'sliders', 'Einstel&shy;lungen')}
+      ${link('#/settings', 'settings', 'sliders', 'Optionen')}
       ${app.user?.role === 'admin' ? link('#/admin', 'admin', 'shield', 'Admin') : ''}
     </nav>`;
   return `<a class="skip-link" href="#main" data-action="skip">Zum Inhalt springen</a>
@@ -563,9 +565,11 @@ function publicLayout(content) {
   ${footer()}`;
 }
 
-function meter(value, max, label, cls = '') {
+function meter(value, max, label, cls = '', { decorative = false } = {}) {
   const pct = max > 0 ? Math.min(100, Math.round((value / max) * 100)) : 0;
-  return `<div class="meter ${cls}" role="progressbar" aria-label="${esc(label)}" aria-valuemin="0" aria-valuemax="${max}" aria-valuenow="${Math.min(value, max)}" aria-valuetext="${Math.min(value, max)} von ${max}"><span style="width:${pct}%"></span></div>`;
+  // In Knöpfen steht der Wert schon als Text daneben – dort nur als Bild, sonst nennt der Screenreader ihn doppelt.
+  if (decorative) return `<span class="meter${cls ? ` ${cls}` : ''}" aria-hidden="true"><span style="width:${pct}%"></span></span>`;
+  return `<span class="meter${cls ? ` ${cls}` : ''}" role="progressbar" aria-label="${esc(label)}" aria-valuemin="0" aria-valuemax="${max}" aria-valuenow="${Math.min(value, max)}" aria-valuetext="${Math.min(value, max)} von ${max}"><span style="width:${pct}%"></span></span>`;
 }
 
 function noticeHtml(scope) {
@@ -591,7 +595,7 @@ function legacyBanner() {
   return `<section class="banner" aria-labelledby="legacy-banner-h">
     <h2 id="legacy-banner-h" class="banner-title">Fortschritt aus der alten Version gefunden</h2>
     <p>In diesem Browser liegt noch ein lokaler Stand von Wortweg 0.1 (${plural(lg.summary.xpTotal, 'XP', 'XP')}, ${plural(lg.summary.lessons, 'Lektion', 'Lektionen')}). Möchtest du ihn in dein ${app.user?.isGuest ? 'Gast-' : ''}Konto übernehmen?</p>
-    <div class="row"><a class="btn btn-small btn-primary" href="#/settings" data-action="goto-legacy">Ansehen &amp; übernehmen</a>
+    <div class="row"><a class="btn btn-small btn-field" href="#/settings" data-action="goto-legacy">Ansehen &amp; übernehmen</a>
     <button type="button" class="btn btn-small btn-ghost" data-action="legacy-later">Später</button></div></section>`;
 }
 
@@ -602,10 +606,9 @@ function legacyBanner() {
 function viewWelcome() {
   setTitle('Willkommen');
   const busy = app.busy;
-  return `<section class="welcome">
+  return `<section class="welcome" aria-labelledby="welcome-h">
     <div class="welcome-text">
-      <p class="eyebrow">Freie Sprachlern-App</p>
-      <h1 tabindex="-1">Sprachen lernen – Schritt für Schritt auf deinem Wortweg</h1>
+      <h1 id="welcome-h" tabindex="-1">Sprachen lernen, Feld für Feld</h1>
       <p class="lead">Kurze Lektionen, sofortiges Feedback mit Erklärung und Wiederholung nach Plan. Ohne Werbung, ohne Herzen, ohne Strafen.</p>
       <div class="hero-actions">
         <button type="button" class="btn btn-primary btn-lg" data-action="guest" ${busy ? 'disabled aria-busy="true"' : ''}>${busy ? 'Wird gestartet …' : LOCAL ? 'Los geht’s' : 'Ohne Konto starten'}</button>
@@ -616,13 +619,33 @@ function viewWelcome() {
     ? 'Ohne Konto, ohne Server: Dein Fortschritt bleibt auf diesem Gerät und die App funktioniert auch offline. Tipp fürs iPhone: In Safari „Teilen → Zum Home-Bildschirm“ – dann startet Wortweg wie eine App.'
     : '„Ohne Konto starten“ legt ein anonymes Gastkonto an; ein Cookie in diesem Browser merkt es sich. Du kannst es jederzeit in ein Konto mit E-Mail umwandeln.'}</p>
     </div>
-    <div class="welcome-art"><img src="assets/weg.svg" alt="" width="360" height="260"></div>
+    ${welcomeBoard()}
   </section>
-  <section class="features" aria-label="Was dich erwartet">
-    <div class="card feature"><img src="assets/sprechblasen.svg" alt="" width="56" height="56"><h2>Üben mit Sinn</h2><p>Auswählen, Paare finden, Sätze bauen, übersetzen, hören und – wenn du willst – sprechen.</p></div>
-    <div class="card feature"><img src="assets/wegmarke.svg" alt="" width="56" height="56"><h2>Dein Lernpfad</h2><p>Abschnitte mit Checkpoints. Kannst du schon etwas, überspringst du einen Abschnitt per Test.</p></div>
-    <div class="card feature"><img src="assets/logo.svg" alt="" width="56" height="56"><h2>Ehrlich &amp; frei</h2><p>Kein Abo, keine Werbung. Kurze Demo-Kurse und große Wortschatzkurse aus offenen Quellen – mit Quellenangabe, aber nicht muttersprachlich geprüft.</p></div>
+  <section class="card legend-card" aria-labelledby="legend-h">
+    <h2 id="legend-h">So funktioniert das Brett</h2>
+    <ul class="legend">
+      <li><span class="board-field is-current" aria-hidden="true">${icon('pawn', 'figure')}</span><span><strong>Deine Figur</strong> Sie steht auf der nächsten Lektion und rückt nach jeder Lektion ein Feld weiter.</span></li>
+      <li><span class="board-field is-done" aria-hidden="true">${icon('crown')}</span><span><strong>Krone</strong> Lektion geschafft. Du kannst sie jederzeit wiederholen.</span></li>
+      <li><span class="board-field is-rule" aria-hidden="true">${icon('bulb')}</span><span><strong>Regel-Feld</strong> Eine kurze Grammatikregel mit Beispielen, bevor es losgeht.</span></li>
+      <li><span class="board-field is-checkpoint" aria-hidden="true">${icon('chest')}</span><span><strong>Checkpoint</strong> Am Ende jedes Abschnitts. Wer etwas schon kann, überspringt den Abschnitt per Test.</span></li>
+    </ul>
+    <p class="muted small">Kein Abo, keine Werbung, kein Tracking. Kurze Demo-Kurse und große Wortschatzkurse aus offenen Quellen – mit Quellenangabe, aber nicht muttersprachlich geprüft.</p>
   </section>`;
+}
+
+/** Beispiel-Brett für die Willkommensseite (nur Bild, ohne Links): drei Einheiten aus dem Spanischkurs. */
+function welcomeBoard() {
+  const row = (title, words, fields, cls) => `<section class="board-unit ${cls}">
+      <div class="board-unit-head"><h3>${esc(title)}</h3><p class="board-words" lang="es">${esc(words)}</p></div>
+      <ol class="board-row" style="--reach:${fields.lastIndexOf('done') >= 0 || fields.includes('current') ? Math.max(fields.lastIndexOf('done'), fields.indexOf('current')) : -1}">${fields.map((f, i) => `<li><span class="board-field${f === 'done' ? ' is-done' : f === 'current' ? ' is-current' : ' is-locked'}">${f === 'done' ? icon('crown') : f === 'current' ? icon('pawn', 'figure') : i + 1}</span></li>`).join('')}</ol>
+    </section>`;
+  return `<figure class="welcome-board" aria-hidden="true">
+    <div class="board">
+      ${row('Zahlen', 'dos, primero, tres, cuánto, segundo, cinco, el número, medio …', ['done', 'done', 'done', 'done'], 'is-first is-reached is-complete')}
+      ${row('Farben', 'negro, blanco, rojo, color, azul, verde, amarillo, gris, marrón', ['done', 'current', 'locked'], 'is-rev is-reached')}
+      ${row('Wichtige kleine Wörter 2', 'sí, eso, ver, yo, tu, bueno, le, como, aquí, ese …', ['locked', 'locked', 'locked', 'locked'], '')}
+    </div>
+  </figure>`;
 }
 
 function formState(name) {
@@ -844,20 +867,155 @@ async function submitRegister(form) {
 // Start
 // =====================================================================================================
 
-function stepLink(step, course, { started = true, autofocus = true, big = true } = {}) {
+function stepLink(step, course, { started = true, autofocus = true, big = true, block = false } = {}) {
   const af = autofocus ? ' data-autofocus' : '';
-  const cls = `btn btn-primary${big ? ' btn-lg' : ''}`;
+  const cls = `btn btn-primary${big ? ' btn-lg' : ''}${block ? ' btn-block' : ''}`;
   if (step?.kind === 'lesson') {
-    return `<a class="${cls}"${af} href="#/lesson/${enc(step.lesson.id)}">${started ? 'Weiterlernen' : 'Erste Lektion starten'}<span class="btn-sub">${esc(step.lesson.unit.title)} · Lektion ${step.lesson.index + 1}</span></a>`;
+    return `<a class="${cls}"${af} href="#/lesson/${enc(step.lesson.id)}">${started ? 'Weiterlernen' : 'Erste Lektion starten'}<span class="btn-sub">${esc(step.lesson.unit.title)} · Lektion&nbsp;${step.lesson.index + 1}</span></a>`;
   }
   if (step?.kind === 'checkpoint') {
-    return `<a class="${cls}"${af} href="#/checkpoint/${enc(step.level.id)}">${icon('flag')} Checkpoint machen<span class="btn-sub">${esc(step.level.title)}</span></a>`;
+    return `<a class="${cls}"${af} href="#/checkpoint/${enc(step.level.id)}">Checkpoint machen<span class="btn-sub">${esc(step.level.title)}</span></a>`;
   }
   const allPassed = course.levels.every((l) => isCheckpointPassed(app.state, course.id, l.id));
   return allPassed
     ? '<p class="done-note"><strong>Kurs geschafft!</strong> Alle Checkpoints sind bestanden. Wiederhole, um das Gelernte zu festigen.</p>'
     : `<a class="${cls}"${af} href="#/learn">Zum Lernpfad</a>`;
 }
+
+/** Die eine Hauptaktion: eine angefangene Lektion fortsetzen, sonst der nächste Schritt (DESIGN.md §8.1, §8.5). */
+function primaryAction(course, step, opts = {}) {
+  const r = resumeInfo(course);
+  if (r && /^#\/(lesson|checkpoint)\/[^/]+$/.test(r.hash)) {
+    const cls = `btn btn-primary${opts.big === false ? '' : ' btn-lg'}${opts.block ? ' btn-block' : ''}`;
+    return `<a class="${cls}"${opts.autofocus === false ? '' : ' data-autofocus'} href="${esc(r.hash)}">Weitermachen<span class="btn-sub">${esc(r.title)} · Übung&nbsp;${r.pos} von&nbsp;${r.total}</span></a>`;
+  }
+  return stepLink(step, course, opts);
+}
+
+const fmtNum = (n) => Number(n).toLocaleString('de-DE');
+
+// =====================================================================================================
+// Spielbrett (DESIGN.md §8.5): eine Reihe je Einheit, Schlangenweg, Figur auf dem nächsten Feld
+// =====================================================================================================
+
+/** Felder einer Einheit mit Zustand: geschafft, übersprungen, aktuell, offen oder gesperrt. */
+function boardUnitHtml(course, unit, ui, { step, levelPassed, first, focusCurrent }) {
+  const st = app.state;
+  const lessons = listLessons(course).filter((l) => l.unitId === unit.id);
+  const fields = [];
+  if (unit.intro) {
+    fields.push({ html: `<button type="button" class="board-field is-rule" data-action="open-rule" data-unit="${esc(unit.id)}" aria-haspopup="dialog" aria-label="Regel: ${esc(unit.title)}">${icon('bulb')}</button>`, reached: false });
+  }
+  let reachedAny = false;
+  let complete = lessons.length > 0;
+  for (const l of lessons) {
+    const done = isLessonCompleted(st, course.id, l.id);
+    const skipped = !done && levelPassed;
+    const current = step?.kind === 'lesson' && step.lesson.id === l.id;
+    const unlocked = isLessonUnlocked(st, course, l.id);
+    const status = done ? 'geschafft' : skipped ? 'übersprungen (Checkpoint bestanden)' : current ? 'als Nächstes' : unlocked ? 'offen' : `gesperrt. ${lockReason(course, l.id)}`;
+    const label = `${unit.title}, Lektion ${l.index + 1}: ${status}`;
+    const href = `#/lesson/${enc(l.id)}`;
+    const data = `data-lesson="${esc(l.id)}" aria-label="${esc(label)}"`;
+    let html;
+    if (current) html = `<a class="board-field is-current" href="${href}" ${data} aria-current="step"${focusCurrent ? ' data-autofocus' : ''}>${icon('pawn', 'figure')}</a>`;
+    else if (done || skipped) html = `<a class="board-field is-done" href="${href}" ${data}>${icon(done ? 'crown' : 'skip')}</a>`;
+    else if (unlocked) html = `<a class="board-field" href="${href}" ${data}>${l.index + 1}</a>`;
+    else html = `<span class="board-field is-locked" role="img" ${data}>${l.index + 1}</span>`;
+    const reached = done || skipped || current;
+    reachedAny ||= reached;
+    if (!(done || skipped)) complete = false;
+    fields.push({ html, reached });
+  }
+  if (reachedAny && fields[0] && unit.intro) fields[0].reached = true;
+  const reach = fields.reduce((r, f, i) => (f.reached ? i : r), -1);
+  const cls = ['board-unit', ui % 2 ? 'is-rev' : '', reachedAny ? 'is-reached' : '', complete ? 'is-complete' : '', first ? 'is-first' : ''].filter(Boolean).join(' ');
+  return `<section class="${cls}" aria-labelledby="bu-${esc(unit.id)}">
+    <div class="board-unit-head"><h3 id="bu-${esc(unit.id)}">${esc(unit.title)}</h3>${unit.description ? `<p class="board-words"${course.generated ? ` lang="${esc(course.targetLang)}"` : ''}>${esc(unit.description)}</p>` : ''}</div>
+    <ol class="board-row" style="--reach:${reach}">${fields.map((f) => `<li>${f.html}</li>`).join('')}</ol>
+  </section>`;
+}
+
+/** Checkpoint-Feld am Ende eines Abschnitts. */
+function boardCheckpointHtml(course, level, rev, step, focusCurrent = false) {
+  const st = app.state;
+  const passed = isCheckpointPassed(st, course.id, level.id);
+  const unlocked = isCheckpointUnlocked(st, course, level.id);
+  const isNext = step?.kind === 'checkpoint' && step.level.id === level.id;
+  const href = `#/checkpoint/${enc(level.id)}`;
+  const data = `data-lesson="checkpoint:${esc(level.id)}"`;
+  let field;
+  if (isNext) field = `<a class="board-field is-checkpoint is-current" href="${href}" ${data} aria-current="step"${focusCurrent ? ' data-autofocus' : ''} aria-label="Checkpoint ${esc(level.title)}: als Nächstes">${icon('pawn', 'figure')}${icon('chest')}</a>`;
+  else if (passed) field = `<a class="board-field is-checkpoint is-done" href="${href}" ${data} aria-label="Checkpoint ${esc(level.title)}: bestanden">${icon('crown')}</a>`;
+  else if (unlocked) field = `<a class="board-field is-checkpoint" href="${href}" ${data} aria-label="Checkpoint ${esc(level.title)}: offen, Abschnitt per Test überspringen">${icon('chest')}</a>`;
+  else {
+    const li = course.levels.findIndex((l) => l.id === level.id);
+    const why = li > 0 ? ` Bestehe zuerst den Checkpoint „${course.levels[li - 1].title}“.` : '';
+    field = `<span class="board-field is-checkpoint is-locked" role="img" ${data} aria-label="${esc(`Checkpoint ${level.title}: gesperrt.${why}`)}">${icon('lock')}</span>`;
+  }
+  const cls = ['board-unit', 'is-last', rev ? 'is-rev' : '', isNext || passed ? 'is-reached' : '', passed ? 'is-complete' : ''].filter(Boolean).join(' ');
+  return `<section class="${cls}" aria-labelledby="bu-cp-${esc(level.id)}">
+    <div class="board-unit-head"><h3 id="bu-cp-${esc(level.id)}">Checkpoint</h3><p class="board-words">${passed ? 'Bestanden – der Abschnitt zählt als geschafft' : 'Truhe am Ende des Abschnitts'}</p></div>
+    <ol class="board-row" style="--reach:0"><li>${field}</li></ol>
+  </section>`;
+}
+
+/** Brett eines Abschnitts; mit range nur ein Ausschnitt (Startseite: vorige, aktuelle, nächste Einheit). */
+function levelBoardHtml(course, level, step, { range = null, hint = false, focusCurrent = false } = {}) {
+  const levelPassed = isCheckpointPassed(app.state, course.id, level.id);
+  const from = range ? range[0] : 0;
+  const to = range ? range[1] : level.units.length - 1;
+  const parts = [];
+  for (let ui = from; ui <= to; ui++) parts.push(boardUnitHtml(course, level.units[ui], ui, { step, levelPassed, first: ui === 0, focusCurrent }));
+  if (to === level.units.length - 1) parts.push(boardCheckpointHtml(course, level, level.units.length % 2 === 1, step, focusCurrent));
+  const links = hint ? '<p class="board-hint"><a href="#/learn">Ganzes Brett ansehen</a><a href="#/courses">Kurs wechseln</a></p>' : '';
+  return `<div class="board">${parts.join('')}${links}</div>`;
+}
+
+/** Signatur-Bewegung: Nach einer Lektion hüpft die Figur vom alten aufs neue Feld (Web Animations API). */
+let hopObserver = null;
+function animateFigureHop() {
+  hopObserver?.disconnect();
+  hopObserver = null;
+  const fig = root.querySelector('.board .is-current .figure');
+  const courseId = app.state?.activeCourseId;
+  if (!fig || !courseId) return;
+  const lessonId = fig.closest('[data-lesson]')?.dataset.lesson ?? null;
+  const prev = lastFigure;
+  lastFigure = { courseId, lessonId };
+  if (!prev || prev.courseId !== courseId || prev.lessonId === lessonId || !motionOk() || !fig.animate) return;
+  const from = root.querySelector(`.board [data-lesson="${CSS.escape(prev.lessonId)}"]`);
+  if (!from) return;
+  const play = () => {
+    if (!fig.isConnected || !from.isConnected) return;
+    const cs = getComputedStyle(document.documentElement);
+    const duration = parseFloat(cs.getPropertyValue('--dur-3')) || 480;
+    const easing = cs.getPropertyValue('--ease-hop').trim() || 'ease-out';
+    const a = from.getBoundingClientRect();
+    const b = fig.getBoundingClientRect();
+    const dx = a.left + a.width / 2 - (b.left + b.width / 2);
+    const dy = a.top + a.height / 2 - (b.top + b.height / 2);
+    fig.animate([
+      { transform: `translate(${dx}px, ${dy}px)` },
+      { transform: `translate(${dx / 2}px, ${dy / 2 - 28}px) scale(1.1)`, offset: 0.5 },
+      { transform: 'none' },
+    ], { duration, easing });
+  };
+  // Erst hüpfen, wenn das Brett zu sehen ist – sonst verpasst man die Bewegung.
+  if (!globalThis.IntersectionObserver) return play();
+  hopObserver = new IntersectionObserver((entries) => {
+    if (entries.some((e) => e.isIntersecting)) {
+      hopObserver?.disconnect();
+      hopObserver = null;
+      play();
+    }
+  }, { threshold: 0.5 });
+  hopObserver.observe(fig.closest('.board-unit') ?? fig);
+}
+
+// =====================================================================================================
+// Start
+// =====================================================================================================
 
 function viewHome() {
   return withCourse(app.state.activeCourseId, (course) => {
@@ -875,43 +1033,66 @@ function viewHome() {
     const words = Object.keys(st.review ?? {}).filter((k) => k.startsWith(`${course.id}|w|`)).length;
     const reached = dailyGoalReached(st, now);
     const goalPct = goal > 0 ? Math.min(100, Math.round((today / goal) * 100)) : 0;
+    const goalHint = goal > 0 ? (reached ? 'Tagesziel geschafft!' : `Noch ${goal - today} XP bis zum Tagesziel.`) : 'Kein Tagesziel gesetzt.';
     return `${legacyBanner()}${guestHint()}
-    <section class="arena" aria-labelledby="home-h">
-      <div class="arena-top">
-        <div class="rank">
-          <span class="rank-badge" aria-hidden="true">${icon('shield')}<span class="rank-num">${lvl.level}</span></span>
-          <div class="rank-info">
-            <p class="rank-title">Stufe ${lvl.level}</p>
-            ${meter(lvl.into, lvl.need, `Fortschritt bis Stufe ${lvl.level + 1}`, 'meter-gold')}
-            <p class="rank-hint">Noch ${lvl.need - lvl.into} XP bis Stufe ${lvl.level + 1}</p>
-          </div>
-        </div>
-        <p class="arena-course">${esc(languageName(course.nativeLang))} <span aria-hidden="true">→</span><span class="sr-only">nach</span> ${esc(languageName(course.targetLang))}${course.demo ? ' · Demo' : ''}</p>
+    <div class="home-grid">
+      <div class="home-main">
+        <section class="home-hero" aria-labelledby="home-h">
+          <h1 id="home-h" tabindex="-1">Hallo ${esc(app.user.displayName)}!</h1>
+          <p class="home-sub">${esc(course.title)}${course.levels.length > 1 ? ` · ${esc(stageLabel(course, step))}` : ''}</p>
+          ${primaryAction(course, step, { started, block: true })}
+        </section>
+        ${stageHtml(course, step, prog)}
       </div>
-      <h1 id="home-h" tabindex="-1">Hallo ${esc(app.user.displayName)}!</h1>
-      <p class="arena-sub">${esc(course.title)} · ${prog.done} von ${prog.total} Lektionen geschafft (${prog.percent} %)</p>
-      ${meter(prog.done, prog.total, 'Kursfortschritt', 'meter-gold meter-lg')}
-      <div class="hero-actions">
-        ${stepLink(step, course, { started })}
-        ${due ? `<a class="btn btn-blue" href="#/review">${icon('repeat')} ${plural(due, 'Wiederholung', 'Wiederholungen')} fällig</a>` : ''}
+      <div class="home-side">
+        <section class="home-values" aria-labelledby="values-h">
+          <h2 id="values-h" class="sr-only">Deine Werte</h2>
+          <ul class="tokens">
+            <li class="token"><span class="stone stone-flame">${icon('flame')}${streak}</span>${streak === 1 ? 'Tag' : 'Tage'} Serie</li>
+            <li class="token"><span class="stone stone-ring${reached ? ' is-open' : ''}" style="--p:${goalPct}">${reached ? icon('chest') : ''}<span>${today}</span></span>${goal > 0 ? `von ${goal} XP heute` : 'XP heute'}</li>
+            <li class="token"><span class="stone stone-star">${icon('star')}${lvl.level}</span>Stufe <small>(noch ${lvl.need - lvl.into} XP)</small></li>
+            <li class="token"><span class="stone stone-book">${icon('book')}<span${words > 999 ? ' class="stone-long"' : ''}>${fmtNum(words)}</span></span>${words === 1 ? 'Wort' : 'Wörter'}</li>
+          </ul>
+          <p class="small muted">${goalHint} Bester Serienwert: ${plural(st.streak.best, 'Tag', 'Tage')}. Pausen kosten nichts.</p>
+          ${due ? `<a class="btn btn-field btn-block" href="#/review">${icon('repeat')} ${plural(due, 'Wiederholung', 'Wiederholungen')} fällig</a>` : ''}
+        </section>
+        ${step?.kind === 'lesson' ? nextLessonCard(course, step.lesson) : ''}
       </div>
-      <p class="arena-links"><a href="#/learn">Ganzer Lernpfad</a> · <a href="#/courses">Kurs wechseln</a></p>
-    </section>
-    ${resumeCard(course)}
-    <section class="tiles" aria-label="Deine Werte">
-      <div class="tile-stat tile-flame"><span class="tile-icon" aria-hidden="true">${icon('flame')}</span>
-        <p class="stat-value">${streak}</p><p class="stat-label">${streak === 1 ? 'Tag' : 'Tage'} Serie</p><p class="stat-hint">Bester Wert: ${st.streak.best}. Pausen kosten nichts.</p></div>
-      <div class="tile-stat tile-chest${reached ? ' is-open' : ''}"><span class="tile-icon ring" style="--p:${goalPct}" aria-hidden="true">${icon('chest')}</span>
-        <p class="stat-value">${today}${goal > 0 ? `<small> / ${goal}</small>` : ''}</p><p class="stat-label">XP heute</p>
-        <p class="stat-hint">${goal > 0 ? (reached ? 'Tagesziel geschafft – Truhe offen!' : `Noch ${goal - today} XP bis zur Tagestruhe.`) : 'Kein Tagesziel gesetzt.'}</p></div>
-      <div class="tile-stat tile-star"><span class="tile-icon" aria-hidden="true">${icon('star')}</span>
-        <p class="stat-value">${st.xpTotal}</p><p class="stat-label">XP gesamt</p><p class="stat-hint"><a href="#/stats">Statistik ansehen</a></p></div>
-      <div class="tile-stat tile-book"><span class="tile-icon" aria-hidden="true">${icon('book')}</span>
-        <p class="stat-value">${words}</p><p class="stat-label">${words === 1 ? 'Wort' : 'Wörter'} gelernt</p><p class="stat-hint">${due ? `${plural(due, 'Eintrag', 'Einträge')} zum Wiederholen` : 'Nichts fällig'}</p></div>
-    </section>
-    ${step?.kind === 'lesson' ? nextLessonCard(course, step.lesson) : ''}
+    </div>
     ${sectionsOverview(course, step)}`;
   });
+}
+
+/** Abschnitt des nächsten Schritts (oder der letzte, wenn alles geschafft ist). */
+function stageLevel(course, step) {
+  const id = step?.kind === 'lesson' ? step.lesson.levelId : step?.kind === 'checkpoint' ? step.level.id : course.levels.at(-1)?.id;
+  const li = Math.max(0, course.levels.findIndex((l) => l.id === id));
+  return { level: course.levels[li], li };
+}
+
+function stageLabel(course, step) {
+  const { li } = stageLevel(course, step);
+  return `Abschnitt\u00a0${li + 1} von\u00a0${course.levels.length}`;
+}
+
+/** Abschnitts-Kopf mit Fortschritt und Brett-Ausschnitt um die Figur (DESIGN.md §7, §8.5). */
+function stageHtml(course, step, prog) {
+  const { level } = stageLevel(course, step);
+  if (!level) return '';
+  const st = app.state;
+  const passed = isCheckpointPassed(st, course.id, level.id);
+  const lessons = listLessons(course).filter((l) => l.levelId === level.id);
+  const done = passed ? lessons.length : lessons.filter((l) => isLessonCompleted(st, course.id, l.id)).length;
+  const cu = step?.kind === 'lesson' ? level.units.findIndex((u) => u.id === step.lesson.unitId) : level.units.length - 1;
+  const range = [Math.max(0, cu - 1), Math.min(level.units.length - 1, cu + 1)];
+  return `<section class="board-card" aria-labelledby="stage-h">
+    <div class="stage-head">
+      <h2 id="stage-h">${esc(level.title)}</h2>
+      <p class="stage-meta"><span>${done} von ${plural(lessons.length, 'Lektion', 'Lektionen')}</span><span>Kurs: ${fmtNum(prog.done)} von ${fmtNum(prog.total)}</span></p>
+      ${meter(done, lessons.length, `Fortschritt ${level.title}`)}
+    </div>
+    ${levelBoardHtml(course, level, step, { range, hint: true })}
+  </section>`;
 }
 
 /** Vorschau „Als Nächstes“: Wörter der nächsten Lektion zum Anhören, Regel der Einheit. */
@@ -923,14 +1104,14 @@ function nextLessonCard(course, lesson) {
     return `<li class="word-chip"><span class="word-chip-text"><span class="word-chip-target" lang="${esc(course.targetLang)}">${esc(w.target[0])}</span>${readingHtml(w.reading)}<span class="word-chip-native" lang="${esc(course.nativeLang)}">${esc(w.native[0])}</span></span>${sayBtn(w.target[0], `„${w.target[0]}“ vorlesen`)}</li>`;
   }).join('');
   return `<section class="card next-card" aria-labelledby="next-h">
-    <p class="card-kicker">${icon('sword')} Als Nächstes</p>
-    <h2 id="next-h">${esc(unit.title)} · Lektion ${lesson.index + 1}</h2>
+    <h2 id="next-h">Als Nächstes</h2>
+    <p class="next-meta">${esc(unit.title)} · Lektion&nbsp;${lesson.index + 1}</p>
     ${chips ? `<ul class="word-chips" aria-label="Wörter dieser Lektion">${chips}</ul>` : ''}
-    ${unit.intro ? `<details class="rule-details"><summary>${icon('bulb')} Regel dieser Einheit</summary><div class="rule-text">${introHtml(unit.intro)}</div></details>` : ''}
+    ${unit.intro ? `<button type="button" class="btn" data-action="open-rule" data-unit="${esc(unit.id)}" aria-haspopup="dialog">${icon('bulb')} Regel ansehen</button>` : ''}
   </section>`;
 }
 
-/** Alle Abschnitte mit Fortschritt; ein Klick öffnet den Abschnitt im Lernpfad. */
+/** Alle Abschnitte mit Fortschritt (aufklappbar); ein Klick öffnet den Abschnitt im Lernpfad. */
 function sectionsOverview(course, step) {
   if (course.levels.length < 2) return '';
   const st = app.state;
@@ -943,14 +1124,14 @@ function sectionsOverview(course, step) {
     return `<li class="section-row${passed ? ' is-passed' : ''}${level.id === current ? ' is-current' : ''}">
       <button type="button" class="section-btn" data-action="goto-level" data-level="${esc(level.id)}">
         <span class="section-num" aria-hidden="true">${passed ? icon('crown') : li + 1}</span>
-        <span class="section-main"><span class="section-title">${esc(level.title)}</span>${meter(done, lessons.length, `Fortschritt ${level.title}`, passed ? 'meter-gold' : '')}</span>
-        <span class="section-count">${done}/${lessons.length}</span>
+        <span class="section-main"><span class="section-title">${esc(level.title)}</span>${meter(done, lessons.length, '', '', { decorative: true })}</span>
+        <span class="section-count">${done}/${lessons.length}<span class="sr-only"> Lektionen</span></span>
       </button></li>`;
   }).join('');
-  return `<section class="card sections-card" aria-labelledby="sections-h">
-    <h2 id="sections-h">Deine Abschnitte</h2>
+  return `<details class="card sections-card">
+    <summary>Alle ${course.levels.length} Abschnitte ${icon('chevron')}</summary>
     <ol class="section-list">${rows}</ol>
-  </section>`;
+  </details>`;
 }
 
 // =====================================================================================================
@@ -979,8 +1160,8 @@ function courseCard(c, active) {
     ${meter(done, s.lessons, `Fortschritt ${c.title}`)}
     <p class="course-meta">${done} von ${s.lessons} Lektionen erledigt</p>
     ${active
-      ? '<p class="course-active"><span class="tag tag-active">Aktiver Kurs</span> <a class="btn btn-small" href="#/">Weiterlernen</a></p>'
-      : `<button type="button" class="btn btn-primary btn-small" data-action="select-course" data-course="${esc(c.id)}"${app.busy ? ' disabled' : ''}>${done ? 'Zu diesem Kurs wechseln' : 'Diesen Kurs lernen'}<span class="sr-only">: ${esc(c.title)}</span></button>`}
+      ? '<p class="course-active"><span class="tag tag-active">Aktiver Kurs</span> <a class="btn btn-primary btn-small" href="#/">Weiterlernen</a></p>'
+      : `<button type="button" class="btn btn-small" data-action="select-course" data-course="${esc(c.id)}"${app.busy ? ' disabled' : ''}>${done ? 'Zu diesem Kurs wechseln' : 'Diesen Kurs lernen'}<span class="sr-only">: ${esc(c.title)}</span></button>`}
   </li>`;
 }
 
@@ -1117,7 +1298,7 @@ function checkpointCard(course, level, li, step) {
     action = '';
   } else if (isNext) {
     text = `Alle Lektionen geschafft – zeig im Checkpoint, was du kannst. Bestanden ab ${Math.round(CHECKPOINT_PASS * 100)} % im ersten Versuch.`;
-    action = `<a class="btn btn-primary btn-small" href="${href}" data-autofocus>Checkpoint starten</a>`;
+    action = `<a class="btn btn-field btn-small" href="${href}" data-autofocus>Checkpoint starten</a>`;
   } else {
     text = `Kannst du das schon? Bestehe den Checkpoint (mindestens ${Math.round(CHECKPOINT_PASS * 100)} % im ersten Versuch richtig), dann gelten alle Lektionen dieses Abschnitts als erledigt und der nächste Abschnitt öffnet sich. Du kannst es beliebig oft versuchen – ohne Nachteile.`;
     action = `<a class="btn btn-small" href="${href}">${icon('skip')} Abschnitt überspringen</a>`;
@@ -1149,52 +1330,28 @@ function viewLearn() {
       const isOpen = open.has(level.id);
       const isCurrent = level.id === currentLevel;
       const locked = !isCheckpointUnlocked(st, course, level.id) && doneInLevel === 0 && !isCurrent;
-      const head = `<div class="level-head">
-          <h2 id="lv-${esc(level.id)}" tabindex="-1"><span class="level-num" aria-hidden="true">${passed ? icon('crown') : li + 1}</span> ${esc(level.title)}</h2>
-          <span class="pill">${doneInLevel}/${lessonsInLevel.length}<span class="sr-only"> Lektionen erledigt</span></span>
-          <button type="button" class="btn btn-small level-toggle" data-action="toggle-level" data-level="${esc(level.id)}" aria-expanded="${isOpen}" aria-controls="lvb-${esc(level.id)}">${isOpen ? 'Einklappen' : 'Anzeigen'}<span class="sr-only">: ${esc(level.title)}</span></button>
-        </div>
-        ${meter(doneInLevel, lessonsInLevel.length, `Fortschritt ${level.title}`, passed ? 'meter-gold' : '')}`;
+      // Abschnittskopf als eine Zeile zum Auf- und Zuklappen (wie die Abschnittsliste auf der Startseite).
+      const head = `<h2 id="lv-${esc(level.id)}" class="level-head" tabindex="-1">
+          <button type="button" class="level-toggle" data-action="toggle-level" data-level="${esc(level.id)}" aria-expanded="${isOpen}"${isOpen ? ` aria-controls="lvb-${esc(level.id)}"` : ''}>
+            <span class="level-num" aria-hidden="true">${passed ? icon('crown') : li + 1}</span>
+            <span class="level-main"><span class="level-title">${esc(level.title)}</span>${meter(doneInLevel, lessonsInLevel.length, '', '', { decorative: true })}</span>
+            <span class="level-count">${doneInLevel}/${lessonsInLevel.length}<span class="sr-only"> Lektionen erledigt</span></span>
+            ${icon('chevron', 'level-chevron')}
+          </button>
+        </h2>`;
       if (!isOpen) {
         return `<section class="level is-collapsed${isCurrent ? ' is-current' : ''}${passed ? ' is-passed' : ''}${locked ? ' is-locked' : ''}" aria-labelledby="lv-${esc(level.id)}">${head}</section>`;
       }
-      const units = level.units.map((unit) => {
-        const up = unitProgress(st, course, unit);
-        const nodes = all.filter((l) => l.unitId === unit.id).map((l) => {
-          const done = isLessonCompleted(st, course.id, l.id);
-          const skipped = !done && passed;
-          const unlocked = isLessonUnlocked(st, course, l.id);
-          const current = step?.kind === 'lesson' && step.lesson.id === l.id;
-          const status = done ? 'abgeschlossen' : skipped ? 'übersprungen (Checkpoint bestanden)' : current ? 'als Nächstes' : unlocked ? 'offen' : `gesperrt. ${lockReason(course, l.id)}`;
-          const label = `${unit.title}, Lektion ${l.index + 1}: ${status}`;
-          const cls = `node${done ? ' is-done' : ''}${skipped ? ' is-skipped' : ''}${current ? ' is-current' : ''}${unlocked ? '' : ' is-locked'}`;
-          const mark = done ? icon('crown') : skipped ? icon('skip') : unlocked ? `${l.index + 1}` : icon('lock');
-          const sub = done ? 'geschafft' : skipped ? 'übersprungen' : current ? 'als Nächstes' : unlocked ? 'offen' : 'gesperrt';
-          const inner = `<span class="node-num" aria-hidden="true">${mark}</span><span class="node-text" aria-hidden="true"><span class="node-label">Lektion ${l.index + 1}</span><span class="node-sub">${sub}</span></span>`;
-          return unlocked
-            ? `<li><a class="${cls}" href="#/lesson/${enc(l.id)}" aria-label="${esc(label)}"${current ? ' data-autofocus' : ''}>${inner}</a></li>`
-            : `<li><span class="${cls}" role="img" aria-label="${esc(label)}">${inner}</span></li>`;
-        }).join('');
-        const ruleOpen = app.openRules.has(unit.id);
-        const rule = unit.intro
-          ? `<button type="button" class="btn btn-small btn-rule" data-action="toggle-rule" data-unit="${esc(unit.id)}" aria-expanded="${ruleOpen}" aria-controls="rule-${esc(unit.id)}">${icon('bulb')} Regel</button>`
-          : '';
-        return `<section class="unit card${up.done === up.total && up.total ? ' is-complete' : ''}" aria-labelledby="u-${esc(unit.id)}">
-          <div class="unit-head"><div class="unit-title"><h3 id="u-${esc(unit.id)}">${esc(unit.title)}</h3>${unit.description ? `<p class="muted small unit-desc">${esc(unit.description)}</p>` : ''}</div>
-          <div class="unit-side">${rule}<span class="pill">${up.done}/${up.total}<span class="sr-only"> Lektionen erledigt</span></span></div></div>
-          ${ruleOpen ? `<div class="rule-box" id="rule-${esc(unit.id)}">${introHtml(unit.intro)}</div>` : ''}
-          <ol class="path">${nodes}</ol>
-        </section>`;
-      }).join('');
+      const board = levelBoardHtml(course, level, step, { focusCurrent: true });
       return `<section class="level${isCurrent ? ' is-current' : ''}${passed ? ' is-passed' : ''}" aria-labelledby="lv-${esc(level.id)}">
         ${head}
-        <div id="lvb-${esc(level.id)}" class="level-body">${units}${checkpointCard(course, level, li, step)}</div>
+        <div id="lvb-${esc(level.id)}" class="level-body">${board}${checkpointCard(course, level, li, step)}</div>
       </section>`;
     }).join('');
     return `${guestHint()}<div class="page-head"><h1 tabindex="-1">Lernpfad · ${esc(course.title)}</h1>
-      <p class="muted">Lektionen öffnen sich der Reihe nach${st.settings.unlockAll ? ' – aktuell sind alle freigeschaltet (Einstellungen)' : ''}. Am Ende jedes Abschnitts wartet ein Checkpoint mit Truhe.</p>
-      <div class="hero-actions">${stepLink(step, course, { autofocus: false, big: false })}</div></div>
-      ${resumeCard(course)}${levels}
+      <p class="muted">Lektionen öffnen sich der Reihe nach${st.settings.unlockAll ? ' – aktuell sind alle freigeschaltet (Optionen)' : ''}. Am Ende jedes Abschnitts wartet ein Checkpoint mit Truhe.</p>
+      <div class="hero-actions">${primaryAction(course, step, { autofocus: false, big: false })}</div></div>
+      ${levels}
       ${courseInfoHtml(course)}`;
   });
 }
@@ -1295,16 +1452,6 @@ function resumeInfo(course) {
   return { hash: snap.hash, title: snap.title, pos: snap.session.pos + 1, total: snap.session.queue.length };
 }
 
-function resumeCard(course) {
-  const r = resumeInfo(course);
-  if (!r || !/^#\/(lesson|checkpoint)\/[^/]+$/.test(r.hash)) return '';
-  return `<section class="resume-card" aria-labelledby="resume-h">
-    <span class="resume-icon" aria-hidden="true">${icon('play')}</span>
-    <div class="resume-text"><h2 id="resume-h">Weitermachen, wo du aufgehört hast</h2>
-    <p>${esc(r.title)} · Übung ${r.pos} von ${r.total}</p></div>
-    <a class="btn btn-primary" href="${esc(r.hash)}">Fortsetzen</a></section>`;
-}
-
 function endRun() {
   stopAll();
   run = null;
@@ -1368,7 +1515,7 @@ function viewRunRoute(kind, arg) {
     if (!isLessonUnlocked(app.state, course, lesson.id)) {
       setTitle('Lektion gesperrt');
       return layout(`<section class="card state-card"><h1 tabindex="-1">Diese Lektion ist noch gesperrt</h1><p>${esc(lockReason(course, lesson.id))}</p>
-        <p class="muted">Alternativ: den Checkpoint des Abschnitts machen oder in den Einstellungen alles freischalten.</p><p><a class="btn btn-primary" href="#/learn">Zum Lernpfad</a></p></section>`, 'learn');
+        <p class="muted">Alternativ: den Checkpoint des Abschnitts machen oder in den Optionen alles freischalten.</p><p><a class="btn btn-primary" href="#/learn">Zum Lernpfad</a></p></section>`, 'learn');
     }
     startRun('lesson', course, lesson);
   } else if (kind === 'checkpoint') {
@@ -1491,7 +1638,7 @@ function viewIntro() {
   if (card.kind === 'rule') {
     setTitle(`Regel: ${card.unit.title}`);
     body = `<section class="intro-card rule-card" aria-labelledby="intro-h">
-      <p class="card-kicker">${icon('bulb')} Neue Regel</p>
+      <p class="card-meta">${icon('bulb')} Neue Regel</p>
       <h1 id="intro-h" tabindex="-1">${esc(card.unit.title)}</h1>
       <div class="rule-text">${introHtml(card.unit.intro)}</div>
     </section>`;
@@ -1500,7 +1647,7 @@ function viewIntro() {
     const n = wordCards.indexOf(card) + 1;
     setTitle(`Neues Wort: ${w.target[0]}`);
     body = `<section class="intro-card word-card" aria-labelledby="intro-h">
-      <p class="card-kicker">${icon('star')} Neues Wort ${n} von ${wordCards.length}</p>
+      <p class="card-meta">Neues Wort ${n} von ${wordCards.length}</p>
       <div class="word-main">
         <h1 id="intro-h" tabindex="-1" class="word-target"><span lang="${esc(course.targetLang)}">${esc(w.target[0])}</span>${readingHtml(w.reading)}</h1>
         <div class="word-say">${sayBtn(w.target[0], `„${w.target[0]}“ vorlesen`, { big: true })}${sayBtn(w.target[0], 'Langsam vorlesen', { rate: 0.6 })}</div>
@@ -1593,7 +1740,7 @@ function viewExercise() {
   } else {
     const listen = ex.type === 'listen';
     const audio = listen ? `<div class="listen-row">
-        <button type="button" class="btn btn-primary" data-action="speak" data-rate="1">${icon('play')} Abspielen</button>
+        <button type="button" class="btn btn-field" data-action="speak" data-rate="1">${icon('play')} Abspielen</button>
         <button type="button" class="btn" data-action="speak" data-rate="0.6">${icon('slow')} Langsam</button>
       </div>
       ${!canSpeak() ? '<p class="inline-error">Dein Browser kann gerade nichts vorlesen. Nutze „Kann gerade nicht hören“.</p>' : ''}` : q + say;
@@ -1684,7 +1831,7 @@ function viewSpeak(ex, ui) {
   const recBtn = canRecognize()
     ? rec.active
       ? `<button type="button" class="btn btn-rec is-recording" data-action="rec-stop">${icon('stop')} Aufnahme beenden</button>`
-      : `<button type="button" class="btn btn-primary" data-action="rec-start"${checked ? ' disabled' : ' data-autofocus'}>${icon('mic')} Sprechen</button>`
+      : `<button type="button" class="btn btn-field" data-action="rec-start"${checked ? ' disabled' : ' data-autofocus'}>${icon('mic')} Sprechen</button>`
     : '<p class="muted small">Dein Browser hat keine Spracherkennung. Tippe den Satz einfach ins Feld.</p>';
   return `<p class="question question-target" lang="${esc(ex.questionLang)}">${esc(ex.question)}${readingHtml(ex.reading)}</p>
     <div class="listen-row">
@@ -1982,12 +2129,12 @@ function viewSummary() {
     ${crownRow}
     <h1 tabindex="-1">${heading}</h1>
     ${intro}
-    <div class="summary-grid">
-      <div class="summary-xp"><p class="stat-label">Verdient</p><p class="stat-value xp-pop">+${r.xp} XP</p></div>
-      <div><p class="stat-label">Im ersten Versuch richtig</p><p class="stat-value">${r.firstTryCorrect}/${r.total} <small>(${acc} %)</small></p></div>
-      <div><p class="stat-label">Serie</p><p class="stat-value">${icon('flame')} ${plural(displayStreak(st, now), 'Tag', 'Tage')}</p></div>
-    </div>
-    ${goal > 0 ? `<p>${r.goalJustReached ? '<strong>Tagesziel erreicht!</strong> ' : ''}Heute: ${xpToday(st, now)} / ${goal} XP</p>${meter(xpToday(st, now), goal, 'Tagesziel', 'meter-accent')}` : ''}
+    <dl class="facts">
+      <div><dt>Verdient</dt><dd><span class="xp-pop">+${r.xp} XP</span></dd></div>
+      <div><dt>Im ersten Versuch richtig</dt><dd>${r.firstTryCorrect}/${r.total}<small>${acc} %</small></dd></div>
+      <div><dt>Serie</dt><dd>${icon('flame')} ${plural(displayStreak(st, now), 'Tag', 'Tage')}</dd></div>
+    </dl>
+    ${goal > 0 ? `<p>${r.goalJustReached ? '<strong>Tagesziel erreicht!</strong> ' : ''}Heute: ${xpToday(st, now)} / ${goal} XP</p>${meter(xpToday(st, now), goal, 'Tagesziel')}` : ''}
     ${mistakes ? `<h2>Das üben wir noch einmal</h2><ul class="mistakes">${mistakes}</ul><p class="muted small">Diese Einträge sind jetzt unter „Wiederholen“ fällig.</p>` : '<p>Fehlerfrei – stark!</p>'}
     <div class="hero-actions">
       ${nextBtn}
@@ -2045,11 +2192,14 @@ function viewStats() {
           <table class="data-table"><caption class="sr-only">XP pro Tag, neueste zuerst</caption><thead><tr><th scope="col">Tag</th><th scope="col">XP</th></tr></thead><tbody>${rows}</tbody></table>
         </details>
       </section>
-      <section class="stats" aria-label="Kennzahlen">
-        <div class="card stat"><p class="stat-label">Trefferquote</p><p class="stat-value">${accuracy}</p><p class="stat-hint">im ersten Versuch, über ${plural(s.answered ?? 0, 'Übung', 'Übungen')}</p></div>
-        <div class="card stat"><p class="stat-label">Abgeschlossen</p><p class="stat-value">${s.attempts.lesson}</p><p class="stat-hint">${plural(s.attempts.lesson, 'Lektion', 'Lektionen')}, ${plural(s.attempts.review, 'Wiederholung', 'Wiederholungen')}, ${plural(s.attempts.checkpoint, 'Checkpoint-Versuch', 'Checkpoint-Versuche')}</p></div>
-        <div class="card stat"><p class="stat-label">Wörter &amp; Sätze</p><p class="stat-value">${s.items?.learning ?? 0} + ${s.items?.mastered ?? 0}</p><p class="stat-hint">${s.items?.learning ?? 0} in Wiederholung, ${s.items?.mastered ?? 0} gemeistert</p></div>
-        <div class="card stat"><p class="stat-label">Gesamt</p><p class="stat-value">${app.state.xpTotal} XP</p><p class="stat-hint">Serie: bester Wert ${plural(app.state.streak.best, 'Tag', 'Tage')}</p></div>
+      <section class="card" aria-labelledby="facts-h">
+        <h2 id="facts-h">Kennzahlen</h2>
+        <dl class="facts">
+          <div><dt>Trefferquote</dt><dd>${accuracy}<small>im ersten Versuch, über ${plural(s.answered ?? 0, 'Übung', 'Übungen')}</small></dd></div>
+          <div><dt>Abgeschlossen</dt><dd>${s.attempts.lesson}<small>${plural(s.attempts.lesson, 'Lektion', 'Lektionen')}, ${plural(s.attempts.review, 'Wiederholung', 'Wiederholungen')}, ${plural(s.attempts.checkpoint, 'Checkpoint-Versuch', 'Checkpoint-Versuche')}</small></dd></div>
+          <div><dt>Wörter und Sätze</dt><dd>${s.items?.learning ?? 0} + ${s.items?.mastered ?? 0}<small>${s.items?.learning ?? 0} in Wiederholung, ${s.items?.mastered ?? 0} gemeistert</small></dd></div>
+          <div><dt>Gesamt</dt><dd>${fmtNum(app.state.xpTotal)} XP<small>Serie: bester Wert ${plural(app.state.streak.best, 'Tag', 'Tage')}</small></dd></div>
+        </dl>
       </section>
       <section class="card">
         <h2>Schwierige Wörter und Sätze</h2>
@@ -2071,7 +2221,7 @@ function confirmBox(key, question, yesLabel, extra = '') {
 }
 
 function viewSettings() {
-  setTitle('Einstellungen');
+  setTitle('Optionen');
   const st = app.state;
   const user = app.user;
   const s = st.settings;
@@ -2085,7 +2235,8 @@ function viewSettings() {
   const pi = app.pendingImport;
   const dn = formState('display-name');
   if (dn.values.displayName == null) dn.values.displayName = user.displayName;
-  return `<h1 tabindex="-1">Einstellungen</h1>
+  return `<h1 tabindex="-1">Optionen</h1>
+  ${app.user?.role === 'admin' ? '<p class="note admin-note"><a href="#/admin">Zum Admin-Bereich</a>: Kurse, Sprachen und Inhalte verwalten.</p>' : ''}
   ${lg ? `<section class="card banner-card" aria-labelledby="legacy-h">
     <h2 id="legacy-h" tabindex="-1">Fortschritt aus der alten lokalen Version übernehmen?</h2>
     <p>In diesem Browser liegt noch ein Stand von Wortweg 0.1: ${plural(lg.summary.xpTotal, 'XP', 'XP')}, ${plural(lg.summary.lessons, 'abgeschlossene Lektion', 'abgeschlossene Lektionen')}, ${plural(lg.summary.items, 'Lernobjekt', 'Lernobjekte')} in der Wiederholung.</p>
@@ -2324,8 +2475,8 @@ function viewAbout() {
     <p>Wortweg ist eine freie, werbefreie Lern-App ohne Bezahlschranke, ohne Herzen oder Energie und ohne Strafen.</p>
     <h2>${LOCAL ? 'Daten' : 'Konten und Daten'}</h2>
     ${LOCAL
-    ? '<p>Dies ist die <strong>App-Version ohne Server</strong>: Lernstand, Einstellungen und Name liegen nur im Speicher dieses Browsers (localStorage). Nichts wird an einen Server geschickt – außer dem Laden der App- und Kursdateien. Kein Konto, kein Cookie, kein Tracking.</p><p>Du kannst deinen Fortschritt in den Einstellungen als Datei sichern, auf einem anderen Gerät wieder einspielen und alle Daten löschen.</p>'
-    : '<p>Dein Fortschritt liegt auf dem Wortweg-Server (SQLite-Datenbank). Gespeichert werden nur: Anzeigename, E-Mail-Adresse und Passwort-Hash (bei Konten), Lernstand, Einstellungen und Lernversuche für die Statistik. Es gibt genau ein Cookie (<code>ww_session</code>) für die Anmeldung – kein Tracking, keine Drittanbieter.</p><p>Du kannst deinen Fortschritt jederzeit exportieren und dein Konto in den Einstellungen löschen.</p>'}
+    ? '<p>Dies ist die <strong>App-Version ohne Server</strong>: Lernstand, Einstellungen und Name liegen nur im Speicher dieses Browsers (localStorage). Nichts wird an einen Server geschickt – außer dem Laden der App- und Kursdateien. Kein Konto, kein Cookie, kein Tracking.</p><p>Du kannst deinen Fortschritt in den Optionen als Datei sichern, auf einem anderen Gerät wieder einspielen und alle Daten löschen.</p>'
+    : '<p>Dein Fortschritt liegt auf dem Wortweg-Server (SQLite-Datenbank). Gespeichert werden nur: Anzeigename, E-Mail-Adresse und Passwort-Hash (bei Konten), Lernstand, Einstellungen und Lernversuche für die Statistik. Es gibt genau ein Cookie (<code>ww_session</code>) für die Anmeldung – kein Tracking, keine Drittanbieter.</p><p>Du kannst deinen Fortschritt jederzeit exportieren und dein Konto in den Optionen löschen.</p>'}
     ${LOCAL ? '' : demoNote}
     <h2>Inhalte</h2>
     <p>Es gibt zwei Arten von Kursen: kurze, <strong>selbst geschriebene Demo-Kurse</strong> (CC0 1.0) und große <strong>Wortschatzkurse aus offenen Quellen</strong> wie Tatoeba (Beispielsätze, CC BY 2.0 FR), Wiktionary/WikDict und HanDeDict (CC BY-SA) sowie offenen HSK-Wortlisten (MIT). Diese Kurse stehen unter CC BY-SA 4.0; die Quellen stehen im Lernpfad unter „Über diesen Kurs“, die Herkunft jedes Beispielsatzes erscheint nach dem Prüfen. Nichts wurde aus anderen Lern-Apps übernommen. Kein Kurs ist muttersprachlich oder von einem Lehrwerk geprüft; Wortweg bietet nicht „alle Sprachen“.</p>
@@ -2333,7 +2484,7 @@ function viewAbout() {
     <p>Es werden keine Audiodateien mitgeliefert. Hörübungen nutzen die Sprachausgabe deines Browsers bzw. Systems. Sprechübungen sind standardmäßig aus; schaltest du sie ein, nutzt Wortweg die Spracherkennung deines Browsers. <strong>Manche Browser (z. B. Chrome) übertragen die Aufnahme dafür an den Browserhersteller.</strong> Wortweg selbst empfängt und speichert keine Aufnahmen.</p>
     <h2>Code, Grafiken und Schriften</h2>
     <p>Eigener Code (MIT-Lizenz). Logo, Illustrationen, Symbole, Kronen und Truhen sind eigene SVG-Zeichnungen dieses Projekts; das Spiel-Design (Blau, Gold, 3D-Knöpfe) ist selbst gestaltet und übernimmt keine Grafiken, Namen oder Schriften aus Spielen oder anderen Apps. Konfetti und Töne erzeugt der Browser selbst (Canvas, Web Audio) – keine Bild- oder Audiodateien, keine externen Bibliotheken.</p>
-    <p>Schrift für Überschriften und Knöpfe: <strong>Lilita One</strong> von Juan Montoreano, lizenziert unter der <a href="assets/fonts/OFL-LilitaOne.txt" target="_blank" rel="noopener">SIL Open Font License 1.1</a>, mitgeliefert (kein Abruf von fremden Servern). Fließtext in der Systemschrift.</p>
+    <p>Schrift für Überschriften und Knöpfe: <strong>Lilita One</strong> von Juan Montoreano, lizenziert unter der <a href="assets/fonts/OFL-LilitaOne.txt" target="_blank" rel="noopener">SIL Open Font License 1.1</a>, mitgeliefert (kein Abruf von fremden Servern). Text und Lerninhalte: <strong>Atkinson Hyperlegible Next</strong> vom Braille Institute, ebenfalls <a href="assets/fonts/OFL-AtkinsonHyperlegibleNext.txt" target="_blank" rel="noopener">SIL Open Font License 1.1</a> und mitgeliefert. Chinesische Zeichen in der Systemschrift.</p>
   </section>`;
 }
 
@@ -2491,12 +2642,17 @@ function onClick(e) {
       go('#/learn');
       break;
     }
-    case 'toggle-rule': {
-      const key = el.dataset.unit;
-      if (app.openRules.has(key)) app.openRules.delete(key);
-      else app.openRules.add(key);
-      pendingFocus = `[data-action="toggle-rule"][data-unit="${CSS.escape(key)}"]`;
-      render();
+    case 'open-rule': {
+      // Regel als Ereigniskarte im Dialog (index.html, außerhalb von #app – überlebt ein Neuzeichnen).
+      const course = cache.get(`course:${app.state?.activeCourseId}`)?.data;
+      const unit = course ? findUnit(course, el.dataset.unit) : null;
+      const dlg = document.getElementById('rule-dialog');
+      if (!unit?.intro || !dlg) break;
+      dlg.querySelector('#rule-title').textContent = unit.title;
+      dlg.querySelector('#rule-icon').innerHTML = icon('bulb');
+      dlg.querySelector('#rule-body').innerHTML = introHtml(unit.intro);
+      if (dlg.showModal) dlg.showModal();
+      else dlg.setAttribute('open', '');
       break;
     }
     case 'quit-no':
@@ -2677,6 +2833,8 @@ function onKeydown(e) {
 }
 
 function onHashChange() {
+  const dlg = document.getElementById('rule-dialog');
+  if (dlg?.open) dlg.close();
   if (flash && flash.hash !== currentHash()) flash = null;
   app.confirm = null;
   app.notice = null;

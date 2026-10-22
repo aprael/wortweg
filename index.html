@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="description" content="Wortweg – freie Sprachlern-App mit Lernpfad, Checkpoints und Wiederholung. Eigene Demo-Kurse, ohne Werbung und ohne Tracking.">
   <meta name="color-scheme" content="light dark">
-  <meta name="theme-color" content="#2459dc" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#173f9f" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#0d1e4b" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#122251" media="(prefers-color-scheme: dark)">
   <title>Wortweg</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
@@ -16,5 +16,10 @@
   <div id="app" class="app"><p class="loading">Wortweg wird geladen …</p></div>
   <div id="live" class="sr-only" aria-live="polite" aria-atomic="true"></div>
   <noscript><p class="loading">Wortweg benötigt JavaScript.</p></noscript>
+  <dialog id="rule-dialog" class="event-dialog" aria-labelledby="rule-title" aria-describedby="rule-body">
+    <div class="event-head"><span class="event-badge" id="rule-icon" aria-hidden="true"></span><div><p class="event-kind">Regel</p><h2 id="rule-title"></h2></div></div>
+    <div class="event-body rule-text" id="rule-body"></div>
+    <form method="dialog" class="event-foot"><button class="btn btn-primary btn-block" value="ok">Verstanden</button></form>
+  </dialog>
 </body>
 </html>

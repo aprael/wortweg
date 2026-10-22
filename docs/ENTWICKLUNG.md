@@ -13,6 +13,7 @@ ursprüngliche MVP-Dokumentation vom 17.10.2026 (Version 0.1, damals nur Browser
 | 0.2 | 20.10. | Node-Server mit SQLite, Konten und Gäste, Admin-Bereich mit Kurs-Editor, Server bewertet Abgaben nach, Paare- und Sprechübungen |
 | 0.3 | 20.10. abends | Datenkurse Chinesisch (HSK 1–3) und Spanisch aus offenen Quellen, Pinyin, App-Version (PWA, offline, iPhone), mitgelieferte Kurse aktualisieren sich automatisch, gzip, GitHub-Workflows. Zwei parallele Arbeitssitzungen, am 21.10. zusammengeführt. |
 | 0.4 | 21.10. | Spanisch und Chinesisch: Lehrplan von leicht nach schwer mit Themen und Regel-Einheiten (Regelkarten), alle Sätze und Beispielsätze von Hand geprüft. Oberfläche: Spiel-Design (Blau/Gold, 3D-Knöpfe, Lilita One), Wortkarten mit Beispielsatz, Regelkarten, Vorlese-Knopf bei jeder Aufgabe, Aussprache beim Antippen, ausgerichtete Paare, Konfetti und Töne, Kronen, Stufen, Tagestruhe, neue Startseite, einklappbarer Lernpfad, Zwischenstand einer Lektion auf dem Gerät. Server/Admin: `unit.intro`, `word.examples`. |
+| 0.5 (Zweig `design-c-spielbrett`) | 22.10. | Designsystem „Spielbrett“ (`DESIGN.md`, nach Design-Audit und Wahl aus drei Richtungen): Lernpfad und Startseite als Spielbrett mit Figur, Regeln als Ereigniskarte im Dialog, flache Flächen in fünf Kernfarben ohne Verläufe, Atkinson Hyperlegible Next für Text und Lerninhalte, Spielsteine statt Werte-Kacheln, eine Hauptaktion pro Ansicht, „Optionen“ statt „Einstellungen“. Prototyp: `prototypes/start.html`. |
 
 ### 0.2 Prüfprotokoll 21.10.2026
 

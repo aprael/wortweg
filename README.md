@@ -46,7 +46,7 @@ Die Datenkurse werden aus offenen Quellen gebaut: `npm run sources` lädt die Qu
 
 | Pfad | Inhalt |
 |---|---|
-| `index.html`, `styles.css` | Einstieg und Design („Arena“: Blau/Gold, Schrift Lilita One) |
+| `index.html`, `styles.css` | Einstieg und Design (Designsystem „Spielbrett“, verbindlich in `DESIGN.md`) |
 | `src/app.js` | Oberfläche: Routen, Ansichten, Lektionsablauf, Tastatur |
 | `src/admin.js` | Admin-Bereich (nur Server-Version) |
 | `src/content.js`, `exercises.js`, `grading.js`, `session.js`, `progress.js` | Lern-Logik ohne DOM – Browser und Server nutzen dieselben Module |
@@ -86,6 +86,6 @@ Jede Einheit braucht mindestens 4 Wörter und 4 Sätze; je 4 Wörter ergeben ein
 
 - **Code:** MIT (`LICENSE`).
 - **Kursinhalte:** Datenkurse CC BY-SA 4.0 (Quellen und Autoren im Kurs und in `PROVENIENZ.md`), Demo-Kurse CC0 1.0.
-- **Schrift:** Lilita One von Juan Montoreano, SIL Open Font License 1.1 (`assets/fonts/OFL-LilitaOne.txt`).
+- **Schriften:** Lilita One von Juan Montoreano und Atkinson Hyperlegible Next vom Braille Institute, beide SIL Open Font License 1.1 (`assets/fonts/OFL-LilitaOne.txt`, `assets/fonts/OFL-AtkinsonHyperlegibleNext.txt`).
 - **Grafiken:** Logo, Illustrationen und Symbole sind eigene SVG-Zeichnungen (CC0). Konfetti und Töne erzeugt der Browser.
 - Wortweg ist ein unabhängiges Projekt und übernimmt keine Inhalte, Namen, Logos oder Grafiken anderer Lern-Apps oder Spiele.

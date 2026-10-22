@@ -21,4 +21,4 @@ Freie Sprachlern-App – ohne Werbung, ohne Bezahlschranke, ohne Tracking.
 ### Hinweise
 
 - Die Kursinhalte sind aus offenen Quellen zusammengestellt bzw. selbst geschrieben und **nicht muttersprachlich geprüft**. Quellen und Lizenzen: `data/courses/PROVENIENZ.md`.
-- Code: MIT. Datenkurse: CC BY-SA 4.0. Demo-Kurse: CC0. Schrift Lilita One: SIL OFL 1.1.
+- Code: MIT. Datenkurse: CC BY-SA 4.0. Demo-Kurse: CC0. Schriften Lilita One und Atkinson Hyperlegible Next: SIL OFL 1.1.

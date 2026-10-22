@@ -67,8 +67,8 @@ writeFileSync(join(OUT, 'manifest.webmanifest'), JSON.stringify({
   start_url: './',
   scope: './',
   display: 'standalone',
-  background_color: '#dfe9ff',
-  theme_color: '#2459dc',
+  background_color: '#e9effc',
+  theme_color: '#0d1e4b',
   icons: [
     { src: 'assets/icon-192.png', sizes: '192x192', type: 'image/png', purpose: 'any' },
     { src: 'assets/icon-512.png', sizes: '512x512', type: 'image/png', purpose: 'any' },

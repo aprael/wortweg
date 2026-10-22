@@ -2,7 +2,13 @@
 // Konfetti zeichnet ein Canvas, Töne erzeugt die Web Audio API. Alles ist dekorativ (aria-hidden)
 // und abschaltbar – Bewegung über „Animationen reduzieren“ bzw. die Systemeinstellung, Töne über settings.sounds.
 
-const COLORS = ['#ffc83d', '#ffe27a', '#3d8bff', '#7cc4ff', '#ffffff', '#ff6b5c', '#4fd1a5', '#b48cff'];
+// Kernfarben aus DESIGN.md §2.1 (zur Laufzeit aus den CSS-Tokens gelesen, diese Werte nur als Rückfall).
+const FALLBACK = ['#ffc21a', '#2457d6', '#ff5d4f', '#ffffff'];
+function colors() {
+  const cs = globalThis.getComputedStyle?.(globalThis.document.documentElement);
+  const read = ['--gold', '--field', '--event'].map((v) => cs?.getPropertyValue(v).trim()).filter((c) => /^#[0-9a-f]{3,8}$/i.test(c));
+  return read.length === 3 ? [...read, '#ffffff'] : FALLBACK;
+}
 
 /** Darf sich gerade etwas bewegen? */
 export function motionOk() {
@@ -78,6 +84,7 @@ export function confetti({ x, y, count = 70, power = 1 } = {}) {
   ensureCanvas();
   const cx = x ?? innerWidth / 2;
   const cy = y ?? innerHeight * 0.75;
+  const palette = colors();
   for (let i = 0; i < count; i++) {
     const angle = -Math.PI / 2 + (Math.random() - 0.5) * 1.9;
     const speed = (7 + Math.random() * 9) * power;
@@ -85,7 +92,7 @@ export function confetti({ x, y, count = 70, power = 1 } = {}) {
       x: cx, y: cy,
       vx: Math.cos(angle) * speed, vy: Math.sin(angle) * speed,
       rot: Math.random() * Math.PI, spin: (Math.random() - 0.5) * 0.35,
-      size: 7 + Math.random() * 7, color: COLORS[i % COLORS.length], round: Math.random() < 0.25,
+      size: 7 + Math.random() * 7, color: palette[i % palette.length], round: Math.random() < 0.25,
       life: 70 + Math.random() * 40,
     });
   }
@@ -149,12 +156,12 @@ export function tone(kind) {
 // ---------- Klick-Ring ----------
 
 /**
- * Leuchtender Ring an der Tippstelle (Ereignis-Delegation). Er liegt fest über der Seite statt im Knopf,
+ * Ring an der Tippstelle (Ereignis-Delegation). Er liegt fest über der Seite statt im Knopf,
  * weil ein Klick die Ansicht meist neu zeichnet – so bleibt er trotzdem sichtbar.
  */
 export function attachTapRings(root) {
   root.addEventListener('pointerdown', (e) => {
-    const el = e.target.closest?.('.btn, .choice, .tile, .match-btn, .node, .say-btn, .icon-btn, .nav-link');
+    const el = e.target.closest?.('.btn, .choice, .tile, .match-btn, a.board-field, button.board-field, .say-btn, .icon-btn, .nav-link');
     if (!el || el.disabled || !motionOk() || e.button > 0) return;
     const ring = document.createElement('span');
     ring.className = 'tap-ring';
