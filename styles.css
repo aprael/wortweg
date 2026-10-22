@@ -352,7 +352,8 @@ mark { background: var(--gold-soft); color: var(--ink); border-radius: var(--rad
 .auth form { margin: var(--sp-2) 0; }
 .check { display: flex; align-items: center; gap: var(--sp-1); min-height: var(--control-h); cursor: pointer; font-weight: 700; }
 .check input, .radio input { width: var(--icon-s); height: var(--icon-s); accent-color: var(--field); flex: none; }
-.radios { border: 0; padding: 0; margin: 0 0 var(--sp-1); display: flex; flex-wrap: wrap; gap: var(--sp-1); }
+/* Wahlfelder in gleich breiten Spalten (am Handy einspaltig), statt ungleich umbrechender Reihen */
+.radios { border: 0; padding: 0; margin: 0 0 var(--sp-1); display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 12rem), 1fr)); gap: var(--sp-1); }
 .radio {
   display: flex; align-items: center; gap: var(--sp-1); min-height: var(--control-h); padding: var(--sp-half) var(--sp-2);
   border: var(--border-w) solid var(--line); border-radius: var(--radius); cursor: pointer; font-weight: 700; background: var(--surface); box-shadow: 0 var(--edge-h) 0 var(--line);
