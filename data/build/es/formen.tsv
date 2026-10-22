@@ -138,3 +138,6 @@ puesto	poner/verb:1 | puesto/noun:1
 para	para/prep
 abogado	abogado/noun
 abogados	abogado/noun
+# hay ist immer haber (Wiktionary führt es auch als Schreibfehler von ahí); es ist immer ser (nicht Plural von e).
+hay	haber/verb
+es	ser/verb
