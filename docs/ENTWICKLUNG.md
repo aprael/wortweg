@@ -61,8 +61,9 @@ Ergebnis: **keine kritischen Befunde.** Hinweise für einen öffentlichen Server
 - App-Version über GitHub Pages (Quelle „GitHub Actions“, Workflow `pages.yml`): <https://aprael.github.io/wortweg/>.
 - Erste Läufe grün: CI (Check, E2E, App-Build) und Pages-Deploy. Live-Seite in Headless-Brave 375 × 812 geprüft: Startseite lädt,
   keine Konsolenfehler, kein horizontales Scrollen.
-- Hinweis der Läufe: `actions/checkout@v4`, `setup-node@v4` und `upload-artifact@v4` laufen noch auf Node 20 (wird von GitHub
-  auf Node 24 gezwungen) – bei Gelegenheit auf neuere Hauptversionen anheben.
+- Hinweis der Läufe: `actions/checkout@v4`, `setup-node@v4` und `upload-artifact@v4` liefen noch auf Node 20. Am 22.10.2026
+  angehoben auf `checkout@v7`, `setup-node@v7`, `upload-pages-artifact@v5`, `deploy-pages@v5` (Release-Hinweise geprüft:
+  keine Änderung, die dieses Projekt betrifft).
 
 ## 1. Ausgangslage (vorher)
 
