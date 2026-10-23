@@ -59,6 +59,15 @@ Ergebnis: **keine kritischen Befunde.** Hinweise für einen öffentlichen Server
    ersten 13 Einheiten (dort war kein besserer Satz möglich).
    Der Bericht `node scripts/build-course-es.mjs --nur-pruefen --bericht datei.json` listet sie (`unbekannteWoerter`).
 4. Weitere Veröffentlichungen (Releases über Versions-Tags) nur nach ausdrücklicher Bestätigung.
+6. **Echte Aufnahmen (in Arbeit, Stand 23.10.2026):** Code ist fertig und in CI grün (`src/recordings.js`, `src/speech.js`,
+   Option „Computerstimme als Ersatz“, Standard aus; Seite `#/recordings`; siehe `docs/ARCHITEKTUR.md` §11). Es fehlen noch
+   die Audiodateien: `node scripts/audio-sammeln.mjs es zh` lädt nach `.cache/audio/` (setzt nach Abbruch fort; Wikimedia
+   erlaubt etwa eine Datei pro Sekunde, insgesamt ~6.800 Commons- und ~1.800 Tatoeba-Dateien), danach
+   `node scripts/audio-aufbereiten.mjs es zh` → `assets/audio/<sprache>/`, im Browser prüfen, committen. **Erst dann** auf
+   `main` bringen – vorher wäre die Live-App stumm. Danach `PROVENIENZ.md` (Abschnitt Aufnahmen mit Zahlen) und
+   `DESIGN-PRAEFERENZEN.md` („heute nutzt die App noch die Systemstimmen“) aktualisieren. Lücken: Chinesisch hat für Sätze
+   fast keine freien Aufnahmen (10 von 2.295), für Wörter ~67 %; Spanisch Wörter ~91 %, Sätze ~48 %. Nächster Schritt dafür:
+   Liste fehlender Wörter für Lingua Libre (Aufnahme durch Muttersprachler).
 
 ### 0.5 Veröffentlichung 21.10.2026
 

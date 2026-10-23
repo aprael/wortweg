@@ -132,6 +132,13 @@ function score(c, a) {
   return s;
 }
 
+/** Lingua Libre schreibt „Speaker: X Recorder: Y“; daraus „X“ bzw. „X (aufgenommen von Y)“. */
+function speakerName(artist) {
+  const m = String(artist ?? '').match(/^Speaker:\s*(.+?)\s*Recorder:\s*(.+)$/);
+  if (!m) return String(artist ?? '').trim();
+  return m[1] === m[2] ? m[1] : `${m[1]} (aufgenommen von ${m[2]})`;
+}
+
 async function pool(items, limit, fn) {
   let next = 0;
   const workers = Array.from({ length: limit }, async () => {
@@ -214,7 +221,7 @@ for (const lang of langs.length ? langs : ['es', 'zh']) {
       f: name,
       text: c.source === 'tatoeba' ? c.text : c.title.replace(/^File:/, ''),
       quelle: c.source === 'tatoeba' ? 'Tatoeba' : /^File:LL-/.test(c.title) ? 'Lingua Libre (Wikimedia Commons)' : 'Wikimedia Commons',
-      sprecher: c.artist,
+      sprecher: speakerName(c.artist),
       lizenz: c.license,
       lizenzUrl: c.licenseUrl ?? '',
       seite: c.page,
