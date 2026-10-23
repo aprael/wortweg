@@ -116,10 +116,11 @@ Bestehen ab 80 % im ersten Versuch; Fehlversuche kosten nichts und dürfen belie
   courses{ [courseId]: { completed{ [lessonId]: {completions,bestScore,lastAt} },
                          checkpoints{ [levelId]: {passed,bestScore,attempts,lastAt} } } },
   review{ [itemKey]: {courseId,kind,unitId,index,box,due,wrong,seen} },
-  settings{ listening, speaking, unlockAll, reduceMotion } }
+  settings{ listening, deviceVoice, speaking, unlockAll, showReading, reduceMotion, sounds } }
 ```
 
 `settings.speaking` ist standardmäßig **false** (Spracherkennung in Chrome überträgt Audio an Google; nur nach Opt-in).
+`settings.deviceVoice` ist standardmäßig **false**: vorgelesen wird nur mit echten Aufnahmen (§11).
 
 ## 5. Datenbank (SQLite, `data/wortweg.db`, Migrationen in `server/migrations/NNN_name.sql`)
 
@@ -167,7 +168,7 @@ Schreibende Anfragen: nur `Content-Type: application/json`, `Origin` muss zum Ho
 | `GET /api/courses` | – | `{ courses: [{id,title,subtitle,nativeLang,targetLang,demo,license,stats:{levels,units,lessons,words,sentences}}] }` |
 | `GET /api/courses/:id` | – | `{ course }` (Kursformat inkl. `version`; Admin mit `?preview=1` auch Entwürfe) |
 | `GET /api/progress` | – | `{ state }` (Zustand v2) – 401 ohne Anmeldung |
-| `PATCH /api/progress/settings` | `{ dailyGoal?, activeCourseId?, settings?: {listening,speaking,unlockAll,reduceMotion} }` | `{ state }` |
+| `PATCH /api/progress/settings` | `{ dailyGoal?, activeCourseId?, settings?: {listening,deviceVoice,speaking,unlockAll,showReading,reduceMotion,sounds} }` | `{ state }` |
 | `POST /api/progress/lesson` | `{ courseId, lessonId, version, seed, options:{listening,speaking}, responses }` | `{ state, result }` |
 | `POST /api/progress/checkpoint` | `{ courseId, levelId, version, seed, options, responses }` | `{ state, result }` (`result.passed`) |
 | `POST /api/progress/review` | `{ courseId, version, responses }` (Schlüssel = `review:<itemKey>`) | `{ state, result }` |
@@ -292,3 +293,26 @@ sentence { native[], target[], note, reading?: string, tokens?: string[], source
   Große Kurse: im Lernpfad ist nur der Abschnitt mit dem nächsten Schritt aufgeklappt.
 - **Paare:** ein gemeinsames Raster für beide Spalten (CSS `subgrid`), alle Zeilen gleich hoch.
 - **Schriften:** Lilita One und Atkinson Hyperlegible Next (beide SIL OFL 1.1, WOFF2/TTF) liegen unter `assets/fonts/`; `font-src` fällt unter `default-src 'self'`. Design-Regeln: `DESIGN.md`.
+
+## 11. Ergänzung 23.10.2026: Echte Aufnahmen statt Computerstimmen
+
+- **Wunsch des Nutzers:** Aussprache nur mit Aufnahmen von Menschen, keine KI- oder Computerstimmen.
+- **Dateien:** `assets/audio/<targetLang>/` mit `index.json` (`{ lang, items: { <Schlüssel>: "<hash>.m4a|mp3" } }`) und
+  `quellen.json` (Namensnennung je Datei: Text, Quelle, Sprecher, Lizenz, Originalseite, bearbeitet ja/nein). Dateiname =
+  Inhalts-Hash, dadurch dauerhaft cachebar. Schlüssel = `recordingKey(text)` aus `src/recordings.js` (rein, von Browser
+  und Skripten gemeinsam genutzt: NFC, klein, Satzzeichen am Rand weg, keine Leerzeichen zwischen Schriftzeichen).
+- **Erzeugung:** `scripts/audio-sammeln.mjs` (Commons-Kategorien, Lizenzprüfung je Datei, Tatoeba-Aufnahmen mit Lizenz,
+  Rohdateien in `.cache/audio/`, hält sich an `Retry-After`) und `scripts/audio-aufbereiten.mjs` (macOS `afconvert`;
+  wählt je Schlüssel die beste Aufnahme nach Rauschabstand, Übersteuerung und Länge, kürzt Stille, gleicht die Lautstärke
+  an, AAC 64 kbit/s mono; Tatoeba-MP3s unverändert, weil meist „ND“).
+- **Abspielen** (`src/speech.js`): `speak(text, lang, rate)` sucht zuerst die Aufnahme (`recordingFor`), lädt sie per
+  `fetch` als Blob (keine Range-Anfragen, Service Worker kann cachen) und spielt sie über ein einziges `Audio`-Element;
+  „Langsam“ = `playbackRate` (Tonhöhe bleibt). Ohne Aufnahme nur dann Web Speech, wenn `settings.deviceVoice` an ist.
+  `preloadRecordings` lädt die Aufnahmen einer Runde vorab, damit iOS sie direkt im Klick abspielt.
+- **Oberfläche:** Lautsprecher-Knöpfe erscheinen nur, wenn `canSay(text, lang)`. Hörübungen ohne Aufnahme werden
+  automatisch zur Ersatzübung (`fallbackExercise`, wie „Kann gerade nicht hören“) – der Server bewertet sie wie bisher.
+  `runOptions(course).listening` setzt Aufnahmen der Zielsprache oder die erlaubte Gerätestimme voraus.
+  Seite `#/recordings` listet alle Aufnahmen mit Namensnennung (Pflicht der CC-Lizenzen).
+- **Auslieferung:** Server: MIME `audio/mp4`, `audio/mpeg`; CSP `media-src 'self' blob:`. App-Build: Aufnahmen gehören
+  nicht zur vorab geladenen App-Hülle (nur `index.json`); der Service Worker legt gehörte Aufnahmen im Cache
+  `wortweg-audio` ab (offline wieder abspielbar).

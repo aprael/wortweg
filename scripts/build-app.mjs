@@ -78,7 +78,7 @@ writeFileSync(join(OUT, 'manifest.webmanifest'), JSON.stringify({
 
 // index.html: Manifest, iPhone-Angaben, Service Worker, CSP (statisches Hosting setzt keine Header).
 const CSP = "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; "
-  + "worker-src 'self'; manifest-src 'self'; media-src 'self'; object-src 'none'; base-uri 'none'; form-action 'self'";
+  + "worker-src 'self'; manifest-src 'self'; media-src 'self' blob:; object-src 'none'; base-uri 'none'; form-action 'self'";
 let html = readFileSync(join(ROOT, 'index.html'), 'utf8');
 const head = `  <meta http-equiv="Content-Security-Policy" content="${CSP}">
   <meta name="referrer" content="no-referrer">
@@ -103,12 +103,15 @@ function walk(dir) {
 }
 const all = walk(OUT).map((p) => relative(OUT, p).split('\\').join('/')).filter((p) => p !== '.nojekyll').sort();
 const courseFiles = courses.map((c) => `courses/${c.file}`);
-const shell = all.filter((p) => !courseFiles.includes(p) && !p.endsWith('.md') && !p.endsWith('.txt'));
+// Aufnahmen (assets/audio/, ~100 MB) nicht vorab laden: nur die Verzeichnisse, die Dateien beim ersten Abspielen.
+const isRecording = (p) => p.startsWith('assets/audio/') && !p.endsWith('/index.json');
+const shell = all.filter((p) => !courseFiles.includes(p) && !isRecording(p) && !p.endsWith('.md') && !p.endsWith('.txt'));
 const version = sha(all.map((p) => `${p}:${sha(readFileSync(join(OUT, p)))}`).join('\n')).slice(0, 12);
 writeFileSync(join(OUT, 'sw.js'), `// Wortweg Service Worker (erzeugt von scripts/build-app.mjs – nicht von Hand ändern).
 const VERSION = '${version}';
 const SHELL = 'wortweg-shell-' + VERSION;
 const COURSES = 'wortweg-courses';
+const AUDIO = 'wortweg-audio';
 const SHELL_FILES = ${JSON.stringify(['./', ...shell])};
 const COURSE_FILES = ${JSON.stringify(courseFiles)};
 
@@ -133,7 +136,7 @@ async function fromCache(cacheName, request, fallbackUrl) {
   const hit = (await cache.match(request, { ignoreSearch: true })) ?? (fallbackUrl ? await cache.match(fallbackUrl) : null);
   if (hit) return hit;
   const res = await fetch(request);
-  if (res.ok && cacheName === COURSES) await cache.put(request, res.clone());
+  if (res.ok && cacheName !== SHELL) await cache.put(request, res.clone());
   return res;
 }
 
@@ -146,6 +149,9 @@ self.addEventListener('fetch', (event) => {
     event.respondWith(fromCache(SHELL, req, new URL('./', self.registration.scope).href));
   } else if (COURSE_FILES.some((f) => url.href === new URL(f, self.registration.scope).href)) {
     event.respondWith(fromCache(COURSES, req));
+  } else if (/\/assets\/audio\/[a-z]+\/[0-9a-f]+\.(m4a|mp3)$/.test(url.pathname)) {
+    // Aufnahmen: Dateiname = Inhalts-Hash, also dauerhaft gültig; einmal gehört, auch offline da.
+    event.respondWith(fromCache(AUDIO, req));
   } else {
     event.respondWith(fromCache(SHELL, req));
   }

@@ -223,7 +223,7 @@ test('sanitizeState: v1-Zustand wird zu v2 (ohne Datenverlust)', () => {
   assert.equal(s.version, 2);
   assert.deepEqual(s.courses[course.id], { completed: v1.courses[course.id].completed, checkpoints: {} });
   assert.deepEqual(s.review, v1.review);
-  assert.deepEqual(s.settings, { listening: false, speaking: false, unlockAll: false, showReading: true, reduceMotion: true, sounds: true });
+  assert.deepEqual(s.settings, { listening: false, deviceVoice: false, speaking: false, unlockAll: false, showReading: true, reduceMotion: true, sounds: true });
   assert.equal(s.xpTotal, 40);
   assert.equal(isLessonUnlocked(s, course, lessons[1].id), true);
   assert.deepEqual(sanitizeState(s), s, 'idempotent');

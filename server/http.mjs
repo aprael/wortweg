@@ -13,7 +13,7 @@ export class HttpError extends Error {
 }
 
 export const SECURITY_HEADERS = {
-  'Content-Security-Policy': "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; media-src 'self'; object-src 'none'; base-uri 'none'; frame-ancestors 'none'; form-action 'self'",
+  'Content-Security-Policy': "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; media-src 'self' blob:; object-src 'none'; base-uri 'none'; frame-ancestors 'none'; form-action 'self'",
   'X-Content-Type-Options': 'nosniff',
   'Referrer-Policy': 'no-referrer',
   'Permissions-Policy': 'camera=(), geolocation=(), payment=(), microphone=(self)',
@@ -150,6 +150,8 @@ const TYPES = {
   '.png': 'image/png',
   '.ttf': 'font/ttf',
   '.woff2': 'font/woff2',
+  '.m4a': 'audio/mp4',
+  '.mp3': 'audio/mpeg',
   '.txt': 'text/plain; charset=utf-8',
   '.webmanifest': 'application/manifest+json',
 };

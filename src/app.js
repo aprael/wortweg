@@ -15,7 +15,10 @@ import {
   readLegacyState, clearLegacyState, legacyExportPayload, parseJsonText, checkProgressExport, readFileText, downloadJson,
   summarizeState,
 } from './storage.js';
-import { canSpeak, speak, stopSpeaking, canRecognize, startRecognition } from './speech.js';
+import {
+  canSpeak, canSay, speak, stopSpeaking, canRecognize, startRecognition, useRecordings, allowDeviceVoice, hasRecordings,
+  preloadRecordings,
+} from './speech.js';
 import { confetti, confettiFrom, tone, attachTapRings, motionOk } from './fx.js';
 import { saveRunSnapshot, loadRunSnapshot, clearRunSnapshot, snapshotMatches } from './run-store.js';
 
@@ -313,8 +316,23 @@ function invalidate(...keys) {
 
 const coursesEntry = () => need('courses', () => api.getCourses().then((d) => d.courses));
 const languagesEntry = () => need('languages', () => api.getLanguages().then((d) => d.languages));
-const courseEntry = (id) => need(`course:${id}`, () => api.getCourse(id).then((d) => d.course));
+const courseEntry = (id) => need(`course:${id}`, () => api.getCourse(id).then(async (d) => {
+  await loadRecordings(d.course.targetLang);
+  return d.course;
+}));
 const statsEntry = () => need('stats', () => api.getStats().then((d) => d.stats));
+
+/** Aufnahme-Verzeichnis der Zielsprache laden (einmal je Sprache; fehlt es, gibt es eben keine Aufnahmen). */
+const recordingIndexes = new Map();
+function loadRecordings(lang) {
+  if (!recordingIndexes.has(lang)) {
+    recordingIndexes.set(lang, fetch(`assets/audio/${encodeURIComponent(lang)}/index.json`)
+      .then((res) => (res.ok ? res.json() : null))
+      .catch(() => null)
+      .then((index) => useRecordings(lang, index)));
+  }
+  return recordingIndexes.get(lang);
+}
 
 /** Kurs laden und auf das Ergebnis warten (für Aktionen). */
 async function loadCourse(id) {
@@ -403,6 +421,7 @@ function render() {
   const prev = focusSelector(document.activeElement);
   root.innerHTML = html;
   document.documentElement.classList.toggle('reduce-motion', Boolean(app.state?.settings?.reduceMotion));
+  allowDeviceVoice(app.state?.settings?.deviceVoice === true);
   afterRender(prev);
 }
 
@@ -437,7 +456,7 @@ function afterRender(prevFocus) {
   animateFigureHop();
 }
 
-const PUBLIC_ROUTES = new Set(['welcome', 'login', 'register', 'about']);
+const PUBLIC_ROUTES = new Set(['welcome', 'login', 'register', 'about', 'recordings']);
 
 function view({ name, args }) {
   if (app.booting) {
@@ -455,6 +474,7 @@ function view({ name, args }) {
       if (LOCAL) return redirect(app.user ? '#/' : '#/welcome');
       return app.user ? layout(viewRegister(), 'settings') : publicLayout(viewRegister());
     case 'about': return app.user ? layout(viewAbout(), 'about') : publicLayout(viewAbout());
+    case 'recordings': return app.user ? layout(viewRecordings(), 'about') : publicLayout(viewRecordings());
     case 'home': return app.state.activeCourseId ? layout(viewHome(), 'home') : redirect('#/courses');
     case 'courses': return layout(viewCourses(), 'courses');
     case 'onboarding': return layout(viewOnboarding(), 'courses');
@@ -1373,9 +1393,10 @@ function courseInfoHtml(course) {
 // Lektion, Checkpoint, Wiederholung
 // =====================================================================================================
 
-function runOptions() {
+function runOptions(course) {
   const s = app.state.settings;
-  return { listening: Boolean(s.listening && canSpeak()), speaking: Boolean(s.speaking && canRecognize()) };
+  const hearable = hasRecordings(course.targetLang) || (s.deviceVoice === true && canSpeak());
+  return { listening: Boolean(s.listening && hearable), speaking: Boolean(s.speaking && canRecognize()) };
 }
 
 function freshUi() {
@@ -1384,7 +1405,7 @@ function freshUi() {
 
 function startRun(kind, course, target) {
   const st = app.state;
-  const options = runOptions();
+  const options = runOptions(course);
   let exercises = [];
   let seed = 0;
   let title = '';
@@ -1419,6 +1440,7 @@ function startRun(kind, course, target) {
         skip: { listen: Boolean(snap.skip?.listen), speak: Boolean(snap.skip?.speak) },
         options: { listening: Boolean(snap.options?.listening), speaking: Boolean(snap.options?.speaking) }, restored: true,
       });
+      preloadRunAudio(run);
       return;
     }
   }
@@ -1432,6 +1454,17 @@ function startRun(kind, course, target) {
       run.phase = 'intro';
     }
   }
+  preloadRunAudio(run);
+}
+
+/** Aufnahmen der Wortkarten und Übungen schon laden, damit sie beim Antippen sofort spielen (iOS). */
+function preloadRunAudio(r) {
+  const texts = [];
+  for (const c of r.intro?.cards ?? []) if (c.word) texts.push(c.word.target[0], c.word.examples?.[0]?.target);
+  for (const { ex } of r.session.queue) {
+    texts.push(ex.speak, ex.solution, ex.question, ...(ex.choices ?? []), ...(ex.bank ?? []).map((t) => t.text));
+  }
+  preloadRecordings(texts.filter(Boolean), ttsLang(r.course));
 }
 
 /** Zwischenstand sichern (nur Lektion und Checkpoint, nur während der Übungen). */
@@ -1595,14 +1628,14 @@ const ttsLang = (course) => course.ttsLang || course.targetLang;
 
 /** Lautsprecher-Knopf: spricht data-text in der Zielsprache (data-rate optional). */
 function sayBtn(text, label, { rate = 1, big = false, caption = '' } = {}) {
-  if (!text || !canSpeak()) return '';
+  if (!text || !canSay(text, activeTtsLang())) return '';
   return `<button type="button" class="say-btn${big ? ' say-btn-lg' : ''}" data-action="say" data-text="${esc(text)}"${rate !== 1 ? ` data-rate="${rate}"` : ''} aria-label="${esc(label)}" title="${esc(label)}">${icon(rate < 1 ? 'slow' : 'speaker')}${caption ? `<span class="say-label">${esc(caption)}</span>` : ''}</button>`;
 }
 
 /** Vorlese-Knöpfe einer Übung (normal und langsam) – siehe speechFor. */
 function sayRow(ex) {
   const sp = speechFor(ex, run.course);
-  if (!sp || !canSpeak()) return '';
+  if (!sp || !canSay(sp.text, sp.lang)) return '';
   const what = sp.reveals ? `Lösung auf ${langLabel(run.course.targetLang)} anhören` : `Auf ${langLabel(run.course.targetLang)} vorlesen`;
   return `<div class="say-row">${sayBtn(sp.text, what, { big: true, caption: sp.reveals ? 'Lösung anhören' : 'Anhören' })}${sayBtn(sp.text, `${what} – langsam`, { rate: 0.6 })}</div>`;
 }
@@ -1743,7 +1776,7 @@ function viewExercise() {
         <button type="button" class="btn btn-field" data-action="speak" data-rate="1">${icon('play')} Abspielen</button>
         <button type="button" class="btn" data-action="speak" data-rate="0.6">${icon('slow')} Langsam</button>
       </div>
-      ${!canSpeak() ? '<p class="inline-error">Dein Browser kann gerade nichts vorlesen. Nutze „Kann gerade nicht hören“.</p>' : ''}` : q + say;
+      ${!canSay(ex.speak, ex.speakLang) ? '<p class="inline-error">Zu diesem Satz gibt es keine Aufnahme. Nutze „Kann gerade nicht hören“.</p>' : ''}` : q + say;
     const skipRow = listen && !checked && !item.retry ? `<div class="skip-row">
         <button type="button" class="btn btn-ghost btn-small" data-action="no-audio">${icon('ear')} Kann gerade nicht hören</button>
         <button type="button" class="btn btn-ghost btn-small" data-action="skip-listen-all">In dieser ${run.kind === 'checkpoint' ? 'Prüfung' : 'Lektion'} keine Hörübungen</button></div>` : '';
@@ -1835,7 +1868,7 @@ function viewSpeak(ex, ui) {
     : '<p class="muted small">Dein Browser hat keine Spracherkennung. Tippe den Satz einfach ins Feld.</p>';
   return `<p class="question question-target" lang="${esc(ex.questionLang)}">${esc(ex.question)}${readingHtml(ex.reading)}</p>
     <div class="listen-row">
-      ${canSpeak() ? `<button type="button" class="btn" data-action="speak" data-rate="1">${icon('play')} Vorlesen</button><button type="button" class="btn" data-action="speak" data-rate="0.6">${icon('slow')} Langsam</button>` : ''}
+      ${canSay(ex.speak, ex.speakLang) ? `<button type="button" class="btn" data-action="speak" data-rate="1">${icon('play')} Vorlesen</button><button type="button" class="btn" data-action="speak" data-rate="0.6">${icon('slow')} Langsam</button>` : ''}
       ${recBtn}
     </div>
     ${rec.active ? '<p class="rec-status"><span class="rec-dot" aria-hidden="true"></span> Ich höre zu … sprich jetzt den Satz.</p>' : ''}
@@ -1865,7 +1898,9 @@ function applyFallback() {
 function maybeAutoFallback() {
   const item = run && currentItem(run.session);
   if (!item || item.retry) return;
-  if ((item.ex.type === 'listen' && run.skip.listen) || (item.ex.type === 'speak' && run.skip.speak)) applyFallback();
+  // Hörübung ohne Aufnahme (und ohne erlaubte Gerätestimme): gleich als Übersetzung.
+  const unheard = item.ex.type === 'listen' && (run.skip.listen || !canSay(item.ex.speak, item.ex.speakLang));
+  if (unheard || (item.ex.type === 'speak' && run.skip.speak)) applyFallback();
 }
 
 function applyCheck(result, response) {
@@ -2281,7 +2316,8 @@ function viewSettings() {
   </section>
   <section class="card" aria-labelledby="set-learn">
     <h2 id="set-learn">Lernen</h2>
-    ${toggle('listening', 'Hörübungen und Vorlesen', tts ? 'Hörübungen, und nach dem Prüfen wird der Satz vorgelesen. Nutzt die Sprachausgabe deines Browsers bzw. Systems. Die Lautsprecher-Knöpfe funktionieren immer.' : 'In diesem Browser gibt es keine Sprachausgabe – Hörübungen werden durch Satzbau ersetzt.', !tts)}
+    ${toggle('listening', 'Hörübungen und Vorlesen', 'Hörübungen, und nach dem Prüfen wird der Satz vorgelesen – mit echten Aufnahmen von Menschen (Lingua Libre, Wikimedia Commons, Tatoeba). Die Lautsprecher-Knöpfe funktionieren immer.')}
+    ${toggle('deviceVoice', 'Computerstimme als Ersatz', tts ? 'Nur für Wörter und Sätze, zu denen es noch keine Aufnahme gibt: Dann liest die Sprachausgabe deines Geräts vor. Aus heißt: nur echte Aufnahmen – Hörübungen ohne Aufnahme werden zu Übersetzungen.' : 'In diesem Browser gibt es keine Sprachausgabe.', !tts && !s.deviceVoice)}
     ${toggle('speaking', 'Sprechübungen (Mikrofon)', `${asr ? '' : '<strong>In diesem Browser nicht verfügbar.</strong> '}Standardmäßig aus. Achtung Datenschutz: Die Spracherkennung mancher Browser (z. B. Chrome) überträgt deine Aufnahme an den Browserhersteller. Wortweg selbst speichert keine Aufnahmen. Du kannst jede Sprechübung auch tippen oder überspringen.`, !asr && !s.speaking)}
     ${toggle('unlockAll', 'Alle Lektionen freischalten', 'Für alle, die schon etwas können. Checkpoints sind die Alternative.')}
     ${toggle('showReading', 'Aussprachehilfe anzeigen', 'Zeigt Pinyin unter chinesischen Wörtern und Sätzen.')}
@@ -2481,11 +2517,48 @@ function viewAbout() {
     <h2>Inhalte</h2>
     <p>Es gibt zwei Arten von Kursen: kurze, <strong>selbst geschriebene Demo-Kurse</strong> (CC0 1.0) und große <strong>Wortschatzkurse aus offenen Quellen</strong> wie Tatoeba (Beispielsätze, CC BY 2.0 FR), Wiktionary/WikDict und HanDeDict (CC BY-SA) sowie offenen HSK-Wortlisten (MIT). Diese Kurse stehen unter CC BY-SA 4.0; die Quellen stehen im Lernpfad unter „Über diesen Kurs“, die Herkunft jedes Beispielsatzes erscheint nach dem Prüfen. Nichts wurde aus anderen Lern-Apps übernommen. Kein Kurs ist muttersprachlich oder von einem Lehrwerk geprüft; Wortweg bietet nicht „alle Sprachen“.</p>
     <h2>Audio und Sprechen</h2>
-    <p>Es werden keine Audiodateien mitgeliefert. Hörübungen nutzen die Sprachausgabe deines Browsers bzw. Systems. Sprechübungen sind standardmäßig aus; schaltest du sie ein, nutzt Wortweg die Spracherkennung deines Browsers. <strong>Manche Browser (z. B. Chrome) übertragen die Aufnahme dafür an den Browserhersteller.</strong> Wortweg selbst empfängt und speichert keine Aufnahmen.</p>
+    <p>Vorgelesen wird mit <strong>echten Aufnahmen von Menschen</strong>, nicht mit Computer- oder KI-Stimmen: Wörter aus Lingua Libre und Wikimedia Commons (u. a. Shtooka-Projekt, meist CC BY-SA), Sätze von Tatoeba (je Aufnahme eigene Lizenz, meist CC BY-NC-ND 3.0: nicht kommerziell, unverändert). Wortweg hat die Wort-Aufnahmen gekürzt und in der Lautstärke angeglichen; die Tatoeba-Aufnahmen sind unverändert. Alle Dateien liegen in der App selbst, nichts wird von fremden Servern geladen. <a href="#/recordings">Alle Aufnahmen mit Sprechern und Lizenzen</a></p>
+    <p>Wo es noch keine Aufnahme gibt, bleibt es still – außer du schaltest in den Optionen „Computerstimme als Ersatz“ ein; dann liest dort die Sprachausgabe deines Geräts vor. Sprechübungen sind standardmäßig aus; schaltest du sie ein, nutzt Wortweg die Spracherkennung deines Browsers. <strong>Manche Browser (z. B. Chrome) übertragen die Aufnahme dafür an den Browserhersteller.</strong> Wortweg selbst empfängt und speichert keine Aufnahmen.</p>
     <h2>Code, Grafiken und Schriften</h2>
     <p>Eigener Code (MIT-Lizenz). Logo, Illustrationen, Symbole, Kronen und Truhen sind eigene SVG-Zeichnungen dieses Projekts; das Spiel-Design (Blau, Gold, 3D-Knöpfe) ist selbst gestaltet und übernimmt keine Grafiken, Namen oder Schriften aus Spielen oder anderen Apps. Konfetti und Töne erzeugt der Browser selbst (Canvas, Web Audio) – keine Bild- oder Audiodateien, keine externen Bibliotheken.</p>
     <p>Schrift für Überschriften und Knöpfe: <strong>Lilita One</strong> von Juan Montoreano, lizenziert unter der <a href="assets/fonts/OFL-LilitaOne.txt" target="_blank" rel="noopener">SIL Open Font License 1.1</a>, mitgeliefert (kein Abruf von fremden Servern). Text und Lerninhalte: <strong>Atkinson Hyperlegible Next</strong> vom Braille Institute, ebenfalls <a href="assets/fonts/OFL-AtkinsonHyperlegibleNext.txt" target="_blank" rel="noopener">SIL Open Font License 1.1</a> und mitgeliefert. Chinesische Zeichen in der Systemschrift.</p>
   </section>`;
+}
+
+const RECORDING_LANGS = ['es', 'zh'];
+const recordingCreditsEntry = (lang) => need(`credits:${lang}`, () => fetch(`assets/audio/${lang}/quellen.json`)
+  .then((res) => (res.ok ? res.json() : []), () => Promise.reject(Object.assign(new Error('Die Liste der Aufnahmen konnte nicht geladen werden.'), { status: 0 }))));
+
+/** Namensnennung aller Aufnahmen (Pflicht der CC-Lizenzen), gruppiert nach Sprecher und Lizenz. */
+function viewRecordings() {
+  setTitle('Aufnahmen');
+  const entries = RECORDING_LANGS.map(recordingCreditsEntry);
+  return withData(entries, RECORDING_LANGS.map((l) => `credits:${l}`), () => `<h1 tabindex="-1">Aufnahmen</h1>
+  <section class="card prose">
+    <p>Alle Aufnahmen in Wortweg stammen von Menschen, die sie unter einer freien Lizenz geteilt haben. Danke! Hier stehen sie mit Sprecherin oder Sprecher, Quelle und Lizenz; jeder Eintrag führt zur Originaldatei.</p>
+    <p>Wort-Aufnahmen (Lingua Libre, Wikimedia Commons) hat Wortweg bearbeitet: Stille am Anfang und Ende gekürzt, Lautstärke angeglichen, als AAC gespeichert. Die bearbeiteten Fassungen stehen unter derselben Lizenz. Tatoeba-Aufnahmen sind unverändert.</p>
+    <p><a href="#/about">Zurück zu „Über Wortweg“</a></p>
+  </section>
+  ${RECORDING_LANGS.map((lang, i) => recordingCreditsHtml(lang, entries[i].data)).join('')}`, { loading: 'Aufnahmen werden geladen …' });
+}
+
+function recordingCreditsHtml(lang, list) {
+  if (!list?.length) return '';
+  const groups = new Map();
+  for (const c of list) {
+    const k = [c.sprecher, c.quelle, c.lizenz].join('\u0000');
+    if (!groups.has(k)) groups.set(k, []);
+    groups.get(k).push(c);
+  }
+  const rows = [...groups.values()].sort((a, b) => b.length - a.length).map((g) => {
+    const c = g[0];
+    const license = c.lizenzUrl ? `<a href="${esc(c.lizenzUrl)}" target="_blank" rel="noopener">${esc(c.lizenz)}</a>` : esc(c.lizenz);
+    return `<details class="table-details"><summary>${esc(c.sprecher || 'ohne Namen')} · ${plural(g.length, 'Aufnahme', 'Aufnahmen')}</summary>
+      <p class="muted small">${esc(c.quelle)} · Lizenz: ${license}${c.bearbeitet ? ' · von Wortweg bearbeitet' : ''}</p>
+      <ul class="source-list">${g.map((x) => `<li><a href="${esc(x.seite)}" target="_blank" rel="noopener" lang="${esc(lang)}">${esc(x.text)}</a></li>`).join('')}</ul></details>`;
+  }).join('');
+  return `<section class="card" aria-labelledby="rec-${esc(lang)}">
+    <h2 id="rec-${esc(lang)}">${esc(languageName(lang))}: ${plural(list.length, 'Aufnahme', 'Aufnahmen')}</h2>${rows}</section>`;
 }
 
 // =====================================================================================================
@@ -2621,7 +2694,7 @@ function onClick(e) {
     case 'intro-skip': startExercises(); break;
     case 'say':
       stopRecognition();
-      if (!speak(el.dataset.text ?? '', activeTtsLang(), Number(el.dataset.rate) || 1)) announce('Dein Browser kann gerade nichts vorlesen.');
+      if (!speak(el.dataset.text ?? '', activeTtsLang(), Number(el.dataset.rate) || 1)) announce('Dazu gibt es noch keine Aufnahme.');
       break;
     case 'toggle-level': {
       const id = el.dataset.level;
@@ -2665,7 +2738,7 @@ function onClick(e) {
       const ex = run && currentItem(run.session)?.ex;
       if (ex?.speak) {
         stopRecognition();
-        if (!speak(ex.speak, ex.speakLang, Number(el.dataset.rate) || 1)) announce('Dein Browser kann gerade nichts vorlesen.');
+        if (!speak(ex.speak, ex.speakLang, Number(el.dataset.rate) || 1)) announce('Dazu gibt es noch keine Aufnahme.');
       }
       break;
     }
@@ -2739,7 +2812,7 @@ function onChange(e) {
   if (action === 'goal') {
     saveSetting({ dailyGoal: Number(el.value) }, 'goal', `Tagesziel gespeichert: ${Number(el.value) ? `${el.value} XP` : 'kein Ziel'}.`);
   } else if (action === 'setting') {
-    const labels = { listening: 'Hörübungen', speaking: 'Sprechübungen', unlockAll: 'Alle Lektionen freischalten', showReading: 'Aussprachehilfe', reduceMotion: 'Animationen reduzieren', sounds: 'Soundeffekte' };
+    const labels = { listening: 'Hörübungen', deviceVoice: 'Computerstimme als Ersatz', speaking: 'Sprechübungen', unlockAll: 'Alle Lektionen freischalten', showReading: 'Aussprachehilfe', reduceMotion: 'Animationen reduzieren', sounds: 'Soundeffekte' };
     saveSetting({ settings: { [el.dataset.key]: el.checked } }, 'settings', `${labels[el.dataset.key] ?? el.dataset.key}: ${el.checked ? 'an' : 'aus'}.`);
   } else if (action === 'filter') {
     app.courseFilter = { ...app.courseFilter, [el.name]: el.value };

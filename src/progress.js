@@ -23,7 +23,7 @@ export function createInitialState() {
     courses: {},
     review: {},
     // Sprechen nur nach Opt-in: die Spracherkennung mancher Browser schickt Audio an fremde Server.
-    settings: { listening: true, speaking: false, unlockAll: false, showReading: true, reduceMotion: false, sounds: true },
+    settings: { listening: true, deviceVoice: false, speaking: false, unlockAll: false, showReading: true, reduceMotion: false, sounds: true },
   };
 }
 
@@ -349,6 +349,7 @@ export function sanitizeState(raw) {
   if (isPlainObject(raw.settings)) {
     out.settings = {
       listening: raw.settings.listening !== false,
+      deviceVoice: raw.settings.deviceVoice === true,
       speaking: raw.settings.speaking === true,
       unlockAll: raw.settings.unlockAll === true,
       showReading: raw.settings.showReading !== false,
