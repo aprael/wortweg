@@ -68,6 +68,15 @@ Ergebnis: **keine kritischen Befunde.** Hinweise für einen öffentlichen Server
    `DESIGN-PRAEFERENZEN.md` („heute nutzt die App noch die Systemstimmen“) aktualisieren. Lücken: Chinesisch hat für Sätze
    fast keine freien Aufnahmen (10 von 2.295), für Wörter ~67 %; Spanisch Wörter ~91 %, Sätze ~48 %. Nächster Schritt dafür:
    Liste fehlender Wörter für Lingua Libre (Aufnahme durch Muttersprachler).
+7. **Installierbar auf Windows, Mac, iPhone, Android (23.10.2026, Zweig `inhalte-beispiele`):** Seite `#/app` mit
+   Installieren-Knopf (Chrome/Edge) bzw. Anleitung je Gerät, „Aufnahmen laden“ für offline, Hinweise auf Willkommensseite,
+   in den Optionen und in der Fußzeile. Dabei gefunden und behoben: Seit dem Aufnahmen-Commit war das erzeugte `sw.js`
+   ungültig (`\/` im Template wurde zu `/`, die Zeile begann mit `//`) – die App wäre nach dem nächsten Deploy nicht mehr
+   offline gegangen. Der Build prüft `sw.js` jetzt selbst. Kursdateien werden beim Installieren vorab gespeichert.
+   Geprüft (Headless-Chromium, 390 × 844 und 1440 × 900, hell/dunkel): Service Worker aktiv, 6 Kurse und 173 Aufnahmen im
+   Cache, danach Server aus → App startet, Chinesisch und Spanisch öffnen, Lektion läuft, Aufnahme spielt; iPhone-Ansicht
+   (Safari-Kennung) zeigt die Home-Bildschirm-Anleitung; kein horizontales Scrollen, keine Konsolenfehler; `npm run check`
+   134/134, `npm run e2e` 25/25. Nicht geprüft: echtes Installieren auf Windows, Mac und iPhone (nur im Browser simuliert).
 
 ### 0.5 Veröffentlichung 21.10.2026
 

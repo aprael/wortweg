@@ -4,7 +4,7 @@ Wortweg ist eine kostenlose App zum Sprachenlernen – ohne Werbung, ohne Bezahl
 
 **Direkt ausprobieren:** <https://aprael.github.io/wortweg/> (App-Version, läuft im Browser und offline)
 
-- **App-Version** (statisch, offline, ohne Konto): läuft z. B. über GitHub Pages und lässt sich auf dem iPhone über Safari → Teilen → „Zum Home-Bildschirm“ wie eine App installieren. Der Fortschritt bleibt auf dem Gerät.
+- **App-Version** (statisch, offline, ohne Konto): läuft z. B. über GitHub Pages und lässt sich auf **Windows, Mac, iPhone und Android** wie eine App installieren – kostenlos, ohne App Store. In der App steht unter „Als App installieren“ (`#/app`) die passende Anleitung; in Chrome und Edge reicht ein Klick. Danach funktionieren App und alle Kurse ohne Internet, Aufnahmen lassen sich für unterwegs vorab laden. Der Fortschritt bleibt auf dem Gerät.
 - **Server-Version** (`npm start`): mit Konten (auch als Gast), Fortschritt auf dem eigenen Server und einem Admin-Bereich, in dem man Kurse anlegt und bearbeitet.
 
 > **Inhalte:** Die großen Kurse (Chinesisch HSK 1–3, Spanisch-Wortschatz) sind aus offenen Quellen zusammengestellt und von Hand geprüft, aber **nicht muttersprachlich** geprüft. Dazu kommen kleine, selbst geschriebene Demo-Kurse. Details: [`data/courses/PROVENIENZ.md`](data/courses/PROVENIENZ.md).

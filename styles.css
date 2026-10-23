@@ -551,6 +551,19 @@ a.board-field:active, button.board-field:active { transform: translateY(var(--ed
 .checkpoint.is-locked .checkpoint-icon { background: var(--line); color: var(--muted); }
 .course-info { margin-top: var(--sp-4); }
 .course-info summary, .table-details summary { cursor: pointer; font-weight: 700; min-height: var(--control-h); display: flex; align-items: center; }
+/* Seite „Wortweg als App“: Anleitung je Gerät, Aufnahmen für offline */
+.install-steps { padding-left: var(--sp-3); margin: 0 0 var(--sp-2); display: grid; gap: var(--sp-1); }
+.prose > h2:first-child { margin-top: 0; }
+.install-hint { margin-top: var(--sp-2); }
+.device-guide summary { cursor: pointer; font-weight: 700; min-height: var(--control-h); display: flex; align-items: center; justify-content: space-between; gap: var(--sp-2); list-style: none; }
+.device-guide summary::-webkit-details-marker { display: none; }
+.device-guide summary .icon { transition: transform var(--dur-2) var(--ease-out); }
+.device-guide[open] summary .icon { transform: rotate(180deg); }
+.device-guide[open] summary { margin-bottom: var(--sp-1); }
+.offline-row { margin-top: var(--sp-3); }
+.offline-row h3 { margin: 0 0 var(--sp-half); }
+.offline-row p { margin: 0 0 var(--sp-1); }
+.offline-row p .icon { width: var(--icon-s); height: var(--icon-s); vertical-align: -4px; }
 .source-list { padding-left: var(--sp-3); margin: var(--sp-1) 0 0; display: grid; gap: var(--sp-1); }
 .source-line { margin: var(--sp-1) 0; }
 .source-line a, .source-list a { color: inherit; }

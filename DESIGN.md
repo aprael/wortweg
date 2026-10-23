@@ -262,6 +262,10 @@ Spielstein 64. Abstände zwischen Geschwistern immer per `gap` in Flex/Grid, nic
 - **Dialog** (nur wenn ein Bestätigungsfeld nicht reicht): natives `<dialog>`, `--surface`, `--radius`, `--float`,
   höchstens 480 px breit, Titel h2, Fokus hinein und beim Schließen zurück, Esc schließt.
 - **Update-Hinweis:** schwebende Leiste unten (über der Tab-Leiste), `--surface`, `--float`.
+- **Aufklapp-Anleitung** (Seite „Wortweg als App“, Abschnitt „Andere Geräte“): `<details>` in einer Karte, Zusammenfassung
+  48 px hoch in Atkinson 700 mit Chevron rechts (dreht sich beim Öffnen wie bei den Abschnitten im Lernpfad), darin eine
+  nummerierte Liste. Begründung: Vier Geräte-Anleitungen untereinander wären am Handy mehrere Bildschirme lang; die
+  Anleitung für das eigene Gerät steht offen darüber.
 
 ### 8.4 Karten und Flächen
 
@@ -517,4 +521,5 @@ widerspricht dem Spielbrett) und die übrigen Marketing-Skills für Werbung, Tra
 | 22.10.2026 | Schrift (3.1): Pinyin in der Systemschrift (`--font-reading`), weil Atkinson Hyperlegible Next die Tonzeichen ǎ ǐ ǒ ǔ ǚ nicht enthält (im Browser gemessen). |
 | 22.10.2026 | Bewegung (10): Konfetti wieder bei richtigen Antworten und am Lektionsende erlaubt – der Nutzer hatte sich ausdrücklich Konfetti und Effekte gewünscht; die erste Fassung hatte das zu streng begrenzt. |
 | 22.10.2026 | Startseite (8.5): Primärknopf über dem Brett statt darunter – im Prototyp lag er bei 390 × 844 unter dem ersten Bildschirm. |
+| 23.10.2026 | Dialoge (8.3): Aufklapp-Anleitung für die Seite „Wortweg als App“ (Installieren auf Windows, Mac, iPhone, Android; Aufnahmen offline laden). Sonst nur vorhandene Komponenten (Karte, Primärknopf nur, wenn der Browser direkt installieren kann; „Aufnahmen laden“ als Feld-Knopf, Fortschrittsbalken). |
 | 22.10.2026 | Brett (8.5): drei abgeleitete Tokens `--field-bright`, `--table-muted`, `--table-locked`, weil `--field` auf `--table` nur 2,6:1 erreicht; Feldgröße 48 px unter 600 px (statt unter 360 px), damit Regel-Einheiten mit fünf Feldern ab 320 px passen; Regeln als Dialog statt aufklappbar im Brett. |

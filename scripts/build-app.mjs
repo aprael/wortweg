@@ -4,6 +4,7 @@
 import { createHash } from 'node:crypto';
 import { cpSync, mkdirSync, readdirSync, readFileSync, rmSync, statSync, writeFileSync } from 'node:fs';
 import { join, relative, resolve } from 'node:path';
+import { Script } from 'node:vm';
 import { fileURLToPath } from 'node:url';
 import { validateCourse, listLessons } from '../src/content.js';
 import { KNOWN_LANGUAGES } from '../server/content.mjs';
@@ -58,8 +59,9 @@ const languages = [...langs].sort().map((code) => {
 });
 writeFileSync(join(OUT, 'courses/index.json'), JSON.stringify({ courses, languages }));
 
-// Manifest für „Zum Home-Bildschirm“ (iPhone/Android).
+// Manifest: macht Wortweg installierbar (Windows/Mac über Edge, Chrome oder Safari, iPhone/Android über den Home-Bildschirm).
 writeFileSync(join(OUT, 'manifest.webmanifest'), JSON.stringify({
+  id: './',
   name: 'Wortweg – Sprachen lernen',
   short_name: 'Wortweg',
   description: 'Freie Sprachlern-App: Lernpfad, Übungen, Wiederholung. Offline, ohne Konto, ohne Werbung.',
@@ -67,6 +69,7 @@ writeFileSync(join(OUT, 'manifest.webmanifest'), JSON.stringify({
   start_url: './',
   scope: './',
   display: 'standalone',
+  categories: ['education'],
   background_color: '#e9effc',
   theme_color: '#0d1e4b',
   icons: [
@@ -94,7 +97,8 @@ if (html.split('</head>').length !== 2) throw new Error('index.html: </head> nic
 html = html.replace('</head>', head);
 writeFileSync(join(OUT, 'index.html'), html);
 
-// Service Worker: App-Hülle vorab cachen (versioniert), Kursdateien beim ersten Öffnen (Name enthält den Hash).
+// Service Worker: App-Hülle (versioniert) und alle Kursdateien (Name enthält den Hash) beim Installieren cachen,
+// damit nach dem ersten Start jeder Kurs offline geht; Aufnahmen beim ersten Abspielen oder auf Wunsch (Seite „App“).
 function walk(dir) {
   return readdirSync(dir).flatMap((f) => {
     const p = join(dir, f);
@@ -107,7 +111,7 @@ const courseFiles = courses.map((c) => `courses/${c.file}`);
 const isRecording = (p) => p.startsWith('assets/audio/') && !p.endsWith('/index.json');
 const shell = all.filter((p) => !courseFiles.includes(p) && !isRecording(p) && !p.endsWith('.md') && !p.endsWith('.txt'));
 const version = sha(all.map((p) => `${p}:${sha(readFileSync(join(OUT, p)))}`).join('\n')).slice(0, 12);
-writeFileSync(join(OUT, 'sw.js'), `// Wortweg Service Worker (erzeugt von scripts/build-app.mjs – nicht von Hand ändern).
+const swSource = `// Wortweg Service Worker (erzeugt von scripts/build-app.mjs – nicht von Hand ändern).
 const VERSION = '${version}';
 const SHELL = 'wortweg-shell-' + VERSION;
 const COURSES = 'wortweg-courses';
@@ -117,8 +121,11 @@ const COURSE_FILES = ${JSON.stringify(courseFiles)};
 
 self.addEventListener('install', (event) => {
   // cache: 'reload' – am HTTP-Cache vorbei, sonst könnte eine alte Datei in die neue Version geraten.
-  event.waitUntil(caches.open(SHELL).then((cache) => cache.addAll(SHELL_FILES.map((f) => new Request(f, { cache: 'reload' }))))
-    .then(() => self.skipWaiting()));
+  const fresh = (f) => new Request(f, { cache: 'reload' });
+  event.waitUntil(Promise.all([
+    caches.open(SHELL).then((cache) => cache.addAll(SHELL_FILES.map(fresh))),
+    caches.open(COURSES).then((cache) => cache.addAll(COURSE_FILES.map(fresh))),
+  ]).then(() => self.skipWaiting()));
 });
 
 self.addEventListener('activate', (event) => {
@@ -149,14 +156,18 @@ self.addEventListener('fetch', (event) => {
     event.respondWith(fromCache(SHELL, req, new URL('./', self.registration.scope).href));
   } else if (COURSE_FILES.some((f) => url.href === new URL(f, self.registration.scope).href)) {
     event.respondWith(fromCache(COURSES, req));
-  } else if (/\/assets\/audio\/[a-z]+\/[0-9a-f]+\.(m4a|mp3)$/.test(url.pathname)) {
+  } else if (/\\/assets\\/audio\\/[a-z]+\\/[0-9a-f]+\\.(m4a|mp3)$/.test(url.pathname)) {
     // Aufnahmen: Dateiname = Inhalts-Hash, also dauerhaft gültig; einmal gehört, auch offline da.
     event.respondWith(fromCache(AUDIO, req));
   } else {
     event.respondWith(fromCache(SHELL, req));
   }
 });
-`);
+`;
+// Schutz: Ein einfacher Backslash geht im Template verloren und machte sw.js schon einmal ungültig – dann ist die
+// App nicht mehr offline nutzbar, ohne dass es jemand merkt. Deshalb hier parsen (nicht ausführen).
+new Script(swSource, { filename: 'sw.js' });
+writeFileSync(join(OUT, 'sw.js'), swSource);
 
 const size = walk(OUT).reduce((n, p) => n + statSync(p).size, 0);
 console.log(`✓ App-Build in ${relative(ROOT, OUT) || '.'}/ (Version ${version}): ${courses.length} Kurse, ${all.length + 1} Dateien, ${(size / 1e6).toFixed(1)} MB, ${((performance.now() - started) / 1000).toFixed(1)} s`);

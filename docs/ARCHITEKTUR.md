@@ -267,9 +267,15 @@ sentence { native[], target[], note, reading?: string, tokens?: string[], source
   `courses/index.json` (Kennzahlen, Sprachen), `manifest.webmanifest` und `sw.js`. Der Build ersetzt in `dist/src/app.js`
   genau einen Import (`./api.js` → `./local-api.js`); es gibt kein `config.json`. `src/local-api.js` hat dieselben
   Funktionen wie `src/api.js` (`MODE = 'local'`), Fortschritt in `localStorage` (`wortweg:app:v2`), Bewertung mit
-  denselben Engine-Funktionen. Kein Konto nötig, offline nutzbar, Export/Import der Daten. Der Service Worker cacht die
-  App-Hülle versioniert und die Kursdateien beim ersten Öffnen; nach einem Update zeigt `src/pwa.js` einen Hinweis.
-  Admin-Bereich gibt es nur im Server-Modus.
+  denselben Engine-Funktionen. Kein Konto nötig, offline nutzbar, Export/Import der Daten. Der Service Worker cacht beim
+  Installieren die App-Hülle (versioniert) und alle Kursdateien, damit nach dem ersten Start jeder Kurs offline geht; nach
+  einem Update zeigt `src/pwa.js` einen Hinweis. Der Build parst `sw.js` vor dem Schreiben (`node:vm`), damit ein
+  Escape-Fehler im Template den Build abbricht statt die Offline-Fähigkeit still zu verlieren. Admin-Bereich gibt es nur
+  im Server-Modus.
+- **Installieren** (nur App-Modus): Seite `#/app` („Wortweg als App“, öffentlich). Chrome/Edge: Knopf über
+  `beforeinstallprompt`; sonst eine Anleitung passend zu Gerät und Browser (`detectPlatform`, `installGuideFor`, rein und
+  getestet) für iPhone/iPad (Safari „Zum Home-Bildschirm“), Mac (Safari „Zum Dock hinzufügen“, Chrome/Edge), Windows und
+  Android. Läuft Wortweg schon als App (`display-mode: standalone`), entfällt die Anleitung.
 - **Mitgelieferte Kurse im Server-Modus:** `server/seed.mjs` läuft bei jedem Start. Neue Kursdateien werden eingespielt;
   eine geänderte Datei (Hash) ersetzt den Kurs nur, wenn kein Admin ihn seit dem Einspielen bearbeitet hat
   (Tabelle `bundled_courses`). Von Admins gelöschte Kurse kommen nicht wieder.
@@ -315,4 +321,5 @@ sentence { native[], target[], note, reading?: string, tokens?: string[], source
   Seite `#/recordings` listet alle Aufnahmen mit Namensnennung (Pflicht der CC-Lizenzen).
 - **Auslieferung:** Server: MIME `audio/mp4`, `audio/mpeg`; CSP `media-src 'self' blob:`. App-Build: Aufnahmen gehören
   nicht zur vorab geladenen App-Hülle (nur `index.json`); der Service Worker legt gehörte Aufnahmen im Cache
-  `wortweg-audio` ab (offline wieder abspielbar).
+  `wortweg-audio` ab (offline wieder abspielbar). Auf `#/app` lädt „Aufnahmen laden“ alle Dateien einer Sprache in
+  denselben Cache (sechs parallel, anhaltbar, setzt fort); `index.json` nennt dafür die Gesamtgröße (`bytes`).

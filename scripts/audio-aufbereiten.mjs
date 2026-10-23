@@ -4,7 +4,7 @@
 // durch (die meisten sind „ND“: keine Bearbeitung erlaubt).
 // Ergebnis: assets/audio/<sprache>/index.json (Schlüssel → Datei) und quellen.json (Namensnennung je Datei).
 // Braucht macOS (afconvert ist eingebaut, nichts zu installieren). Aufruf: node scripts/audio-aufbereiten.mjs [es|zh]
-import { copyFileSync, existsSync, mkdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
+import { copyFileSync, existsSync, mkdirSync, readFileSync, rmSync, statSync, writeFileSync } from 'node:fs';
 import { execFile } from 'node:child_process';
 import { createHash } from 'node:crypto';
 import { join } from 'node:path';
@@ -229,7 +229,9 @@ for (const lang of langs.length ? langs : ['es', 'zh']) {
     });
   });
   const sortedItems = Object.fromEntries(Object.entries(items).sort(([x], [y]) => x.localeCompare(y)));
-  writeFileSync(join(outDir, 'index.json'), JSON.stringify({ lang, items: sortedItems }));
+  // bytes: Gesamtgröße aller Dateien – die App nennt sie, bevor man alle Aufnahmen für offline lädt.
+  const bytes = [...new Set(Object.values(items))].reduce((n, f) => n + statSync(join(outDir, f)).size, 0);
+  writeFileSync(join(outDir, 'index.json'), JSON.stringify({ lang, bytes, items: sortedItems }));
   writeFileSync(join(outDir, 'quellen.json'), JSON.stringify([...credits.values()].sort((x, y) => x.f.localeCompare(y.f)), null, 1));
   const speakers = new Map();
   for (const cr of credits.values()) speakers.set(cr.sprecher, (speakers.get(cr.sprecher) ?? 0) + 1);

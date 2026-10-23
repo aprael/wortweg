@@ -1,7 +1,8 @@
-// Neue reine Hilfsfunktionen der Oberfläche (Vorlesen, Stufen, Kronen, Regeltext, Wortkarten) und der Zwischenstand.
+// Neue reine Hilfsfunktionen der Oberfläche (Vorlesen, Stufen, Kronen, Regeltext, Wortkarten, Installationsanleitung)
+// und der Zwischenstand.
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { speechFor, playerLevel, crownsFor, introHtml, newWordRefs, findWordIn } from '../src/app.js';
+import { speechFor, playerLevel, crownsFor, introHtml, newWordRefs, findWordIn, detectPlatform, installGuideFor } from '../src/app.js';
 import { saveRunSnapshot, loadRunSnapshot, clearRunSnapshot, snapshotMatches, RUN_MAX_AGE } from '../src/run-store.js';
 import { buildLesson, itemKey } from '../src/exercises.js';
 import { createSession, recordAnswer, advance } from '../src/session.js';
@@ -147,4 +148,35 @@ test('Zwischenstand: gesperrter Speicher wirft nicht', (t) => {
   assert.doesNotThrow(() => saveRunSnapshot(snapshot()));
   assert.equal(loadRunSnapshot(T0), null);
   assert.doesNotThrow(() => clearRunSnapshot());
+});
+
+test('detectPlatform: Gerät und Browser für die Installationsanleitung', () => {
+  const ua = {
+    iphone: 'Mozilla/5.0 (iPhone; CPU iPhone OS 18_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.5 Mobile/15E148 Safari/604.1',
+    ipad: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.5 Safari/605.1.15',
+    macChrome: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36',
+    winEdge: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36 Edg/141.0.0.0',
+    winFirefox: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:144.0) Gecko/20100101 Firefox/144.0',
+    android: 'Mozilla/5.0 (Linux; Android 15; Pixel 9) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Mobile Safari/537.36',
+    linux: 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36',
+  };
+  assert.deepEqual(detectPlatform({ userAgent: ua.iphone }), { os: 'ios', browser: 'safari' });
+  assert.deepEqual(detectPlatform({ userAgent: ua.ipad, maxTouchPoints: 5 }), { os: 'ios', browser: 'safari' });
+  assert.deepEqual(detectPlatform({ userAgent: ua.ipad, maxTouchPoints: 0 }), { os: 'mac', browser: 'safari' });
+  assert.deepEqual(detectPlatform({ userAgent: ua.macChrome }), { os: 'mac', browser: 'chrome' });
+  assert.deepEqual(detectPlatform({ userAgent: ua.winEdge }), { os: 'windows', browser: 'edge' });
+  assert.deepEqual(detectPlatform({ userAgent: ua.winFirefox }), { os: 'windows', browser: 'firefox' });
+  assert.deepEqual(detectPlatform({ userAgent: ua.android }), { os: 'android', browser: 'chrome' });
+  assert.deepEqual(detectPlatform({ userAgent: ua.linux }), { os: 'other', browser: 'chrome' });
+  assert.deepEqual(detectPlatform(), { os: 'other', browser: 'other' });
+
+  const text = (p) => installGuideFor(p).steps.join(' ');
+  assert.match(text({ os: 'ios', browser: 'safari' }), /Zum Home-Bildschirm/);
+  assert.match(text({ os: 'mac', browser: 'safari' }), /Zum Dock hinzufügen/);
+  assert.doesNotMatch(text({ os: 'mac', browser: 'chrome' }), /Ablage/);
+  assert.match(text({ os: 'windows', browser: 'edge' }), /App installieren/);
+  assert.match(text({ os: 'windows', browser: 'firefox' }), /Edge/);
+  assert.match(text({ os: 'mac', browser: 'firefox' }), /Safari/);
+  assert.match(text({ os: 'android', browser: 'chrome' }), /App installieren/);
+  assert.ok(installGuideFor({ os: 'other', browser: 'chrome' }).steps.length > 0);
 });

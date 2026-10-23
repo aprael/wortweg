@@ -456,7 +456,7 @@ function afterRender(prevFocus) {
   animateFigureHop();
 }
 
-const PUBLIC_ROUTES = new Set(['welcome', 'login', 'register', 'about', 'recordings']);
+const PUBLIC_ROUTES = new Set(['welcome', 'login', 'register', 'about', 'recordings', 'app']);
 
 function view({ name, args }) {
   if (app.booting) {
@@ -475,6 +475,9 @@ function view({ name, args }) {
       return app.user ? layout(viewRegister(), 'settings') : publicLayout(viewRegister());
     case 'about': return app.user ? layout(viewAbout(), 'about') : publicLayout(viewAbout());
     case 'recordings': return app.user ? layout(viewRecordings(), 'about') : publicLayout(viewRecordings());
+    case 'app':
+      if (!LOCAL) return redirect('#/');
+      return app.user ? layout(viewInstall(), 'settings') : publicLayout(viewInstall());
     case 'home': return app.state.activeCourseId ? layout(viewHome(), 'home') : redirect('#/courses');
     case 'courses': return layout(viewCourses(), 'courses');
     case 'onboarding': return layout(viewOnboarding(), 'courses');
@@ -554,7 +557,7 @@ function brand(href) {
 }
 
 function footer() {
-  return `<footer class="footer"><span>Wortweg · freie Lern-App${LOCAL ? ' · App-Version (offline)' : ''}</span> <a href="#/about">Über, Datenschutz &amp; Lizenzen</a></footer>`;
+  return `<footer class="footer"><span>Wortweg · freie Lern-App${LOCAL ? ' · App-Version (offline)' : ''}</span>${LOCAL ? ' <a href="#/app">Als App installieren</a>' : ''} <a href="#/about">Über, Datenschutz &amp; Lizenzen</a></footer>`;
 }
 
 function layout(content, active) {
@@ -632,11 +635,11 @@ function viewWelcome() {
       <p class="lead">Kurze Lektionen, sofortiges Feedback mit Erklärung und Wiederholung nach Plan. Ohne Werbung, ohne Herzen, ohne Strafen.</p>
       <div class="hero-actions">
         <button type="button" class="btn btn-primary btn-lg" data-action="guest" ${busy ? 'disabled aria-busy="true"' : ''}>${busy ? 'Wird gestartet …' : LOCAL ? 'Los geht’s' : 'Ohne Konto starten'}</button>
-        ${LOCAL ? '' : '<a class="btn btn-lg" href="#/login">Anmelden</a><a class="btn btn-lg" href="#/register">Konto erstellen</a>'}
+        ${LOCAL ? (runsAsApp() ? '' : '<a class="btn btn-lg" href="#/app">Als App installieren</a>') : '<a class="btn btn-lg" href="#/login">Anmelden</a><a class="btn btn-lg" href="#/register">Konto erstellen</a>'}
       </div>
       ${noticeHtml('welcome')}
       <p class="muted small">${LOCAL
-    ? 'Ohne Konto, ohne Server: Dein Fortschritt bleibt auf diesem Gerät und die App funktioniert auch offline. Tipp fürs iPhone: In Safari „Teilen → Zum Home-Bildschirm“ – dann startet Wortweg wie eine App.'
+    ? 'Ohne Konto, ohne Server: Dein Fortschritt bleibt auf diesem Gerät und die App funktioniert auch offline. Installieren geht auf Windows, Mac, iPhone und Android – kostenlos, ohne App Store.'
     : '„Ohne Konto starten“ legt ein anonymes Gastkonto an; ein Cookie in diesem Browser merkt es sich. Du kannst es jederzeit in ein Konto mit E-Mail umwandeln.'}</p>
     </div>
     ${welcomeBoard()}
@@ -2308,6 +2311,11 @@ function viewSettings() {
       <button type="button" class="btn" data-action="confirm-no" data-key="delete-account" id="confirm-delete-account-no">Abbrechen</button>
     </form>` : ''}
   </section>
+  ${LOCAL ? `<section class="card" aria-labelledby="set-app">
+    <h2 id="set-app">App und offline</h2>
+    <p>${runsAsApp() ? 'Du nutzt Wortweg als App.' : 'Installiere Wortweg als App – mit eigenem Symbol und auch ohne Internet.'} Aufnahmen für unterwegs lädst du auf derselben Seite.</p>
+    <div class="hero-actions"><a class="btn" href="#/app">${runsAsApp() ? 'Aufnahmen laden' : 'App installieren'}</a></div>
+  </section>` : ''}
   <section class="card" aria-labelledby="set-goal">
     <h2 id="set-goal">Tagesziel</h2>
     <fieldset class="radios"><legend class="sr-only">Tagesziel wählen</legend>${goalRadios('goal', st.dailyGoal)}</fieldset>
@@ -2328,7 +2336,7 @@ function viewSettings() {
   <section class="card" aria-labelledby="set-data">
     <h2 id="set-data">Daten</h2>
     <p class="muted small">${LOCAL
-    ? 'Dein Fortschritt liegt nur im Speicher dieses Browsers. Löschst du die Website-Daten, ist er weg – sichere ihn deshalb ab und zu als Datei. Auf dem iPhone schützt „Zum Home-Bildschirm“ vor dem automatischen Aufräumen durch Safari.'
+    ? 'Dein Fortschritt liegt nur im Speicher dieses Browsers. Löschst du die Website-Daten, ist er weg – sichere ihn deshalb ab und zu als Datei. Auf dem iPhone schützt <a href="#/app">die Installation als App</a> vor dem automatischen Aufräumen durch Safari.'
     : `Dein Fortschritt liegt auf dem Wortweg-Server in deinem ${user.isGuest ? 'Gast-' : ''}Konto. Du kannst ihn jederzeit als Datei sichern und wieder einspielen.`}</p>
     <div class="hero-actions">
       <button type="button" class="btn" data-action="export">Fortschritt exportieren</button>
@@ -2605,6 +2613,222 @@ function viewAdmin(args) {
 }
 
 // =====================================================================================================
+// Als App installieren und offline lernen (nur App-Version)
+// =====================================================================================================
+
+/** Gerät und Browser für die passende Installationsanleitung (rein, testbar). */
+export function detectPlatform({ userAgent = '', maxTouchPoints = 0 } = {}) {
+  const ua = String(userAgent);
+  // iPadOS meldet sich als Mac – erkennbar am Touchscreen.
+  const os = /iPhone|iPad|iPod/.test(ua) || (/Macintosh/.test(ua) && maxTouchPoints > 1) ? 'ios'
+    : /Android/.test(ua) ? 'android'
+      : /Windows/.test(ua) ? 'windows'
+        : /Macintosh|Mac OS X/.test(ua) ? 'mac' : 'other';
+  const browser = /Edg(e|A|iOS)?\//.test(ua) ? 'edge'
+    : /Firefox\/|FxiOS\//.test(ua) ? 'firefox'
+      : /Chrome\/|Chromium\/|CriOS\//.test(ua) ? 'chrome'
+        : /Safari\//.test(ua) ? 'safari' : 'other';
+  return { os, browser };
+}
+
+const CHROMIUM_STEPS = [
+  'Klicke rechts in der Adressleiste auf das Symbol <strong>„App installieren“</strong> und dann auf „Installieren“.',
+  'Kein Symbol zu sehen? <strong>Edge:</strong> Menü „…“ → „Apps“ → „Wortweg installieren“. <strong>Chrome:</strong> Menü „⋮“ → „Streamen, speichern und teilen“ → „Wortweg installieren …“.',
+];
+const INSTALL_GUIDES = {
+  ios: {
+    name: 'iPhone und iPad',
+    steps: [
+      'Öffne diese Seite in <strong>Safari</strong> (Chrome und Edge gehen auch).',
+      'Tippe auf das <strong>Teilen-Symbol</strong> (Quadrat mit Pfeil nach oben). Siehst du es nicht, tippe zuerst auf „…“.',
+      'Wähle <strong>„Zum Home-Bildschirm“</strong> (eventuell etwas nach unten wischen) und tippe auf „Hinzufügen“.',
+    ],
+    after: 'Wortweg liegt dann als Symbol auf dem Home-Bildschirm und startet ohne Browserleiste.',
+  },
+  mac: {
+    name: 'Mac',
+    steps: [
+      '<strong>Safari:</strong> oben im Menü „Ablage“ → <strong>„Zum Dock hinzufügen …“</strong> → „Hinzufügen“ (ab macOS 14).',
+      '<strong>Chrome oder Edge:</strong> rechts in der Adressleiste auf das Symbol „App installieren“ klicken.',
+    ],
+    after: 'Wortweg liegt dann im Dock und bei den Programmen und öffnet sich in einem eigenen Fenster.',
+  },
+  windows: {
+    name: 'Windows',
+    steps: ['Öffne diese Seite in <strong>Edge</strong> oder <strong>Chrome</strong>.', ...CHROMIUM_STEPS],
+    after: 'Wortweg steht dann im Startmenü, lässt sich an die Taskleiste anheften und öffnet sich in einem eigenen Fenster.',
+  },
+  android: {
+    name: 'Android',
+    steps: [
+      'Öffne diese Seite in <strong>Chrome</strong>.',
+      'Tippe oben rechts auf „⋮“ und dann auf <strong>„App installieren“</strong> bzw. „Zum Startbildschirm hinzufügen“.',
+    ],
+    after: 'Wortweg liegt dann bei deinen Apps.',
+  },
+};
+
+/** Anleitung für dieses Gerät: Mac und andere Systeme je nach Browser, Firefox am Computer mit Ausweg. */
+export function installGuideFor({ os, browser }) {
+  const desktop = os === 'mac' || os === 'windows' || os === 'other';
+  if (desktop && browser === 'firefox') {
+    return {
+      steps: [`Firefox kann Wortweg am Computer nicht zuverlässig als App installieren. Öffne diese Seite in <strong>Edge</strong> oder <strong>Chrome</strong>${os === 'mac' ? ', am Mac auch in <strong>Safari</strong>' : ''}.`],
+      after: '',
+    };
+  }
+  if (os === 'mac' && browser === 'safari') return { ...INSTALL_GUIDES.mac, steps: INSTALL_GUIDES.mac.steps.slice(0, 1) };
+  if (os === 'mac') return { ...INSTALL_GUIDES.mac, steps: CHROMIUM_STEPS };
+  if (os === 'other') return { steps: CHROMIUM_STEPS, after: 'Wortweg öffnet sich dann in einem eigenen Fenster.' };
+  return INSTALL_GUIDES[os];
+}
+
+// Chrome und Edge melden mit „beforeinstallprompt“, dass sie Wortweg installieren können; den Dialog öffnet der Knopf.
+let installPrompt = null;
+let installedNow = false;
+if (LOCAL && typeof window !== 'undefined') {
+  window.addEventListener('beforeinstallprompt', (e) => {
+    e.preventDefault();
+    installPrompt = e;
+    render();
+  });
+  window.addEventListener('appinstalled', () => {
+    installPrompt = null;
+    installedNow = true;
+    render();
+  });
+}
+const runsAsApp = () => typeof window !== 'undefined'
+  && (window.matchMedia?.('(display-mode: standalone)').matches || window.navigator.standalone === true);
+
+async function promptInstall() {
+  const ev = installPrompt;
+  if (!ev) return;
+  installPrompt = null;
+  await ev.prompt();
+  const { outcome } = await ev.userChoice;
+  if (outcome === 'accepted') installedNow = true;
+  render();
+}
+
+// Aufnahmen für offline: dieselbe Cache-Ablage wie der Service Worker (AUDIO in scripts/build-app.mjs).
+const AUDIO_CACHE = 'wortweg-audio';
+const OFFLINE_LANGS = [['es', 'Spanisch'], ['zh', 'Chinesisch']];
+const offline = new Map(); // Sprache → { files, bytes, stored, running, error }
+
+async function checkOffline(lang) {
+  const res = await fetch(`assets/audio/${lang}/index.json`).catch(() => null);
+  if (!res?.ok) return { files: [], bytes: 0, stored: 0 };
+  const idx = await res.json();
+  const files = [...new Set(Object.values(idx.items ?? {}))].map((f) => new URL(`assets/audio/${lang}/${f}`, location.href).href);
+  const cached = new Set((await (await caches.open(AUDIO_CACHE)).keys()).map((r) => r.url));
+  return { files, bytes: Number(idx.bytes) || 0, stored: files.filter((f) => cached.has(f)).length };
+}
+
+function offlineEntry(lang) {
+  if (!offline.has(lang)) {
+    const st = { files: null, bytes: 0, stored: 0, running: false, error: null };
+    offline.set(lang, st);
+    checkOffline(lang).then((r) => Object.assign(st, r), (err) => { st.error = err?.message ?? String(err); }).then(render);
+  }
+  return offline.get(lang);
+}
+
+async function loadRecordingsOffline(lang) {
+  const st = offline.get(lang);
+  if (!st?.files || st.running) return;
+  st.running = true;
+  st.error = null;
+  render();
+  globalThis.navigator?.storage?.persist?.().catch(() => {});
+  const cache = await caches.open(AUDIO_CACHE);
+  const missing = [];
+  for (const url of st.files) if (!(await cache.match(url))) missing.push(url);
+  st.stored = st.files.length - missing.length;
+  let shown = 0;
+  const worker = async () => {
+    while (st.running && missing.length) {
+      const url = missing.shift();
+      const res = await fetch(url);
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      // Mit Service Worker landet die Datei schon auf dem Weg im Cache, sonst hier.
+      if (await cache.match(url)) await res.body?.cancel();
+      else await cache.put(url, res);
+      st.stored++;
+      if (Date.now() - shown > 300) {
+        shown = Date.now();
+        render();
+      }
+    }
+  };
+  try {
+    await Promise.all(Array.from({ length: 6 }, worker));
+  } catch {
+    st.error = 'Laden unterbrochen – keine Verbindung? Was schon da ist, bleibt gespeichert. Später einfach erneut starten.';
+  }
+  st.running = false;
+  if (!st.error && st.stored >= st.files.length) announce(`Alle Aufnahmen für ${OFFLINE_LANGS.find(([l]) => l === lang)?.[1] ?? lang} sind gespeichert.`);
+  render();
+}
+
+function offlineRows() {
+  if (typeof caches === 'undefined') {
+    return '<p class="muted small">In diesem Browser gibt es keinen Offline-Speicher (zum Beispiel im privaten Fenster).</p>';
+  }
+  const rows = OFFLINE_LANGS.map(([lang, name]) => {
+    const st = offlineEntry(lang);
+    if (!st.files) return st.error ? `<p class="muted small">${esc(name)}: ${esc(st.error)}</p>` : '';
+    if (!st.files.length) return '';
+    const total = st.files.length;
+    const done = st.stored >= total;
+    const size = st.bytes ? ` (etwa ${fmtNum(Math.max(1, Math.round(st.bytes / 1e6)))} MB)` : '';
+    return `<div class="offline-row">
+      <h3>${esc(name)}</h3>
+      <p>${done ? `${icon('check')} Alle ${fmtNum(total)} Aufnahmen sind auf diesem Gerät.` : `${fmtNum(st.stored)} von ${fmtNum(total)} Aufnahmen auf diesem Gerät${size}.`}</p>
+      ${st.running || st.stored ? meter(st.stored, total, `Aufnahmen ${name} gespeichert`) : ''}
+      ${st.error ? `<p class="notice notice-error" role="alert">${esc(st.error)}</p>` : ''}
+      ${done ? '' : st.running
+    ? `<button type="button" class="btn btn-ghost" data-action="offline-stop" data-key="${lang}">Anhalten</button>`
+    : `<button type="button" class="btn btn-field" data-action="offline-load" data-key="${lang}">${st.stored ? 'Weiter laden' : 'Aufnahmen laden'}</button>`}
+    </div>`;
+  }).join('');
+  return rows || '<p class="muted small">Für die Kurse gibt es noch keine Aufnahmen zum Speichern.</p>';
+}
+
+function viewInstall() {
+  setTitle('Wortweg als App');
+  const platform = detectPlatform(globalThis.navigator ?? {});
+  const guide = installGuideFor(platform);
+  const asApp = runsAsApp();
+  const steps = (g) => `<ol class="install-steps">${g.steps.map((s) => `<li>${s}</li>`).join('')}</ol>${g.after ? `<p>${g.after}</p>` : ''}`;
+  const others = Object.entries(INSTALL_GUIDES).filter(([os]) => os !== platform.os);
+  let top;
+  if (asApp || installedNow) {
+    top = `<p class="notice notice-ok">${asApp ? 'Du nutzt Wortweg gerade als App.' : 'Wortweg ist installiert. Du findest die App jetzt bei deinen Programmen.'}</p>`;
+  } else if (installPrompt) {
+    top = `<div class="hero-actions"><button type="button" class="btn btn-primary btn-lg" data-action="install-app">App installieren</button></div>
+      <p class="muted small install-hint">Kostenlos, ohne App Store und ohne Konto. Deinstallieren geht wie bei jeder anderen App.</p>`;
+  } else {
+    top = `<h2>So installierst du Wortweg</h2>${steps(guide)}`;
+  }
+  return `<h1 tabindex="-1">Wortweg als App</h1>
+  <section class="card prose" aria-label="Installieren">
+    <p class="lead">Mit eigenem Symbol, im eigenen Fenster und auch ohne Internet – auf Windows, Mac, iPhone und Android.</p>
+    ${top}
+  </section>
+  <section class="card prose" aria-labelledby="install-other">
+    <h2 id="install-other">Andere Geräte</h2>
+    ${others.map(([, g]) => `<details class="device-guide"><summary>${esc(g.name)}${icon('chevron')}</summary>${steps(g)}</details>`).join('')}
+  </section>
+  <section class="card prose" aria-labelledby="install-offline">
+    <h2 id="install-offline">Offline lernen</h2>
+    <p>Nach dem ersten Start sind die App und alle Kurse auf dem Gerät gespeichert. Aufnahmen speichert Wortweg, sobald du sie einmal gehört hast. Für unterwegs kannst du alle Aufnahmen einer Sprache auf einmal laden – am besten im WLAN.</p>
+    ${offlineRows()}
+    <p class="muted small install-hint">Dein Fortschritt liegt nur auf diesem Gerät. Wechselst du das Gerät, nimm ihn per Datei mit (Optionen → Daten).</p>
+  </section>`;
+}
+
+// =====================================================================================================
 // Ereignisse
 // =====================================================================================================
 
@@ -2632,6 +2856,13 @@ function onClick(e) {
       break;
     }
     case 'guest': startAsGuest(); break;
+    case 'install-app': promptInstall(); break;
+    case 'offline-load': loadRecordingsOffline(el.dataset.key); break;
+    case 'offline-stop': {
+      const st = offline.get(el.dataset.key);
+      if (st) st.running = false;
+      break;
+    }
     case 'show-password': {
       const form = el.closest('form');
       form?.querySelectorAll('input[name="password"]').forEach((i) => {
