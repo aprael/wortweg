@@ -1,24 +1,36 @@
-## Wortweg 0.4.0
+## Wortweg 0.5.0
 
 Freie Sprachlern-App – ohne Werbung, ohne Bezahlschranke, ohne Tracking.
 
-**App-Version:** Die angehängte ZIP-Datei enthält die Offline-App (`index.html` öffnen über einen Webserver, z. B. GitHub Pages). Auf dem iPhone: Seite in Safari öffnen → Teilen → „Zum Home-Bildschirm“.
-**Server-Version:** Quellcode herunterladen, Node.js 24 installieren, `npm start`.
+### Herunterladen
 
-### Neu in 0.4
+- **Windows:** `Wortweg-Windows.exe` herunterladen und starten. Windows warnt beim ersten Mal („Der Computer wurde durch
+  Windows geschützt“), weil Wortweg kein gekauftes Zertifikat hat: **„Weitere Informationen“ → „Trotzdem ausführen“**.
+  Die Installation braucht keine Adminrechte.
+- **Mac (Apple-Chip und Intel):** `Wortweg-Mac.dmg` öffnen und Wortweg in den Ordner „Programme“ ziehen. Beim ersten
+  Start meldet der Mac, dass Apple Wortweg nicht prüfen konnte: „Fertig“ klicken, dann **Systemeinstellungen →
+  Datenschutz & Sicherheit → „Dennoch öffnen“**.
+- **iPhone, iPad, Android:** <https://aprael.github.io/wortweg/> im Browser öffnen → „Zum Home-Bildschirm“ (Safari) bzw.
+  „App installieren“ (Chrome). Die Seite „Als App installieren“ in der App erklärt jeden Schritt.
+- **App-Version als ZIP** (`wortweg-app-v0.5.0.zip`): dieselbe Offline-App zum Selbst-Hosten über einen Webserver.
+- **Server-Version:** Quellcode herunterladen, Node.js 24 installieren, `npm start`.
 
-- Neues Spiel-Design in Blau und Gold mit 3D-Knöpfen, Kronen, Stufen und Tagestruhe
-- Wortkarten vor jeder Lektion: neues Wort mit Übersetzung, Formen und Beispielsatz
-- Regelkarten für Grammatik (z. B. Präpositionen, Zeitformen), auch im Lernpfad aufrufbar
-- Vorlese-Knopf bei jeder Aufgabe; Antippen von Wörtern spricht sie aus; Lösung wird nach dem Prüfen vorgelesen
-- „Finde die Paare“ mit gleich hohen, sauber ausgerichteten Feldern
-- Konfetti bei richtigen Antworten, kurze Töne (abschaltbar)
-- Zwischenstand: Eine unterbrochene Lektion geht später bei derselben Übung weiter
-- Spanisch-Wortschatz neu aufgebaut: von leicht nach schwer, Themen, Regel-Einheiten für Präpositionen und Zeitformen; alle Sätze und Beispielsätze von Hand geprüft
-- Chinesisch (HSK 1–3) neu aufgebaut: je HSK-Stufe Themen von leicht nach schwer, dann Regeln (Zählwörter, Fragen, 了/着/过, Vergleiche, 把/被 …) mit Regelkarten; Beispielsätze mit Pinyin; alle Sätze von Hand geprüft
-- Neue Startseite mit Kacheln, Vorschau der nächsten Lektion und Abschnittsübersicht; großer Lernpfad einklappbar
+### Neu in 0.5
+
+- **Echte Aussprache:** Wörter und Sätze werden mit Aufnahmen echter Menschen vorgelesen (Wikimedia Commons, Lingua
+  Libre, Tatoeba) statt mit einer Computerstimme. Die Seite „Aufnahmen“ nennt alle Sprecherinnen und Sprecher. Wo
+  es noch keine Aufnahme gibt, bleibt die App still – die Computerstimme lässt sich in den Optionen als Ersatz einschalten.
+- **Als eigenes Programm** für Windows und Mac, ohne Browser und auch offline, mit allen Kursen und Aufnahmen.
+- **Installierbar** auf iPhone, iPad und Android; „Aufnahmen laden“ speichert die Aussprache für unterwegs.
+- **Neues Design „Spielbrett“:** Lernpfad und Startseite als Spielbrett mit Figur, Regeln als Ereigniskarte, ruhige
+  Farben, gut lesbare Schrift (Atkinson Hyperlegible Next), eine Hauptaktion pro Ansicht.
+- **Beispielsätze zu fast allen Wörtern:** Spanisch zu allen 2.959 Wörtern, Chinesisch zu 2.238 von 2.243.
+- Spanisch erkennt „hay“, „es“, „vale“, „fuera“ und „por la mañana“ jetzt richtig.
 
 ### Hinweise
 
-- Die Kursinhalte sind aus offenen Quellen zusammengestellt bzw. selbst geschrieben und **nicht muttersprachlich geprüft**. Quellen und Lizenzen: `data/courses/PROVENIENZ.md`.
-- Code: MIT. Datenkurse: CC BY-SA 4.0. Demo-Kurse: CC0. Schriften Lilita One und Atkinson Hyperlegible Next: SIL OFL 1.1.
+- Die Kursinhalte sind aus offenen Quellen zusammengestellt bzw. selbst geschrieben und **nicht muttersprachlich
+  geprüft** – das gilt auch für die neuen eigenen Beispielsätze. Quellen und Lizenzen: `data/courses/PROVENIENZ.md`.
+- Nicht jedes Wort hat schon eine Aufnahme, vor allem bei chinesischen Sätzen gibt es kaum freie Aufnahmen.
+- Code: MIT. Datenkurse: CC BY-SA 4.0. Demo-Kurse: CC0. Aufnahmen: jeweils eigene freie Lizenz (siehe Seite
+  „Aufnahmen“). Schriften Lilita One und Atkinson Hyperlegible Next: SIL OFL 1.1.
