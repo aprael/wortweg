@@ -4,7 +4,9 @@ Wortweg ist eine kostenlose App zum Sprachenlernen – ohne Werbung, ohne Bezahl
 
 **Direkt ausprobieren:** <https://aprael.github.io/wortweg/> (App-Version, läuft im Browser und offline)
 
-- **App-Version** (statisch, offline, ohne Konto): läuft z. B. über GitHub Pages und lässt sich auf **Windows, Mac, iPhone und Android** wie eine App installieren – kostenlos, ohne App Store. In der App steht unter „Als App installieren“ (`#/app`) die passende Anleitung; in Chrome und Edge reicht ein Klick. Danach funktionieren App und alle Kurse ohne Internet, Aufnahmen lassen sich für unterwegs vorab laden. Der Fortschritt bleibt auf dem Gerät.
+- **App-Version** (statisch, offline, ohne Konto): läuft z. B. über GitHub Pages. Der Fortschritt bleibt auf dem Gerät.
+  - **Windows und Mac:** als eigenes Programm zum Herunterladen (`Wortweg-Windows.exe`, `Wortweg-Mac.dmg` unter [Releases](https://github.com/aprael/wortweg/releases/latest)) – startet ohne Browser, mit allen Kursen und Aufnahmen, auch offline. Weil die Programme nicht kostenpflichtig signiert sind, warnt das System beim ersten Start; die Seite „Als App installieren“ (`#/app`) erklärt die zwei Klicks.
+  - **iPhone, iPad und Android:** über den Browser auf den Home-Bildschirm („Zum Home-Bildschirm“ bzw. „App installieren“) – startet danach im Vollbild wie eine App. Kurse sind offline da, Aufnahmen lassen sich für unterwegs vorab laden.
 - **Server-Version** (`npm start`): mit Konten (auch als Gast), Fortschritt auf dem eigenen Server und einem Admin-Bereich, in dem man Kurse anlegt und bearbeitet.
 
 > **Inhalte:** Die großen Kurse (Chinesisch HSK 1–3, Spanisch-Wortschatz) sind aus offenen Quellen zusammengestellt und von Hand geprüft, aber **nicht muttersprachlich** geprüft. Dazu kommen kleine, selbst geschriebene Demo-Kurse. Details: [`data/courses/PROVENIENZ.md`](data/courses/PROVENIENZ.md).

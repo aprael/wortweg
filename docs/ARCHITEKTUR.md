@@ -281,6 +281,31 @@ sentence { native[], target[], note, reading?: string, tokens?: string[], source
   (Tabelle `bundled_courses`). Von Admins gelöschte Kurse kommen nicht wieder.
 - iPhone: Safari → Teilen → „Zum Home-Bildschirm“ (Manifest, `apple-touch-icon` PNG 180 px, `display: standalone`).
 
+### 9.4 Desktop-Apps (Windows, Mac) – Ergänzung 23.10.2026
+
+- **Ziel:** Wortweg als eigenes Programm, das ohne Browser installiert und gestartet wird. iPhone und Android bleiben bei
+  der installierten Web-App (App Store bräuchte ein kostenpflichtiges Apple-Entwicklerkonto; vom Nutzer nicht gewählt).
+- **Aufbau:** `src-tauri/` (Tauri 2, Rust) zeigt den unveränderten App-Build `dist/` in einem eigenen Fenster
+  (macOS: WKWebView, `tauri://localhost`; Windows: WebView2, `http://tauri.localhost`). Kein IPC, keine Plugins, keine
+  Tauri-JS-API; die App erkennt die Desktop-Hülle nur an der Adresse (`DESKTOP` in `src/app.js`, `src/pwa.js`) und
+  verzichtet dort auf Service Worker, Installieren und „Aufnahmen laden“ – Kurse und Aufnahmen liegen im Programm.
+  `src-tauri/src/main.rs`: eigene Seiten bleiben im Fenster; fremde Links (auch `target="_blank"`) öffnet der normale
+  Browser, eigene Dateien in neuen Fenstern (Lizenztexte) die Website; Downloads (Fortschritt exportieren) landen ohne
+  Überschreiben im Download-Ordner. CSP bleibt die Meta-CSP aus `index.html` (`security.csp: null`).
+- **Abhängigkeiten:** Die App selbst bleibt ohne npm-Abhängigkeiten. Die Hülle hat fest gepinnte Rust-Crates
+  (`tauri`, `tauri-build`, `open`; `Cargo.lock` eingecheckt); die Tauri-CLI (`@tauri-apps/cli`, fest gepinnt) läuft nur in
+  GitHub Actions über `npx`. Lokal ist kein Rust nötig. Neue Versionen erst übernehmen, wenn sie einige Wochen alt sind.
+- **Bau:** `.github/workflows/desktop.yml` – bei Push auf Arbeitszweige Artefakte, bei Versions-Tags zusätzlich am
+  Release mit festen Namen `Wortweg-Windows.exe` (NSIS, Installation ohne Adminrechte) und `Wortweg-Mac.dmg`
+  (Universal: Apple-Chip und Intel). Icon: `node scripts/make-icons.mjs --desktop` (1024 px, Mac-Raster), daraus
+  `tauri icon`. Version kommt aus `package.json`.
+- **Signatur:** keine gekaufte. Mac: Ad-hoc-Signatur (`signingIdentity: "-"`), damit macOS das Programm nicht als
+  „beschädigt“ meldet; beim ersten Start „Dennoch öffnen“ in den Systemeinstellungen. Windows: SmartScreen-Warnung,
+  „Weitere Informationen → Trotzdem ausführen“. Beides erklärt die Seite `#/app`. Ohne Warnung ginge es nur mit Apple
+  Developer ID (99 €/Jahr) bzw. einem Windows-Code-Signing-Zertifikat.
+- **Downloads in der App:** `#/app` verlinkt auf Windows und Mac `…/releases/latest/download/<Datei>`. Die Links
+  funktionieren erst, wenn ein Release die Dateien hat – Pages (main) deshalb erst nach dem Release aktualisieren.
+
 ## 10. Ergänzung 21.10.2026: Lernerlebnis (Oberfläche, ohne Änderung der Bewertung)
 
 - **Wortkarten und Regelkarte:** Eine Lektion beginnt mit `run.phase = 'intro'`: Regelkarte (`unit.intro`, nur erste

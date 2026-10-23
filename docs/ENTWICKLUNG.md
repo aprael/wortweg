@@ -77,6 +77,11 @@ Ergebnis: **keine kritischen Befunde.** Hinweise für einen öffentlichen Server
    Cache, danach Server aus → App startet, Chinesisch und Spanisch öffnen, Lektion läuft, Aufnahme spielt; iPhone-Ansicht
    (Safari-Kennung) zeigt die Home-Bildschirm-Anleitung; kein horizontales Scrollen, keine Konsolenfehler; `npm run check`
    134/134, `npm run e2e` 25/25. Nicht geprüft: echtes Installieren auf Windows, Mac und iPhone (nur im Browser simuliert).
+8. **Desktop-Apps Windows/Mac (23.10.2026):** Der Nutzer will, dass Wortweg „sich nicht über den Browser öffnen muss“,
+   und hat „Download-Apps Win + Mac“ gewählt (kostenlos, mit Warnung beim ersten Start; App Store fürs iPhone nicht).
+   Umsetzung mit Tauri, siehe `docs/ARCHITEKTUR.md` §9.4. Vor dem Livegang: `Cargo.lock` aus dem ersten Bau einchecken,
+   `docs/RELEASE.md` für 0.5 schreiben (Downloads + Warnhinweise), Version in `package.json` anheben, Tag nur nach
+   Rückfrage – erst danach `main`, weil `#/app` auf die Release-Dateien verlinkt.
 
 ### 0.5 Veröffentlichung 21.10.2026
 

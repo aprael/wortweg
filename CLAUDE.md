@@ -1,6 +1,7 @@
 # Wortweg – Hinweise für Claude
 
 - Freie Sprachlern-App: Browser (Vanilla JS, ES-Module, kein Build) + Node-Server (`node:http`, `node:sqlite`). **Keine npm-Abhängigkeiten.**
+- Desktop-Apps (Windows, Mac): `src-tauri/` (Tauri 2) verpackt `dist/`; gebaut nur in GitHub Actions (`desktop.yml`), lokal kein Rust nötig. Crates und Tauri-CLI fest gepinnt, Details `docs/ARCHITEKTUR.md` §9.4.
 - Zwei Betriebsarten: **Server-Version** (`npm start`, Konten, Admin) und **App-Version** (`npm run build:app` → `dist/`, offline, `src/local-api.js` statt `src/api.js`, für GitHub Pages / iPhone).
 - Nutzer spricht Deutsch → auf Deutsch antworten, einfach erklären.
 - Vor Änderungen lesen: `README.md`, `docs/ARCHITEKTUR.md` (verbindlicher Vertrag: Übungs-/Antwortformate, Kursformat inkl. `intro`/`examples`, DB, API, Sicherheit) und `docs/ENTWICKLUNG.md` (Abschnitt 0: Verlauf, Prüfprotokoll, offene Punkte).
