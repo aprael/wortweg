@@ -1,0 +1,93 @@
+# Desktop-Apps (Windows, Mac) mit Tauri bauen – siehe docs/ARCHITEKTUR.md §9.4.
+# Push auf einen Arbeitszweig: Installer als Artefakt zum Testen. Versions-Tag (v*): zusätzlich mit festem Namen an das
+# Release hängen, das release.yml anlegt – die Seite „Wortweg als App“ verlinkt …/releases/latest/download/<Datei>.
+name: Desktop-Apps
+on:
+  push:
+    branches-ignore: [main]
+    tags: ['v*']
+    paths:
+      - 'src-tauri/**'
+      - '.github/workflows/desktop.yml'
+      - 'src/**'
+      - 'assets/**'
+      - 'styles.css'
+      - 'index.html'
+      - 'scripts/build-app.mjs'
+      - 'scripts/make-icons.mjs'
+      - 'data/courses/**'
+      - 'package.json'
+permissions:
+  contents: write
+jobs:
+  build:
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - name: Mac
+            os: macos-latest
+            target: universal-apple-darwin
+            bundles: app,dmg
+            out: src-tauri/target/universal-apple-darwin/release/bundle/dmg/*.dmg
+            file: Wortweg-Mac.dmg
+          - name: Windows
+            os: windows-latest
+            target: x86_64-pc-windows-msvc
+            bundles: nsis
+            out: src-tauri/target/x86_64-pc-windows-msvc/release/bundle/nsis/*-setup.exe
+            file: Wortweg-Windows.exe
+    runs-on: ${{ matrix.os }}
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+      - name: Rust
+        run: |
+          rustup update stable --no-self-update
+          rustup default stable
+          if [ "${{ matrix.target }}" = universal-apple-darwin ]; then rustup target add aarch64-apple-darwin x86_64-apple-darwin; fi
+      - name: App-Version und Icons
+        run: |
+          npm run build:app
+          node scripts/make-icons.mjs --desktop src-tauri/app-icon.png
+          npx --yes @tauri-apps/cli@2.12.1 icon src-tauri/app-icon.png
+      - name: Desktop-App bauen
+        run: npx --yes @tauri-apps/cli@2.12.1 build --ci --target ${{ matrix.target }} --bundles ${{ matrix.bundles }}
+      - name: Feste Dateinamen
+        run: |
+          mkdir -p out
+          cp ${{ matrix.out }} "out/${{ matrix.file }}"
+          ls -la out
+      - uses: actions/upload-artifact@v7
+        with:
+          name: Wortweg-${{ matrix.name }}
+          path: out/${{ matrix.file }}
+          if-no-files-found: error
+      # Cargo.lock entsteht erst hier (lokal gibt es kein Rust) – zum Einchecken bereitstellen.
+      - if: matrix.name == 'Mac'
+        uses: actions/upload-artifact@v7
+        with:
+          name: Cargo.lock
+          path: src-tauri/Cargo.lock
+  release:
+    if: startsWith(github.ref, 'refs/tags/')
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v8
+        with:
+          pattern: Wortweg-*
+          path: out
+          merge-multiple: true
+      - env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          # release.yml legt das Release an; das dauert kürzer als der Bau, zur Sicherheit bis zu 10 Minuten warten.
+          for i in $(seq 1 30); do gh release view "$GITHUB_REF_NAME" >/dev/null 2>&1 && break; sleep 20; done
+          gh release upload "$GITHUB_REF_NAME" out/Wortweg-Mac.dmg out/Wortweg-Windows.exe --clobber

@@ -1,0 +1,23 @@
+# Wortweg als Desktop-App (Windows, Mac) mit Tauri – siehe docs/ARCHITEKTUR.md §9.4.
+# Versionen bewusst fest (=): neue Tauri-Versionen erst nach ein paar Wochen übernehmen. Die App-Version steht in
+# package.json (tauri.conf.json liest sie von dort).
+[package]
+name = "wortweg"
+edition = "2021"
+publish = false
+license = "MIT"
+description = "Wortweg – freie Sprachlern-App als Desktop-Programm"
+
+[build-dependencies]
+tauri-build = { version = "=2.7.1", features = [] }
+
+[dependencies]
+tauri = { version = "=2.12.1", features = [] }
+open = "=5.4.4"
+
+[profile.release]
+codegen-units = 1
+lto = true
+opt-level = "s"
+panic = "abort"
+strip = true

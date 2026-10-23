@@ -1,5 +1,6 @@
 // Erzeugt die PNG-App-Icons aus der Geometrie von assets/logo.svg (ohne Abhängigkeiten, reproduzierbar).
 // Aufruf: node scripts/make-icons.mjs → assets/icon-180.png (iPhone), icon-192.png, icon-512.png, icon-maskable-512.png
+//        node scripts/make-icons.mjs --desktop <datei.png> → 1024 px für die Desktop-App (daraus macht `tauri icon` .icns/.ico)
 // Randlose Varianten (iPhone, maskable): Hintergrund füllt das Quadrat, das Motiv ist auf 85 % verkleinert (sichere Zone).
 import { writeFileSync } from 'node:fs';
 import { deflateSync, crc32 } from 'node:zlib';
@@ -36,6 +37,8 @@ function sample(u, v, { rounded, scale }) {
 }
 
 function render(size, opts, ss = 4) {
+  const pad = opts.pad ?? 0; // transparenter Rand in Logo-Einheiten (Desktop-Icon)
+  const span = 64 + 2 * pad;
   const rows = Buffer.alloc(size * (size * 4 + 1));
   for (let y = 0; y < size; y++) {
     rows[y * (size * 4 + 1)] = 0; // Filter „None“
@@ -46,7 +49,7 @@ function render(size, opts, ss = 4) {
       let a = 0;
       for (let sy = 0; sy < ss; sy++) {
         for (let sx = 0; sx < ss; sx++) {
-          const c = sample(((x + (sx + 0.5) / ss) / size) * 64, ((y + (sy + 0.5) / ss) / size) * 64, opts);
+          const c = sample(((x + (sx + 0.5) / ss) / size) * span - pad, ((y + (sy + 0.5) / ss) / size) * span - pad, opts);
           if (!c) continue;
           r += c[0];
           g += c[1];
@@ -86,6 +89,16 @@ function png(width, height, rows) {
     chunk('IDAT', deflateSync(rows, { level: 9 })),
     chunk('IEND', Buffer.alloc(0)),
   ]);
+}
+
+const desktopAt = process.argv.indexOf('--desktop');
+if (desktopAt > 0) {
+  // Mac-Raster: Motiv 824 von 1024 px, Rest transparent – sonst wirkt das Icon im Dock größer als alle anderen.
+  const file = process.argv[desktopAt + 1];
+  if (!file) throw new Error('Aufruf: node scripts/make-icons.mjs --desktop <datei.png>');
+  writeFileSync(file, render(1024, { rounded: true, scale: 1, pad: (64 * 100) / 824 }, 2));
+  console.log(`✓ ${file} (1024×1024, Desktop)`);
+  process.exit(0);
 }
 
 const out = (name) => new URL(`../assets/${name}`, import.meta.url);

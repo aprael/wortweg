@@ -5,3 +5,9 @@ data/*.db-wal
 data/*.db-shm
 .cache/
 dist/
+
+# Desktop-App (Tauri): Bauergebnisse und erzeugte Icons
+src-tauri/target/
+src-tauri/gen/
+src-tauri/icons/
+src-tauri/app-icon.png

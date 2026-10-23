@@ -172,11 +172,16 @@ test('detectPlatform: Gerät und Browser für die Installationsanleitung', () =>
 
   const text = (p) => installGuideFor(p).steps.join(' ');
   assert.match(text({ os: 'ios', browser: 'safari' }), /Zum Home-Bildschirm/);
-  assert.match(text({ os: 'mac', browser: 'safari' }), /Zum Dock hinzufügen/);
-  assert.doesNotMatch(text({ os: 'mac', browser: 'chrome' }), /Ablage/);
-  assert.match(text({ os: 'windows', browser: 'edge' }), /App installieren/);
-  assert.match(text({ os: 'windows', browser: 'firefox' }), /Edge/);
-  assert.match(text({ os: 'mac', browser: 'firefox' }), /Safari/);
   assert.match(text({ os: 'android', browser: 'chrome' }), /App installieren/);
-  assert.ok(installGuideFor({ os: 'other', browser: 'chrome' }).steps.length > 0);
+  // Windows und Mac: Download der Desktop-App – egal mit welchem Browser, mit ehrlichem Hinweis auf die Warnung.
+  for (const browser of ['edge', 'chrome', 'firefox', 'safari']) {
+    assert.match(text({ os: 'windows', browser }), /releases\/latest\/download\/Wortweg-Windows\.exe/);
+    assert.match(text({ os: 'windows', browser }), /Trotzdem ausführen/);
+    assert.match(text({ os: 'mac', browser }), /releases\/latest\/download\/Wortweg-Mac\.dmg/);
+    assert.match(text({ os: 'mac', browser }), /Dennoch öffnen/);
+  }
+  assert.match(installGuideFor({ os: 'mac', browser: 'safari' }).alt, /Zum Dock hinzufügen/);
+  for (const os of ['windows', 'mac']) assert.equal(installGuideFor({ os }).buttonSteps.length, 2);
+  assert.match(text({ os: 'other', browser: 'firefox' }), /Chrome/);
+  assert.match(text({ os: 'other', browser: 'chrome' }), /App installieren/);
 });

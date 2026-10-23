@@ -250,6 +250,8 @@ let adminError = null;
 const enc = encodeURIComponent;
 /** App-Version ohne Server (statischer Build, src/local-api.js): kein Konto, alles auf diesem Gerät. */
 const LOCAL = api.MODE === 'local';
+/** Desktop-App (src-tauri): dieselbe App-Version in einem eigenen Programmfenster – macOS tauri://, Windows tauri.localhost. */
+const DESKTOP = typeof location !== 'undefined' && (location.protocol === 'tauri:' || location.hostname === 'tauri.localhost');
 
 const ICONS = {
   play: '<path d="M8 5.5v13a1 1 0 0 0 1.5.8l10.2-6.5a1 1 0 0 0 0-1.6L9.5 4.7A1 1 0 0 0 8 5.5z"/>',
@@ -557,7 +559,7 @@ function brand(href) {
 }
 
 function footer() {
-  return `<footer class="footer"><span>Wortweg · freie Lern-App${LOCAL ? ' · App-Version (offline)' : ''}</span>${LOCAL ? ' <a href="#/app">Als App installieren</a>' : ''} <a href="#/about">Über, Datenschutz &amp; Lizenzen</a></footer>`;
+  return `<footer class="footer"><span>Wortweg · freie Lern-App${LOCAL ? ' · App-Version (offline)' : ''}</span>${LOCAL && !runsAsApp() ? ' <a href="#/app">Als App installieren</a>' : ''} <a href="#/about">Über, Datenschutz &amp; Lizenzen</a></footer>`;
 }
 
 function layout(content, active) {
@@ -2311,7 +2313,7 @@ function viewSettings() {
       <button type="button" class="btn" data-action="confirm-no" data-key="delete-account" id="confirm-delete-account-no">Abbrechen</button>
     </form>` : ''}
   </section>
-  ${LOCAL ? `<section class="card" aria-labelledby="set-app">
+  ${LOCAL && !DESKTOP ? `<section class="card" aria-labelledby="set-app">
     <h2 id="set-app">App und offline</h2>
     <p>${runsAsApp() ? 'Du nutzt Wortweg als App.' : 'Installiere Wortweg als App – mit eigenem Symbol und auch ohne Internet.'} Aufnahmen für unterwegs lädst du auf derselben Seite.</p>
     <div class="hero-actions"><a class="btn" href="#/app">${runsAsApp() ? 'Aufnahmen laden' : 'App installieren'}</a></div>
@@ -2482,7 +2484,7 @@ async function doExport() {
   try {
     const { data, filename } = await api.exportProgress();
     downloadJson(filename ?? `wortweg-fortschritt-${dayKey(Date.now())}.json`, data);
-    setNotice('data', 'ok', 'Export wurde heruntergeladen.');
+    setNotice('data', 'ok', DESKTOP ? 'Export liegt jetzt in deinem Download-Ordner.' : 'Export wurde heruntergeladen.');
   } catch (err) {
     if (handledAuthError(err)) return;
     setNotice('data', 'error', `Export fehlgeschlagen: ${err.message}`, true);
@@ -2635,7 +2637,31 @@ const CHROMIUM_STEPS = [
   'Klicke rechts in der Adressleiste auf das Symbol <strong>„App installieren“</strong> und dann auf „Installieren“.',
   'Kein Symbol zu sehen? <strong>Edge:</strong> Menü „…“ → „Apps“ → „Wortweg installieren“. <strong>Chrome:</strong> Menü „⋮“ → „Streamen, speichern und teilen“ → „Wortweg installieren …“.',
 ];
+// Desktop-Apps (src-tauri) hängen mit festen Namen an jedem Release; „latest“ zeigt immer auf das neueste.
+const DOWNLOAD_BASE = 'https://github.com/aprael/wortweg/releases/latest/download/';
+export const DESKTOP_DOWNLOADS = {
+  windows: { file: 'Wortweg-Windows.exe', label: 'Für Windows herunterladen' },
+  mac: { file: 'Wortweg-Mac.dmg', label: 'Für Mac herunterladen' },
+};
+const downloadLink = (os) => `<a href="${DOWNLOAD_BASE}${DESKTOP_DOWNLOADS[os].file}" rel="noopener">${DESKTOP_DOWNLOADS[os].label}</a>`;
+// Ehrlich sagen, warum das System warnt: Signaturen kosten Geld (Apple 99 €/Jahr, Windows-Zertifikat), Wortweg ist frei.
+const WINDOWS_WARNING = 'Windows warnt beim ersten Mal („Der Computer wurde durch Windows geschützt“), weil Wortweg kein gekauftes Zertifikat hat. Klicke auf <strong>„Weitere Informationen“</strong> und dann auf <strong>„Trotzdem ausführen“</strong>.';
+const MAC_WARNING = 'Beim ersten Start meldet der Mac, dass Apple Wortweg nicht prüfen konnte – Wortweg hat keine kostenpflichtige Apple-Signatur. Klicke auf „Fertig“, öffne dann <strong>Systemeinstellungen → Datenschutz &amp; Sicherheit</strong> und klicke unten bei Wortweg auf <strong>„Dennoch öffnen“</strong>.';
 const INSTALL_GUIDES = {
+  windows: {
+    name: 'Windows',
+    steps: [`<strong>${downloadLink('windows')}</strong> und die Datei öffnen.`, WINDOWS_WARNING],
+    buttonSteps: ['Öffne die heruntergeladene Datei <strong>„Wortweg-Windows.exe“</strong>.', WINDOWS_WARNING],
+    after: 'Wortweg steht dann im Startmenü und startet als eigenes Programm – ohne Browser und ohne Internet.',
+    alt: 'Ohne Download: in Edge oder Chrome rechts in der Adressleiste auf das Symbol „App installieren“ klicken.',
+  },
+  mac: {
+    name: 'Mac',
+    steps: [`<strong>${downloadLink('mac')}</strong>, die Datei öffnen und Wortweg in den Ordner „Programme“ ziehen.`, MAC_WARNING],
+    buttonSteps: ['Öffne die heruntergeladene Datei <strong>„Wortweg-Mac.dmg“</strong> und ziehe Wortweg in den Ordner „Programme“.', MAC_WARNING],
+    after: 'Danach startet Wortweg wie jedes Programm aus dem Dock oder dem Launchpad – ohne Browser und ohne Internet.',
+    alt: 'Ohne Download: in Safari oben im Menü „Ablage“ → „Zum Dock hinzufügen …“.',
+  },
   ios: {
     name: 'iPhone und iPad',
     steps: [
@@ -2643,20 +2669,7 @@ const INSTALL_GUIDES = {
       'Tippe auf das <strong>Teilen-Symbol</strong> (Quadrat mit Pfeil nach oben). Siehst du es nicht, tippe zuerst auf „…“.',
       'Wähle <strong>„Zum Home-Bildschirm“</strong> (eventuell etwas nach unten wischen) und tippe auf „Hinzufügen“.',
     ],
-    after: 'Wortweg liegt dann als Symbol auf dem Home-Bildschirm und startet ohne Browserleiste.',
-  },
-  mac: {
-    name: 'Mac',
-    steps: [
-      '<strong>Safari:</strong> oben im Menü „Ablage“ → <strong>„Zum Dock hinzufügen …“</strong> → „Hinzufügen“ (ab macOS 14).',
-      '<strong>Chrome oder Edge:</strong> rechts in der Adressleiste auf das Symbol „App installieren“ klicken.',
-    ],
-    after: 'Wortweg liegt dann im Dock und bei den Programmen und öffnet sich in einem eigenen Fenster.',
-  },
-  windows: {
-    name: 'Windows',
-    steps: ['Öffne diese Seite in <strong>Edge</strong> oder <strong>Chrome</strong>.', ...CHROMIUM_STEPS],
-    after: 'Wortweg steht dann im Startmenü, lässt sich an die Taskleiste anheften und öffnet sich in einem eigenen Fenster.',
+    after: 'Wortweg liegt dann als Symbol auf dem Home-Bildschirm und startet im Vollbild wie eine App – ohne Browserleiste.',
   },
   android: {
     name: 'Android',
@@ -2668,19 +2681,13 @@ const INSTALL_GUIDES = {
   },
 };
 
-/** Anleitung für dieses Gerät: Mac und andere Systeme je nach Browser, Firefox am Computer mit Ausweg. */
+/** Anleitung für dieses Gerät: Windows und Mac per Download, sonst über den Browser (Firefox am Computer mit Ausweg). */
 export function installGuideFor({ os, browser }) {
-  const desktop = os === 'mac' || os === 'windows' || os === 'other';
-  if (desktop && browser === 'firefox') {
-    return {
-      steps: [`Firefox kann Wortweg am Computer nicht zuverlässig als App installieren. Öffne diese Seite in <strong>Edge</strong> oder <strong>Chrome</strong>${os === 'mac' ? ', am Mac auch in <strong>Safari</strong>' : ''}.`],
-      after: '',
-    };
+  if (INSTALL_GUIDES[os]) return INSTALL_GUIDES[os];
+  if (browser === 'firefox') {
+    return { steps: ['Firefox kann Wortweg hier nicht als App installieren. Öffne diese Seite in <strong>Chrome</strong> oder <strong>Edge</strong>.'], after: '' };
   }
-  if (os === 'mac' && browser === 'safari') return { ...INSTALL_GUIDES.mac, steps: INSTALL_GUIDES.mac.steps.slice(0, 1) };
-  if (os === 'mac') return { ...INSTALL_GUIDES.mac, steps: CHROMIUM_STEPS };
-  if (os === 'other') return { steps: CHROMIUM_STEPS, after: 'Wortweg öffnet sich dann in einem eigenen Fenster.' };
-  return INSTALL_GUIDES[os];
+  return { steps: CHROMIUM_STEPS, after: 'Wortweg öffnet sich dann in einem eigenen Fenster.' };
 }
 
 // Chrome und Edge melden mit „beforeinstallprompt“, dass sie Wortweg installieren können; den Dialog öffnet der Knopf.
@@ -2698,8 +2705,8 @@ if (LOCAL && typeof window !== 'undefined') {
     render();
   });
 }
-const runsAsApp = () => typeof window !== 'undefined'
-  && (window.matchMedia?.('(display-mode: standalone)').matches || window.navigator.standalone === true);
+const runsAsApp = () => DESKTOP || (typeof window !== 'undefined'
+  && (window.matchMedia?.('(display-mode: standalone)').matches || window.navigator.standalone === true));
 
 async function promptInstall() {
   const ev = installPrompt;
@@ -2800,11 +2807,16 @@ function viewInstall() {
   const platform = detectPlatform(globalThis.navigator ?? {});
   const guide = installGuideFor(platform);
   const asApp = runsAsApp();
-  const steps = (g) => `<ol class="install-steps">${g.steps.map((s) => `<li>${s}</li>`).join('')}</ol>${g.after ? `<p>${g.after}</p>` : ''}`;
+  const steps = (g) => `<ol class="install-steps">${g.steps.map((s) => `<li>${s}</li>`).join('')}</ol>${g.after ? `<p>${g.after}</p>` : ''}${g.alt ? `<p class="muted small">${g.alt}</p>` : ''}`;
+  const download = DESKTOP_DOWNLOADS[platform.os];
   const others = Object.entries(INSTALL_GUIDES).filter(([os]) => os !== platform.os);
   let top;
   if (asApp || installedNow) {
     top = `<p class="notice notice-ok">${asApp ? 'Du nutzt Wortweg gerade als App.' : 'Wortweg ist installiert. Du findest die App jetzt bei deinen Programmen.'}</p>`;
+  } else if (download) {
+    top = `<div class="hero-actions"><a class="btn btn-primary btn-lg" href="${DOWNLOAD_BASE}${download.file}" rel="noopener">${download.label}</a></div>
+      <h2>So installierst du Wortweg</h2>${steps({ ...guide, steps: guide.buttonSteps, alt: '' })}
+      ${installPrompt ? '<p class="muted small">Oder ohne Download direkt aus dem Browser: <button type="button" class="btn btn-small" data-action="install-app">Im Browser installieren</button></p>' : `<p class="muted small">${guide.alt}</p>`}`;
   } else if (installPrompt) {
     top = `<div class="hero-actions"><button type="button" class="btn btn-primary btn-lg" data-action="install-app">App installieren</button></div>
       <p class="muted small install-hint">Kostenlos, ohne App Store und ohne Konto. Deinstallieren geht wie bei jeder anderen App.</p>`;
@@ -2813,7 +2825,7 @@ function viewInstall() {
   }
   return `<h1 tabindex="-1">Wortweg als App</h1>
   <section class="card prose" aria-label="Installieren">
-    <p class="lead">Mit eigenem Symbol, im eigenen Fenster und auch ohne Internet – auf Windows, Mac, iPhone und Android.</p>
+    <p class="lead">${DESKTOP ? 'Wortweg läuft hier als eigenes Programm – mit allen Kursen und Aufnahmen, auch ohne Internet.' : 'Als eigenes Programm mit eigenem Symbol, auch ohne Internet – auf Windows, Mac, iPhone und Android.'}</p>
     ${top}
   </section>
   <section class="card prose" aria-labelledby="install-other">
@@ -2822,8 +2834,8 @@ function viewInstall() {
   </section>
   <section class="card prose" aria-labelledby="install-offline">
     <h2 id="install-offline">Offline lernen</h2>
-    <p>Nach dem ersten Start sind die App und alle Kurse auf dem Gerät gespeichert. Aufnahmen speichert Wortweg, sobald du sie einmal gehört hast. Für unterwegs kannst du alle Aufnahmen einer Sprache auf einmal laden – am besten im WLAN.</p>
-    ${offlineRows()}
+    ${DESKTOP ? '<p>In der Desktop-App ist alles schon dabei: alle Kurse und alle Aufnahmen. Du brauchst kein Internet.</p>' : `<p>Nach dem ersten Start sind die App und alle Kurse auf dem Gerät gespeichert. Aufnahmen speichert Wortweg, sobald du sie einmal gehört hast. Für unterwegs kannst du alle Aufnahmen einer Sprache auf einmal laden – am besten im WLAN.</p>
+    ${offlineRows()}`}
     <p class="muted small install-hint">Dein Fortschritt liegt nur auf diesem Gerät. Wechselst du das Gerät, nimm ihn per Datei mit (Optionen → Daten).</p>
   </section>`;
 }
